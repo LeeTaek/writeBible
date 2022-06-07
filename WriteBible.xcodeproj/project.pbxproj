@@ -7,6 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
+		74782C1D284F08820077CDCC /* BibleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782C1C284F08820077CDCC /* BibleViewModel.swift */; };
+		74782C20284F08B50077CDCC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74782C1F284F08B50077CDCC /* RealmSwift */; };
+		74782CEC284F2D1B0077CDCC /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAA284F2D190077CDCC /* 1-17에스더.txt */; };
+		74782CED284F2D1B0077CDCC /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAB284F2D190077CDCC /* 2-09갈라디아서.txt */; };
+		74782CEE284F2D1B0077CDCC /* 1-19시편.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAC284F2D190077CDCC /* 1-19시편.txt */; };
+		74782CEF284F2D1B0077CDCC /* 1-27다니엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAD284F2D190077CDCC /* 1-27다니엘.txt */; };
+		74782CF0284F2D1B0077CDCC /* 1-25예레미야애가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAE284F2D190077CDCC /* 1-25예레미야애가.txt */; };
+		74782CF1284F2D1B0077CDCC /* 2-24요한이서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAF284F2D190077CDCC /* 2-24요한이서.txt */; };
+		74782CF2284F2D1B0077CDCC /* 1-13역대상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB0284F2D190077CDCC /* 1-13역대상.txt */; };
+		74782CF3284F2D1B0077CDCC /* 1-38스가랴.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB1284F2D190077CDCC /* 1-38스가랴.txt */; };
+		74782CF4284F2D1B0077CDCC /* 2-06로마서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB2284F2D190077CDCC /* 2-06로마서.txt */; };
+		74782CF5284F2D1B0077CDCC /* 1-23이사야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB3284F2D190077CDCC /* 1-23이사야.txt */; };
+		74782CF6284F2D1B0077CDCC /* 1-10사무엘하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB4284F2D190077CDCC /* 1-10사무엘하.txt */; };
+		74782CF7284F2D1B0077CDCC /* 2-08고린도후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB5284F2D190077CDCC /* 2-08고린도후서.txt */; };
+		74782CF8284F2D1B0077CDCC /* 2-27요한계시록.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB6284F2D190077CDCC /* 2-27요한계시록.txt */; };
+		74782CF9284F2D1B0077CDCC /* 1-26에스겔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB7284F2D190077CDCC /* 1-26에스겔.txt */; };
+		74782CFA284F2D1B0077CDCC /* 1-31오바댜.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB8284F2D190077CDCC /* 1-31오바댜.txt */; };
+		74782CFB284F2D1B0077CDCC /* 1-37학개.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CB9284F2D190077CDCC /* 1-37학개.txt */; };
+		74782CFC284F2D1B0077CDCC /* 1-03레위기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CBA284F2D190077CDCC /* 1-03레위기.txt */; };
+		74782CFD284F2D1B0077CDCC /* 1-30아모스.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CBB284F2D190077CDCC /* 1-30아모스.txt */; };
+		74782CFE284F2D1B0077CDCC /* 2-15디모데전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CBC284F2D190077CDCC /* 2-15디모데전서.txt */; };
+		74782CFF284F2D1B0077CDCC /* 2-21베드로전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CBD284F2D190077CDCC /* 2-21베드로전서.txt */; };
+		74782D00284F2D1B0077CDCC /* 2-10에베소서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CBE284F2D190077CDCC /* 2-10에베소서.txt */; };
+		74782D01284F2D1B0077CDCC /* 1-21전도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CBF284F2D190077CDCC /* 1-21전도서.txt */; };
+		74782D02284F2D1B0077CDCC /* 2-20야고보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC0284F2D190077CDCC /* 2-20야고보서.txt */; };
+		74782D03284F2D1B0077CDCC /* 2-12골로새서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC1284F2D1A0077CDCC /* 2-12골로새서.txt */; };
+		74782D04284F2D1B0077CDCC /* 2-19히브리서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC2284F2D1A0077CDCC /* 2-19히브리서.txt */; };
+		74782D05284F2D1B0077CDCC /* 1-15에스라.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC3284F2D1A0077CDCC /* 1-15에스라.txt */; };
+		74782D06284F2D1B0077CDCC /* 1-08룻기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC4284F2D1A0077CDCC /* 1-08룻기.txt */; };
+		74782D07284F2D1B0077CDCC /* 2-14데살로니가후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC5284F2D1A0077CDCC /* 2-14데살로니가후서.txt */; };
+		74782D08284F2D1B0077CDCC /* 1-28호세아.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC6284F2D1A0077CDCC /* 1-28호세아.txt */; };
+		74782D09284F2D1B0077CDCC /* 2-13데살로니가전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC7284F2D1A0077CDCC /* 2-13데살로니가전서.txt */; };
+		74782D0A284F2D1B0077CDCC /* 2-18빌레몬서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC8284F2D1A0077CDCC /* 2-18빌레몬서.txt */; };
+		74782D0B284F2D1B0077CDCC /* 1-29요엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CC9284F2D1A0077CDCC /* 1-29요엘.txt */; };
+		74782D0C284F2D1B0077CDCC /* 1-33미가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CCA284F2D1A0077CDCC /* 1-33미가.txt */; };
+		74782D0D284F2D1B0077CDCC /* 1-09사무엘상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CCB284F2D1A0077CDCC /* 1-09사무엘상.txt */; };
+		74782D0E284F2D1B0077CDCC /* 1-02출애굽기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CCC284F2D1A0077CDCC /* 1-02출애굽기.txt */; };
+		74782D0F284F2D1B0077CDCC /* 1-39말라기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CCD284F2D1A0077CDCC /* 1-39말라기.txt */; };
+		74782D10284F2D1B0077CDCC /* 1-34나훔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CCE284F2D1A0077CDCC /* 1-34나훔.txt */; };
+		74782D11284F2D1B0077CDCC /* 2-07고린도전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CCF284F2D1A0077CDCC /* 2-07고린도전서.txt */; };
+		74782D12284F2D1B0077CDCC /* 2-05사도행전.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD0284F2D1A0077CDCC /* 2-05사도행전.txt */; };
+		74782D13284F2D1B0077CDCC /* 2-16디모데후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD1284F2D1A0077CDCC /* 2-16디모데후서.txt */; };
+		74782D14284F2D1B0077CDCC /* 2-22베드로후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD2284F2D1A0077CDCC /* 2-22베드로후서.txt */; };
+		74782D15284F2D1B0077CDCC /* 2-17디도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD3284F2D1A0077CDCC /* 2-17디도서.txt */; };
+		74782D16284F2D1B0077CDCC /* 1-06여호수아.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD4284F2D1A0077CDCC /* 1-06여호수아.txt */; };
+		74782D17284F2D1B0077CDCC /* 2-01마태복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD5284F2D1A0077CDCC /* 2-01마태복음.txt */; };
+		74782D18284F2D1B0077CDCC /* 2-02마가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD6284F2D1A0077CDCC /* 2-02마가복음.txt */; };
+		74782D19284F2D1B0077CDCC /* 1-14역대하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD7284F2D1A0077CDCC /* 1-14역대하.txt */; };
+		74782D1A284F2D1B0077CDCC /* 1-32요나.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD8284F2D1A0077CDCC /* 1-32요나.txt */; };
+		74782D1B284F2D1B0077CDCC /* 2-03누가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CD9284F2D1A0077CDCC /* 2-03누가복음.txt */; };
+		74782D1C284F2D1B0077CDCC /* 1-20잠언.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CDA284F2D1A0077CDCC /* 1-20잠언.txt */; };
+		74782D1D284F2D1B0077CDCC /* 1-07사사기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CDB284F2D1A0077CDCC /* 1-07사사기.txt */; };
+		74782D1E284F2D1B0077CDCC /* 1-18욥기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CDC284F2D1A0077CDCC /* 1-18욥기.txt */; };
+		74782D1F284F2D1B0077CDCC /* 1-11열왕기상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CDD284F2D1A0077CDCC /* 1-11열왕기상.txt */; };
+		74782D20284F2D1B0077CDCC /* 1-05신명기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CDE284F2D1A0077CDCC /* 1-05신명기.txt */; };
+		74782D21284F2D1B0077CDCC /* 1-36스바냐.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CDF284F2D1A0077CDCC /* 1-36스바냐.txt */; };
+		74782D22284F2D1B0077CDCC /* 2-04요한복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE0284F2D1A0077CDCC /* 2-04요한복음.txt */; };
+		74782D23284F2D1B0077CDCC /* 2-26유다서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE1284F2D1A0077CDCC /* 2-26유다서.txt */; };
+		74782D24284F2D1B0077CDCC /* 1-01창세기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE2284F2D1B0077CDCC /* 1-01창세기.txt */; };
+		74782D25284F2D1B0077CDCC /* 1-22아가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE3284F2D1B0077CDCC /* 1-22아가.txt */; };
+		74782D26284F2D1B0077CDCC /* 1-16느헤미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE4284F2D1B0077CDCC /* 1-16느헤미야.txt */; };
+		74782D27284F2D1B0077CDCC /* 1-24예레미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE5284F2D1B0077CDCC /* 1-24예레미야.txt */; };
+		74782D28284F2D1B0077CDCC /* 2-11빌립보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE6284F2D1B0077CDCC /* 2-11빌립보서.txt */; };
+		74782D29284F2D1B0077CDCC /* 2-23요한일서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE7284F2D1B0077CDCC /* 2-23요한일서.txt */; };
+		74782D2A284F2D1B0077CDCC /* 2-25요한삼서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE8284F2D1B0077CDCC /* 2-25요한삼서.txt */; };
+		74782D2B284F2D1B0077CDCC /* 1-04민수기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE9284F2D1B0077CDCC /* 1-04민수기.txt */; };
+		74782D2C284F2D1B0077CDCC /* 1-12열왕기하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CEA284F2D1B0077CDCC /* 1-12열왕기하.txt */; };
+		74782D2D284F2D1B0077CDCC /* 1-35하박국.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CEB284F2D1B0077CDCC /* 1-35하박국.txt */; };
+		74782D2F284F3B300077CDCC /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D2E284F3B300077CDCC /* BibleView.swift */; };
 		7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4542848804B00517BAF /* WriteBibleApp.swift */; };
 		7481B4572848804B00517BAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4562848804B00517BAF /* ContentView.swift */; };
 		7481B4592848804D00517BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481B4582848804D00517BAF /* Assets.xcassets */; };
@@ -14,6 +84,75 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74782B0D284F05F90077CDCC /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
+		74782C1C284F08820077CDCC /* BibleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewModel.swift; sourceTree = "<group>"; };
+		74782CAA284F2D190077CDCC /* 1-17에스더.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
+		74782CAB284F2D190077CDCC /* 2-09갈라디아서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-09갈라디아서.txt"; sourceTree = "<group>"; };
+		74782CAC284F2D190077CDCC /* 1-19시편.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-19시편.txt"; sourceTree = "<group>"; };
+		74782CAD284F2D190077CDCC /* 1-27다니엘.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-27다니엘.txt"; sourceTree = "<group>"; };
+		74782CAE284F2D190077CDCC /* 1-25예레미야애가.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-25예레미야애가.txt"; sourceTree = "<group>"; };
+		74782CAF284F2D190077CDCC /* 2-24요한이서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-24요한이서.txt"; sourceTree = "<group>"; };
+		74782CB0284F2D190077CDCC /* 1-13역대상.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-13역대상.txt"; sourceTree = "<group>"; };
+		74782CB1284F2D190077CDCC /* 1-38스가랴.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-38스가랴.txt"; sourceTree = "<group>"; };
+		74782CB2284F2D190077CDCC /* 2-06로마서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-06로마서.txt"; sourceTree = "<group>"; };
+		74782CB3284F2D190077CDCC /* 1-23이사야.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-23이사야.txt"; sourceTree = "<group>"; };
+		74782CB4284F2D190077CDCC /* 1-10사무엘하.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-10사무엘하.txt"; sourceTree = "<group>"; };
+		74782CB5284F2D190077CDCC /* 2-08고린도후서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-08고린도후서.txt"; sourceTree = "<group>"; };
+		74782CB6284F2D190077CDCC /* 2-27요한계시록.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-27요한계시록.txt"; sourceTree = "<group>"; };
+		74782CB7284F2D190077CDCC /* 1-26에스겔.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-26에스겔.txt"; sourceTree = "<group>"; };
+		74782CB8284F2D190077CDCC /* 1-31오바댜.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-31오바댜.txt"; sourceTree = "<group>"; };
+		74782CB9284F2D190077CDCC /* 1-37학개.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-37학개.txt"; sourceTree = "<group>"; };
+		74782CBA284F2D190077CDCC /* 1-03레위기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-03레위기.txt"; sourceTree = "<group>"; };
+		74782CBB284F2D190077CDCC /* 1-30아모스.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-30아모스.txt"; sourceTree = "<group>"; };
+		74782CBC284F2D190077CDCC /* 2-15디모데전서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-15디모데전서.txt"; sourceTree = "<group>"; };
+		74782CBD284F2D190077CDCC /* 2-21베드로전서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-21베드로전서.txt"; sourceTree = "<group>"; };
+		74782CBE284F2D190077CDCC /* 2-10에베소서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-10에베소서.txt"; sourceTree = "<group>"; };
+		74782CBF284F2D190077CDCC /* 1-21전도서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-21전도서.txt"; sourceTree = "<group>"; };
+		74782CC0284F2D190077CDCC /* 2-20야고보서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-20야고보서.txt"; sourceTree = "<group>"; };
+		74782CC1284F2D1A0077CDCC /* 2-12골로새서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-12골로새서.txt"; sourceTree = "<group>"; };
+		74782CC2284F2D1A0077CDCC /* 2-19히브리서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-19히브리서.txt"; sourceTree = "<group>"; };
+		74782CC3284F2D1A0077CDCC /* 1-15에스라.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-15에스라.txt"; sourceTree = "<group>"; };
+		74782CC4284F2D1A0077CDCC /* 1-08룻기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-08룻기.txt"; sourceTree = "<group>"; };
+		74782CC5284F2D1A0077CDCC /* 2-14데살로니가후서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-14데살로니가후서.txt"; sourceTree = "<group>"; };
+		74782CC6284F2D1A0077CDCC /* 1-28호세아.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-28호세아.txt"; sourceTree = "<group>"; };
+		74782CC7284F2D1A0077CDCC /* 2-13데살로니가전서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-13데살로니가전서.txt"; sourceTree = "<group>"; };
+		74782CC8284F2D1A0077CDCC /* 2-18빌레몬서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-18빌레몬서.txt"; sourceTree = "<group>"; };
+		74782CC9284F2D1A0077CDCC /* 1-29요엘.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-29요엘.txt"; sourceTree = "<group>"; };
+		74782CCA284F2D1A0077CDCC /* 1-33미가.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-33미가.txt"; sourceTree = "<group>"; };
+		74782CCB284F2D1A0077CDCC /* 1-09사무엘상.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-09사무엘상.txt"; sourceTree = "<group>"; };
+		74782CCC284F2D1A0077CDCC /* 1-02출애굽기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-02출애굽기.txt"; sourceTree = "<group>"; };
+		74782CCD284F2D1A0077CDCC /* 1-39말라기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-39말라기.txt"; sourceTree = "<group>"; };
+		74782CCE284F2D1A0077CDCC /* 1-34나훔.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-34나훔.txt"; sourceTree = "<group>"; };
+		74782CCF284F2D1A0077CDCC /* 2-07고린도전서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-07고린도전서.txt"; sourceTree = "<group>"; };
+		74782CD0284F2D1A0077CDCC /* 2-05사도행전.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-05사도행전.txt"; sourceTree = "<group>"; };
+		74782CD1284F2D1A0077CDCC /* 2-16디모데후서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-16디모데후서.txt"; sourceTree = "<group>"; };
+		74782CD2284F2D1A0077CDCC /* 2-22베드로후서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-22베드로후서.txt"; sourceTree = "<group>"; };
+		74782CD3284F2D1A0077CDCC /* 2-17디도서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-17디도서.txt"; sourceTree = "<group>"; };
+		74782CD4284F2D1A0077CDCC /* 1-06여호수아.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-06여호수아.txt"; sourceTree = "<group>"; };
+		74782CD5284F2D1A0077CDCC /* 2-01마태복음.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-01마태복음.txt"; sourceTree = "<group>"; };
+		74782CD6284F2D1A0077CDCC /* 2-02마가복음.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-02마가복음.txt"; sourceTree = "<group>"; };
+		74782CD7284F2D1A0077CDCC /* 1-14역대하.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-14역대하.txt"; sourceTree = "<group>"; };
+		74782CD8284F2D1A0077CDCC /* 1-32요나.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-32요나.txt"; sourceTree = "<group>"; };
+		74782CD9284F2D1A0077CDCC /* 2-03누가복음.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-03누가복음.txt"; sourceTree = "<group>"; };
+		74782CDA284F2D1A0077CDCC /* 1-20잠언.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-20잠언.txt"; sourceTree = "<group>"; };
+		74782CDB284F2D1A0077CDCC /* 1-07사사기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-07사사기.txt"; sourceTree = "<group>"; };
+		74782CDC284F2D1A0077CDCC /* 1-18욥기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-18욥기.txt"; sourceTree = "<group>"; };
+		74782CDD284F2D1A0077CDCC /* 1-11열왕기상.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-11열왕기상.txt"; sourceTree = "<group>"; };
+		74782CDE284F2D1A0077CDCC /* 1-05신명기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-05신명기.txt"; sourceTree = "<group>"; };
+		74782CDF284F2D1A0077CDCC /* 1-36스바냐.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-36스바냐.txt"; sourceTree = "<group>"; };
+		74782CE0284F2D1A0077CDCC /* 2-04요한복음.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-04요한복음.txt"; sourceTree = "<group>"; };
+		74782CE1284F2D1A0077CDCC /* 2-26유다서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-26유다서.txt"; sourceTree = "<group>"; };
+		74782CE2284F2D1B0077CDCC /* 1-01창세기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
+		74782CE3284F2D1B0077CDCC /* 1-22아가.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-22아가.txt"; sourceTree = "<group>"; };
+		74782CE4284F2D1B0077CDCC /* 1-16느헤미야.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-16느헤미야.txt"; sourceTree = "<group>"; };
+		74782CE5284F2D1B0077CDCC /* 1-24예레미야.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-24예레미야.txt"; sourceTree = "<group>"; };
+		74782CE6284F2D1B0077CDCC /* 2-11빌립보서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-11빌립보서.txt"; sourceTree = "<group>"; };
+		74782CE7284F2D1B0077CDCC /* 2-23요한일서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-23요한일서.txt"; sourceTree = "<group>"; };
+		74782CE8284F2D1B0077CDCC /* 2-25요한삼서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-25요한삼서.txt"; sourceTree = "<group>"; };
+		74782CE9284F2D1B0077CDCC /* 1-04민수기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-04민수기.txt"; sourceTree = "<group>"; };
+		74782CEA284F2D1B0077CDCC /* 1-12열왕기하.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-12열왕기하.txt"; sourceTree = "<group>"; };
+		74782CEB284F2D1B0077CDCC /* 1-35하박국.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-35하박국.txt"; sourceTree = "<group>"; };
+		74782D2E284F3B300077CDCC /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
 		7481B4512848804B00517BAF /* WriteBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WriteBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7481B4542848804B00517BAF /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
 		7481B4562848804B00517BAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,15 +165,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74782C20284F08B50077CDCC /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74782C21284F0CBE0077CDCC /* 개역개정-text */ = {
+			isa = PBXGroup;
+			children = (
+				74782CE2284F2D1B0077CDCC /* 1-01창세기.txt */,
+				74782CCC284F2D1A0077CDCC /* 1-02출애굽기.txt */,
+				74782CBA284F2D190077CDCC /* 1-03레위기.txt */,
+				74782CE9284F2D1B0077CDCC /* 1-04민수기.txt */,
+				74782CDE284F2D1A0077CDCC /* 1-05신명기.txt */,
+				74782CD4284F2D1A0077CDCC /* 1-06여호수아.txt */,
+				74782CDB284F2D1A0077CDCC /* 1-07사사기.txt */,
+				74782CC4284F2D1A0077CDCC /* 1-08룻기.txt */,
+				74782CCB284F2D1A0077CDCC /* 1-09사무엘상.txt */,
+				74782CB4284F2D190077CDCC /* 1-10사무엘하.txt */,
+				74782CDD284F2D1A0077CDCC /* 1-11열왕기상.txt */,
+				74782CEA284F2D1B0077CDCC /* 1-12열왕기하.txt */,
+				74782CB0284F2D190077CDCC /* 1-13역대상.txt */,
+				74782CD7284F2D1A0077CDCC /* 1-14역대하.txt */,
+				74782CC3284F2D1A0077CDCC /* 1-15에스라.txt */,
+				74782CE4284F2D1B0077CDCC /* 1-16느헤미야.txt */,
+				74782CAA284F2D190077CDCC /* 1-17에스더.txt */,
+				74782CDC284F2D1A0077CDCC /* 1-18욥기.txt */,
+				74782CAC284F2D190077CDCC /* 1-19시편.txt */,
+				74782CDA284F2D1A0077CDCC /* 1-20잠언.txt */,
+				74782CBF284F2D190077CDCC /* 1-21전도서.txt */,
+				74782CE3284F2D1B0077CDCC /* 1-22아가.txt */,
+				74782CB3284F2D190077CDCC /* 1-23이사야.txt */,
+				74782CE5284F2D1B0077CDCC /* 1-24예레미야.txt */,
+				74782CAE284F2D190077CDCC /* 1-25예레미야애가.txt */,
+				74782CB7284F2D190077CDCC /* 1-26에스겔.txt */,
+				74782CAD284F2D190077CDCC /* 1-27다니엘.txt */,
+				74782CC6284F2D1A0077CDCC /* 1-28호세아.txt */,
+				74782CC9284F2D1A0077CDCC /* 1-29요엘.txt */,
+				74782CBB284F2D190077CDCC /* 1-30아모스.txt */,
+				74782CB8284F2D190077CDCC /* 1-31오바댜.txt */,
+				74782CD8284F2D1A0077CDCC /* 1-32요나.txt */,
+				74782CCA284F2D1A0077CDCC /* 1-33미가.txt */,
+				74782CCE284F2D1A0077CDCC /* 1-34나훔.txt */,
+				74782CEB284F2D1B0077CDCC /* 1-35하박국.txt */,
+				74782CDF284F2D1A0077CDCC /* 1-36스바냐.txt */,
+				74782CB9284F2D190077CDCC /* 1-37학개.txt */,
+				74782CB1284F2D190077CDCC /* 1-38스가랴.txt */,
+				74782CCD284F2D1A0077CDCC /* 1-39말라기.txt */,
+				74782CD5284F2D1A0077CDCC /* 2-01마태복음.txt */,
+				74782CD6284F2D1A0077CDCC /* 2-02마가복음.txt */,
+				74782CD9284F2D1A0077CDCC /* 2-03누가복음.txt */,
+				74782CE0284F2D1A0077CDCC /* 2-04요한복음.txt */,
+				74782CD0284F2D1A0077CDCC /* 2-05사도행전.txt */,
+				74782CB2284F2D190077CDCC /* 2-06로마서.txt */,
+				74782CCF284F2D1A0077CDCC /* 2-07고린도전서.txt */,
+				74782CB5284F2D190077CDCC /* 2-08고린도후서.txt */,
+				74782CAB284F2D190077CDCC /* 2-09갈라디아서.txt */,
+				74782CBE284F2D190077CDCC /* 2-10에베소서.txt */,
+				74782CE6284F2D1B0077CDCC /* 2-11빌립보서.txt */,
+				74782CC1284F2D1A0077CDCC /* 2-12골로새서.txt */,
+				74782CC7284F2D1A0077CDCC /* 2-13데살로니가전서.txt */,
+				74782CC5284F2D1A0077CDCC /* 2-14데살로니가후서.txt */,
+				74782CBC284F2D190077CDCC /* 2-15디모데전서.txt */,
+				74782CD1284F2D1A0077CDCC /* 2-16디모데후서.txt */,
+				74782CD3284F2D1A0077CDCC /* 2-17디도서.txt */,
+				74782CC8284F2D1A0077CDCC /* 2-18빌레몬서.txt */,
+				74782CC2284F2D1A0077CDCC /* 2-19히브리서.txt */,
+				74782CC0284F2D190077CDCC /* 2-20야고보서.txt */,
+				74782CBD284F2D190077CDCC /* 2-21베드로전서.txt */,
+				74782CD2284F2D1A0077CDCC /* 2-22베드로후서.txt */,
+				74782CE7284F2D1B0077CDCC /* 2-23요한일서.txt */,
+				74782CAF284F2D190077CDCC /* 2-24요한이서.txt */,
+				74782CE8284F2D1B0077CDCC /* 2-25요한삼서.txt */,
+				74782CE1284F2D1A0077CDCC /* 2-26유다서.txt */,
+				74782CB6284F2D190077CDCC /* 2-27요한계시록.txt */,
+			);
+			path = "개역개정-text";
+			sourceTree = "<group>";
+		};
 		7481B4482848804B00517BAF = {
 			isa = PBXGroup;
 			children = (
+				74782C21284F0CBE0077CDCC /* 개역개정-text */,
 				7481B4532848804B00517BAF /* WriteBible */,
 				7481B4522848804B00517BAF /* Products */,
 			);
@@ -55,6 +269,9 @@
 				7481B4562848804B00517BAF /* ContentView.swift */,
 				7481B4582848804D00517BAF /* Assets.xcassets */,
 				7481B45A2848804D00517BAF /* Preview Content */,
+				74782B0D284F05F90077CDCC /* Bible.swift */,
+				74782C1C284F08820077CDCC /* BibleViewModel.swift */,
+				74782D2E284F3B300077CDCC /* BibleView.swift */,
 			);
 			path = WriteBible;
 			sourceTree = "<group>";
@@ -83,6 +300,9 @@
 			dependencies = (
 			);
 			name = WriteBible;
+			packageProductDependencies = (
+				74782C1F284F08B50077CDCC /* RealmSwift */,
+			);
 			productName = WriteBible;
 			productReference = 7481B4512848804B00517BAF /* WriteBible.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +331,9 @@
 				Base,
 			);
 			mainGroup = 7481B4482848804B00517BAF;
+			packageReferences = (
+				74782C1E284F08B50077CDCC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 7481B4522848804B00517BAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +348,74 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74782D2C284F2D1B0077CDCC /* 1-12열왕기하.txt in Resources */,
+				74782CF3284F2D1B0077CDCC /* 1-38스가랴.txt in Resources */,
+				74782CF1284F2D1B0077CDCC /* 2-24요한이서.txt in Resources */,
+				74782D00284F2D1B0077CDCC /* 2-10에베소서.txt in Resources */,
+				74782CF7284F2D1B0077CDCC /* 2-08고린도후서.txt in Resources */,
+				74782D03284F2D1B0077CDCC /* 2-12골로새서.txt in Resources */,
+				74782D02284F2D1B0077CDCC /* 2-20야고보서.txt in Resources */,
+				74782CFC284F2D1B0077CDCC /* 1-03레위기.txt in Resources */,
+				74782D0D284F2D1B0077CDCC /* 1-09사무엘상.txt in Resources */,
+				74782D0E284F2D1B0077CDCC /* 1-02출애굽기.txt in Resources */,
+				74782D10284F2D1B0077CDCC /* 1-34나훔.txt in Resources */,
+				74782D05284F2D1B0077CDCC /* 1-15에스라.txt in Resources */,
+				74782CF0284F2D1B0077CDCC /* 1-25예레미야애가.txt in Resources */,
+				74782D11284F2D1B0077CDCC /* 2-07고린도전서.txt in Resources */,
+				74782D25284F2D1B0077CDCC /* 1-22아가.txt in Resources */,
+				74782D07284F2D1B0077CDCC /* 2-14데살로니가후서.txt in Resources */,
+				74782D18284F2D1B0077CDCC /* 2-02마가복음.txt in Resources */,
+				74782D28284F2D1B0077CDCC /* 2-11빌립보서.txt in Resources */,
+				74782D0B284F2D1B0077CDCC /* 1-29요엘.txt in Resources */,
+				74782CF2284F2D1B0077CDCC /* 1-13역대상.txt in Resources */,
+				74782CF9284F2D1B0077CDCC /* 1-26에스겔.txt in Resources */,
+				74782D1A284F2D1B0077CDCC /* 1-32요나.txt in Resources */,
+				74782D15284F2D1B0077CDCC /* 2-17디도서.txt in Resources */,
+				74782D06284F2D1B0077CDCC /* 1-08룻기.txt in Resources */,
+				74782D29284F2D1B0077CDCC /* 2-23요한일서.txt in Resources */,
+				74782CEC284F2D1B0077CDCC /* 1-17에스더.txt in Resources */,
+				74782D1D284F2D1B0077CDCC /* 1-07사사기.txt in Resources */,
+				74782D17284F2D1B0077CDCC /* 2-01마태복음.txt in Resources */,
+				74782CFA284F2D1B0077CDCC /* 1-31오바댜.txt in Resources */,
+				74782CF8284F2D1B0077CDCC /* 2-27요한계시록.txt in Resources */,
+				74782D1C284F2D1B0077CDCC /* 1-20잠언.txt in Resources */,
+				74782CEE284F2D1B0077CDCC /* 1-19시편.txt in Resources */,
+				74782CF4284F2D1B0077CDCC /* 2-06로마서.txt in Resources */,
+				74782CF6284F2D1B0077CDCC /* 1-10사무엘하.txt in Resources */,
+				74782D04284F2D1B0077CDCC /* 2-19히브리서.txt in Resources */,
+				74782D1E284F2D1B0077CDCC /* 1-18욥기.txt in Resources */,
+				74782D1F284F2D1B0077CDCC /* 1-11열왕기상.txt in Resources */,
+				74782D2D284F2D1B0077CDCC /* 1-35하박국.txt in Resources */,
+				74782D22284F2D1B0077CDCC /* 2-04요한복음.txt in Resources */,
+				74782CFB284F2D1B0077CDCC /* 1-37학개.txt in Resources */,
+				74782CFE284F2D1B0077CDCC /* 2-15디모데전서.txt in Resources */,
+				74782D0C284F2D1B0077CDCC /* 1-33미가.txt in Resources */,
+				74782D21284F2D1B0077CDCC /* 1-36스바냐.txt in Resources */,
+				74782D16284F2D1B0077CDCC /* 1-06여호수아.txt in Resources */,
+				74782D0A284F2D1B0077CDCC /* 2-18빌레몬서.txt in Resources */,
+				74782CED284F2D1B0077CDCC /* 2-09갈라디아서.txt in Resources */,
+				74782D19284F2D1B0077CDCC /* 1-14역대하.txt in Resources */,
+				74782D23284F2D1B0077CDCC /* 2-26유다서.txt in Resources */,
+				74782D12284F2D1B0077CDCC /* 2-05사도행전.txt in Resources */,
 				7481B45C2848804D00517BAF /* Preview Assets.xcassets in Resources */,
+				74782D26284F2D1B0077CDCC /* 1-16느헤미야.txt in Resources */,
+				74782D13284F2D1B0077CDCC /* 2-16디모데후서.txt in Resources */,
+				74782CFD284F2D1B0077CDCC /* 1-30아모스.txt in Resources */,
 				7481B4592848804D00517BAF /* Assets.xcassets in Resources */,
+				74782D2A284F2D1B0077CDCC /* 2-25요한삼서.txt in Resources */,
+				74782D20284F2D1B0077CDCC /* 1-05신명기.txt in Resources */,
+				74782D08284F2D1B0077CDCC /* 1-28호세아.txt in Resources */,
+				74782D09284F2D1B0077CDCC /* 2-13데살로니가전서.txt in Resources */,
+				74782D01284F2D1B0077CDCC /* 1-21전도서.txt in Resources */,
+				74782D0F284F2D1B0077CDCC /* 1-39말라기.txt in Resources */,
+				74782CEF284F2D1B0077CDCC /* 1-27다니엘.txt in Resources */,
+				74782D14284F2D1B0077CDCC /* 2-22베드로후서.txt in Resources */,
+				74782CFF284F2D1B0077CDCC /* 2-21베드로전서.txt in Resources */,
+				74782D24284F2D1B0077CDCC /* 1-01창세기.txt in Resources */,
+				74782D1B284F2D1B0077CDCC /* 2-03누가복음.txt in Resources */,
+				74782CF5284F2D1B0077CDCC /* 1-23이사야.txt in Resources */,
+				74782D27284F2D1B0077CDCC /* 1-24예레미야.txt in Resources */,
+				74782D2B284F2D1B0077CDCC /* 1-04민수기.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +427,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7481B4572848804B00517BAF /* ContentView.swift in Sources */,
+				74782C1D284F08820077CDCC /* BibleViewModel.swift in Sources */,
+				74782D2F284F3B300077CDCC /* BibleView.swift in Sources */,
+				74782B0E284F05F90077CDCC /* Bible.swift in Sources */,
 				7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +631,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74782C1E284F08B50077CDCC /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74782C1F284F08B50077CDCC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74782C1E284F08B50077CDCC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7481B4492848804B00517BAF /* Project object */;
 }
