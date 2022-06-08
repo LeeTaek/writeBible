@@ -20,29 +20,43 @@ struct ContentView: View {
     
     @State private var currentLine = Line()
     @State private var lines: [Line] = []
-//    @State var bible = [Bible]()
+    @State var bibleTitle: BibleTitle = .genesis
     
     var body: some View {
         ZStack {
             VStack {
                 HStack{
-                    Text("Title")
+                    
+                    //MARK: - Title
+                    Picker("성경본문", selection: $bibleTitle) {
+                        ForEach(BibleTitle.allCases, id: \.self) {
+                            Text($0.rawValue)
+                                .tag($0)
+                        }
+                    }
                     
                     Spacer()
                     
-                    Text("Date")
+                    Image(systemName: "pencil")
+                    
                 }
-                            
+        
+            
+               
+                
                 HStack {
                     GeometryReader {
-                        sen
+            
+                            sen
                             .frame(width: $0.size.width / 2)
+                        
+                            
+                            
+                        
                             
                     }
                     
                   
-//                    Text("writeLine")
-//                        .padding()
                 }
        
                 
@@ -54,6 +68,12 @@ struct ContentView: View {
         }//ZStack
        
     }
+    
+//
+//    var BibleTitleView: some View {
+//        Picker
+//    }
+//    
     
     
     
@@ -87,7 +107,7 @@ struct ContentView: View {
     //MARK: - 성경 본문 view
     var sen: some View {
                 
-        List(makeBible(title: "1-01창세기.txt").filter{$0.chapter == 1}, id: \.sentence ) {
+        List(makeBible(title: bibleTitle.rawValue).filter{$0.chapter == 1}, id: \.sentence ) {
                BibleView(bibleSentence: $0)
                 .listRowSeparator(.hidden)
 
@@ -154,9 +174,6 @@ struct ContentView: View {
         
         return bible
     }
-    
-    
-    
     
     
 }

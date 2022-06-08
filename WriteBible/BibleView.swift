@@ -28,7 +28,7 @@ struct BibleView: View {
 struct BibleView_Previews: PreviewProvider {
 
     static var previews: some View {
-        var bible = Bible(title: "창세기", chapterTitle: nil, chapter: 1, section: 1, sentence: "태초에 하나님이 천지를 창조하시니라")
+        let bible = Bible(title: "창세기", chapterTitle: nil, chapter: 1, section: 1, sentence: "태초에 하나님이 천지를 창조하시니라")
         
         
         BibleView(bibleSentence: bible)
