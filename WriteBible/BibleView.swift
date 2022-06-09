@@ -15,11 +15,11 @@ struct BibleView: View {
         HStack(alignment: .top) {
             Text("\(bibleSentence.section)")
                 .bold()
-                .font(.system(size: 16))
+                .font(.system(size: 18))
             
             Text("\(bibleSentence.sentence)")
                 .tracking(3)
-                .font(.system(size: 15))
+                .font(.system(size: 17))
 
         }
     }

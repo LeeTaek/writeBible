@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		741797D12850A7B8000EA75E /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741797D02850A7B8000EA75E /* PKCanvas.swift */; };
 		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
 		74782C1D284F08820077CDCC /* BibleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782C1C284F08820077CDCC /* BibleViewModel.swift */; };
 		74782C20284F08B50077CDCC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74782C1F284F08B50077CDCC /* RealmSwift */; };
@@ -66,7 +67,6 @@
 		74782D21284F2D1B0077CDCC /* 1-36스바냐.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CDF284F2D1A0077CDCC /* 1-36스바냐.txt */; };
 		74782D22284F2D1B0077CDCC /* 2-04요한복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE0284F2D1A0077CDCC /* 2-04요한복음.txt */; };
 		74782D23284F2D1B0077CDCC /* 2-26유다서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE1284F2D1A0077CDCC /* 2-26유다서.txt */; };
-		74782D24284F2D1B0077CDCC /* 1-01창세기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE2284F2D1B0077CDCC /* 1-01창세기.txt */; };
 		74782D25284F2D1B0077CDCC /* 1-22아가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE3284F2D1B0077CDCC /* 1-22아가.txt */; };
 		74782D26284F2D1B0077CDCC /* 1-16느헤미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE4284F2D1B0077CDCC /* 1-16느헤미야.txt */; };
 		74782D27284F2D1B0077CDCC /* 1-24예레미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CE5284F2D1B0077CDCC /* 1-24예레미야.txt */; };
@@ -77,6 +77,9 @@
 		74782D2C284F2D1B0077CDCC /* 1-12열왕기하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CEA284F2D1B0077CDCC /* 1-12열왕기하.txt */; };
 		74782D2D284F2D1B0077CDCC /* 1-35하박국.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CEB284F2D1B0077CDCC /* 1-35하박국.txt */; };
 		74782D2F284F3B300077CDCC /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D2E284F3B300077CDCC /* BibleView.swift */; };
+		74782D5828507D0B0077CDCC /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D5728507D0B0077CDCC /* WriteView.swift */; };
+		74782D5A285086D90077CDCC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D59285086D90077CDCC /* TitleView.swift */; };
+		74782D5E2850937F0077CDCC /* 1-01창세기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782D5D2850937F0077CDCC /* 1-01창세기.txt */; };
 		7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4542848804B00517BAF /* WriteBibleApp.swift */; };
 		7481B4572848804B00517BAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4562848804B00517BAF /* ContentView.swift */; };
 		7481B4592848804D00517BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481B4582848804D00517BAF /* Assets.xcassets */; };
@@ -84,6 +87,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		741797D02850A7B8000EA75E /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
 		74782B0D284F05F90077CDCC /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
 		74782C1C284F08820077CDCC /* BibleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewModel.swift; sourceTree = "<group>"; };
 		74782CAA284F2D190077CDCC /* 1-17에스더.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
@@ -142,7 +146,6 @@
 		74782CDF284F2D1A0077CDCC /* 1-36스바냐.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-36스바냐.txt"; sourceTree = "<group>"; };
 		74782CE0284F2D1A0077CDCC /* 2-04요한복음.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-04요한복음.txt"; sourceTree = "<group>"; };
 		74782CE1284F2D1A0077CDCC /* 2-26유다서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-26유다서.txt"; sourceTree = "<group>"; };
-		74782CE2284F2D1B0077CDCC /* 1-01창세기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
 		74782CE3284F2D1B0077CDCC /* 1-22아가.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-22아가.txt"; sourceTree = "<group>"; };
 		74782CE4284F2D1B0077CDCC /* 1-16느헤미야.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-16느헤미야.txt"; sourceTree = "<group>"; };
 		74782CE5284F2D1B0077CDCC /* 1-24예레미야.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-24예레미야.txt"; sourceTree = "<group>"; };
@@ -153,6 +156,9 @@
 		74782CEA284F2D1B0077CDCC /* 1-12열왕기하.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-12열왕기하.txt"; sourceTree = "<group>"; };
 		74782CEB284F2D1B0077CDCC /* 1-35하박국.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-35하박국.txt"; sourceTree = "<group>"; };
 		74782D2E284F3B300077CDCC /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
+		74782D5728507D0B0077CDCC /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		74782D59285086D90077CDCC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		74782D5D2850937F0077CDCC /* 1-01창세기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
 		7481B4512848804B00517BAF /* WriteBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WriteBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7481B4542848804B00517BAF /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
 		7481B4562848804B00517BAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -175,7 +181,7 @@
 		74782C21284F0CBE0077CDCC /* 개역개정-text */ = {
 			isa = PBXGroup;
 			children = (
-				74782CE2284F2D1B0077CDCC /* 1-01창세기.txt */,
+				74782D5D2850937F0077CDCC /* 1-01창세기.txt */,
 				74782CCC284F2D1A0077CDCC /* 1-02출애굽기.txt */,
 				74782CBA284F2D190077CDCC /* 1-03레위기.txt */,
 				74782CE9284F2D1B0077CDCC /* 1-04민수기.txt */,
@@ -272,6 +278,9 @@
 				74782B0D284F05F90077CDCC /* Bible.swift */,
 				74782C1C284F08820077CDCC /* BibleViewModel.swift */,
 				74782D2E284F3B300077CDCC /* BibleView.swift */,
+				74782D59285086D90077CDCC /* TitleView.swift */,
+				74782D5728507D0B0077CDCC /* WriteView.swift */,
+				741797D02850A7B8000EA75E /* PKCanvas.swift */,
 			);
 			path = WriteBible;
 			sourceTree = "<group>";
@@ -395,6 +404,7 @@
 				74782D0A284F2D1B0077CDCC /* 2-18빌레몬서.txt in Resources */,
 				74782CED284F2D1B0077CDCC /* 2-09갈라디아서.txt in Resources */,
 				74782D19284F2D1B0077CDCC /* 1-14역대하.txt in Resources */,
+				74782D5E2850937F0077CDCC /* 1-01창세기.txt in Resources */,
 				74782D23284F2D1B0077CDCC /* 2-26유다서.txt in Resources */,
 				74782D12284F2D1B0077CDCC /* 2-05사도행전.txt in Resources */,
 				7481B45C2848804D00517BAF /* Preview Assets.xcassets in Resources */,
@@ -411,7 +421,6 @@
 				74782CEF284F2D1B0077CDCC /* 1-27다니엘.txt in Resources */,
 				74782D14284F2D1B0077CDCC /* 2-22베드로후서.txt in Resources */,
 				74782CFF284F2D1B0077CDCC /* 2-21베드로전서.txt in Resources */,
-				74782D24284F2D1B0077CDCC /* 1-01창세기.txt in Resources */,
 				74782D1B284F2D1B0077CDCC /* 2-03누가복음.txt in Resources */,
 				74782CF5284F2D1B0077CDCC /* 1-23이사야.txt in Resources */,
 				74782D27284F2D1B0077CDCC /* 1-24예레미야.txt in Resources */,
@@ -426,8 +435,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				741797D12850A7B8000EA75E /* PKCanvas.swift in Sources */,
 				7481B4572848804B00517BAF /* ContentView.swift in Sources */,
 				74782C1D284F08820077CDCC /* BibleViewModel.swift in Sources */,
+				74782D5828507D0B0077CDCC /* WriteView.swift in Sources */,
+				74782D5A285086D90077CDCC /* TitleView.swift in Sources */,
 				74782D2F284F3B300077CDCC /* BibleView.swift in Sources */,
 				74782B0E284F05F90077CDCC /* Bible.swift in Sources */,
 				7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */,

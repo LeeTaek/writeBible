@@ -21,9 +21,9 @@ struct Bible {
   
     
     //MARK: - fileRead
-    func fileRead(title: String) -> [String] {
+    func fileRead() -> [String] {
         // 파일 경로
-        let textPath = Bundle.main.path(forResource: "\(title)", ofType: nil)
+        let textPath = Bundle.main.path(forResource: "\(self.title)", ofType: nil)
         // 한글 인코딩
         let encodingEUCKR = CFStringConvertEncodingToNSStringEncoding(0x0422)
     
@@ -43,7 +43,7 @@ struct Bible {
     
     //MARK: - 바이블 객체 생성
     func makeBible(title: String) -> [Bible] {
-        let str = fileRead(title: title)
+        let str = fileRead()
         var bible = [Bible]()
         
         str.forEach{
@@ -60,13 +60,24 @@ struct Bible {
             
             guard let chapter = Int(prefix.components(separatedBy: ":").first!) else {return}
             guard let section = Int(prefix.components(separatedBy: ":").last!) else {return}
-            
          
             bible.append(Bible(title: title, chapterTitle: nil, chapter: chapter, section: section, sentence: surfix))
         }
         
         return bible
     }
+    
+    
+    
+    //MARK: - 마지막 장
+    func lastChapter() -> Int {
+        let str = fileRead().last!
+        guard let chapter = Int(str.components(separatedBy: ":").first!) else { return 0 }
+        
+        return chapter
+    }
+    
+    
 }
 
 
@@ -139,7 +150,6 @@ enum BibleTitle: String, Equatable, CaseIterable {
     case john3 = "2-25요한삼서.txt"
     case jude = "2-26유다서.txt"
     case revelation = "2-27요한계시록.txt"
-    
 }
 
 
