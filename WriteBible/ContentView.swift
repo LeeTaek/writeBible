@@ -12,10 +12,14 @@ import RealmSwift
 struct ContentView: View {
     @State var bibleTitle: BibleTitle = .genesis
     @State var chapterNum: Int = 1
-
+    @State private var showingSheet = false
+        
+    
     var body: some View {
         VStack {
-            TitleView(title: $bibleTitle, chapter: $chapterNum)
+            
+            title
+//            TitleView(title: $bibleTitle, chapter: $chapterNum)
     
             HStack {
                 GeometryReader {
@@ -32,14 +36,20 @@ struct ContentView: View {
     
     //MARK: - Title View
     var title: some View {
-        HStack{
-            Picker("성경본문", selection: $bibleTitle) {
-                ForEach(BibleTitle.allCases, id: \.self) {
-                    Text($0.rawValue)
-                        .tag($0)
-                }
-            }
-            .padding()
+        let ti = bibleTitle.rawValue.components(separatedBy: ".").first!
+        let name = ti[4..<ti.count]
+        
+        return HStack{
+            
+            Button("\(name) \(chapterNum)장") {
+                        self.showingSheet.toggle()
+                    }
+                    .foregroundColor(.black)
+                    .font(.system(size: 30))
+                    .padding()
+                    .sheet(isPresented: $showingSheet) {
+                        TitleView(title: $bibleTitle, chapter: $chapterNum)
+                    }
             
             Spacer()
             

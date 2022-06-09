@@ -10,7 +10,8 @@ import SwiftUI
 struct TitleView: View {
     @Binding var title: BibleTitle
     @Binding var chapter: Int
-    
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         VStack {
             contents
@@ -41,6 +42,7 @@ struct TitleView: View {
         
     }
     
+    
     //MARK: - 성경 목차
     var bibleList: some View {
         let lastChapter = Bible(title: title.rawValue, chapterTitle: nil).lastChapter()
@@ -60,7 +62,9 @@ struct TitleView: View {
             
             List{
                 ForEach((1...lastChapter), id: \.self) { value in
-                    Button(action: { self.chapter = value}) {
+                    Button(action: { self.chapter = value
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
                         Text("\(value)")
                     }
                 }
