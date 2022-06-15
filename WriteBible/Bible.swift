@@ -9,15 +9,8 @@ struct Bible {
     var chapter: Int = 1
     var section: Int = 1
     var sentence: String = ""
-//
-//    init(title: String, chapterTitle: String?, chapter: Int, section: Int, sentence: String) {            // Preview 보기 위한 Recruit 예
-//        self.title = title
-//        self.chapterTitle = chapterTitle
-//        self.chapter = chapter
-//        self.section = section
-//        self.sentence = sentence
-//    }
-//
+    var isWrite: Bool = false
+
   
     
     //MARK: - fileRead

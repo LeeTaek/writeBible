@@ -17,6 +17,7 @@ struct TitleView: View {
             contents
             
             bibleList
+                .padding()
 
         }
     }
@@ -31,7 +32,8 @@ struct TitleView: View {
             
             Spacer()
             
-            Button(action: {print("X")}) {
+            Button(action: {                        self.presentationMode.wrappedValue.dismiss()
+            }) {
                 Image(systemName: "x.circle")
                     .foregroundColor(.black)
                     

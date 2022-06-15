@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		741797D12850A7B8000EA75E /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741797D02850A7B8000EA75E /* PKCanvas.swift */; };
 		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
-		74782C1D284F08820077CDCC /* BibleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782C1C284F08820077CDCC /* BibleViewModel.swift */; };
-		74782C20284F08B50077CDCC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74782C1F284F08B50077CDCC /* RealmSwift */; };
 		74782CEC284F2D1B0077CDCC /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAA284F2D190077CDCC /* 1-17에스더.txt */; };
 		74782CED284F2D1B0077CDCC /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAB284F2D190077CDCC /* 2-09갈라디아서.txt */; };
 		74782CEE284F2D1B0077CDCC /* 1-19시편.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAC284F2D190077CDCC /* 1-19시편.txt */; };
@@ -77,9 +75,9 @@
 		74782D2C284F2D1B0077CDCC /* 1-12열왕기하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CEA284F2D1B0077CDCC /* 1-12열왕기하.txt */; };
 		74782D2D284F2D1B0077CDCC /* 1-35하박국.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CEB284F2D1B0077CDCC /* 1-35하박국.txt */; };
 		74782D2F284F3B300077CDCC /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D2E284F3B300077CDCC /* BibleView.swift */; };
-		74782D5828507D0B0077CDCC /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D5728507D0B0077CDCC /* WriteView.swift */; };
 		74782D5A285086D90077CDCC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D59285086D90077CDCC /* TitleView.swift */; };
 		74782D5E2850937F0077CDCC /* 1-01창세기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782D5D2850937F0077CDCC /* 1-01창세기.txt */; };
+		7480A51728580C4600493DC9 /* WriteBibleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7480A51628580C4600493DC9 /* WriteBibleDataModel.swift */; };
 		7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4542848804B00517BAF /* WriteBibleApp.swift */; };
 		7481B4572848804B00517BAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4562848804B00517BAF /* ContentView.swift */; };
 		7481B4592848804D00517BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481B4582848804D00517BAF /* Assets.xcassets */; };
@@ -89,7 +87,6 @@
 /* Begin PBXFileReference section */
 		741797D02850A7B8000EA75E /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
 		74782B0D284F05F90077CDCC /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
-		74782C1C284F08820077CDCC /* BibleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewModel.swift; sourceTree = "<group>"; };
 		74782CAA284F2D190077CDCC /* 1-17에스더.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
 		74782CAB284F2D190077CDCC /* 2-09갈라디아서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-09갈라디아서.txt"; sourceTree = "<group>"; };
 		74782CAC284F2D190077CDCC /* 1-19시편.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-19시편.txt"; sourceTree = "<group>"; };
@@ -156,9 +153,9 @@
 		74782CEA284F2D1B0077CDCC /* 1-12열왕기하.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-12열왕기하.txt"; sourceTree = "<group>"; };
 		74782CEB284F2D1B0077CDCC /* 1-35하박국.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-35하박국.txt"; sourceTree = "<group>"; };
 		74782D2E284F3B300077CDCC /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
-		74782D5728507D0B0077CDCC /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		74782D59285086D90077CDCC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		74782D5D2850937F0077CDCC /* 1-01창세기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
+		7480A51628580C4600493DC9 /* WriteBibleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleDataModel.swift; sourceTree = "<group>"; };
 		7481B4512848804B00517BAF /* WriteBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WriteBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7481B4542848804B00517BAF /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
 		7481B4562848804B00517BAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,7 +168,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74782C20284F08B50077CDCC /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +272,10 @@
 				7481B4582848804D00517BAF /* Assets.xcassets */,
 				7481B45A2848804D00517BAF /* Preview Content */,
 				74782B0D284F05F90077CDCC /* Bible.swift */,
-				74782C1C284F08820077CDCC /* BibleViewModel.swift */,
 				74782D2E284F3B300077CDCC /* BibleView.swift */,
 				74782D59285086D90077CDCC /* TitleView.swift */,
-				74782D5728507D0B0077CDCC /* WriteView.swift */,
 				741797D02850A7B8000EA75E /* PKCanvas.swift */,
+				7480A51628580C4600493DC9 /* WriteBibleDataModel.swift */,
 			);
 			path = WriteBible;
 			sourceTree = "<group>";
@@ -310,7 +305,6 @@
 			);
 			name = WriteBible;
 			packageProductDependencies = (
-				74782C1F284F08B50077CDCC /* RealmSwift */,
 			);
 			productName = WriteBible;
 			productReference = 7481B4512848804B00517BAF /* WriteBible.app */;
@@ -341,7 +335,6 @@
 			);
 			mainGroup = 7481B4482848804B00517BAF;
 			packageReferences = (
-				74782C1E284F08B50077CDCC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 7481B4522848804B00517BAF /* Products */;
 			projectDirPath = "";
@@ -437,11 +430,10 @@
 			files = (
 				741797D12850A7B8000EA75E /* PKCanvas.swift in Sources */,
 				7481B4572848804B00517BAF /* ContentView.swift in Sources */,
-				74782C1D284F08820077CDCC /* BibleViewModel.swift in Sources */,
-				74782D5828507D0B0077CDCC /* WriteView.swift in Sources */,
 				74782D5A285086D90077CDCC /* TitleView.swift in Sources */,
 				74782D2F284F3B300077CDCC /* BibleView.swift in Sources */,
 				74782B0E284F05F90077CDCC /* Bible.swift in Sources */,
+				7480A51728580C4600493DC9 /* WriteBibleDataModel.swift in Sources */,
 				7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,25 +635,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		74782C1E284F08B50077CDCC /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		74782C1F284F08B50077CDCC /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74782C1E284F08B50077CDCC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7481B4492848804B00517BAF /* Project object */;
 }
