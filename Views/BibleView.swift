@@ -36,6 +36,7 @@ struct BibleView: View {
     
     
     
+    
     //MARK: - 성경 본문 view
     var writeView: some View {
         let bible = Bible(title: bibleTitle.rawValue, chapterTitle: nil)

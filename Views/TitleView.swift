@@ -8,21 +8,47 @@
 import SwiftUI
 
 struct TitleView: View {
-    @Binding var title: BibleTitle
+    @Binding var bibleTitle: BibleTitle
     @Binding var chapter: Int
-    @Environment(\.presentationMode) var presentationMode
+    @Binding var showTitleSheet: Bool
 
     var body: some View {
-        VStack {
-            contents
+            title
+    }
+    
+    
+    
+    
+    //MARK: - Title View
+    var title: some View {
+        let ti = bibleTitle.rawValue.components(separatedBy: ".").first!
+        let name = ti[4..<ti.count]
+        
+        return HStack{
             
-            bibleList
-                .padding()
+            Button("\(name) \(chapter)장") {
+                        self.showTitleSheet.toggle()
+                    }
+                    .font(.system(size: 30))
+                    .padding()
+                    .sheet(isPresented: $showTitleSheet) {
+                        VStack {
+                            contents
+                            
+                            bibleList
+                                .padding()
+                        }
+                    }
+            
+            Spacer()
+
         }
     }
     
     
-    //MARK: - 제목
+    
+    
+    //MARK: - Sheet창의 성경 제목
     var contents: some View {
         HStack {
             Text("목차")
@@ -33,7 +59,7 @@ struct TitleView: View {
             Spacer()
             
             Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
+                showTitleSheet = false
             }) {
                 Image(systemName: "x.circle")
                     .foregroundColor(.black)
@@ -46,9 +72,9 @@ struct TitleView: View {
     }
     
     
-    //MARK: - 성경 목차
+    //MARK: - Sheet창의 장
     var bibleList: some View {
-        let lastChapter = Bible(title: title.rawValue, chapterTitle: nil).lastChapter()
+        let lastChapter = Bible(title: bibleTitle.rawValue, chapterTitle: nil).lastChapter()
         
         return HStack {
             List {
@@ -56,7 +82,7 @@ struct TitleView: View {
                     let ti = value.rawValue.components(separatedBy: ".").first!
                     let name = ti[4..<ti.count]
                     
-                    Button(action: { self.title = value}) {
+                    Button(action: { self.bibleTitle = value}) {
                         Text("\(name)")
                     }
                 }
@@ -66,7 +92,8 @@ struct TitleView: View {
             List{
                 ForEach((1...lastChapter), id: \.self) { value in
                     Button(action: { self.chapter = value
-                        self.presentationMode.wrappedValue.dismiss()
+                        showTitleSheet = false
+
                     }) {
                         Text("\(value)")
                     }
@@ -83,6 +110,6 @@ struct TitleView_Previews: PreviewProvider {
    
     
     static var previews: some View {
-        TitleView(title: .constant(.genesis), chapter: .constant(1))
+        TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(false))
     }
 }
