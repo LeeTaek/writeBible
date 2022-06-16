@@ -8,15 +8,14 @@
 import Foundation
 import PencilKit
 import SwiftUI
-import Introspect
+
 
 struct PKCanvas: UIViewRepresentable {
     
     @Binding var canvasView: PKCanvasView
-
+    @Binding var canvasSize: CGSize
     
     let picker = PKToolPicker.init()
-    
     
     func makeUIView(context: Context) -> PKCanvasView {
         canvasView.drawingPolicy = .pencilOnly
@@ -27,9 +26,8 @@ struct PKCanvas: UIViewRepresentable {
         self.canvasView.alwaysBounceVertical = true
         self.canvasView.showsVerticalScrollIndicator = true
         
-//        self.canvasView.contentSize.height = 5000
-//
-
+        
+        
         return canvasView
     }
     
@@ -38,6 +36,8 @@ struct PKCanvas: UIViewRepresentable {
     
 
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
+        self.canvasView.contentSize = self.canvasSize
+        
         picker.addObserver(canvasView)
         picker.setVisible(true, forFirstResponder: uiView)
         DispatchQueue.main.async {

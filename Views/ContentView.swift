@@ -6,50 +6,19 @@
 //
 
 import SwiftUI
-import PencilKit
-import SimultaneouslyScrollView
-import Introspect
-
-//View의 크기를 알기위해 사용하는 변수
-struct sizePreferenceKey: PreferenceKey{
-    static var defaultValue: CGSize = .zero
-    static func reduce(value: inout CGSize, nextValue: () -> CGSize) {}
-}
-
 
 struct ContentView: View {
     @State var bibleTitle: BibleTitle = .genesis
     @State var chapterNum: Int = 1
     @State private var showingSheet = false
     @State var showingWriteView = false
-    @State private var canvasView = PKCanvasView()
-//    @Environment (\.managedObjectContext) var viewContext
-    
-    //사용하는 메인뷰의 높이를 구하기위해 사용하는 변수
-    @State var writeViewSize : CGFloat = .zero
-    
-    // 동시 스크롤을 위한 객체 생성.
-    let simultaneouslyScrollViewHandler = SimultaneouslyScrollViewHandlerFactory.create()
-    
+
     
     var body: some View {
-        simultaneouslyScrollViewHandler.register(scrollView: canvasView)
-        
-   
         return VStack {
             title
         
-            
             BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum)
-                .introspectScrollView { simultaneouslyScrollViewHandler.register(scrollView: $0) }      // 동시 스크롤을 위한 동기화
-                .overlay() {
-                    PKCanvas(canvasView: $canvasView)
-                }
-            
-
-            
-
-     
         }
     }
     

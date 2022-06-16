@@ -18,9 +18,9 @@ struct TitleView: View {
             
             bibleList
                 .padding()
-
         }
     }
+    
     
     //MARK: - 제목
     var contents: some View {
@@ -32,7 +32,8 @@ struct TitleView: View {
             
             Spacer()
             
-            Button(action: {                        self.presentationMode.wrappedValue.dismiss()
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "x.circle")
                     .foregroundColor(.black)

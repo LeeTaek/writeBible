@@ -180,6 +180,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74436423285B27B1005241E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7480A51628580C4600493DC9 /* WriteBibleDataModel.swift */,
+				74782B0D284F05F90077CDCC /* Bible.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74436424285B27D0005241E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74782D59285086D90077CDCC /* TitleView.swift */,
+				7481B4562848804B00517BAF /* ContentView.swift */,
+				74782D2E284F3B300077CDCC /* BibleSentenceView.swift */,
+				741797D02850A7B8000EA75E /* PKCanvas.swift */,
+				74436405285B0E67005241E7 /* BibleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		74782C21284F0CBE0077CDCC /* 개역개정-text */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,8 +277,10 @@
 		7481B4482848804B00517BAF = {
 			isa = PBXGroup;
 			children = (
-				74782C21284F0CBE0077CDCC /* 개역개정-text */,
 				7481B4532848804B00517BAF /* WriteBible */,
+				74782C21284F0CBE0077CDCC /* 개역개정-text */,
+				74436423285B27B1005241E7 /* Models */,
+				74436424285B27D0005241E7 /* Views */,
 				7481B4522848804B00517BAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -274,16 +297,9 @@
 			isa = PBXGroup;
 			children = (
 				7481B4542848804B00517BAF /* WriteBibleApp.swift */,
-				7481B4562848804B00517BAF /* ContentView.swift */,
 				7481B45A2848804D00517BAF /* Preview Content */,
 				7481B4582848804D00517BAF /* Assets.xcassets */,
 				7481B45B2848804D00517BAF /* Preview Assets.xcassets */,
-				74782B0D284F05F90077CDCC /* Bible.swift */,
-				74782D2E284F3B300077CDCC /* BibleSentenceView.swift */,
-				74782D59285086D90077CDCC /* TitleView.swift */,
-				741797D02850A7B8000EA75E /* PKCanvas.swift */,
-				7480A51628580C4600493DC9 /* WriteBibleDataModel.swift */,
-				74436405285B0E67005241E7 /* BibleView.swift */,
 			);
 			path = WriteBible;
 			sourceTree = "<group>";
