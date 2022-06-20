@@ -11,6 +11,7 @@
 		74436401285ADD3A005241E7 /* SimultaneouslyScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 74436400285ADD3A005241E7 /* SimultaneouslyScrollView */; };
 		74436404285ADE78005241E7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 74436403285ADE78005241E7 /* Introspect */; };
 		74436406285B0E67005241E7 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74436405285B0E67005241E7 /* BibleView.swift */; };
+		74436427285B3799005241E7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74436426285B3799005241E7 /* RealmSwift */; };
 		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
 		74782CEC284F2D1B0077CDCC /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAA284F2D190077CDCC /* 1-17에스더.txt */; };
 		74782CED284F2D1B0077CDCC /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAB284F2D190077CDCC /* 2-09갈라디아서.txt */; };
@@ -172,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74436427285B3799005241E7 /* RealmSwift in Frameworks */,
 				74436401285ADD3A005241E7 /* SimultaneouslyScrollView in Frameworks */,
 				74436404285ADE78005241E7 /* Introspect in Frameworks */,
 			);
@@ -330,6 +332,7 @@
 			packageProductDependencies = (
 				74436400285ADD3A005241E7 /* SimultaneouslyScrollView */,
 				74436403285ADE78005241E7 /* Introspect */,
+				74436426285B3799005241E7 /* RealmSwift */,
 			);
 			productName = WriteBible;
 			productReference = 7481B4512848804B00517BAF /* WriteBible.app */;
@@ -362,6 +365,7 @@
 			packageReferences = (
 				744363FF285ADD3A005241E7 /* XCRemoteSwiftPackageReference "SimultaneouslyScrollView" */,
 				74436402285ADE78005241E7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				74436425285B3799005241E7 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 7481B4522848804B00517BAF /* Products */;
 			projectDirPath = "";
@@ -681,6 +685,14 @@
 				minimumVersion = 0.1.4;
 			};
 		};
+		74436425285B3799005241E7 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -693,6 +705,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 74436402285ADE78005241E7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		74436426285B3799005241E7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74436425285B3799005241E7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

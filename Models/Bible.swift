@@ -13,7 +13,7 @@ struct Bible {
 
   
     
-    //MARK: - fileRead
+    //MARK: - txt fileRead
     func fileRead() -> [String] {
         // 파일 경로
         let textPath = Bundle.main.path(forResource: "\(self.title)", ofType: nil)

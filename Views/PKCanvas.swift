@@ -14,8 +14,17 @@ struct PKCanvas: UIViewRepresentable {
     
     @Binding var canvasView: PKCanvasView
     @Binding var canvasSize: CGSize
-    
+
     let picker = PKToolPicker.init()
+
+    /// Data model for the drawing displayed by this view controller.
+    var dataModelController = WriteBibleDataModel()
+    
+    /// Private drawing state.
+    var drawingIndex: Int = 0
+    var hasModifiedDrawing = false
+    
+    
     
     func makeUIView(context: Context) -> PKCanvasView {
         canvasView.drawingPolicy = .pencilOnly
@@ -26,8 +35,14 @@ struct PKCanvas: UIViewRepresentable {
         self.canvasView.alwaysBounceVertical = true
         self.canvasView.showsVerticalScrollIndicator = true
         
+        self.canvasView.minimumZoomScale = 0.5
+        self.canvasView.maximumZoomScale = 1.5
+        self.canvasView.translatesAutoresizingMaskIntoConstraints = true
         
-        
+        dataModelController.newDrawing()
+        dataModelController.loadDataModel()
+        self.canvasView.drawing = dataModelController.drawings[drawingIndex]
+
         return canvasView
     }
     
@@ -37,17 +52,34 @@ struct PKCanvas: UIViewRepresentable {
 
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
         self.canvasView.contentSize = self.canvasSize
-        
+
         picker.addObserver(canvasView)
         picker.setVisible(true, forFirstResponder: uiView)
         DispatchQueue.main.async {
             uiView.becomeFirstResponder()
         }
+        
+        dataModelController.updateDrawing(canvasView.drawing, at: drawingIndex)
+
     }
 
-
-  
+    
+    
+    
+    func setCanvasDrawing(data drawingData: Data? = nil, height: Double) {
+        if let data = drawingData { canvasView.drawing = try! PKDrawing(data: data)}
+        if height == 0 {
+            canvasView.contentSize.height = UIScreen.main.bounds.height
+        } else {
+            canvasView.contentSize.height = height
+        }
+    }
+    
+    
 }
+
+
+
 
 
 extension PKDrawing {
