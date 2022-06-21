@@ -11,27 +11,37 @@ import SimultaneouslyScrollView
 import Introspect
 import Combine
 
+
 struct BibleView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: Drawing.entity(), sortDescriptors: []) var drawings: FetchedResults<Drawing>
+    
     @Binding var bibleTitle: BibleTitle
     @Binding var chapterNum: Int
-    @State private var canvasView = PKCanvasView()
-
+//    @State private var canvasView = PKCanvasView()
+        
     //사용하는 메인뷰의 높이를 구하기위해 사용하는 변수
     @State var writeViewSize : CGSize = .zero
-    
     
     // 동시 스크롤을 위한 객체 생성.
     let simultaneouslyScrollViewHandler = SimultaneouslyScrollViewHandlerFactory.create()
     
     
     var body: some View {
-        simultaneouslyScrollViewHandler.register(scrollView: canvasView)
+//        simultaneouslyScrollViewHandler.register(scrollView: canvasView)
         
         return writeView
             .introspectScrollView { simultaneouslyScrollViewHandler.register(scrollView: $0) }      // 동시 스크롤을 위한 동기화
             .overlay() {
-                    PKCanvas(canvasView: $canvasView, canvasSize: $writeViewSize)
+//                    PKCanvas(canvasView: $canvasView, canvasSize: $writeViewSize)
+                ForEach(drawings) { draw in
+                    DrawingView(id: draw.id, data: draw.canvasData, title: self.bibleTitle.rawValue)
+                }
+                .introspectScrollView { simultaneouslyScrollViewHandler.register(scrollView: $0) }
+
+           // 동시 스크롤을 위한 동기화
             }
+            
     }
     
     
@@ -92,9 +102,9 @@ struct BibleView: View {
 }
 
 struct BibleView_Previews: PreviewProvider {
-    
     static var previews: some View {
         BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1))
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 

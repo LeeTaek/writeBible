@@ -12,7 +12,6 @@ struct ContentView: View {
     @State var chapterNum: Int = 1
     @State private var showingSheet = false
 
-
     
     var body: some View {
         return VStack {

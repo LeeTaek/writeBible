@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7403D11A28608C4C00AB68A3 /* DrawingCavasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D11928608C4C00AB68A3 /* DrawingCavasViewController.swift */; };
+		7403D11C28608EF800AB68A3 /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D11B28608EF800AB68A3 /* DrawingCanvasView.swift */; };
+		7403D11F28608F3400AB68A3 /* Drawing_Pencil_Kit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7403D11D28608F3400AB68A3 /* Drawing_Pencil_Kit.xcdatamodeld */; };
+		7403D1232860974500AB68A3 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1222860974500AB68A3 /* DrawingView.swift */; };
+		7403D1252861796600AB68A3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1242861796600AB68A3 /* Persistence.swift */; };
 		741797D12850A7B8000EA75E /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741797D02850A7B8000EA75E /* PKCanvas.swift */; };
 		74436401285ADD3A005241E7 /* SimultaneouslyScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 74436400285ADD3A005241E7 /* SimultaneouslyScrollView */; };
 		74436404285ADE78005241E7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 74436403285ADE78005241E7 /* Introspect */; };
 		74436406285B0E67005241E7 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74436405285B0E67005241E7 /* BibleView.swift */; };
-		74436427285B3799005241E7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74436426285B3799005241E7 /* RealmSwift */; };
 		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
 		74782CEC284F2D1B0077CDCC /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAA284F2D190077CDCC /* 1-17에스더.txt */; };
 		74782CED284F2D1B0077CDCC /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAB284F2D190077CDCC /* 2-09갈라디아서.txt */; };
@@ -89,6 +93,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7403D11928608C4C00AB68A3 /* DrawingCavasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCavasViewController.swift; sourceTree = "<group>"; };
+		7403D11B28608EF800AB68A3 /* DrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
+		7403D11E28608F3400AB68A3 /* Drawing_Pencil_Kit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drawing_Pencil_Kit.xcdatamodel; sourceTree = "<group>"; };
+		7403D1222860974500AB68A3 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		7403D1242861796600AB68A3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		741797D02850A7B8000EA75E /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
 		74436405285B0E67005241E7 /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
 		74782B0D284F05F90077CDCC /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
@@ -173,7 +182,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74436427285B3799005241E7 /* RealmSwift in Frameworks */,
 				74436401285ADD3A005241E7 /* SimultaneouslyScrollView in Frameworks */,
 				74436404285ADE78005241E7 /* Introspect in Frameworks */,
 			);
@@ -199,6 +207,10 @@
 				74782D2E284F3B300077CDCC /* BibleSentenceView.swift */,
 				741797D02850A7B8000EA75E /* PKCanvas.swift */,
 				74436405285B0E67005241E7 /* BibleView.swift */,
+				7403D11928608C4C00AB68A3 /* DrawingCavasViewController.swift */,
+				7403D11B28608EF800AB68A3 /* DrawingCanvasView.swift */,
+				7403D1222860974500AB68A3 /* DrawingView.swift */,
+				7403D1242861796600AB68A3 /* Persistence.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +314,7 @@
 				7481B45A2848804D00517BAF /* Preview Content */,
 				7481B4582848804D00517BAF /* Assets.xcassets */,
 				7481B45B2848804D00517BAF /* Preview Assets.xcassets */,
+				7403D11D28608F3400AB68A3 /* Drawing_Pencil_Kit.xcdatamodeld */,
 			);
 			path = WriteBible;
 			sourceTree = "<group>";
@@ -332,7 +345,6 @@
 			packageProductDependencies = (
 				74436400285ADD3A005241E7 /* SimultaneouslyScrollView */,
 				74436403285ADE78005241E7 /* Introspect */,
-				74436426285B3799005241E7 /* RealmSwift */,
 			);
 			productName = WriteBible;
 			productReference = 7481B4512848804B00517BAF /* WriteBible.app */;
@@ -365,7 +377,6 @@
 			packageReferences = (
 				744363FF285ADD3A005241E7 /* XCRemoteSwiftPackageReference "SimultaneouslyScrollView" */,
 				74436402285ADE78005241E7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				74436425285B3799005241E7 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 7481B4522848804B00517BAF /* Products */;
 			projectDirPath = "";
@@ -462,9 +473,14 @@
 				741797D12850A7B8000EA75E /* PKCanvas.swift in Sources */,
 				7481B4572848804B00517BAF /* ContentView.swift in Sources */,
 				74782D5A285086D90077CDCC /* TitleView.swift in Sources */,
+				7403D1232860974500AB68A3 /* DrawingView.swift in Sources */,
 				74436406285B0E67005241E7 /* BibleView.swift in Sources */,
+				7403D11A28608C4C00AB68A3 /* DrawingCavasViewController.swift in Sources */,
 				74782D2F284F3B300077CDCC /* BibleSentenceView.swift in Sources */,
+				7403D1252861796600AB68A3 /* Persistence.swift in Sources */,
+				7403D11F28608F3400AB68A3 /* Drawing_Pencil_Kit.xcdatamodeld in Sources */,
 				74782B0E284F05F90077CDCC /* Bible.swift in Sources */,
+				7403D11C28608EF800AB68A3 /* DrawingCanvasView.swift in Sources */,
 				7480A51728580C4600493DC9 /* WriteBibleDataModel.swift in Sources */,
 				7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */,
 			);
@@ -685,14 +701,6 @@
 				minimumVersion = 0.1.4;
 			};
 		};
-		74436425285B3799005241E7 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -706,12 +714,20 @@
 			package = 74436402285ADE78005241E7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
 		};
-		74436426285B3799005241E7 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74436425285B3799005241E7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		7403D11D28608F3400AB68A3 /* Drawing_Pencil_Kit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7403D11E28608F3400AB68A3 /* Drawing_Pencil_Kit.xcdatamodel */,
+			);
+			currentVersion = 7403D11E28608F3400AB68A3 /* Drawing_Pencil_Kit.xcdatamodel */;
+			path = Drawing_Pencil_Kit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7481B4492848804B00517BAF /* Project object */;
 }

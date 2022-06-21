@@ -8,13 +8,18 @@
 import Foundation
 import PencilKit
 import SwiftUI
+import CoreData
 
 
 struct PKCanvas: UIViewRepresentable {
-    
+    @Environment(\.managedObjectContext) private var viewContext
+
     @Binding var canvasView: PKCanvasView
     @Binding var canvasSize: CGSize
-
+//    @Binding var data: PKDrawing
+   
+    
+    
     let picker = PKToolPicker.init()
 
     /// Data model for the drawing displayed by this view controller.
@@ -23,6 +28,7 @@ struct PKCanvas: UIViewRepresentable {
     /// Private drawing state.
     var drawingIndex: Int = 0
     var hasModifiedDrawing = false
+    
     
     
     
@@ -38,11 +44,8 @@ struct PKCanvas: UIViewRepresentable {
         self.canvasView.minimumZoomScale = 0.5
         self.canvasView.maximumZoomScale = 1.5
         self.canvasView.translatesAutoresizingMaskIntoConstraints = true
-        
-        dataModelController.newDrawing()
-        dataModelController.loadDataModel()
-        self.canvasView.drawing = dataModelController.drawings[drawingIndex]
 
+        
         return canvasView
     }
     
@@ -52,7 +55,7 @@ struct PKCanvas: UIViewRepresentable {
 
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
         self.canvasView.contentSize = self.canvasSize
-
+        
         picker.addObserver(canvasView)
         picker.setVisible(true, forFirstResponder: uiView)
         DispatchQueue.main.async {
@@ -60,7 +63,7 @@ struct PKCanvas: UIViewRepresentable {
         }
         
         dataModelController.updateDrawing(canvasView.drawing, at: drawingIndex)
-
+        self.canvasView.drawing = dataModelController.drawings[drawingIndex]
     }
 
     

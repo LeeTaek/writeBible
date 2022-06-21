@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct TitleView: View {
+    @Environment (\.managedObjectContext) var viewContext
+    
     @Binding var bibleTitle: BibleTitle
     @Binding var chapter: Int
     @Binding var showTitleSheet: Bool
-
+    
     var body: some View {
             title
     }
@@ -91,7 +93,20 @@ struct TitleView: View {
             
             List{
                 ForEach((1...lastChapter), id: \.self) { value in
-                    Button(action: { self.chapter = value
+                    Button(action: {
+                        let drawing = Drawing(context: viewContext)
+                        drawing.title = bibleTitle.rawValue
+                        drawing.id = UUID()
+                        
+                        do {
+                            try viewContext.save()
+                        }
+                        catch{
+                            print(error)
+                        }
+                        
+                        
+                        self.chapter = value
                         showTitleSheet = false
 
                     }) {

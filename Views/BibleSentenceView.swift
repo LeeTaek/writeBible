@@ -31,7 +31,6 @@ struct BibleSentenceView: View {
             .font(.system(size: 17))
             .lineSpacing(10) //텍스트 줄간격 조절    }
             .coordinateSpace(name: "test")
-
     }
     
 }
