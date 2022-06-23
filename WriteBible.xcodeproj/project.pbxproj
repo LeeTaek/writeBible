@@ -201,13 +201,6 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		7403D1362862CB9E00AB68A3 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		74436423285B27B1005241E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,7 +317,6 @@
 		7481B4532848804B00517BAF /* WriteBible */ = {
 			isa = PBXGroup;
 			children = (
-				7403D1362862CB9E00AB68A3 /* CoreData */,
 				7403D1292862C6BD00AB68A3 /* Managers */,
 				7403D1262862C69A00AB68A3 /* ViewController */,
 				7481B4542848804B00517BAF /* WriteBibleApp.swift */,
