@@ -7,18 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7403D12B2862C6EE00AB68A3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D12A2862C6EE00AB68A3 /* CoreDataManager.swift */; };
 		7403D12D2862C72A00AB68A3 /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D12C2862C72A00AB68A3 /* DrawingDocument.swift */; };
 		7403D12F2862C74E00AB68A3 /* DrawingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D12E2862C74E00AB68A3 /* DrawingManager.swift */; };
 		7403D1312862C81F00AB68A3 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1302862C81F00AB68A3 /* DrawingViewController.swift */; };
 		7403D1332862C84900AB68A3 /* DrawingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1322862C84900AB68A3 /* DrawingWrapper.swift */; };
-		7403D1352862C90200AB68A3 /* addNewDocumnet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1342862C90200AB68A3 /* addNewDocumnet.swift */; };
-		7403D1392862CBAE00AB68A3 /* DrawingDocModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1372862CBAE00AB68A3 /* DrawingDocModel.xcdatamodeld */; };
 		7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7403D13B2862E49800AB68A3 /* RealmSwift */; };
 		7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D13D2862E4AF00AB68A3 /* RealmManager.swift */; };
-		741797D12850A7B8000EA75E /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741797D02850A7B8000EA75E /* PKCanvas.swift */; };
-		74436401285ADD3A005241E7 /* SimultaneouslyScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 74436400285ADD3A005241E7 /* SimultaneouslyScrollView */; };
-		74436404285ADE78005241E7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 74436403285ADE78005241E7 /* Introspect */; };
 		74436406285B0E67005241E7 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74436405285B0E67005241E7 /* BibleView.swift */; };
 		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
 		74782CEC284F2D1B0077CDCC /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAA284F2D190077CDCC /* 1-17에스더.txt */; };
@@ -89,7 +83,6 @@
 		74782D2F284F3B300077CDCC /* BibleSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D2E284F3B300077CDCC /* BibleSentenceView.swift */; };
 		74782D5A285086D90077CDCC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D59285086D90077CDCC /* TitleView.swift */; };
 		74782D5E2850937F0077CDCC /* 1-01창세기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782D5D2850937F0077CDCC /* 1-01창세기.txt */; };
-		7480A51728580C4600493DC9 /* WriteBibleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7480A51628580C4600493DC9 /* WriteBibleDataModel.swift */; };
 		7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4542848804B00517BAF /* WriteBibleApp.swift */; };
 		7481B4572848804B00517BAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4562848804B00517BAF /* ContentView.swift */; };
 		7481B4592848804D00517BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481B4582848804D00517BAF /* Assets.xcassets */; };
@@ -97,15 +90,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7403D12A2862C6EE00AB68A3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7403D12C2862C72A00AB68A3 /* DrawingDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDocument.swift; sourceTree = "<group>"; };
 		7403D12E2862C74E00AB68A3 /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
 		7403D1302862C81F00AB68A3 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		7403D1322862C84900AB68A3 /* DrawingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingWrapper.swift; sourceTree = "<group>"; };
-		7403D1342862C90200AB68A3 /* addNewDocumnet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewDocumnet.swift; sourceTree = "<group>"; };
-		7403D1382862CBAE00AB68A3 /* DrawingDocModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrawingDocModel.xcdatamodel; sourceTree = "<group>"; };
 		7403D13D2862E4AF00AB68A3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		741797D02850A7B8000EA75E /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
 		74436405285B0E67005241E7 /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
 		74782B0D284F05F90077CDCC /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
 		74782CAA284F2D190077CDCC /* 1-17에스더.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
@@ -176,7 +165,6 @@
 		74782D2E284F3B300077CDCC /* BibleSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleSentenceView.swift; sourceTree = "<group>"; };
 		74782D59285086D90077CDCC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		74782D5D2850937F0077CDCC /* 1-01창세기.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
-		7480A51628580C4600493DC9 /* WriteBibleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleDataModel.swift; sourceTree = "<group>"; };
 		7481B4512848804B00517BAF /* WriteBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WriteBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7481B4542848804B00517BAF /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
 		7481B4562848804B00517BAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -190,8 +178,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */,
-				74436401285ADD3A005241E7 /* SimultaneouslyScrollView in Frameworks */,
-				74436404285ADE78005241E7 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +195,6 @@
 		7403D1292862C6BD00AB68A3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				7403D12A2862C6EE00AB68A3 /* CoreDataManager.swift */,
 				7403D12E2862C74E00AB68A3 /* DrawingManager.swift */,
 				7403D13D2862E4AF00AB68A3 /* RealmManager.swift */,
 			);
@@ -219,7 +204,6 @@
 		7403D1362862CB9E00AB68A3 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				7403D1372862CBAE00AB68A3 /* DrawingDocModel.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -227,7 +211,6 @@
 		74436423285B27B1005241E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7480A51628580C4600493DC9 /* WriteBibleDataModel.swift */,
 				74782B0D284F05F90077CDCC /* Bible.swift */,
 				7403D12C2862C72A00AB68A3 /* DrawingDocument.swift */,
 			);
@@ -241,9 +224,7 @@
 				74782D59285086D90077CDCC /* TitleView.swift */,
 				74782D2E284F3B300077CDCC /* BibleSentenceView.swift */,
 				74436405285B0E67005241E7 /* BibleView.swift */,
-				741797D02850A7B8000EA75E /* PKCanvas.swift */,
 				7403D1322862C84900AB68A3 /* DrawingWrapper.swift */,
-				7403D1342862C90200AB68A3 /* addNewDocumnet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -378,8 +359,6 @@
 			);
 			name = WriteBible;
 			packageProductDependencies = (
-				74436400285ADD3A005241E7 /* SimultaneouslyScrollView */,
-				74436403285ADE78005241E7 /* Introspect */,
 				7403D13B2862E49800AB68A3 /* RealmSwift */,
 			);
 			productName = WriteBible;
@@ -411,8 +390,6 @@
 			);
 			mainGroup = 7481B4482848804B00517BAF;
 			packageReferences = (
-				744363FF285ADD3A005241E7 /* XCRemoteSwiftPackageReference "SimultaneouslyScrollView" */,
-				74436402285ADE78005241E7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 7481B4522848804B00517BAF /* Products */;
@@ -507,7 +484,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				741797D12850A7B8000EA75E /* PKCanvas.swift in Sources */,
 				7481B4572848804B00517BAF /* ContentView.swift in Sources */,
 				7403D1332862C84900AB68A3 /* DrawingWrapper.swift in Sources */,
 				74782D5A285086D90077CDCC /* TitleView.swift in Sources */,
@@ -518,11 +494,7 @@
 				7403D12D2862C72A00AB68A3 /* DrawingDocument.swift in Sources */,
 				7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */,
 				74782B0E284F05F90077CDCC /* Bible.swift in Sources */,
-				7403D1392862CBAE00AB68A3 /* DrawingDocModel.xcdatamodeld in Sources */,
-				7480A51728580C4600493DC9 /* WriteBibleDataModel.swift in Sources */,
-				7403D12B2862C6EE00AB68A3 /* CoreDataManager.swift in Sources */,
 				7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */,
-				7403D1352862C90200AB68A3 /* addNewDocumnet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,22 +705,6 @@
 				kind = branch;
 			};
 		};
-		744363FF285ADD3A005241E7 /* XCRemoteSwiftPackageReference "SimultaneouslyScrollView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stonko1994/SimultaneouslyScrollView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		74436402285ADE78005241E7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.4;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -757,30 +713,7 @@
 			package = 7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
-		74436400285ADD3A005241E7 /* SimultaneouslyScrollView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 744363FF285ADD3A005241E7 /* XCRemoteSwiftPackageReference "SimultaneouslyScrollView" */;
-			productName = SimultaneouslyScrollView;
-		};
-		74436403285ADE78005241E7 /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74436402285ADE78005241E7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		7403D1372862CBAE00AB68A3 /* DrawingDocModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7403D1382862CBAE00AB68A3 /* DrawingDocModel.xcdatamodel */,
-			);
-			currentVersion = 7403D1382862CBAE00AB68A3 /* DrawingDocModel.xcdatamodel */;
-			path = DrawingDocModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7481B4492848804B00517BAF /* Project object */;
 }

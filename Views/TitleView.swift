@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TitleView: View {    
-    @ObservedObject var manager: DrawingManager
     
     @Binding var bibleTitle: BibleTitle
     @Binding var chapter: Int
@@ -19,15 +18,12 @@ struct TitleView: View {
     }
     
     
-    
-    
     //MARK: - Title View
     var title: some View {
         let ti = bibleTitle.rawValue.components(separatedBy: ".").first!
         let name = ti[4..<ti.count]
         
         return HStack{
-            
             Button("\(name) \(chapter)장") {
                         self.showTitleSheet.toggle()
                     }
@@ -96,8 +92,6 @@ struct TitleView: View {
                     Button(action: {
                         self.chapter = value
 
-                        save(title: bibleTitle.rawValue + chapter.description)
-                        
                         showTitleSheet = false
 
                     }) {
@@ -110,16 +104,13 @@ struct TitleView: View {
     
     
     
-    private func save(title: String){
-        manager.addData(doc: DrawingDocument(data: Data(), title: title))
-    }
     
     
 }
 
-//
-//struct TitleView_Previews: PreviewProvider {
-//   static var previews: some View {
-//        TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(false))
-//    }
-//}
+
+struct TitleView_Previews: PreviewProvider {
+   static var previews: some View {
+        TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(false))
+    }
+}

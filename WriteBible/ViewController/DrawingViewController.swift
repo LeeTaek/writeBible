@@ -9,13 +9,12 @@ import UIKit
 import PencilKit
 
 class DrawingViewController: UIViewController {
-
+    
     lazy var canvas: PKCanvasView = {
-        
         var canv = PKCanvasView()
         canv.drawingPolicy = .pencilOnly
         canv.minimumZoomScale = 1
-        canv.maximumZoomScale = 2
+        canv.maximumZoomScale = 1
         canv.translatesAutoresizingMaskIntoConstraints = false
         return canv
     }()

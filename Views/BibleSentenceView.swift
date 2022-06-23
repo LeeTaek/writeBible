@@ -34,6 +34,7 @@ struct BibleSentenceView: View {
     }
 }
 
+
 struct BibleSentenceView_Previews: PreviewProvider {
 
     static var previews: some View {

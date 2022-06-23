@@ -6,37 +6,16 @@
 //
 
 import SwiftUI
-import PencilKit
-import SimultaneouslyScrollView
-import Introspect
-import Combine
 
 
 struct BibleView: View {
     @Binding var bibleTitle: BibleTitle
     @Binding var chapterNum: Int
-    @State private var canvasView = PKCanvasView()
-    
-    //사용하는 메인뷰의 높이를 구하기위해 사용하는 변수
-    @State var writeViewSize : CGSize = .zero
     @ObservedObject var manager = DrawingManager()
-    
-    
-    // 동시 스크롤을 위한 객체 생성.
-    let simultaneouslyScrollViewHandler = SimultaneouslyScrollViewHandlerFactory.create()
-    
-    
-    var body: some View {
-        simultaneouslyScrollViewHandler.register(scrollView: canvasView)
-        
-        return writeView
-                .introspectScrollView { simultaneouslyScrollViewHandler.register(scrollView: $0) }      // 동시 스크롤을 위한 동기화
-            
-                
-            
-            
-        //                    PKCanvas(canvasView: $canvasView, canvasSize: $writeViewSize, manager: manager, title:
 
+    var body: some View {
+        writeView
+            .id(bibleTitle.rawValue)
     }
 
     
@@ -44,10 +23,9 @@ struct BibleView: View {
     var writeView: some View {
         let bible = Bible(title: bibleTitle.rawValue, chapterTitle: nil)
         let keyTitle = bibleTitle.rawValue + chapterNum.description
-
+      
         return GeometryReader { geo in
             ScrollView(.vertical) {
-//                VStack{
                     ForEach(bible.makeBible(title: bibleTitle.rawValue).filter{$0.chapter == chapterNum}, id: \.sentence ) { name in
                             HStack (alignment: .top){
                                 // 성경 구절
@@ -55,37 +33,25 @@ struct BibleView: View {
                                     .frame(width: geo.size.width/2, alignment: .leading)
 
                                     
-                                // 필사 뷰 절
+                                // 필사 뷰 절 번호
                                 Text("\(name.section)")
                                     .bold()
                                     .font(.system(size: 17))
-
+                                    
                                 
                                 // 필사하는 부분 line
-                                LazyVStack (alignment: .leading, spacing: 30){
+                                VStack (alignment: .leading, spacing: 30){
                                     ForEach(1..<5, id: \.self) { _ in
                                         Rectangle()
                                           .opacity(0.2)
-                                          .frame(width: geo.size.width/5 * 2, height: 2)
-                                          .position(x: 180,y: 22)
+                                          .frame(width: geo.frame(in: .global).size.width/7 * 3, height: 2)
+                                          .position(x: (geo.frame(in: .global).midX + geo.frame(in: .global).minX)/2 - 20 , y: 22)
                                     }
                                 }/// LazyVStack
                             .padding([.bottom])
                             .listRowSeparator(.hidden)
                     } /// ForEach
                 }
-                    .background(    // DrawView에 넘길 전체 사이즈 설정
-                        GeometryReader { proxy in
-                            Color.clear
-                                .onAppear() {
-                                    self.writeViewSize = proxy.size     // 초기값
-                                    print(self.writeViewSize)
-                                }
-                                .valueChanged(value: proxy.size) { value  in        // 변할 떄에 값
-                                    self.writeViewSize = proxy.size
-                                }
-                        }
-                    )
                     .overlay() {
                         DrawingWrapper(manager: manager, title: keyTitle)
                             .id(keyTitle)
@@ -94,23 +60,15 @@ struct BibleView: View {
                 } /// scrollView
             } /// geometry
         }
+    
+ 
+    
 }
-//
-//struct BibleView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1), keyTitle: .constant("1-01창세기.txt1"))
-//    }
-//}
 
 
-extension View {
-    @ViewBuilder func valueChanged<T: Equatable>(value: T, onChange: @escaping (T) -> Void) -> some View {
-        if #available(iOS 14.0, *) {
-            self.onChange(of: value, perform: onChange)
-        } else {
-            self.onReceive(Just(value)) { (value) in
-                onChange(value)
-            }
-        }
+struct BibleView_Previews: PreviewProvider {
+    static var previews: some View {
+        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1))
     }
 }
+

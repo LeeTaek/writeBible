@@ -16,7 +16,9 @@ struct DrawingWrapper : UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> DrawingViewController {
         print(#fileID, #function, #line, "\(title)")
-                
+    
+        save(title: title)
+        
         let viewController = DrawingViewController()
         
         viewController.manager = self.manager
@@ -31,4 +33,12 @@ struct DrawingWrapper : UIViewControllerRepresentable {
     
     func updateUIViewController(_ uiViewController: DrawingViewController, context: Context) {
     }
+    
+    
+    
+     private func save(title: String){
+         manager.addData(doc: DrawingDocument(data: Data(), title: title))
+     }
+    
+    
 }

@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
 import RealmSwift
 
 class RealmManager: Object, ObjectKeyIdentifiable {
     static let shared = RealmManager()
     
+    
     @Persisted var data: Data
     @Persisted(primaryKey: true) var title: String
+    
     
     convenience init(document: DrawingDocument) {
         self.init()
@@ -91,6 +94,4 @@ class RealmManager: Object, ObjectKeyIdentifiable {
             }
         }
     }
-    
-    
 }

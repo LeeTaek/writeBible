@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var manager = DrawingManager()
 
-    
     @State var bibleTitle: BibleTitle = .genesis
     @State var chapterNum: Int = 1
     @State private var showingSheet = false
@@ -18,11 +16,15 @@ struct ContentView: View {
     
     var body: some View {
         return VStack {
-            TitleView(manager: manager, bibleTitle: $bibleTitle, chapter: $chapterNum, showTitleSheet: $showingSheet)
+            TitleView(bibleTitle: $bibleTitle, chapter: $chapterNum, showTitleSheet: $showingSheet)
         
             BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum)
+  
         }
     }
+    
+    
+
 }
 
 
