@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct TitleView: View {
-    @Environment (\.managedObjectContext) var viewContext
+struct TitleView: View {    
+    @ObservedObject var manager: DrawingManager
     
     @Binding var bibleTitle: BibleTitle
     @Binding var chapter: Int
@@ -94,19 +94,10 @@ struct TitleView: View {
             List{
                 ForEach((1...lastChapter), id: \.self) { value in
                     Button(action: {
-                        let drawing = Drawing(context: viewContext)
-                        drawing.title = bibleTitle.rawValue
-                        drawing.id = UUID()
-                        
-                        do {
-                            try viewContext.save()
-                        }
-                        catch{
-                            print(error)
-                        }
-                        
-                        
                         self.chapter = value
+
+                        save(title: bibleTitle.rawValue + chapter.description)
+                        
                         showTitleSheet = false
 
                     }) {
@@ -119,12 +110,16 @@ struct TitleView: View {
     
     
     
+    private func save(title: String){
+        manager.addData(doc: DrawingDocument(data: Data(), title: title))
+    }
+    
+    
 }
 
-struct TitleView_Previews: PreviewProvider {
-   
-    
-    static var previews: some View {
-        TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(false))
-    }
-}
+//
+//struct TitleView_Previews: PreviewProvider {
+//   static var previews: some View {
+//        TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(false))
+//    }
+//}

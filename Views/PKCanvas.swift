@@ -8,32 +8,22 @@
 import Foundation
 import PencilKit
 import SwiftUI
-import CoreData
+
+
 
 
 struct PKCanvas: UIViewRepresentable {
-    @Environment(\.managedObjectContext) private var viewContext
-
     @Binding var canvasView: PKCanvasView
     @Binding var canvasSize: CGSize
-//    @Binding var data: PKDrawing
-   
-    
-    
-    let picker = PKToolPicker.init()
 
-    /// Data model for the drawing displayed by this view controller.
-    var dataModelController = WriteBibleDataModel()
-    
-    /// Private drawing state.
-    var drawingIndex: Int = 0
-    var hasModifiedDrawing = false
-    
-    
-    
+    let picker = PKToolPicker.init()
+    var manager: DrawingManager
+    var title: String
     
     func makeUIView(context: Context) -> PKCanvasView {
+        print(#fileID, #function, #line, "")
         canvasView.drawingPolicy = .pencilOnly
+        
         
         self.canvasView.tool = PKInkingTool(.pen, color: .white, width: 15)
         self.canvasView.isOpaque = false
@@ -41,43 +31,46 @@ struct PKCanvas: UIViewRepresentable {
         self.canvasView.alwaysBounceVertical = true
         self.canvasView.showsVerticalScrollIndicator = true
         
-        self.canvasView.minimumZoomScale = 0.5
-        self.canvasView.maximumZoomScale = 1.5
-        self.canvasView.translatesAutoresizingMaskIntoConstraints = true
+        if let drawing = try? PKDrawing(data: manager.getData(for: title)) {
+            canvasView.drawing = drawing
+        }
 
-        
         return canvasView
     }
     
-    
-    
+
     
 
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
+//        print(#fileID, #function, #line, "viewChanged: \(title)")
         self.canvasView.contentSize = self.canvasSize
-        
+    
         picker.addObserver(canvasView)
         picker.setVisible(true, forFirstResponder: uiView)
+    
+//        uiView.delegate = context.coordinator
+        
         DispatchQueue.main.async {
             uiView.becomeFirstResponder()
         }
-        
-        dataModelController.updateDrawing(canvasView.drawing, at: drawingIndex)
-        self.canvasView.drawing = dataModelController.drawings[drawingIndex]
     }
 
-    
-    
-    
-    func setCanvasDrawing(data drawingData: Data? = nil, height: Double) {
-        if let data = drawingData { canvasView.drawing = try! PKDrawing(data: data)}
-        if height == 0 {
-            canvasView.contentSize.height = UIScreen.main.bounds.height
-        } else {
-            canvasView.contentSize.height = height
-        }
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
     }
-    
+
+    class Coordinator: NSObject, PKCanvasViewDelegate {
+        let parent: PKCanvas
+
+        init(_ canvas: PKCanvas) {
+            self.parent = canvas
+        }
+
+        func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
+            parent.manager.update(data: canvasView.drawing.dataRepresentation(), for: parent.title)
+        }
+
+    }
     
 }
 
@@ -85,20 +78,22 @@ struct PKCanvas: UIViewRepresentable {
 
 
 
-extension PKDrawing {
-    mutating func scale(in frame: CGRect) {
-        var scaleFactor:CGFloat = 0
-        
-        if self.bounds.width != frame.width {
-            scaleFactor = frame.width / self.bounds.width
-        } else if self.bounds.height != frame.height {
-            scaleFactor = frame.height / self.bounds.height
-        }
-        
-        let trasform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
-        
-        self.transform(using: trasform)
-    }
-}
-
-
+//
+//
+//extension PKDrawing {
+//    mutating func scale(in frame: CGRect) {
+//        var scaleFactor:CGFloat = 0
+//
+//        if self.bounds.width != frame.width {
+//            scaleFactor = frame.width / self.bounds.width
+//        } else if self.bounds.height != frame.height {
+//            scaleFactor = frame.height / self.bounds.height
+//        }
+//
+//        let trasform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
+//
+//        self.transform(using: trasform)
+//    }
+//}
+//
+//
