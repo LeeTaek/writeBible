@@ -11,27 +11,29 @@ struct BibleSentenceView: View {
     var bibleSentence: Bible
     
     var body: some View {
-        HStack(alignment: .top) {
-            Text("\(bibleSentence.section)")
-                .bold()
-                .font(.system(size: 18))
 
-            Text("\(bibleSentence.sentence)")
-                .tracking(3)
-                .font(.system(size: 17))
-                .lineSpacing(10) //텍스트 줄간격 조절
+        
+        return VStack {
+        
             
+            HStack(alignment: .top) {
+                Text("\(bibleSentence.section)")
+                    .bold()
+                    .font(.system(size: 18))
+
+                Text("\(bibleSentence.sentence)")
+                    .tracking(3)
+                    .font(.system(size: 17))
+                    .lineSpacing(10) //텍스트 줄간격 조절
+                
+            }
+            .padding([.trailing,.leading])
         }
-        .padding([.trailing,.leading])
+        
     }
+
     
-    var test : some View  {
-        Text("\(bibleSentence.sentence)")
-            .tracking(3)
-            .font(.system(size: 17))
-            .lineSpacing(10) //텍스트 줄간격 조절    }
-            .coordinateSpace(name: "test")
-    }
+    
 }
 
 
@@ -44,3 +46,4 @@ struct BibleSentenceView_Previews: PreviewProvider {
         BibleSentenceView(bibleSentence: bible)
     }
 }
+

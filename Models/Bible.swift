@@ -5,7 +5,7 @@ import Foundation
 
 struct Bible {
     var title: String
-    let chapterTitle: String? = ""
+    var chapterTitle: String?
     var chapter: Int = 1
     var section: Int = 1
     var sentence: String = ""
@@ -41,7 +41,8 @@ struct Bible {
         str.forEach{
             var prefix = ""
             var surfix = ""
-            
+            var subTitle: String?
+
             for i in 0..<$0.count {
                 if $0[i] == " " {
                     prefix = $0[0..<i]
@@ -52,8 +53,25 @@ struct Bible {
             
             guard let chapter = Int(prefix.components(separatedBy: ":").first!) else {return}
             guard let section = Int(prefix.components(separatedBy: ":").last!) else {return}
-         
-            bible.append(Bible(title: title, chapter: chapter, section: section, sentence: surfix))
+            
+            if surfix.contains("<") {
+                var foreIndex = 0
+                var afterIndex = 0
+                
+                for i in 0..<surfix.count {
+                    if surfix[i] == "<" {
+                        foreIndex = i + 1
+                    } else if surfix[i] == ">" {
+                        afterIndex = i
+                        break
+                    }
+                }
+                
+                subTitle = surfix[foreIndex ..< afterIndex]
+                surfix = surfix[0..<foreIndex-1] + surfix[afterIndex+1..<surfix.count]
+            }
+            
+            bible.append(Bible(title: title, chapterTitle: subTitle , chapter: chapter, section: section, sentence: surfix))
         }
         
         return bible
@@ -71,6 +89,7 @@ struct Bible {
     
     
 }
+
 
 
 
@@ -164,6 +183,9 @@ enum BibleTitle: String, Equatable, CaseIterable {
     }
     
 }
+
+
+
 
 
 

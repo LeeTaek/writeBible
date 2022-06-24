@@ -24,23 +24,28 @@ struct TitleView: View {
         let name = ti[4..<ti.count]
         
         return HStack{
-            Button("\(name) \(chapter)장") {
-                        self.showTitleSheet.toggle()
-                    }
+            Button(action: {
+                self.showTitleSheet.toggle()
+            }) {
+                Text("\(name) \(chapter)장")
                     .font(.system(size: 30))
                     .padding()
-                    .sheet(isPresented: $showTitleSheet) {
-                        VStack {
-                            contents
-                            
-                            bibleList
-                                .padding()
-                        }
-                    }
+                    .foregroundColor(.titleTextColor)
+            }
+            .sheet(isPresented: $showTitleSheet) {
+                VStack {
+                    contents
+                    
+                    bibleList
+                        .padding()
+                }
+            }
+
             
             Spacer()
 
         }
+        .background(Color.titleBackground)
     }
     
     
@@ -51,7 +56,8 @@ struct TitleView: View {
         HStack {
             Text("목차")
                 .font(.title)
-                .fontWeight(.bold)
+                .fontWeight(.heavy)
+                .foregroundColor(.titleTextColor)
                 .padding()
             
             Spacer()
@@ -60,12 +66,13 @@ struct TitleView: View {
                 showTitleSheet = false
             }) {
                 Image(systemName: "x.circle")
-                    .foregroundColor(.black)
-                    
+                    .foregroundColor(.titleTextColor)
+
             }
             .padding()
-            
         }
+        .background(Color.titleBackground)
+
         
     }
     
@@ -80,10 +87,18 @@ struct TitleView: View {
                     let ti = value.rawValue.components(separatedBy: ".").first!
                     let name = ti[4..<ti.count]
                     
-                    Button(action: { self.bibleTitle = value}) {
-                        Text("\(name)")
+                    Button(action: {
+                        self.bibleTitle = value
+                    }) {
+                        VStack {
+                            Text("\(name)")
+                                .foregroundColor(.contentTextColor)
+                        }
+                       
                     }
+                    .listRowBackground(self.bibleTitle == value ? Color.selectedColor : Color(UIColor.systemBackground))
                 }
+
             }
             .listStyle(.plain)
             
@@ -96,8 +111,11 @@ struct TitleView: View {
 
                     }) {
                         Text("\(value)")
+                            .foregroundColor(.contentTextColor)
                     }
+                    .listRowBackground(self.chapter == value ? Color.selectedColor : Color(UIColor.systemBackground))
                 }
+                
             }.listStyle(.plain)
         }
     }
@@ -111,6 +129,7 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
    static var previews: some View {
-        TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(false))
+        TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(true))
     }
 }
+

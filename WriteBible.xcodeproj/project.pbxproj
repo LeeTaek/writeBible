@@ -13,6 +13,7 @@
 		7403D1332862C84900AB68A3 /* DrawingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1322862C84900AB68A3 /* DrawingWrapper.swift */; };
 		7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7403D13B2862E49800AB68A3 /* RealmSwift */; };
 		7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D13D2862E4AF00AB68A3 /* RealmManager.swift */; };
+		7434623028658233001B5B1D /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434622F28658233001B5B1D /* ColorManager.swift */; };
 		74436406285B0E67005241E7 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74436405285B0E67005241E7 /* BibleView.swift */; };
 		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
 		74782CEC284F2D1B0077CDCC /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAA284F2D190077CDCC /* 1-17에스더.txt */; };
@@ -161,6 +162,7 @@
 		7434622C28656807001B5B1D /* 1-17에스더.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
 		7434622D28656807001B5B1D /* 1-25예레미야애가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-25예레미야애가.txt"; sourceTree = "<group>"; };
 		7434622E28656807001B5B1D /* 2-07고린도전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-07고린도전서.txt"; sourceTree = "<group>"; };
+		7434622F28658233001B5B1D /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		74436405285B0E67005241E7 /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
 		74782B0D284F05F90077CDCC /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
 		74782CAA284F2D190077CDCC /* 1-17에스더.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				7403D12E2862C74E00AB68A3 /* DrawingManager.swift */,
 				7403D13D2862E4AF00AB68A3 /* RealmManager.swift */,
+				7434622F28658233001B5B1D /* ColorManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				7481B4572848804B00517BAF /* ContentView.swift in Sources */,
 				7403D1332862C84900AB68A3 /* DrawingWrapper.swift in Sources */,
 				74782D5A285086D90077CDCC /* TitleView.swift in Sources */,
+				7434623028658233001B5B1D /* ColorManager.swift in Sources */,
 				74436406285B0E67005241E7 /* BibleView.swift in Sources */,
 				7403D12F2862C74E00AB68A3 /* DrawingManager.swift in Sources */,
 				7403D1312862C81F00AB68A3 /* DrawingViewController.swift in Sources */,

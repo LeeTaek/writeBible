@@ -32,7 +32,6 @@ struct ContentView: View {
                               self.chapterNum = 1
                           }
                       }
-        
                   } else if $0.translation.width > 100 {                  //드래그 가로의 위치가 100보다 커지면 실행
                       if chapterNum > 1 {
                           self.chapterNum -= 1

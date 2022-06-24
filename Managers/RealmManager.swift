@@ -12,7 +12,6 @@ import RealmSwift
 class RealmManager: Object, ObjectKeyIdentifiable {
     static let shared = RealmManager()
     
-    
     @Persisted var data: Data
     @Persisted(primaryKey: true) var title: String
     
@@ -26,8 +25,6 @@ class RealmManager: Object, ObjectKeyIdentifiable {
     
     
     func addData(document: DrawingDocument) {
-        print("realm 경로 : \(Realm.Configuration.defaultConfiguration.fileURL!)")
-
         let realm = try! Realm()
         let saveData = RealmManager(document: document)
         
@@ -42,7 +39,6 @@ class RealmManager: Object, ObjectKeyIdentifiable {
     
     
     func getAllData() -> [DrawingDocument] {
-        
         let realm = try! Realm()
         let DrawingRealmObjects = realm.objects(RealmManager.self)
         var DrawingDatas = [DrawingDocument]()
@@ -69,8 +65,6 @@ class RealmManager: Object, ObjectKeyIdentifiable {
     
     
     
-    
-    
     func updateData(data: DrawingDocument) {
         let realm = try! Realm()
         if let updateData = realm.object(ofType: RealmManager.self, forPrimaryKey: data.title) {
@@ -83,6 +77,7 @@ class RealmManager: Object, ObjectKeyIdentifiable {
             addData(document: data)
         }
     }
+    
     
     func deleteData(data: DrawingDocument) {
         let realm = try! Realm()
