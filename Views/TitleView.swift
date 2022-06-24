@@ -72,7 +72,7 @@ struct TitleView: View {
     
     //MARK: - Sheet창의 장
     var bibleList: some View {
-        let lastChapter = Bible(title: bibleTitle.rawValue, chapterTitle: nil).lastChapter()
+        let lastChapter = Bible(title: bibleTitle.rawValue).getLastChapter()
         
         return HStack {
             List {

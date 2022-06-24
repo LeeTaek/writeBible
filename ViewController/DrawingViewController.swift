@@ -55,6 +55,7 @@ class DrawingViewController: UIViewController {
         }
     }
     
+    
     override func viewWillDisappear(_ animated: Bool) {
         print(#fileID, #function, #line, "\(keyTitle!), \(drawingData)")
         manager.update(data: drawingData, for: keyTitle ?? "")

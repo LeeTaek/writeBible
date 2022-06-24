@@ -21,7 +21,7 @@ struct BibleView: View {
     
     //MARK: - 성경 본문 view
     var writeView: some View {
-        let bible = Bible(title: bibleTitle.rawValue, chapterTitle: nil)
+        let bible = Bible(title: bibleTitle.rawValue)
         let keyTitle = bibleTitle.rawValue + chapterNum.description
       
         return GeometryReader { geo in

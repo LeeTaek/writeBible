@@ -5,12 +5,11 @@ import Foundation
 
 struct Bible {
     var title: String
-    let chapterTitle: String?
+    let chapterTitle: String? = ""
     var chapter: Int = 1
     var section: Int = 1
     var sentence: String = ""
     var isWrite: Bool = false
-
   
     
     //MARK: - txt fileRead
@@ -54,7 +53,7 @@ struct Bible {
             guard let chapter = Int(prefix.components(separatedBy: ":").first!) else {return}
             guard let section = Int(prefix.components(separatedBy: ":").last!) else {return}
          
-            bible.append(Bible(title: title, chapterTitle: nil, chapter: chapter, section: section, sentence: surfix))
+            bible.append(Bible(title: title, chapter: chapter, section: section, sentence: surfix))
         }
         
         return bible
@@ -63,7 +62,7 @@ struct Bible {
     
     
     //MARK: - 마지막 장
-    func lastChapter() -> Int {
+    func getLastChapter() -> Int {
         let str = fileRead().last!
         guard let chapter = Int(str.components(separatedBy: ":").first!) else { return 0 }
         
@@ -143,6 +142,27 @@ enum BibleTitle: String, Equatable, CaseIterable {
     case john3 = "2-25요한삼서.txt"
     case jude = "2-26유다서.txt"
     case revelation = "2-27요한계시록.txt"
+    
+    mutating func next() {
+        let allCases = type(of: self).allCases
+        let currentIndex = allCases.firstIndex(of: self)!
+        
+        if self != .revelation {
+            self = allCases[currentIndex + 1]
+        }
+        
+        
+    }
+     
+    mutating func before() {
+        let allCases = type(of: self).allCases
+        let currentIndex = allCases.firstIndex(of: self)!
+
+        if self != .genesis  {
+            self = allCases[currentIndex - 1]
+        }
+    }
+    
 }
 
 

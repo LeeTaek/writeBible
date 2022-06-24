@@ -28,6 +28,7 @@ struct DrawingWrapper : UIViewControllerRepresentable {
             viewController.drawingData = data
         }
         
+        
         return viewController
     }
     
