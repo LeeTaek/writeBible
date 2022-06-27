@@ -12,11 +12,17 @@ struct TitleView: View {
     @Binding var bibleTitle: BibleTitle
     @Binding var chapter: Int
     @Binding var showTitleSheet: Bool
-    
+    @State private var showTitle = false
+    @State var showiSettingSheet = false
+    @Binding var settingValue: SettingModel
+
     var body: some View {
         VStack {
             title
             Spacer()
+            
+         
+            
         }
     }
     
@@ -46,6 +52,15 @@ struct TitleView: View {
 
             
             Spacer()
+            
+            Button(action: {self.showiSettingSheet.toggle()}) {
+                Image(systemName: "gearshape")
+                    .foregroundColor(Color.titleTextColor)
+                    .padding()
+                    
+            }.sheet(isPresented: $showiSettingSheet) {
+                SettingView(setting: $settingValue, showSettingSheet: $showiSettingSheet)
+            }
 
         }
         .background(Color.titleBackground)
@@ -133,7 +148,7 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
    static var previews: some View {
-        TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(true))
+       TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(true), settingValue:  .constant(SettingModel(lineSpace: 11, fontSize: 20, traking: 2)))
     }
 }
 

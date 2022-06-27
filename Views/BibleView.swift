@@ -13,12 +13,9 @@ struct BibleView: View {
     @Binding var chapterNum: Int
     @ObservedObject var manager = DrawingManager()
     @State private var translation: CGSize = .zero
-    
     @Binding var showTitle: Bool
     
-//    @ObservedObject var scrollData: ScrollDetectorData 
-    
-
+    @Binding var settingValue: SettingModel
     
     var body: some View {
         VStack {
@@ -60,18 +57,14 @@ struct BibleView: View {
                 self.translation = .zero
             }
      
-        
-        
-        
-        return GeometryReader { geo in
-            ScrollViewReader { scr in
+ 
+        return ScrollViewReader { scr in
                 ScrollView(.vertical) {
                     VStack {
                         GeometryReader { proxy in
                             Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
                         }.onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
                             withAnimation(.easeInOut) {
-                                print(value)
                                 if value < 0 {
                                     showTitle = true
                                 }
@@ -81,43 +74,23 @@ struct BibleView: View {
                             }
                         })
                 
-                        
                         ForEach(bible.makeBible(title: bibleTitle.rawValue).filter{$0.chapter == chapterNum}, id: \.sentence ) { name in
                             let showChpaterTitle = checkChapterTitle(chapterTitle: name.chapterTitle)
 
-                            VStack {
+                            VStack() {
                                 Text(name.chapterTitle ?? "" )
                                     .font(.system(size: 22))
                                     .fontWeight(.heavy)
                                     .foregroundColor(Color.chapterTitleColor)
                                     .isHidden(showChpaterTitle)
 
-
-                                    HStack (alignment: .top){
-                                        // 성경 구절
-                                        BibleSentenceView(bibleSentence: name)
-                                            .frame(width: geo.size.width/2, alignment: .leading)
-
-                                        
-                                        // 필사 뷰 절 번호
-                                        Text("\(name.section)")
-                                            .bold()
-                                            .font(.system(size: 17))
-
-
-                                        // 필사하는 부분 line
-                                        VStack (alignment: .leading, spacing: 30){
-                                            ForEach(1..<5, id: \.self) { _ in
-                                                Rectangle()
-                                                  .opacity(0.2)
-                                                  .frame(width: geo.frame(in: .global).size.width/7 * 3, height: 2)
-                                                  .position(x: (geo.frame(in: .global).midX + geo.frame(in: .global).minX)/2 - 20 , y: 22)
-                                            }
-                                        }/// VStack
-                                    .padding([.bottom])
-                                    .listRowSeparator(.hidden)
-                                }/// HStack
+                        
+                                    // 성경 구절
+                                BibleSentenceView(bibleSentence: name, setting: $settingValue)
                             }/// VStack
+                            .id(name.section)
+                            .padding([.bottom])
+                            .listRowSeparator(.hidden)
                         }/// ForEach
                     }
                         .id("scrollToTop")
@@ -138,7 +111,6 @@ struct BibleView: View {
                     .offset(x: translation.width)
                     .animation(.interactiveSpring(), value: translation.width)
                 }/// scrollViewReader
-            } /// geometry
         }
     
     
@@ -166,7 +138,7 @@ struct BibleView: View {
 
 struct BibleView_Previews: PreviewProvider {
     static var previews: some View {
-        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1), showTitle: .constant(false)  )
+        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1), showTitle: .constant(false), settingValue: .constant( SettingModel(lineSpace: 11, fontSize: 20, traking: 2))  )
     }
 }
 

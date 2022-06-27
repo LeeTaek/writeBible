@@ -10,9 +10,14 @@ import SwiftUI
 struct ContentView: View {
     
     @State var bibleTitle: BibleTitle = .genesis
+    
     @State var chapterNum: Int = 1
     @State private var showingSheet = false
     @State private var showTitle = false
+    
+    
+    @State var setting = SettingModel(lineSpace: 11, fontSize: 20, traking: 2)
+
 //    @ObservedObject var scrollData: ScrollDetectorData = .init()
 
     
@@ -20,9 +25,9 @@ struct ContentView: View {
         
           
             
-        BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum, showTitle: $showTitle)
+        BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum, showTitle: $showTitle, settingValue: $setting)
         .overlay() {
-                TitleView(bibleTitle: $bibleTitle, chapter: $chapterNum, showTitleSheet: $showingSheet)
+            TitleView(bibleTitle: $bibleTitle, chapter: $chapterNum, showTitleSheet: $showingSheet, settingValue: $setting)
                     .opacity(showTitle ? 0 : 1)
         }
     

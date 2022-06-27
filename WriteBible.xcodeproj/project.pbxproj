@@ -14,6 +14,8 @@
 		7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7403D13B2862E49800AB68A3 /* RealmSwift */; };
 		7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D13D2862E4AF00AB68A3 /* RealmManager.swift */; };
 		74099BDA2869796400ED8D23 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BD92869796400ED8D23 /* ScrollPreferenceKey.swift */; };
+		74099BDC2869CB3800ED8D23 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BDB2869CB3800ED8D23 /* SettingView.swift */; };
+		74099BDE2869CBA600ED8D23 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BDD2869CBA600ED8D23 /* SettingModel.swift */; };
 		7434623028658233001B5B1D /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434622F28658233001B5B1D /* ColorManager.swift */; };
 		74436406285B0E67005241E7 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74436405285B0E67005241E7 /* BibleView.swift */; };
 		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
@@ -98,6 +100,8 @@
 		7403D1322862C84900AB68A3 /* DrawingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingWrapper.swift; sourceTree = "<group>"; };
 		7403D13D2862E4AF00AB68A3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		74099BD92869796400ED8D23 /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
+		74099BDB2869CB3800ED8D23 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		74099BDD2869CBA600ED8D23 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		743461ED28656804001B5B1D /* 1-29요엘.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-29요엘.txt"; sourceTree = "<group>"; };
 		743461EE28656804001B5B1D /* 1-18욥기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-18욥기.txt"; sourceTree = "<group>"; };
 		743461EF28656804001B5B1D /* 1-06여호수아.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-06여호수아.txt"; sourceTree = "<group>"; };
@@ -351,6 +355,7 @@
 				74782B0D284F05F90077CDCC /* Bible.swift */,
 				7403D12C2862C72A00AB68A3 /* DrawingDocument.swift */,
 				74099BD92869796400ED8D23 /* ScrollPreferenceKey.swift */,
+				74099BDD2869CBA600ED8D23 /* SettingModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 			children = (
 				7481B4562848804B00517BAF /* ContentView.swift */,
 				74782D59285086D90077CDCC /* TitleView.swift */,
+				74099BDB2869CB3800ED8D23 /* SettingView.swift */,
 				74782D2E284F3B300077CDCC /* BibleSentenceView.swift */,
 				74436405285B0E67005241E7 /* BibleView.swift */,
 				7403D1322862C84900AB68A3 /* DrawingWrapper.swift */,
@@ -447,8 +453,8 @@
 				74782C21284F0CBE0077CDCC /* 개역개정-text */,
 				7403D1292862C6BD00AB68A3 /* Managers */,
 				7403D1262862C69A00AB68A3 /* ViewController */,
-				74436423285B27B1005241E7 /* Models */,
 				74436424285B27D0005241E7 /* Views */,
+				74436423285B27B1005241E7 /* Models */,
 				7481B4522848804B00517BAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -626,6 +632,8 @@
 				7403D1332862C84900AB68A3 /* DrawingWrapper.swift in Sources */,
 				74782D5A285086D90077CDCC /* TitleView.swift in Sources */,
 				7434623028658233001B5B1D /* ColorManager.swift in Sources */,
+				74099BDC2869CB3800ED8D23 /* SettingView.swift in Sources */,
+				74099BDE2869CBA600ED8D23 /* SettingModel.swift in Sources */,
 				74436406285B0E67005241E7 /* BibleView.swift in Sources */,
 				7403D12F2862C74E00AB68A3 /* DrawingManager.swift in Sources */,
 				7403D1312862C81F00AB68A3 /* DrawingViewController.swift in Sources */,
