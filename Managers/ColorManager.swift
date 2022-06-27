@@ -14,6 +14,7 @@ extension Color {
     static let selectedColor = Color(hex: "CDC9C3")
     static let contentTextColor = Color(hex: "2B2B2B")
     static let chapterTitleColor = Color(hex: "C0A080")
+    static let simpleTitleColor = Color(hex: "435560")
     
     
     init(hex: String) {

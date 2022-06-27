@@ -23,7 +23,6 @@ struct BibleView: View {
     var body: some View {
         VStack {
             simpleTitle
-            
             writeView
 
         }
@@ -148,10 +147,11 @@ struct BibleView: View {
         let ti = bibleTitle.rawValue.components(separatedBy: ".").first!
         let name = ti[4..<ti.count]
         
-        return Text("\(name) \(chapterNum)장")
-            .font(.system(size: 18))
+        return  Text("\(name) \(chapterNum)장")
+            .font(.system(size: 25))
+            .fontWeight(.bold)
+            .foregroundColor(.simpleTitleColor)
             .frame(height: 30)
-        
     }
     
     
