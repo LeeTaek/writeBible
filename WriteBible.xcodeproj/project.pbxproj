@@ -13,6 +13,7 @@
 		7403D1332862C84900AB68A3 /* DrawingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1322862C84900AB68A3 /* DrawingWrapper.swift */; };
 		7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7403D13B2862E49800AB68A3 /* RealmSwift */; };
 		7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D13D2862E4AF00AB68A3 /* RealmManager.swift */; };
+		74099BDA2869796400ED8D23 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BD92869796400ED8D23 /* ScrollPreferenceKey.swift */; };
 		7434623028658233001B5B1D /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434622F28658233001B5B1D /* ColorManager.swift */; };
 		74436406285B0E67005241E7 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74436405285B0E67005241E7 /* BibleView.swift */; };
 		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
@@ -96,6 +97,7 @@
 		7403D1302862C81F00AB68A3 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		7403D1322862C84900AB68A3 /* DrawingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingWrapper.swift; sourceTree = "<group>"; };
 		7403D13D2862E4AF00AB68A3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		74099BD92869796400ED8D23 /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
 		743461ED28656804001B5B1D /* 1-29요엘.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-29요엘.txt"; sourceTree = "<group>"; };
 		743461EE28656804001B5B1D /* 1-18욥기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-18욥기.txt"; sourceTree = "<group>"; };
 		743461EF28656804001B5B1D /* 1-06여호수아.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-06여호수아.txt"; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 			children = (
 				74782B0D284F05F90077CDCC /* Bible.swift */,
 				7403D12C2862C72A00AB68A3 /* DrawingDocument.swift */,
+				74099BD92869796400ED8D23 /* ScrollPreferenceKey.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */,
 				74782B0E284F05F90077CDCC /* Bible.swift in Sources */,
 				7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */,
+				74099BDA2869796400ED8D23 /* ScrollPreferenceKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

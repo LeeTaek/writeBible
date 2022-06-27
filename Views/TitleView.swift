@@ -14,7 +14,10 @@ struct TitleView: View {
     @Binding var showTitleSheet: Bool
     
     var body: some View {
+        VStack {
             title
+            Spacer()
+        }
     }
     
     
@@ -46,6 +49,7 @@ struct TitleView: View {
 
         }
         .background(Color.titleBackground)
+        .frame( height: 40 )
     }
     
     
