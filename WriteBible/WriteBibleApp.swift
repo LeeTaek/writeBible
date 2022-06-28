@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct WriteBibleApp: App {
+    
+    let setting = SettingManager().getSetting()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(setting: setting)
         }
     }
 }

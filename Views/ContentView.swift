@@ -10,15 +10,10 @@ import SwiftUI
 struct ContentView: View {
     
     @State var bibleTitle: BibleTitle = .genesis
-    
     @State var chapterNum: Int = 1
     @State private var showingSheet = false
     @State private var showTitle = false
-    
-    
-    @State var setting = SettingModel(lineSpace: 11, fontSize: 20, traking: 2)
-
-//    @ObservedObject var scrollData: ScrollDetectorData = .init()
+    @State var setting : SettingModel
 
     
     var body: some View {
@@ -42,7 +37,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(setting: SettingModel(lineSpace: 11, fontSize: 20, traking: 2))
     }
 }
 

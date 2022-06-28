@@ -14,7 +14,7 @@ struct BibleSentenceView: View {
     
     ///사용하는 메인뷰의 높이를 구하기위해 사용하는 변수
     @State var textHeight : CGFloat = .zero
-    @State var line: Int = 2
+    @State var line: Int = 3
     @Binding var setting: SettingModel
     
     var LineHeight: CGFloat = .zero
@@ -60,8 +60,8 @@ struct BibleSentenceView: View {
                 .onPreferenceChange(ViewHeightKey.self) { // << read right side height
                     self.textHeight = $0        // << here !!
                     self.line = Int((textHeight + 1 + setting.lineSpace) / (setting.baseLineHeight + setting.lineSpace)) + 1
-                    print("linespace: \(setting.lineSpace), baseLineHeight: \(setting.baseLineHeight)")
-                    print(bibleSentence.section ,$0, "line\( self.line)")
+//                    print("linespace: \(setting.lineSpace), baseLineHeight: \(setting.baseLineHeight)")
+//                    print(bibleSentence.section ,$0, "line\( self.line)")
                    }
                 .padding([.trailing,.leading])
         }.frame(height: self.textHeight)

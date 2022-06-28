@@ -101,7 +101,7 @@ struct BibleView: View {
                         .onChange(of: keyTitle) { newValue in
                             withAnimation(.default) {
                                 scr.scrollTo("scrollToTop", anchor: .top)
-                                print(scr)
+//                                print(scr)
                             }
                         }
                     } /// scrollView

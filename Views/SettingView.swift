@@ -10,7 +10,8 @@ import SwiftUI
 struct SettingView: View {
     @Binding var setting: SettingModel
     @Binding var showSettingSheet: Bool
-    
+    let settingManager = SettingManager()
+
 
     
     var body: some View {
@@ -34,6 +35,7 @@ struct SettingView: View {
             Spacer()
             
             Button(action: {
+                settingManager.updateSetting(setting: setting)
                 showSettingSheet = false
             }) {
                 Image(systemName: "x.circle")
@@ -48,7 +50,6 @@ struct SettingView: View {
     
     
     var settingView: some View {
-        
         Form {
             Section {
                 VStack(alignment: .center) {
@@ -131,11 +132,7 @@ struct SettingView: View {
 
             }
             
-            
-         
-            
-            
-            
+
             
             Section {
                 Slider(value: $setting.lineSpace, in: 10...25, step: 1) {
@@ -159,7 +156,10 @@ struct SettingView: View {
 
             
 
-            Button(action: {self.showSettingSheet.toggle()}) {
+            Button(action: {
+                settingManager.updateSetting(setting: setting)
+                self.showSettingSheet.toggle()
+            }) {
                 Text("완료")
                     .fontWeight(.bold)
                     .foregroundColor(.titleBackground)

@@ -18,6 +18,7 @@
 		74099BDE2869CBA600ED8D23 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BDD2869CBA600ED8D23 /* SettingModel.swift */; };
 		7434623028658233001B5B1D /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434622F28658233001B5B1D /* ColorManager.swift */; };
 		74436406285B0E67005241E7 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74436405285B0E67005241E7 /* BibleView.swift */; };
+		7471BF4B286AD26D00B38386 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BF4A286AD26D00B38386 /* SettingManager.swift */; };
 		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
 		74782CEC284F2D1B0077CDCC /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAA284F2D190077CDCC /* 1-17에스더.txt */; };
 		74782CED284F2D1B0077CDCC /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74782CAB284F2D190077CDCC /* 2-09갈라디아서.txt */; };
@@ -170,6 +171,7 @@
 		7434622E28656807001B5B1D /* 2-07고린도전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-07고린도전서.txt"; sourceTree = "<group>"; };
 		7434622F28658233001B5B1D /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		74436405285B0E67005241E7 /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
+		7471BF4A286AD26D00B38386 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 		74782B0D284F05F90077CDCC /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
 		74782CAA284F2D190077CDCC /* 1-17에스더.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
 		74782CAB284F2D190077CDCC /* 2-09갈라디아서.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2-09갈라디아서.txt"; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				7403D12E2862C74E00AB68A3 /* DrawingManager.swift */,
 				7403D13D2862E4AF00AB68A3 /* RealmManager.swift */,
 				7434622F28658233001B5B1D /* ColorManager.swift */,
+				7471BF4A286AD26D00B38386 /* SettingManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				74099BDE2869CBA600ED8D23 /* SettingModel.swift in Sources */,
 				74436406285B0E67005241E7 /* BibleView.swift in Sources */,
 				7403D12F2862C74E00AB68A3 /* DrawingManager.swift in Sources */,
+				7471BF4B286AD26D00B38386 /* SettingManager.swift in Sources */,
 				7403D1312862C81F00AB68A3 /* DrawingViewController.swift in Sources */,
 				74782D2F284F3B300077CDCC /* BibleSentenceView.swift in Sources */,
 				7403D12D2862C72A00AB68A3 /* DrawingDocument.swift in Sources */,
