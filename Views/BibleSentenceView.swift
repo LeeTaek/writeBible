@@ -20,11 +20,13 @@ struct BibleSentenceView: View {
     var LineHeight: CGFloat = .zero
     
     var body: some View {
+        
+        
         return GeometryReader { geo in
                 HStack(alignment: .top) {
                     Text("\(bibleSentence.section)")
                         .bold()
-                        .font(.system(size: setting.fontSize+1))
+                        .font(.system(size: setting.fontSize + 1))
 
                     
                     Text("\(bibleSentence.sentence)")
@@ -42,7 +44,7 @@ struct BibleSentenceView: View {
                     // 필사 뷰 절 번호
                     Text("\(bibleSentence.section > 9 ? bibleSentence.section : bibleSentence.section)")
                         .bold()
-                        .font(.system(size: 17))
+                        .font(.system(size: setting.fontSize + 1))
 
 
                     // 필사하는 부분 line
@@ -51,13 +53,14 @@ struct BibleSentenceView: View {
                             Rectangle()
                               .opacity(0.2)
                               .frame(width: geo.frame(in: .global).size.width/7 * 3, height: 2)
-                              .position(x: (geo.frame(in: .global).midX + geo.frame(in: .global).minX)/2 - 20 , y: 22)
+                              .position(x: (geo.frame(in: .global).midX + geo.frame(in: .global).minX)/2 - 20 , y: geo.frame(in: .local).minY + setting.fontSize  + (setting.lineSpace*0.9))
                         }
                     }
                 }///HStack
                 .onPreferenceChange(ViewHeightKey.self) { // << read right side height
                     self.textHeight = $0        // << here !!
-                    self.line = Int((textHeight + setting.lineSpace) / (setting.baseLineHeight + setting.lineSpace)) + 1
+                    self.line = Int((textHeight + 1 + setting.lineSpace) / (setting.baseLineHeight + setting.lineSpace)) + 1
+                    print("linespace: \(setting.lineSpace), baseLineHeight: \(setting.baseLineHeight)")
                     print(bibleSentence.section ,$0, "line\( self.line)")
                    }
                 .padding([.trailing,.leading])
