@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct TitleView: View {    
     
@@ -13,16 +14,14 @@ struct TitleView: View {
     @Binding var chapter: Int
     @Binding var showTitleSheet: Bool
     @State private var showTitle = false
-    @State var showiSettingSheet = false
-    @Binding var settingValue: SettingModel
+    @State var showiSettingSheet = !SettingManager().isEmpty()
+    @ObservedRealmObject var settingValue: SettingManager
+
 
     var body: some View {
         VStack {
             title
             Spacer()
-            
-         
-            
         }
     }
     
@@ -33,6 +32,7 @@ struct TitleView: View {
         let name = ti[4..<ti.count]
         
         return HStack{
+            //MARK: -  Title 창
             Button(action: {
                 self.showTitleSheet.toggle()
             }) {
@@ -50,24 +50,27 @@ struct TitleView: View {
                 }
             }
 
-            
+
             Spacer()
             
+            
+            //MARK: - 설정창 sheet
             Button(action: {self.showiSettingSheet.toggle()}) {
                 Image(systemName: "gearshape")
                     .foregroundColor(Color.titleTextColor)
                     .padding()
                     
             }.sheet(isPresented: $showiSettingSheet) {
-                SettingView(setting: $settingValue, showSettingSheet: $showiSettingSheet)
+                SettingView(setting: settingValue.getSetting(), showSettingSheet: $showiSettingSheet)
             }
 
+            
         }
         .background(Color.titleBackground)
         .frame( height: 40 )
     }
-    
-    
+
+
     
     
     //MARK: - Sheet창의 성경 제목
@@ -80,13 +83,13 @@ struct TitleView: View {
                 .padding()
             
             Spacer()
-            
+           
             Button(action: {
                 showTitleSheet = false
             }) {
                 Image(systemName: "x.circle")
                     .foregroundColor(.titleTextColor)
-
+                    
             }
             .padding()
         }
@@ -108,12 +111,11 @@ struct TitleView: View {
                     
                     Button(action: {
                         self.bibleTitle = value
+                        
                     }) {
                         VStack {
                             Text("\(name)")
-                                .foregroundColor(.contentTextColor)
                         }
-                       
                     }
                     .listRowBackground(self.bibleTitle == value ? Color.selectedColor : Color(UIColor.systemBackground))
                 }
@@ -130,7 +132,6 @@ struct TitleView: View {
 
                     }) {
                         Text("\(value)")
-                            .foregroundColor(.contentTextColor)
                     }
                     .listRowBackground(self.chapter == value ? Color.selectedColor : Color(UIColor.systemBackground))
                 }
@@ -148,7 +149,7 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
    static var previews: some View {
-       TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(true), settingValue:  .constant(SettingModel(lineSpace: 11, fontSize: 20, traking: 2)))
+       TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(true), settingValue: SettingManager())
     }
 }
 

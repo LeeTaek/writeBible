@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import RealmSwift
 
 struct BibleView: View {
     @Binding var bibleTitle: BibleTitle
@@ -14,8 +14,7 @@ struct BibleView: View {
     @ObservedObject var manager = DrawingManager()
     @State private var translation: CGSize = .zero
     @Binding var showTitle: Bool
-    
-    @Binding var settingValue: SettingModel
+    @ObservedRealmObject var settingValue: SettingManager
     
     var body: some View {
         VStack {
@@ -23,7 +22,6 @@ struct BibleView: View {
             writeView
 
         }
-        
     }
 
     
@@ -33,7 +31,8 @@ struct BibleView: View {
         let keyTitle = bibleTitle.rawValue + chapterNum.description
         let dragGesture = DragGesture()
             .onChanged({
-                self.translation = $0.translation })
+                self.translation = $0.translation
+            })
             .onEnded {
                   if $0.translation.width < -100 {                           //드래그 가로의 위치가 -100보다 작은 위치로 가면 실행
                       if chapterNum < bible.getLastChapter() {
@@ -61,7 +60,7 @@ struct BibleView: View {
         return ScrollViewReader { scr in
                 ScrollView(.vertical) {
                     VStack {
-                        GeometryReader { proxy in
+                        GeometryReader { proxy in       // titleView 표기
                             Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
                         }.onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
                             withAnimation(.easeInOut) {
@@ -84,9 +83,8 @@ struct BibleView: View {
                                     .foregroundColor(Color.chapterTitleColor)
                                     .isHidden(showChpaterTitle)
 
-                        
                                     // 성경 구절
-                                BibleSentenceView(bibleSentence: name, setting: $settingValue)
+                                BibleSentenceView(bibleSentence: name, setting: .constant(settingValue.getSetting()))
                             }/// VStack
                             .id(name.section)
                             .padding([.bottom])
@@ -101,7 +99,6 @@ struct BibleView: View {
                         .onChange(of: keyTitle) { newValue in
                             withAnimation(.default) {
                                 scr.scrollTo("scrollToTop", anchor: .top)
-//                                print(scr)
                             }
                         }
                     } /// scrollView
@@ -138,7 +135,7 @@ struct BibleView: View {
 
 struct BibleView_Previews: PreviewProvider {
     static var previews: some View {
-        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1), showTitle: .constant(false), settingValue: .constant( SettingModel(lineSpace: 11, fontSize: 20, traking: 2))  )
+        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1), showTitle: .constant(false), settingValue: SettingManager()  )
     }
 }
 

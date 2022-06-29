@@ -57,10 +57,18 @@ class SettingManager: Object, ObjectKeyIdentifiable {
         } else {
             return SettingModel(lineSpace: 11, fontSize: 20, traking: 2)
         }
-        
-      
     }
     
     
+    
+    func isEmpty() -> Bool {
+        let realm = try! Realm()
         
+        if let _ = realm.object(ofType: SettingManager.self, forPrimaryKey: 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+
 }

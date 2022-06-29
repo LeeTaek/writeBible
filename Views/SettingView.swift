@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct SettingView: View {
-    @Binding var setting: SettingModel
+    @State var setting: SettingModel
     @Binding var showSettingSheet: Bool
-    let settingManager = SettingManager()
+    var settingManager = SettingManager()
 
-
-    
     var body: some View {
         VStack{
             settingTitle
             
             settingView
-        }
+        }.interactiveDismissDisabled(true)
     }
     
     
@@ -40,7 +38,6 @@ struct SettingView: View {
             }) {
                 Image(systemName: "x.circle")
                     .foregroundColor(.titleTextColor)
-
             }
             .padding()
         }
@@ -71,7 +68,9 @@ struct SettingView: View {
                                            value: $0.frame(in: .local).size.height)
                            })
                         .onPreferenceChange(ViewHeightKey.self) {
+                            print(#fileID, #function, #line, " base: \($0)")
                             self.setting.baseLineHeight = $0
+                            
                            }
                     
                     Spacer()
@@ -178,6 +177,6 @@ struct SettingView: View {
 
 struct SettinView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView(setting: .constant(SettingModel(lineSpace: 11, fontSize: 20, traking: 2)), showSettingSheet: .constant(false))
+        SettingView(setting: (SettingModel(lineSpace: 11, fontSize: 20, traking: 2)), showSettingSheet: .constant(false))
     }
 }

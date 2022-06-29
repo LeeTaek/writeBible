@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
     
@@ -13,31 +14,26 @@ struct ContentView: View {
     @State var chapterNum: Int = 1
     @State private var showingSheet = false
     @State private var showTitle = false
-    @State var setting : SettingModel
+    @ObservedResults(SettingManager.self) var settingValue
 
     
     var body: some View {
         
-          
-            
-        BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum, showTitle: $showTitle, settingValue: $setting)
+        print("setting Changed! : \(settingValue.first!.getSetting().fontSize)")
+        let setting = settingValue.first ?? SettingManager()
+        
+        return BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum, showTitle: $showTitle, settingValue: setting)
         .overlay() {
-            TitleView(bibleTitle: $bibleTitle, chapter: $chapterNum, showTitleSheet: $showingSheet, settingValue: $setting)
+            TitleView(bibleTitle: $bibleTitle, chapter: $chapterNum, showTitleSheet: $showingSheet, settingValue: setting)
                     .opacity(showTitle ? 0 : 1)
         }
-    
     }
-    
-    
-   
-    
-
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(setting: SettingModel(lineSpace: 11, fontSize: 20, traking: 2))
+        ContentView()
     }
 }
 

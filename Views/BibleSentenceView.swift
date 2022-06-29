@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import Combine
-
 
 struct BibleSentenceView: View {
     var bibleSentence: Bible
@@ -20,11 +18,11 @@ struct BibleSentenceView: View {
     var LineHeight: CGFloat = .zero
     
     var body: some View {
-        
+        let chapter = bibleSentence.section > 9 ? bibleSentence.section.description : bibleSentence.section.description + "  "
         
         return GeometryReader { geo in
                 HStack(alignment: .top) {
-                    Text("\(bibleSentence.section)")
+                    Text(chapter)
                         .bold()
                         .font(.system(size: setting.fontSize + 1))
 
@@ -42,9 +40,10 @@ struct BibleSentenceView: View {
                            })
                     
                     // 필사 뷰 절 번호
-                    Text("\(bibleSentence.section > 9 ? bibleSentence.section : bibleSentence.section)")
+                    Text(chapter)
                         .bold()
                         .font(.system(size: setting.fontSize + 1))
+                        
 
 
                     // 필사하는 부분 line
@@ -52,16 +51,17 @@ struct BibleSentenceView: View {
                         ForEach(1..<line, id: \.self) { _ in
                             Rectangle()
                               .opacity(0.2)
-                              .frame(width: geo.frame(in: .global).size.width/7 * 3, height: 2)
-                              .position(x: (geo.frame(in: .global).midX + geo.frame(in: .global).minX)/2 - 20 , y: geo.frame(in: .local).minY + setting.fontSize  + (setting.lineSpace*0.9))
+                              .frame(width: geo.frame(in: .local).size.width/7 * 3, height: 2)
+                              .position(x: (geo.frame(in: .local).midX + geo.frame(in: .local).minX)/2 - 20 , y: geo.frame(in: .local).minY + setting.fontSize + (setting.lineSpace*0.5))
                         }
                     }
                 }///HStack
-                .onPreferenceChange(ViewHeightKey.self) { // << read right side height
-                    self.textHeight = $0        // << here !!
+                .onPreferenceChange(ViewHeightKey.self) {
+                    // Frame 높이에 따라 그릴 Line 수 계산
+                    self.textHeight = $0
                     self.line = Int((textHeight + 1 + setting.lineSpace) / (setting.baseLineHeight + setting.lineSpace)) + 1
-//                    print("linespace: \(setting.lineSpace), baseLineHeight: \(setting.baseLineHeight)")
-//                    print(bibleSentence.section ,$0, "line\( self.line)")
+//                    print("chapter: \(chapter), height: \($0), line: \(self.line)")
+//                    print("space: \(setting.lineSpace), baseheight: \(setting.baseLineHeight)")
                    }
                 .padding([.trailing,.leading])
         }.frame(height: self.textHeight)
@@ -71,7 +71,6 @@ struct BibleSentenceView: View {
 }
 
 
-/// https://stackoverflow.com/questions/66485411/dynamic-texteditor-overlapping-with-other-views
 struct BibleSentenceView_Previews: PreviewProvider {
 
     static var previews: some View {
@@ -83,7 +82,7 @@ struct BibleSentenceView_Previews: PreviewProvider {
 }
 
 
-
+/// https://stackoverflow.com/questions/66485411/dynamic-texteditor-overlapping-with-other-viewㄴ
 struct ViewHeightKey: PreferenceKey {
     typealias Value = CGFloat
     static var defaultValue = CGFloat.zero
