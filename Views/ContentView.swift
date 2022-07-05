@@ -18,8 +18,6 @@ struct ContentView: View {
 
     
     var body: some View {
-        
-        print("setting Changed! : \(settingValue.first!.getSetting().fontSize)")
         let setting = settingValue.first ?? SettingManager()
         
         return BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum, showTitle: $showTitle, settingValue: setting)
@@ -36,4 +34,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
 

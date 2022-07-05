@@ -34,31 +34,32 @@ struct BibleView: View {
                 self.translation = $0.translation
             })
             .onEnded {
-                  if $0.translation.width < -100 {                           //드래그 가로의 위치가 -100보다 작은 위치로 가면 실행
-                      if chapterNum < bible.getLastChapter() {
-                          self.chapterNum += 1
-                      } else {
-                          bibleTitle.next()
-                          if bibleTitle != .revelation {
-                              self.chapterNum = 1
-                          }
-                      }
-                  } else if $0.translation.width > 100 {                  //드래그 가로의 위치가 100보다 커지면 실행
-                      if chapterNum > 1 {
-                          self.chapterNum -= 1
-                      } else {
-                          bibleTitle.before()
-                          if bibleTitle != .genesis {
-                              self.chapterNum = Bible(title: bibleTitle.rawValue).getLastChapter()
-                          }
-                      }
-                  }
+                if $0.translation.width < -100 {                           //드래그 가로의 위치가 -100보다 작은 위치로 가면 실행
+                    if chapterNum < bible.getLastChapter() {
+                        self.chapterNum += 1
+                    } else {
+                        bibleTitle.next()
+                        if bibleTitle != .revelation {
+                            self.chapterNum = 1
+                        }
+                    }
+                } else if $0.translation.width > 100 {                  //드래그 가로의 위치가 100보다 커지면 실행
+                    if chapterNum > 1 {
+                        self.chapterNum -= 1
+                    } else {
+                        bibleTitle.before()
+                        if bibleTitle != .genesis {
+                            self.chapterNum = Bible(title: bibleTitle.rawValue).getLastChapter()
+                        }
+                    }
+                }
                 self.translation = .zero
             }
-     
- 
+        
+        
         return ScrollViewReader { scr in
-                ScrollView(.vertical) {
+            ScrollView(.vertical) {
+                VStack {
                     VStack {
                         GeometryReader { proxy in       // titleView 표기
                             Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
@@ -70,45 +71,88 @@ struct BibleView: View {
                                 else {
                                     showTitle = false
                                 }
+                                
                             }
                         })
-                
+                        
+                        
                         ForEach(bible.makeBible(title: bibleTitle.rawValue).filter{$0.chapter == chapterNum}, id: \.sentence ) { name in
                             let showChpaterTitle = checkChapterTitle(chapterTitle: name.chapterTitle)
-
+                            
                             VStack() {
                                 Text(name.chapterTitle ?? "" )
                                     .font(.system(size: 22))
                                     .fontWeight(.heavy)
                                     .foregroundColor(Color.chapterTitleColor)
                                     .isHidden(showChpaterTitle)
-
-                                    // 성경 구절
+                                
+                                // 성경 구절
                                 BibleSentenceView(bibleSentence: name, setting: .constant(settingValue.getSetting()))
                             }/// VStack
                             .id(name.section)
                             .padding([.bottom])
                             .listRowSeparator(.hidden)
                         }/// ForEach
+                        
+                        Spacer()
+                   
+                        
+                    }///VStack
+                    .id("scrollToTop")
+                    .overlay() {
+                        DrawingWrapper(manager: manager, title: keyTitle)
+                            .id(keyTitle)
                     }
-                        .id("scrollToTop")
-                        .overlay() {
-                            DrawingWrapper(manager: manager, title: keyTitle)
-                                .id(keyTitle)
+                    .onChange(of: keyTitle) { newValue in
+                        withAnimation(.default) {
+                            scr.scrollTo("scrollToTop", anchor: .top)
                         }
-                        .onChange(of: keyTitle) { newValue in
-                            withAnimation(.default) {
-                                scr.scrollTo("scrollToTop", anchor: .top)
-                            }
-                        }
-                    } /// scrollView
-                .coordinateSpace(name: "scroll")
-                .onTapGesture {}
-                    .gesture(dragGesture)
-                    .offset(x: translation.width)
-                    .animation(.interactiveSpring(), value: translation.width)
-                }/// scrollViewReader
-        }
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Button(action: {
+                            self.chapterNum += 1
+                            RealmManager().written(title: keyTitle)
+                            
+                            print("작성완료")
+                        }) {
+                            
+                            Rectangle()
+                                .stroke(Color.black.opacity(0.85), lineWidth: 3)
+                                .foregroundColor(.white)
+                                .frame(width:150 , height:50)
+                                .cornerRadius(5)
+                                .overlay() {
+                                    HStack {
+                                        Image("Pencil")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+//                                            .padding(10)
+                                        
+                                        Text("새기다")
+                                            .fontWeight(.semibold)
+                                            .font(.subheadline)
+                                            .foregroundColor(.black)
+                                    }
+                                    
+                                    .padding()
+                                }
+                        } ///Button
+                        .padding(30)
+
+                    }///HStack
+                    
+                    
+                } ///VStack
+            } /// scrollView
+            .coordinateSpace(name: "scroll")
+//                .onTapGesture {}
+            .gesture(dragGesture)
+            .animation(.interactiveSpring(), value: translation.width)
+        }/// scrollViewReader
+    }
     
     
     
@@ -129,6 +173,7 @@ struct BibleView: View {
     }
     
  
+
     
 }
 

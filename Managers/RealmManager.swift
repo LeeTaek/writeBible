@@ -14,17 +14,22 @@ class RealmManager: Object, ObjectKeyIdentifiable {
     
     @Persisted var data: Data
     @Persisted(primaryKey: true) var title: String
-    
+    @Persisted var date: Date
+    @Persisted var writted: Bool
     
     convenience init(document: DrawingDocument) {
         self.init()
         
         self.data = document.data
         self.title = document.title
+        self.date = Date.now
+        self.writted = false
     }
     
     
     func addData(document: DrawingDocument) {
+        print(#fileID, #function, #line, "경로: \(Realm.Configuration.defaultConfiguration.fileURL!)")
+        
         let realm = try! Realm()
         let saveData = RealmManager(document: document)
         
@@ -89,4 +94,39 @@ class RealmManager: Object, ObjectKeyIdentifiable {
             }
         }
     }
+    
+    
+    func getRecent() -> String {
+        let realm = try! Realm()
+        
+        if let recentData = realm.objects(RealmManager.self).sorted(by: { $0.date < $1.date} ).last {
+            return recentData.title
+        }
+        
+        return "1-01창세기.txt1"
+    }
+    
+    
+    func written(title: String) {
+        let realm = try! Realm()
+        if let updateData = realm.object(ofType: RealmManager.self, forPrimaryKey: title) {
+            
+            try! realm.write {
+                updateData.writted = true
+            }
+        }
+    }
+    
+    
+    func isWirtten(title: String, chapter: Int) -> Bool {
+        let realm = try! Realm()
+        let keyTitle = title + chapter.description
+        
+        if let bibleData = realm.object(ofType: RealmManager.self, forPrimaryKey: keyTitle) {
+            return bibleData.writted
+        }
+        
+        return false
+    }
+    
 }

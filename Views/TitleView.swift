@@ -102,7 +102,7 @@ struct TitleView: View {
     //MARK: - Sheet창의 장
     var bibleList: some View {
         let lastChapter = Bible(title: bibleTitle.rawValue).getLastChapter()
-        
+
         return HStack {
             List {
                 ForEach(BibleTitle.allCases, id: \.self) { value in
@@ -131,7 +131,19 @@ struct TitleView: View {
                         showTitleSheet = false
 
                     }) {
-                        Text("\(value)")
+                        HStack {
+                            Text("\(value)")
+                            
+                            Spacer()
+                            
+                            if RealmManager().isWirtten(title: bibleTitle.rawValue, chapter: value) {
+                                Image("Pencil")
+                                    .resizable()
+                                    .frame(width: 30, height:30)
+
+                            }
+                       
+                        }
                     }
                     .listRowBackground(self.chapter == value ? Color.selectedColor : Color(UIColor.systemBackground))
                 }

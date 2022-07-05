@@ -15,7 +15,7 @@ struct DrawingWrapper : UIViewControllerRepresentable {
     var title: String
     
     func makeUIViewController(context: Context) -> DrawingViewController {
-        print(#fileID, #function, #line, "\(title)")
+//        print(#fileID, #function, #line, "\(title)")
     
         save(title: title)
         

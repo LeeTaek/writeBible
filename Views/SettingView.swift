@@ -68,10 +68,8 @@ struct SettingView: View {
                                            value: $0.frame(in: .local).size.height)
                            })
                         .onPreferenceChange(ViewHeightKey.self) {
-                            print(#fileID, #function, #line, " base: \($0)")
                             self.setting.baseLineHeight = $0
-                            
-                           }
+                        }
                     
                     Spacer()
                     

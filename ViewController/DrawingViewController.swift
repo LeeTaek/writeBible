@@ -30,6 +30,8 @@ class DrawingViewController: UIViewController {
     var drawingData = Data()
     var drawingChanged: (Data) -> Void = {_ in }
     var keyTitle: String? = ""
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,7 @@ class DrawingViewController: UIViewController {
             canvas.topAnchor.constraint(equalTo: view.topAnchor),
             canvas.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
+            
         
         toolPicker.setVisible(true, forFirstResponder: canvas)
         toolPicker.addObserver(canvas)
@@ -55,7 +57,7 @@ class DrawingViewController: UIViewController {
         }
     }
     
-    
+    //MARK: -  PKdrawing 저장
     override func viewWillDisappear(_ animated: Bool) {
         print(#fileID, #function, #line, "\(keyTitle!), \(drawingData)")
         manager.update(data: drawingData, for: keyTitle ?? "")
