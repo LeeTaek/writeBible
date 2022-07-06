@@ -61,8 +61,8 @@ struct BibleSentenceView: View {
                     // Frame 높이에 따라 그릴 Line 수 계산
                     self.textHeight = $0
                     self.line = Int((textHeight + 25 + setting.lineSpace) / (setting.baseLineHeight + setting.lineSpace)) + 1
-                    print("chapter: \(chapter), height: \($0), line: \(self.line)")
-                    print("space: \(setting.lineSpace), baseheight: \(setting.baseLineHeight)")
+//                    print("chapter: \(chapter), height: \($0), line: \(self.line)")
+//                    print("space: \(setting.lineSpace), baseheight: \(setting.baseLineHeight)")
                    }
                 .padding([.trailing,.leading])
         }.frame(height: self.textHeight)

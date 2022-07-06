@@ -12,9 +12,7 @@ struct SettingView: View {
     @Binding var showSettingSheet: Bool
     var settingManager = SettingManager()
    
-    
 
-    
     var body: some View {
         VStack{
             settingTitle

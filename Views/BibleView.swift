@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealmSwift
+import Introspect
 
 struct BibleView: View {
     @Binding var bibleTitle: BibleTitle
@@ -64,14 +65,15 @@ struct BibleView: View {
                         GeometryReader { proxy in       // titleView 표기
                             Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
                         }.onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
-                            withAnimation(.easeInOut) {
-                                if value < 0 {
-                                    showTitle = true
+                            DispatchQueue.main.async {
+                                withAnimation(.easeInOut) {
+                                    if value < 0 {
+                                        showTitle = true
+                                    }
+                                    else {
+                                        showTitle = false
+                                    }
                                 }
-                                else {
-                                    showTitle = false
-                                }
-                                
                             }
                         })
                         
@@ -115,7 +117,15 @@ struct BibleView: View {
                         Spacer()
                         
                         Button(action: {
-                            self.chapterNum += 1
+                            if chapterNum < bible.getLastChapter() {
+                                self.chapterNum += 1
+                            } else {
+                                bibleTitle.next()
+                                if bibleTitle != .revelation {
+                                    self.chapterNum = 1
+                                }
+                            }
+                            
                             RealmManager().written(title: keyTitle)
                             
                             print("작성완료")
@@ -182,7 +192,7 @@ struct BibleView: View {
 
 struct BibleView_Previews: PreviewProvider {
     static var previews: some View {
-        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1), showTitle: .constant(false), settingValue: SettingManager()  )
+        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1), showTitle: .constant(false), settingValue: SettingManager())
     }
 }
 

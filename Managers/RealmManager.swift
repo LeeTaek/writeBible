@@ -35,7 +35,7 @@ class RealmManager: Object, ObjectKeyIdentifiable {
         
         if isEmpty(data: document) {
             try! realm.write {
-                print(#fileID, #function, #line, "\(document.title)")
+//                print(#fileID, #function, #line, "\(document.title)")
                 realm.add(saveData)
             }
         }
@@ -51,7 +51,6 @@ class RealmManager: Object, ObjectKeyIdentifiable {
         DrawingRealmObjects.forEach { object in
             DrawingDatas.append(DrawingDocument(data: object.data, title: object.title))
         }
-        
         
         return DrawingDatas
     }
@@ -76,6 +75,7 @@ class RealmManager: Object, ObjectKeyIdentifiable {
             
             try! realm.write {
                 updateData.data = data.data
+                updateData.date = Date.now
                 
             }
         } else {

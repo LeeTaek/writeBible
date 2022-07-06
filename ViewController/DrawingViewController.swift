@@ -61,6 +61,11 @@ class DrawingViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         print(#fileID, #function, #line, "\(keyTitle!), \(drawingData)")
         manager.update(data: drawingData, for: keyTitle ?? "")
+        
+        let chapter = Int(String(keyTitle!.components(separatedBy: "txt").last!))!
+        
+        RecentWrittingManager().updateSetting(bibleTitle: keyTitle! + "txt", chapter: chapter)
+
     }
 }
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct WriteBibleApp: App {
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -95,6 +95,8 @@
 		7483622A2875457F0012B3B5 /* 나눔명조.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748362292875457E0012B3B5 /* 나눔명조.ttf */; };
 		7495B560287534EB009D265E /* 나눔손글씨 꽃내음.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */; };
 		7495B5622875393A009D265E /* 나눔바른고딕.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7495B5612875393A009D265E /* 나눔바른고딕.ttf */; };
+		74F92056287560B600E05A77 /* RecentWrittingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F92055287560B600E05A77 /* RecentWrittingManager.swift */; };
+		74F9205D2875706B00E05A77 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 74F9205C2875706B00E05A77 /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -253,6 +255,7 @@
 		7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 꽃내음.ttf"; sourceTree = "<group>"; };
 		7495B5612875393A009D265E /* 나눔바른고딕.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔바른고딕.ttf"; sourceTree = "<group>"; };
 		74DB0F52286D7C070019A646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		74F92055287560B600E05A77 /* RecentWrittingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWrittingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */,
+				74F9205D2875706B00E05A77 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +286,7 @@
 				7403D13D2862E4AF00AB68A3 /* RealmManager.swift */,
 				7434622F28658233001B5B1D /* ColorManager.swift */,
 				7471BF4A286AD26D00B38386 /* SettingManager.swift */,
+				74F92055287560B600E05A77 /* RecentWrittingManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 			name = WriteBible;
 			packageProductDependencies = (
 				7403D13B2862E49800AB68A3 /* RealmSwift */,
+				74F9205C2875706B00E05A77 /* Introspect */,
 			);
 			productName = WriteBible;
 			productReference = 7481B4512848804B00517BAF /* WriteBible.app */;
@@ -557,6 +563,7 @@
 			mainGroup = 7481B4482848804B00517BAF;
 			packageReferences = (
 				7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				74F9205B2875706B00E05A77 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 7481B4522848804B00517BAF /* Products */;
 			projectDirPath = "";
@@ -661,6 +668,7 @@
 				74099BDE2869CBA600ED8D23 /* SettingModel.swift in Sources */,
 				74436406285B0E67005241E7 /* BibleView.swift in Sources */,
 				7403D12F2862C74E00AB68A3 /* DrawingManager.swift in Sources */,
+				74F92056287560B600E05A77 /* RecentWrittingManager.swift in Sources */,
 				7471BF4B286AD26D00B38386 /* SettingManager.swift in Sources */,
 				7403D1312862C81F00AB68A3 /* DrawingViewController.swift in Sources */,
 				74782D2F284F3B300077CDCC /* BibleSentenceView.swift in Sources */,
@@ -881,6 +889,14 @@
 				kind = branch;
 			};
 		};
+		74F9205B2875706B00E05A77 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -888,6 +904,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		74F9205C2875706B00E05A77 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74F9205B2875706B00E05A77 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
