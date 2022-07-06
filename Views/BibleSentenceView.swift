@@ -24,12 +24,12 @@ struct BibleSentenceView: View {
                 HStack(alignment: .top) {
                     Text(chapter)
                         .bold()
-                        .font(.system(size: setting.fontSize + 1))
+                        .font(.custom(setting.font.rawValue, size: setting.fontSize + 1))
 
                     
                     Text("\(bibleSentence.sentence)")
                         .tracking(setting.traking)
-                        .font(.system(size: setting.fontSize))
+                        .font(.custom(setting.font.rawValue, size: setting.fontSize))
                         .lineSpacing(setting.lineSpace) //텍스트 줄간격 조절
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(width: geo.frame(in: .global).size.width/7 * 3, alignment: .leading)
@@ -42,7 +42,8 @@ struct BibleSentenceView: View {
                     // 필사 뷰 절 번호
                     Text(chapter)
                         .bold()
-                        .font(.system(size: setting.fontSize + 1))
+                        .font(.custom(setting.font.rawValue, size: setting.fontSize + 1))
+
                         
 
 
@@ -59,9 +60,9 @@ struct BibleSentenceView: View {
                 .onPreferenceChange(ViewHeightKey.self) {
                     // Frame 높이에 따라 그릴 Line 수 계산
                     self.textHeight = $0
-                    self.line = Int((textHeight + 1 + setting.lineSpace) / (setting.baseLineHeight + setting.lineSpace)) + 1
-//                    print("chapter: \(chapter), height: \($0), line: \(self.line)")
-//                    print("space: \(setting.lineSpace), baseheight: \(setting.baseLineHeight)")
+                    self.line = Int((textHeight + 25 + setting.lineSpace) / (setting.baseLineHeight + setting.lineSpace)) + 1
+                    print("chapter: \(chapter), height: \($0), line: \(self.line)")
+                    print("space: \(setting.lineSpace), baseheight: \(setting.baseLineHeight)")
                    }
                 .padding([.trailing,.leading])
         }.frame(height: self.textHeight)

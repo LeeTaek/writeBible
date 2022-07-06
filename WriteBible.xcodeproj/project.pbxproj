@@ -92,6 +92,9 @@
 		7481B4572848804B00517BAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4562848804B00517BAF /* ContentView.swift */; };
 		7481B4592848804D00517BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481B4582848804D00517BAF /* Assets.xcassets */; };
 		7481B45C2848804D00517BAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481B45B2848804D00517BAF /* Preview Assets.xcassets */; };
+		7483622A2875457F0012B3B5 /* 나눔명조.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748362292875457E0012B3B5 /* 나눔명조.ttf */; };
+		7495B560287534EB009D265E /* 나눔손글씨 꽃내음.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */; };
+		7495B5622875393A009D265E /* 나눔바른고딕.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7495B5612875393A009D265E /* 나눔바른고딕.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -246,6 +249,9 @@
 		7481B4562848804B00517BAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7481B4582848804D00517BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7481B45B2848804D00517BAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		748362292875457E0012B3B5 /* 나눔명조.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔명조.ttf"; sourceTree = "<group>"; };
+		7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 꽃내음.ttf"; sourceTree = "<group>"; };
+		7495B5612875393A009D265E /* 나눔바른고딕.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔바른고딕.ttf"; sourceTree = "<group>"; };
 		74DB0F52286D7C070019A646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -454,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				7481B4532848804B00517BAF /* WriteBible */,
+				7495B55E287534DD009D265E /* Font */,
 				74782C21284F0CBE0077CDCC /* 개역개정-text */,
 				7403D1292862C6BD00AB68A3 /* Managers */,
 				7403D1262862C69A00AB68A3 /* ViewController */,
@@ -489,6 +496,16 @@
 			children = (
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7495B55E287534DD009D265E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */,
+				7495B5612875393A009D265E /* 나눔바른고딕.ttf */,
+				748362292875457E0012B3B5 /* 나눔명조.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,6 +576,7 @@
 				74782CF3284F2D1B0077CDCC /* 1-38스가랴.txt in Resources */,
 				74782CF1284F2D1B0077CDCC /* 2-24요한이서.txt in Resources */,
 				74782D00284F2D1B0077CDCC /* 2-10에베소서.txt in Resources */,
+				7495B5622875393A009D265E /* 나눔바른고딕.ttf in Resources */,
 				74782CF7284F2D1B0077CDCC /* 2-08고린도후서.txt in Resources */,
 				74782D03284F2D1B0077CDCC /* 2-12골로새서.txt in Resources */,
 				74782D02284F2D1B0077CDCC /* 2-20야고보서.txt in Resources */,
@@ -568,6 +586,7 @@
 				74782D10284F2D1B0077CDCC /* 1-34나훔.txt in Resources */,
 				74782D05284F2D1B0077CDCC /* 1-15에스라.txt in Resources */,
 				74782CF0284F2D1B0077CDCC /* 1-25예레미야애가.txt in Resources */,
+				7483622A2875457F0012B3B5 /* 나눔명조.ttf in Resources */,
 				74782D11284F2D1B0077CDCC /* 2-07고린도전서.txt in Resources */,
 				74782D25284F2D1B0077CDCC /* 1-22아가.txt in Resources */,
 				74782D07284F2D1B0077CDCC /* 2-14데살로니가후서.txt in Resources */,
@@ -606,6 +625,7 @@
 				74782D23284F2D1B0077CDCC /* 2-26유다서.txt in Resources */,
 				74782D12284F2D1B0077CDCC /* 2-05사도행전.txt in Resources */,
 				7481B45C2848804D00517BAF /* Preview Assets.xcassets in Resources */,
+				7495B560287534EB009D265E /* 나눔손글씨 꽃내음.ttf in Resources */,
 				74782D26284F2D1B0077CDCC /* 1-16느헤미야.txt in Resources */,
 				74782D13284F2D1B0077CDCC /* 2-16디모데후서.txt in Resources */,
 				74782CFD284F2D1B0077CDCC /* 1-30아모스.txt in Resources */,
@@ -781,6 +801,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WriteBible/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "새기다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -810,6 +831,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WriteBible/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "새기다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

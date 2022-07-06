@@ -16,15 +16,18 @@ struct ContentView: View {
     @State private var showTitle = false
     @ObservedResults(SettingManager.self) var settingValue
 
+    @State var isLoading: Bool = true
+    
     
     var body: some View {
         let setting = settingValue.first ?? SettingManager()
         
         return BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum, showTitle: $showTitle, settingValue: setting)
-        .overlay() {
-            TitleView(bibleTitle: $bibleTitle, chapter: $chapterNum, showTitleSheet: $showingSheet, settingValue: setting)
-                    .opacity(showTitle ? 0 : 1)
-        }
+            .overlay() {
+                TitleView(bibleTitle: $bibleTitle, chapter: $chapterNum, showTitleSheet: $showingSheet, settingValue: setting)
+                        .opacity(showTitle ? 0 : 1)
+            }
+
     }
 }
 
@@ -34,5 +37,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
 

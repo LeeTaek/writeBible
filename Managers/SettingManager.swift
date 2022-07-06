@@ -11,12 +11,13 @@ import RealmSwift
 class SettingManager: Object, ObjectKeyIdentifiable {
     static let shared = SettingManager()
     
+    
     @Persisted(primaryKey: true) var id: Int
     @Persisted var lineSpace: Float
     @Persisted var fontSize: Float
     @Persisted var traking: Float
     @Persisted var baseLineHeight: Float
-
+    @Persisted var font: String
     
     convenience init(setting: SettingModel) {
         self.init()
@@ -26,6 +27,7 @@ class SettingManager: Object, ObjectKeyIdentifiable {
         self.fontSize = Float(setting.fontSize)
         self.traking = Float(setting.traking)
         self.baseLineHeight = Float(setting.baseLineHeight)
+        self.font = setting.font.rawValue
     }
     
     
@@ -39,6 +41,7 @@ class SettingManager: Object, ObjectKeyIdentifiable {
                     loaded.traking = Float(setting.traking)
                     loaded.lineSpace = Float(setting.lineSpace)
                     loaded.baseLineHeight = Float(setting.baseLineHeight)
+                    loaded.font = setting.font.rawValue
                 }
 
         } else {
@@ -49,13 +52,14 @@ class SettingManager: Object, ObjectKeyIdentifiable {
         }
     }
     
+    
     func getSetting() -> SettingModel {
         let realm = try! Realm()
             
         if let saved = realm.object(ofType: SettingManager.self, forPrimaryKey: 0) {
-            return SettingModel(lineSpace: CGFloat(saved.lineSpace), fontSize: CGFloat(saved.fontSize), traking: CGFloat(saved.traking), baseLineHeight: CGFloat(saved.baseLineHeight))
+            return SettingModel(lineSpace: CGFloat(saved.lineSpace), fontSize: CGFloat(saved.fontSize), traking: CGFloat(saved.traking), baseLineHeight: CGFloat(saved.baseLineHeight), font: FontCase(rawValue: font)!)
         } else {
-            return SettingModel(lineSpace: 11, fontSize: 20, traking: 2)
+            return SettingModel(lineSpace: 11, fontSize: 20, traking: 1)
         }
     }
     

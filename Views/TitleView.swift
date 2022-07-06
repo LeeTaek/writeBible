@@ -36,6 +36,7 @@ struct TitleView: View {
             Button(action: {
                 self.showTitleSheet.toggle()
             }) {
+                
                 Text("\(name) \(chapter)장")
                     .font(.system(size: 30))
                     .padding()

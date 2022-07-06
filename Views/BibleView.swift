@@ -100,8 +100,10 @@ struct BibleView: View {
                     }///VStack
                     .id("scrollToTop")
                     .overlay() {
-                        DrawingWrapper(manager: manager, title: keyTitle)
-                            .id(keyTitle)
+                        if settingValue.isEmpty() {
+                            DrawingWrapper(manager: manager, title: keyTitle)
+                                .id(keyTitle)
+                        }
                     }
                     .onChange(of: keyTitle) { newValue in
                         withAnimation(.default) {
