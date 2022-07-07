@@ -7,7 +7,6 @@
 
 import SwiftUI
 import RealmSwift
-import Introspect
 
 struct BibleView: View {
     @Binding var bibleTitle: BibleTitle

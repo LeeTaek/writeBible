@@ -15,15 +15,12 @@ struct ContentView: View {
     @State private var showingSheet = false
     @State private var showTitle = false
     @ObservedResults(SettingManager.self) var settingValue
-//    @ObservedResults(RecentWrittingManager.self) var recentValue
 
     @State var isLoading: Bool = true
         
     
     var body: some View {
-        let setting = settingValue.first ?? SettingManager()
-//        let recentData = recentValue.first ?? RecentWrittingManager()
-      
+        let setting = settingValue.first ?? SettingManager()      
 
         return BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum, showTitle: $showTitle, settingValue: setting)
             .overlay() {

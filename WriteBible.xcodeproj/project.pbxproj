@@ -96,7 +96,6 @@
 		7495B560287534EB009D265E /* 나눔손글씨 꽃내음.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */; };
 		7495B5622875393A009D265E /* 나눔바른고딕.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7495B5612875393A009D265E /* 나눔바른고딕.ttf */; };
 		74F92056287560B600E05A77 /* RecentWrittingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F92055287560B600E05A77 /* RecentWrittingManager.swift */; };
-		74F9205D2875706B00E05A77 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 74F9205C2875706B00E05A77 /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -264,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */,
-				74F9205D2875706B00E05A77 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +529,6 @@
 			name = WriteBible;
 			packageProductDependencies = (
 				7403D13B2862E49800AB68A3 /* RealmSwift */,
-				74F9205C2875706B00E05A77 /* Introspect */,
 			);
 			productName = WriteBible;
 			productReference = 7481B4512848804B00517BAF /* WriteBible.app */;
@@ -563,7 +560,6 @@
 			mainGroup = 7481B4482848804B00517BAF;
 			packageReferences = (
 				7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				74F9205B2875706B00E05A77 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 7481B4522848804B00517BAF /* Products */;
 			projectDirPath = "";
@@ -811,9 +807,10 @@
 				INFOPLIST_FILE = WriteBible/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "새기다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -841,9 +838,10 @@
 				INFOPLIST_FILE = WriteBible/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "새기다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -889,14 +887,6 @@
 				kind = branch;
 			};
 		};
-		74F9205B2875706B00E05A77 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -904,11 +894,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
-		};
-		74F9205C2875706B00E05A77 /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74F9205B2875706B00E05A77 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

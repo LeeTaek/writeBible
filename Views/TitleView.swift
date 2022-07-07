@@ -17,6 +17,8 @@ struct TitleView: View {
     @State var showiSettingSheet = !SettingManager().isEmpty()
     @ObservedRealmObject var settingValue: SettingManager
 
+    @Environment(\.colorScheme) var colorScheme     // Dark모드에서 새기다 버튼 컬러를 위해 모드 감지
+
 
     var body: some View {
         VStack {
@@ -140,8 +142,9 @@ struct TitleView: View {
                             if RealmManager().isWirtten(title: bibleTitle.rawValue, chapter: value) {
                                 Image("Pencil")
                                     .resizable()
+                                    .renderingMode(.template)
                                     .frame(width: 30, height:30)
-
+                                    .tint(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85))
                             }
                        
                         }
