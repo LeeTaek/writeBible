@@ -17,11 +17,13 @@ struct BibleView: View {
     @Binding var showTitle: Bool
     @ObservedRealmObject var settingValue: SettingManager
     
+    @Environment(\.colorScheme) var colorScheme     // Dark모드에서 새기다 버튼 컬러를 위해 모드 감지
+        
     var body: some View {
         VStack {
             simpleTitle
+            
             writeView
-
         }
     }
 
@@ -58,14 +60,19 @@ struct BibleView: View {
             }
         
         
+        
         return ScrollViewReader { scr in
             ScrollView(.vertical) {
                 VStack {
                     VStack {
+                        /// Bound preference ScrollPreferenceKey tried to update multiple times per frame. 오류 발생
+                        /// onPreferenceChange가 무거운듯
                         GeometryReader { proxy in       // titleView 표기
                             Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
-                        }.onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
+                        }
+                        .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
                             DispatchQueue.main.async {
+
                                 withAnimation(.easeInOut) {
                                     if value < 0 {
                                         showTitle = true
@@ -77,7 +84,7 @@ struct BibleView: View {
                             }
                         })
                         
-                        
+                        // 성경 본문
                         ForEach(bible.makeBible(title: bibleTitle.rawValue).filter{$0.chapter == chapterNum}, id: \.sentence ) { name in
                             let showChpaterTitle = checkChapterTitle(chapterTitle: name.chapterTitle)
                             
@@ -113,6 +120,7 @@ struct BibleView: View {
                         }
                     }
                     
+                    // 새기다 버튼
                     HStack {
                         Spacer()
                         
@@ -132,21 +140,22 @@ struct BibleView: View {
                         }) {
                             
                             Rectangle()
-                                .stroke(Color.black.opacity(0.85), lineWidth: 3)
-                                .foregroundColor(.white)
+                                .stroke(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85), lineWidth: 3)
+                                .foregroundColor(colorScheme == .light ? .white : .black)
                                 .frame(width:150 , height:50)
                                 .cornerRadius(5)
                                 .overlay() {
                                     HStack {
                                         Image("Pencil")
                                             .resizable()
+                                            .renderingMode(.template)
                                             .aspectRatio(contentMode: .fit)
-//                                            .padding(10)
+                                            .tint(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85))
                                         
                                         Text("새기다")
                                             .fontWeight(.semibold)
                                             .font(.subheadline)
-                                            .foregroundColor(.black)
+                                            .foregroundColor(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85))
                                     }
                                     
                                     .padding()
@@ -155,14 +164,13 @@ struct BibleView: View {
                         .padding(30)
 
                     }///HStack
-                    
-                    
+                    ///
                 } ///VStack
             } /// scrollView
             .coordinateSpace(name: "scroll")
 //                .onTapGesture {}
             .gesture(dragGesture)
-            .animation(.interactiveSpring(), value: translation.width)
+//            .animation(.interactiveSpring(), value: translation.width)
         }/// scrollViewReader
     }
     

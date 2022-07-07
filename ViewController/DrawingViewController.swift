@@ -62,9 +62,9 @@ class DrawingViewController: UIViewController {
         print(#fileID, #function, #line, "\(keyTitle!), \(drawingData)")
         manager.update(data: drawingData, for: keyTitle ?? "")
         
-        let chapter = Int(String(keyTitle!.components(separatedBy: "txt").last!))!
-        
-        RecentWrittingManager().updateSetting(bibleTitle: keyTitle! + "txt", chapter: chapter)
+        let chapterNum = Int(String(keyTitle!.components(separatedBy: "txt").last!))!
+        let title = keyTitle!.components(separatedBy: "txt").first! + "txt"
+        RecentWrittingManager().updateSetting(bibleTitle: title, chapter: chapterNum)
 
     }
 }
