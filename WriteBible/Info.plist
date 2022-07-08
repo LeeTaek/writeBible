@@ -14,9 +14,6 @@
 		<false/>
 	</dict>
 	<key>UILaunchScreen</key>
-	<dict>
-		<key>UIImageName</key>
-		<string>LaunchScreen</string>
-	</dict>
+	<dict/>
 </dict>
 </plist>
