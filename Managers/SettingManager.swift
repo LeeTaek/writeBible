@@ -56,11 +56,18 @@ class SettingManager: Object, ObjectKeyIdentifiable {
     
     func getSetting() -> SettingModel {
         let realm = try! Realm()
-            
+                
         if let saved = realm.object(ofType: SettingManager.self, forPrimaryKey: 0) {
+            
+//            if saved.font == "나눔바른고딕" {
+//                self.font = "NanumBarunGothic"
+//            } else if saved.font == "나눔명조" {
+//                self.font = "NanumMyeongjo"
+//            }
+//
             return SettingModel(lineSpace: CGFloat(saved.lineSpace), fontSize: CGFloat(saved.fontSize), traking: CGFloat(saved.traking), baseLineHeight: CGFloat(saved.baseLineHeight), font: FontCase(rawValue: font)!)
         } else {
-            return SettingModel(lineSpace: 11, fontSize: 20, traking: 1)
+            return SettingModel(lineSpace: 11, fontSize: 20, traking: 1, font: .myeongjo)
         }
     }
     

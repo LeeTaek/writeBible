@@ -14,7 +14,7 @@ struct ContentView: View {
     @State var chapterNum: Int = 1
     @State private var showingSheet = false
     @State private var showTitle = false
-    @ObservedResults(SettingManager.self) var settingValue
+    @ObservedResults(SettingManager.self, configuration: Realm.Configuration(schemaVersion: 1)) var settingValue
 
     @State var isLoading: Bool = true
         

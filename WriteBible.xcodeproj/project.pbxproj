@@ -30,6 +30,72 @@
 		748DBF5D2877E4A40059D300 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748DBF5C2877E4A40059D300 /* Launch Screen.storyboard */; };
 		748DBF5F2877E5380059D300 /* NanumBarunGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748DBF5E2877E5380059D300 /* NanumBarunGothic.ttf */; };
 		7495B560287534EB009D265E /* 나눔손글씨 꽃내음.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */; };
+		74B6223B28783F8400978FE4 /* 1-01창세기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620228656805001B5B1D /* 1-01창세기.txt */; };
+		74B6223C28783F8D00978FE4 /* 1-02출애굽기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620428656805001B5B1D /* 1-02출애굽기.txt */; };
+		74B6223D28783F8F00978FE4 /* 1-03레위기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621528656805001B5B1D /* 1-03레위기.txt */; };
+		74B6223E28783F9200978FE4 /* 1-04민수기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621A28656806001B5B1D /* 1-04민수기.txt */; };
+		74B6223F28783F9400978FE4 /* 1-05신명기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621028656805001B5B1D /* 1-05신명기.txt */; };
+		74B6224028783F9900978FE4 /* 2-03누가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FA28656804001B5B1D /* 2-03누가복음.txt */; };
+		74B6224128783F9900978FE4 /* 2-24요한이서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622328656806001B5B1D /* 2-24요한이서.txt */; };
+		74B6224228783F9900978FE4 /* 1-07사사기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621428656805001B5B1D /* 1-07사사기.txt */; };
+		74B6224328783F9900978FE4 /* 1-25예레미야애가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622D28656807001B5B1D /* 1-25예레미야애가.txt */; };
+		74B6224428783F9900978FE4 /* 2-15디모데전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F028656804001B5B1D /* 2-15디모데전서.txt */; };
+		74B6224528783F9900978FE4 /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FD28656804001B5B1D /* 2-09갈라디아서.txt */; };
+		74B6224628783F9900978FE4 /* 1-22아가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620628656805001B5B1D /* 1-22아가.txt */; };
+		74B6224728783F9900978FE4 /* 1-31오바댜.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F728656804001B5B1D /* 1-31오바댜.txt */; };
+		74B6224828783F9900978FE4 /* 2-26유다서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620328656805001B5B1D /* 2-26유다서.txt */; };
+		74B6224928783F9900978FE4 /* 2-07고린도전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622E28656807001B5B1D /* 2-07고린도전서.txt */; };
+		74B6224A28783F9900978FE4 /* 2-11빌립보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621F28656806001B5B1D /* 2-11빌립보서.txt */; };
+		74B6224B28783F9900978FE4 /* 2-25요한삼서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622028656806001B5B1D /* 2-25요한삼서.txt */; };
+		74B6224C28783F9900978FE4 /* 1-37학개.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F328656804001B5B1D /* 1-37학개.txt */; };
+		74B6224D28783F9900978FE4 /* 2-08고린도후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620F28656805001B5B1D /* 2-08고린도후서.txt */; };
+		74B6224E28783F9900978FE4 /* 1-10사무엘하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621D28656806001B5B1D /* 1-10사무엘하.txt */; };
+		74B6224F28783F9900978FE4 /* 1-15에스라.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620D28656805001B5B1D /* 1-15에스라.txt */; };
+		74B6225028783F9900978FE4 /* 1-36스바냐.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621328656805001B5B1D /* 1-36스바냐.txt */; };
+		74B6225128783F9900978FE4 /* 1-20잠언.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FB28656804001B5B1D /* 1-20잠언.txt */; };
+		74B6225228783F9900978FE4 /* 2-10에베소서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F428656804001B5B1D /* 2-10에베소서.txt */; };
+		74B6225328783F9900978FE4 /* 1-34나훔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620A28656805001B5B1D /* 1-34나훔.txt */; };
+		74B6225428783F9900978FE4 /* 2-18빌레몬서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620728656805001B5B1D /* 2-18빌레몬서.txt */; };
+		74B6225528783F9900978FE4 /* 1-32요나.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620128656805001B5B1D /* 1-32요나.txt */; };
+		74B6225628783F9900978FE4 /* 1-29요엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461ED28656804001B5B1D /* 1-29요엘.txt */; };
+		74B6225728783F9900978FE4 /* 2-22베드로후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FC28656804001B5B1D /* 2-22베드로후서.txt */; };
+		74B6225828783F9900978FE4 /* 1-35하박국.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620928656805001B5B1D /* 1-35하박국.txt */; };
+		74B6225928783F9900978FE4 /* 1-26에스겔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622828656806001B5B1D /* 1-26에스겔.txt */; };
+		74B6225A28783F9900978FE4 /* 1-09사무엘상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622928656806001B5B1D /* 1-09사무엘상.txt */; };
+		74B6225B28783F9900978FE4 /* 1-30아모스.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F528656804001B5B1D /* 1-30아모스.txt */; };
+		74B6225C28783F9900978FE4 /* 2-19히브리서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620E28656805001B5B1D /* 2-19히브리서.txt */; };
+		74B6225D28783F9900978FE4 /* 2-05사도행전.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620828656805001B5B1D /* 2-05사도행전.txt */; };
+		74B6225E28783F9900978FE4 /* 1-13역대상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621828656806001B5B1D /* 1-13역대상.txt */; };
+		74B6225F28783F9900978FE4 /* 1-39말라기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F228656804001B5B1D /* 1-39말라기.txt */; };
+		74B6226028783F9900978FE4 /* 1-16느헤미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622128656806001B5B1D /* 1-16느헤미야.txt */; };
+		74B6226128783F9900978FE4 /* 2-17디도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620528656805001B5B1D /* 2-17디도서.txt */; };
+		74B6226228783F9900978FE4 /* 2-20야고보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F128656804001B5B1D /* 2-20야고보서.txt */; };
+		74B6226328783F9900978FE4 /* 1-11열왕기상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621C28656806001B5B1D /* 1-11열왕기상.txt */; };
+		74B6226428783F9900978FE4 /* 2-27요한계시록.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622428656806001B5B1D /* 2-27요한계시록.txt */; };
+		74B6226528783F9900978FE4 /* 1-23이사야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621728656806001B5B1D /* 1-23이사야.txt */; };
+		74B6226628783F9900978FE4 /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622C28656807001B5B1D /* 1-17에스더.txt */; };
+		74B6226728783F9900978FE4 /* 1-14역대하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621928656806001B5B1D /* 1-14역대하.txt */; };
+		74B6226828783F9900978FE4 /* 1-27다니엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621228656805001B5B1D /* 1-27다니엘.txt */; };
+		74B6226928783F9900978FE4 /* 2-16디모데후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622A28656806001B5B1D /* 2-16디모데후서.txt */; };
+		74B6226A28783F9900978FE4 /* 1-12열왕기하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621128656805001B5B1D /* 1-12열왕기하.txt */; };
+		74B6226B28783F9900978FE4 /* 1-21전도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621B28656806001B5B1D /* 1-21전도서.txt */; };
+		74B6226C28783F9900978FE4 /* 1-08룻기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621E28656806001B5B1D /* 1-08룻기.txt */; };
+		74B6226D28783F9900978FE4 /* 1-19시편.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FF28656804001B5B1D /* 1-19시편.txt */; };
+		74B6226E28783F9900978FE4 /* 2-02마가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FE28656804001B5B1D /* 2-02마가복음.txt */; };
+		74B6226F28783F9900978FE4 /* 1-38스가랴.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620B28656805001B5B1D /* 1-38스가랴.txt */; };
+		74B6227028783F9900978FE4 /* 2-01마태복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622628656806001B5B1D /* 2-01마태복음.txt */; };
+		74B6227128783F9900978FE4 /* 2-04요한복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F928656804001B5B1D /* 2-04요한복음.txt */; };
+		74B6227228783F9900978FE4 /* 2-06로마서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621628656806001B5B1D /* 2-06로마서.txt */; };
+		74B6227328783F9900978FE4 /* 1-18욥기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461EE28656804001B5B1D /* 1-18욥기.txt */; };
+		74B6227428783F9900978FE4 /* 2-12골로새서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622728656806001B5B1D /* 2-12골로새서.txt */; };
+		74B6227528783F9900978FE4 /* 2-21베드로전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F628656804001B5B1D /* 2-21베드로전서.txt */; };
+		74B6227628783F9900978FE4 /* 2-13데살로니가전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620C28656805001B5B1D /* 2-13데살로니가전서.txt */; };
+		74B6227728783F9900978FE4 /* 1-28호세아.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622228656806001B5B1D /* 1-28호세아.txt */; };
+		74B6227828783F9900978FE4 /* 1-06여호수아.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461EF28656804001B5B1D /* 1-06여호수아.txt */; };
+		74B6227928783F9900978FE4 /* 1-24예레미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F828656804001B5B1D /* 1-24예레미야.txt */; };
+		74B6227A28783F9900978FE4 /* 1-33미가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622528656806001B5B1D /* 1-33미가.txt */; };
+		74B6227B28783F9900978FE4 /* 2-23요한일서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622B28656806001B5B1D /* 2-23요한일서.txt */; };
+		74B6227C28783F9900978FE4 /* 2-14데살로니가후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620028656805001B5B1D /* 2-14데살로니가후서.txt */; };
 		74F92056287560B600E05A77 /* RecentWrittingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F92055287560B600E05A77 /* RecentWrittingManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -373,12 +439,78 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B6227428783F9900978FE4 /* 2-12골로새서.txt in Resources */,
+				74B6224C28783F9900978FE4 /* 1-37학개.txt in Resources */,
+				74B6226528783F9900978FE4 /* 1-23이사야.txt in Resources */,
+				74B6224428783F9900978FE4 /* 2-15디모데전서.txt in Resources */,
+				74B6224D28783F9900978FE4 /* 2-08고린도후서.txt in Resources */,
+				74B6226E28783F9900978FE4 /* 2-02마가복음.txt in Resources */,
+				74B6224F28783F9900978FE4 /* 1-15에스라.txt in Resources */,
+				74B6224328783F9900978FE4 /* 1-25예레미야애가.txt in Resources */,
+				74B6224A28783F9900978FE4 /* 2-11빌립보서.txt in Resources */,
+				74B6225428783F9900978FE4 /* 2-18빌레몬서.txt in Resources */,
 				7483622A2875457F0012B3B5 /* NanumMyeongjo.ttf in Resources */,
+				74B6225C28783F9900978FE4 /* 2-19히브리서.txt in Resources */,
+				74B6225528783F9900978FE4 /* 1-32요나.txt in Resources */,
+				74B6223F28783F9400978FE4 /* 1-05신명기.txt in Resources */,
+				74B6225628783F9900978FE4 /* 1-29요엘.txt in Resources */,
+				74B6227C28783F9900978FE4 /* 2-14데살로니가후서.txt in Resources */,
+				74B6226428783F9900978FE4 /* 2-27요한계시록.txt in Resources */,
+				74B6225728783F9900978FE4 /* 2-22베드로후서.txt in Resources */,
+				74B6225F28783F9900978FE4 /* 1-39말라기.txt in Resources */,
+				74B6226728783F9900978FE4 /* 1-14역대하.txt in Resources */,
+				74B6225028783F9900978FE4 /* 1-36스바냐.txt in Resources */,
+				74B6224E28783F9900978FE4 /* 1-10사무엘하.txt in Resources */,
+				74B6224728783F9900978FE4 /* 1-31오바댜.txt in Resources */,
+				74B6227728783F9900978FE4 /* 1-28호세아.txt in Resources */,
+				74B6225128783F9900978FE4 /* 1-20잠언.txt in Resources */,
+				74B6226B28783F9900978FE4 /* 1-21전도서.txt in Resources */,
+				74B6227128783F9900978FE4 /* 2-04요한복음.txt in Resources */,
+				74B6224928783F9900978FE4 /* 2-07고린도전서.txt in Resources */,
+				74B6223E28783F9200978FE4 /* 1-04민수기.txt in Resources */,
+				74B6226828783F9900978FE4 /* 1-27다니엘.txt in Resources */,
+				74B6224828783F9900978FE4 /* 2-26유다서.txt in Resources */,
+				74B6225A28783F9900978FE4 /* 1-09사무엘상.txt in Resources */,
+				74B6227928783F9900978FE4 /* 1-24예레미야.txt in Resources */,
+				74B6224B28783F9900978FE4 /* 2-25요한삼서.txt in Resources */,
+				74B6226D28783F9900978FE4 /* 1-19시편.txt in Resources */,
 				7481B45C2848804D00517BAF /* Preview Assets.xcassets in Resources */,
+				74B6224228783F9900978FE4 /* 1-07사사기.txt in Resources */,
+				74B6227528783F9900978FE4 /* 2-21베드로전서.txt in Resources */,
+				74B6224628783F9900978FE4 /* 1-22아가.txt in Resources */,
+				74B6224028783F9900978FE4 /* 2-03누가복음.txt in Resources */,
+				74B6227628783F9900978FE4 /* 2-13데살로니가전서.txt in Resources */,
+				74B6226A28783F9900978FE4 /* 1-12열왕기하.txt in Resources */,
+				74B6225228783F9900978FE4 /* 2-10에베소서.txt in Resources */,
 				7495B560287534EB009D265E /* 나눔손글씨 꽃내음.ttf in Resources */,
+				74B6226C28783F9900978FE4 /* 1-08룻기.txt in Resources */,
+				74B6225328783F9900978FE4 /* 1-34나훔.txt in Resources */,
+				74B6226928783F9900978FE4 /* 2-16디모데후서.txt in Resources */,
+				74B6226328783F9900978FE4 /* 1-11열왕기상.txt in Resources */,
+				74B6223C28783F8D00978FE4 /* 1-02출애굽기.txt in Resources */,
+				74B6225D28783F9900978FE4 /* 2-05사도행전.txt in Resources */,
+				74B6227228783F9900978FE4 /* 2-06로마서.txt in Resources */,
+				74B6227B28783F9900978FE4 /* 2-23요한일서.txt in Resources */,
+				74B6226628783F9900978FE4 /* 1-17에스더.txt in Resources */,
+				74B6227828783F9900978FE4 /* 1-06여호수아.txt in Resources */,
+				74B6225928783F9900978FE4 /* 1-26에스겔.txt in Resources */,
+				74B6226028783F9900978FE4 /* 1-16느헤미야.txt in Resources */,
+				74B6226228783F9900978FE4 /* 2-20야고보서.txt in Resources */,
+				74B6224128783F9900978FE4 /* 2-24요한이서.txt in Resources */,
+				74B6225828783F9900978FE4 /* 1-35하박국.txt in Resources */,
 				748DBF5F2877E5380059D300 /* NanumBarunGothic.ttf in Resources */,
+				74B6227A28783F9900978FE4 /* 1-33미가.txt in Resources */,
+				74B6225E28783F9900978FE4 /* 1-13역대상.txt in Resources */,
+				74B6227328783F9900978FE4 /* 1-18욥기.txt in Resources */,
 				7481B4592848804D00517BAF /* Assets.xcassets in Resources */,
+				74B6223B28783F8400978FE4 /* 1-01창세기.txt in Resources */,
+				74B6223D28783F8F00978FE4 /* 1-03레위기.txt in Resources */,
+				74B6227028783F9900978FE4 /* 2-01마태복음.txt in Resources */,
+				74B6225B28783F9900978FE4 /* 1-30아모스.txt in Resources */,
+				74B6224528783F9900978FE4 /* 2-09갈라디아서.txt in Resources */,
 				748DBF5D2877E4A40059D300 /* Launch Screen.storyboard in Resources */,
+				74B6226128783F9900978FE4 /* 2-17디도서.txt in Resources */,
+				74B6226F28783F9900978FE4 /* 1-38스가랴.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
