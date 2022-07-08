@@ -85,7 +85,7 @@ struct SettingView: View {
                     } header: {
                         Text("Samples")
                             .tracking(2)
-                            .font(.system(size: 20))
+                            .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.titleBackground)
                     }
@@ -98,7 +98,7 @@ struct SettingView: View {
                     Section {
                         Picker("글체", selection: $setting.font) {
                             ForEach(FontCase.allCases, id: \.self) {
-                                Text($0.rawValue)
+                                fontTitle(font: $0)
                                     .tag($0)
                             }
                         }.pickerStyle(.segmented)
@@ -108,6 +108,8 @@ struct SettingView: View {
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
+                            .foregroundColor(.titleBackground)
+
                     }
                     
                     
@@ -127,7 +129,8 @@ struct SettingView: View {
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
-                        
+                            .foregroundColor(.titleBackground)
+
                     }
                     
                     // 글자 간격
@@ -147,6 +150,7 @@ struct SettingView: View {
                             .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.titleBackground)
+
                     }
                     
                     
@@ -168,6 +172,8 @@ struct SettingView: View {
                             .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.titleBackground)
+                            .foregroundColor(.titleBackground)
+
                     }
                     
                     // 완료 버튼
@@ -183,7 +189,23 @@ struct SettingView: View {
                 } /// Form
             }/// HStack
         }///geometry
-  
+    }
+    
+    
+    
+    
+    @ViewBuilder func fontTitle(font: FontCase) -> some View {
+        switch font {
+            case .gothic :
+                Text("나눔바른고딕")
+                .font(.custom("NanumBarunGothic", size: 10))
+            case .myeongjo:
+                Text("나눔명조")
+                .font(.custom("NanumMyeongjo", size: 10))
+            default:
+                Text("나눔손글씨 꽃내음")
+                .font(.custom("나눔손글씨 꽃내음", size: 10))
+        }
     }
     
 }

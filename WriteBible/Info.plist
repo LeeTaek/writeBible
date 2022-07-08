@@ -4,8 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>나눔명조.ttf</string>
-		<string>나눔바른고딕.ttf</string>
+		<string>NanumMyeongjo.ttf</string>
+		<string>NanumBarunGothic.ttf</string>
 		<string>나눔손글씨 꽃내음.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
@@ -13,7 +13,5 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
-	<key>UILaunchScreen</key>
-	<dict/>
 </dict>
 </plist>

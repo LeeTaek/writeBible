@@ -19,7 +19,7 @@ struct BibleSentenceView: View {
     
     var body: some View {
         let chapter = bibleSentence.section > 9 ? bibleSentence.section.description : bibleSentence.section.description + "  "
-        
+
         return GeometryReader { geo in
                 HStack(alignment: .top) {
                     Text(chapter)

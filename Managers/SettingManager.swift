@@ -28,6 +28,7 @@ class SettingManager: Object, ObjectKeyIdentifiable {
         self.traking = Float(setting.traking)
         self.baseLineHeight = Float(setting.baseLineHeight)
         self.font = setting.font.rawValue
+        
     }
     
     

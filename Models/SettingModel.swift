@@ -15,12 +15,12 @@ struct SettingModel {
     var baseLineHeight: CGFloat = .zero
     var lineCount: Int = 1
     var font:FontCase = .gothic
- 
+    
 }
 
 
 enum FontCase: String, CaseIterable {
-    case gothic = "나눔바른고딕"
-    case myeongjo = "나눔명조"
+    case gothic = "NanumBarunGothic" 
+    case myeongjo = "NanumMyeongjo"
     case flower = "나눔손글씨 꽃내음"
 }
