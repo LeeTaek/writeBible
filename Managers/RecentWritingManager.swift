@@ -1,5 +1,5 @@
 //
-//  RecentWrittingManager.swift
+//  RecentWritingManager.swift
 //  WriteBible
 //
 //  Created by 이택성 on 2022/07/06.
@@ -13,8 +13,8 @@
 import SwiftUI
 import RealmSwift
 
-class RecentWrittingManager: Object, ObjectKeyIdentifiable {
-    static let shared = RecentWrittingManager()
+class RecentWritingManager: Object, ObjectKeyIdentifiable {
+    static let shared = RecentWritingManager()
     
     @Persisted(primaryKey: true) var id: Int
     @Persisted var bible: String
@@ -31,9 +31,9 @@ class RecentWrittingManager: Object, ObjectKeyIdentifiable {
     
     func updateSetting(bibleTitle: String, chapter: Int) {
         let realm = try! Realm()
-        let saveData = RecentWrittingManager(bibleTitle: bibleTitle, chapter: chapter)
+        let saveData = RecentWritingManager(bibleTitle: bibleTitle, chapter: chapter)
         
-        if let loaded = realm.object(ofType: RecentWrittingManager.self, forPrimaryKey: 0) {
+        if let loaded = realm.object(ofType: RecentWritingManager.self, forPrimaryKey: 0) {
                 try! realm.write {
                     loaded.bible = bibleTitle
                     loaded.chapter = chapter
@@ -51,7 +51,7 @@ class RecentWrittingManager: Object, ObjectKeyIdentifiable {
     func getSetting() -> String {
         let realm = try! Realm()
             
-        if let saved = realm.object(ofType: RecentWrittingManager.self, forPrimaryKey: 0) {
+        if let saved = realm.object(ofType: RecentWritingManager.self, forPrimaryKey: 0) {
             return saved.bible + saved.chapter.description
         } else {
             return "1-01창세기.txt1"

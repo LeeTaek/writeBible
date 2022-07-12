@@ -67,7 +67,7 @@ class DrawingViewController: UIViewController {
         // 다음 앱 실행 때 마지막 작성하던 곳을 열어주기 위해 쓰던 페이지 항목 저장
         let chapterNum = Int(String(keyTitle!.components(separatedBy: "txt").last!))!
         let title = keyTitle!.components(separatedBy: "txt").first! + "txt"
-        RecentWrittingManager().updateSetting(bibleTitle: title, chapter: chapterNum)
+        RecentWritingManager().updateSetting(bibleTitle: title, chapter: chapterNum)
 
     }
 }

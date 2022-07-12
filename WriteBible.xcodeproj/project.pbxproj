@@ -13,7 +13,6 @@
 		7403D1332862C84900AB68A3 /* DrawingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1322862C84900AB68A3 /* DrawingWrapper.swift */; };
 		7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7403D13B2862E49800AB68A3 /* RealmSwift */; };
 		7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D13D2862E4AF00AB68A3 /* RealmManager.swift */; };
-		74099BDA2869796400ED8D23 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BD92869796400ED8D23 /* ScrollPreferenceKey.swift */; };
 		74099BDC2869CB3800ED8D23 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BDB2869CB3800ED8D23 /* SettingView.swift */; };
 		74099BDE2869CBA600ED8D23 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BDD2869CBA600ED8D23 /* SettingModel.swift */; };
 		7434623028658233001B5B1D /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434622F28658233001B5B1D /* ColorManager.swift */; };
@@ -96,7 +95,7 @@
 		74B6227A28783F9900978FE4 /* 1-33미가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622528656806001B5B1D /* 1-33미가.txt */; };
 		74B6227B28783F9900978FE4 /* 2-23요한일서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622B28656806001B5B1D /* 2-23요한일서.txt */; };
 		74B6227C28783F9900978FE4 /* 2-14데살로니가후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620028656805001B5B1D /* 2-14데살로니가후서.txt */; };
-		74F92056287560B600E05A77 /* RecentWrittingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F92055287560B600E05A77 /* RecentWrittingManager.swift */; };
+		74F92056287560B600E05A77 /* RecentWritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F92055287560B600E05A77 /* RecentWritingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,7 +104,6 @@
 		7403D1302862C81F00AB68A3 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		7403D1322862C84900AB68A3 /* DrawingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingWrapper.swift; sourceTree = "<group>"; };
 		7403D13D2862E4AF00AB68A3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		74099BD92869796400ED8D23 /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
 		74099BDB2869CB3800ED8D23 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		74099BDD2869CBA600ED8D23 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		743461ED28656804001B5B1D /* 1-29요엘.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-29요엘.txt"; sourceTree = "<group>"; };
@@ -190,7 +188,7 @@
 		748DBF5E2877E5380059D300 /* NanumBarunGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothic.ttf; sourceTree = "<group>"; };
 		7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 꽃내음.ttf"; sourceTree = "<group>"; };
 		74DB0F52286D7C070019A646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		74F92055287560B600E05A77 /* RecentWrittingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWrittingManager.swift; sourceTree = "<group>"; };
+		74F92055287560B600E05A77 /* RecentWritingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWritingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,12 +203,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7403D1262862C69A00AB68A3 /* ViewController */ = {
+		7403D1262862C69A00AB68A3 /* DrawingView */ = {
 			isa = PBXGroup;
 			children = (
+				7403D1322862C84900AB68A3 /* DrawingWrapper.swift */,
 				7403D1302862C81F00AB68A3 /* DrawingViewController.swift */,
 			);
-			path = ViewController;
+			path = DrawingView;
 			sourceTree = "<group>";
 		};
 		7403D1292862C6BD00AB68A3 /* Managers */ = {
@@ -218,9 +217,8 @@
 			children = (
 				7403D12E2862C74E00AB68A3 /* DrawingManager.swift */,
 				7403D13D2862E4AF00AB68A3 /* RealmManager.swift */,
-				7434622F28658233001B5B1D /* ColorManager.swift */,
 				7471BF4A286AD26D00B38386 /* SettingManager.swift */,
-				74F92055287560B600E05A77 /* RecentWrittingManager.swift */,
+				74F92055287560B600E05A77 /* RecentWritingManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -302,25 +300,25 @@
 		74436423285B27B1005241E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				74782B0D284F05F90077CDCC /* Bible.swift */,
 				7403D12C2862C72A00AB68A3 /* DrawingDocument.swift */,
-				74099BD92869796400ED8D23 /* ScrollPreferenceKey.swift */,
+				74782B0D284F05F90077CDCC /* Bible.swift */,
 				74099BDD2869CBA600ED8D23 /* SettingModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		74436424285B27D0005241E7 /* Views */ = {
+		74436424285B27D0005241E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7434622F28658233001B5B1D /* ColorManager.swift */,
 				7481B4562848804B00517BAF /* ContentView.swift */,
 				74782D59285086D90077CDCC /* TitleView.swift */,
 				74099BDB2869CB3800ED8D23 /* SettingView.swift */,
 				74782D2E284F3B300077CDCC /* BibleSentenceView.swift */,
 				74436405285B0E67005241E7 /* BibleView.swift */,
-				7403D1322862C84900AB68A3 /* DrawingWrapper.swift */,
+				7403D1262862C69A00AB68A3 /* DrawingView */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		7481B4482848804B00517BAF = {
@@ -330,8 +328,7 @@
 				7495B55E287534DD009D265E /* Font */,
 				743461EC28656804001B5B1D /* 개역개정-text */,
 				7403D1292862C6BD00AB68A3 /* Managers */,
-				7403D1262862C69A00AB68A3 /* ViewController */,
-				74436424285B27D0005241E7 /* Views */,
+				74436424285B27D0005241E7 /* View */,
 				74436423285B27B1005241E7 /* Models */,
 				7481B4522848804B00517BAF /* Products */,
 			);
@@ -529,7 +526,7 @@
 				74099BDE2869CBA600ED8D23 /* SettingModel.swift in Sources */,
 				74436406285B0E67005241E7 /* BibleView.swift in Sources */,
 				7403D12F2862C74E00AB68A3 /* DrawingManager.swift in Sources */,
-				74F92056287560B600E05A77 /* RecentWrittingManager.swift in Sources */,
+				74F92056287560B600E05A77 /* RecentWritingManager.swift in Sources */,
 				7471BF4B286AD26D00B38386 /* SettingManager.swift in Sources */,
 				7403D1312862C81F00AB68A3 /* DrawingViewController.swift in Sources */,
 				74782D2F284F3B300077CDCC /* BibleSentenceView.swift in Sources */,
@@ -537,7 +534,6 @@
 				7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */,
 				74782B0E284F05F90077CDCC /* Bible.swift in Sources */,
 				7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */,
-				74099BDA2869796400ED8D23 /* ScrollPreferenceKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,7 @@ struct ContentView: View {
                         .opacity(showTitle ? 0 : 1)
             }.onAppear(){
                 
-                let saved = RecentWrittingManager().getSetting()
+                let saved = RecentWritingManager().getSetting()
                 print(saved)
                 chapterNum = Int(String(saved.components(separatedBy: "txt").last!))!
                 bibleTitle = BibleTitle(rawValue: saved.components(separatedBy: "txt").first! + "txt")!
