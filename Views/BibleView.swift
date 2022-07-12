@@ -5,16 +5,21 @@
 //  Created by 이택성 on 2022/06/16.
 //
 
+/*
+    성경 View와 Drawing을 View를 그려주는 View
+ */
+
+
 import SwiftUI
 import RealmSwift
 
 struct BibleView: View {
     @Binding var bibleTitle: BibleTitle
     @Binding var chapterNum: Int
-    @ObservedObject var manager = DrawingManager()
-    @State private var translation: CGSize = .zero
-    @Binding var showTitle: Bool
-    @ObservedRealmObject var settingValue: SettingManager
+    @ObservedObject var manager = DrawingManager()          // Drawing View에 그린 내용을 저장하기 위한 프로퍼티
+    @State private var translation: CGSize = .zero          // 드래그 제스쳐를 위한 변수
+    @Binding var showTitle: Bool                            // title View를 보일지 말지
+    @ObservedRealmObject var settingValue: SettingManager   // RealmDB에 저장된 셋팅값을 가져옴
     
     @Environment(\.colorScheme) var colorScheme     // Dark모드에서 새기다 버튼 컬러를 위해 모드 감지
         
@@ -36,6 +41,7 @@ struct BibleView: View {
                 self.translation = $0.translation
             })
             .onEnded {
+                /// 다음장 혹은 이전장으로 넘어가기 위한 드래그 제스쳐
                 if $0.translation.width < -100 {                           //드래그 가로의 위치가 -100보다 작은 위치로 가면 실행
                     if chapterNum < bible.getLastChapter() {
                         self.chapterNum += 1
@@ -64,6 +70,7 @@ struct BibleView: View {
             ScrollView(.vertical) {
                 VStack {
                     VStack {
+                        /// 수정해야 할 사항 1.
                         /// Bound preference ScrollPreferenceKey tried to update multiple times per frame. 오류 발생
                         /// onPreferenceChange가 무거운듯
                         GeometryReader { proxy in       // titleView 표기
@@ -108,6 +115,7 @@ struct BibleView: View {
                     }///VStack
                     .id("scrollToTop")
                     .overlay() {
+                        /// 앱 처음 실행시 셋팅값 설정 후 Drawing 가능하도록 설정
                         if settingValue.isEmpty() {
                             DrawingWrapper(manager: manager, title: keyTitle)
                                 .id(keyTitle)
@@ -132,38 +140,13 @@ struct BibleView: View {
                                     self.chapterNum = 1
                                 }
                             }
-                            
                             RealmManager().written(title: keyTitle)
-                            
-                            print("작성완료")
                         }) {
-                            
-                            Rectangle()
-                                .stroke(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85), lineWidth: 3)
-                                .foregroundColor(colorScheme == .light ? .white : .black)
-                                .frame(width:150 , height:50)
-                                .cornerRadius(5)
-                                .overlay() {
-                                    HStack {
-                                        Image("Pencil")
-                                            .resizable()
-                                            .renderingMode(.template)
-                                            .aspectRatio(contentMode: .fit)
-                                            .tint(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85))
-                                        
-                                        Text("새기다")
-                                            .fontWeight(.semibold)
-                                            .font(.subheadline)
-                                            .foregroundColor(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85))
-                                    }
-                                    
-                                    .padding()
-                                }
+                            buttonUI
                         } ///Button
                         .padding(30)
 
                     }///HStack
-                    ///
                 } ///VStack
             } /// scrollView
             .coordinateSpace(name: "scroll")
@@ -174,7 +157,7 @@ struct BibleView: View {
     }
     
     
-    
+    //MARK: - simple title
     var simpleTitle: some View {
         let ti = bibleTitle.rawValue.components(separatedBy: ".").first!
         let name = ti[4..<ti.count]
@@ -187,12 +170,38 @@ struct BibleView: View {
     }
     
     
+    //MARK: - chapter Title이 있으면 true 반환
     func checkChapterTitle(chapterTitle: String?) -> Bool {
         return chapterTitle != nil ? false : true
     }
     
  
 
+    //MARK: - 새기다 버튼 UI
+    
+    var buttonUI: some View {
+        Rectangle()
+            .stroke(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85), lineWidth: 3)
+            .foregroundColor(colorScheme == .light ? .white : .black)
+            .frame(width:150 , height:50)
+            .cornerRadius(5)
+            .overlay() {
+                HStack {
+                    Image("Pencil")
+                        .resizable()
+                        .renderingMode(.template)
+                        .aspectRatio(contentMode: .fit)
+                        .tint(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85))
+                    
+                    Text("새기다")
+                        .fontWeight(.semibold)
+                        .font(.subheadline)
+                        .foregroundColor(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85))
+                }
+                
+                .padding()
+            }
+    }
     
 }
 

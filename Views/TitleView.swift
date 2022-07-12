@@ -14,7 +14,7 @@ struct TitleView: View {
     @Binding var chapter: Int
     @Binding var showTitleSheet: Bool
     @State private var showTitle = false
-    @State var showiSettingSheet = !SettingManager().isEmpty()
+    @State var showiSettingSheet = !SettingManager().isEmpty()  // setting 초기 설정을 위한 변수
     @ObservedRealmObject var settingValue: SettingManager
 
     @Environment(\.colorScheme) var colorScheme     // Dark모드에서 새기다 버튼 컬러를 위해 모드 감지
@@ -64,6 +64,7 @@ struct TitleView: View {
                     .padding()
                     
             }.sheet(isPresented: $showiSettingSheet) {
+                // 앱 처음 실행시 셋팅값이 없다면 setting 창을 띄워준다.
                 SettingView(setting: settingValue.getSetting(), showSettingSheet: $showiSettingSheet)
             }
 
@@ -107,6 +108,7 @@ struct TitleView: View {
         let lastChapter = Bible(title: bibleTitle.rawValue).getLastChapter()
 
         return HStack {
+            // 성경 책 리스트
             List {
                 ForEach(BibleTitle.allCases, id: \.self) { value in
                     let ti = value.rawValue.components(separatedBy: ".").first!
@@ -126,6 +128,7 @@ struct TitleView: View {
             }
             .listStyle(.plain)
             
+            // 성경 구절 리스트
             List{
                 ForEach((1...lastChapter), id: \.self) { value in
                     Button(action: {

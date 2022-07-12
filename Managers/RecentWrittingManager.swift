@@ -4,6 +4,12 @@
 //
 //  Created by 이택성 on 2022/07/06.
 //
+
+/*
+    앱 실행시 마지막으로 작성하던 페이지를 열어주기 위한 DB
+    마지막으로 쓰던 페이지 정보를 저장한다. 
+ */
+
 import SwiftUI
 import RealmSwift
 

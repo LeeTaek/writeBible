@@ -5,6 +5,11 @@
 //  Created by 이택성 on 2022/06/27.
 //
 
+/*
+    setting View
+    
+ */
+
 import SwiftUI
 
 struct SettingView: View {
@@ -46,7 +51,7 @@ struct SettingView: View {
     }
     
     
-    
+    //MARK: - setting창 내용
     var settingView: some View {
         GeometryReader { geo in
             HStack {

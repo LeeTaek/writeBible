@@ -5,6 +5,11 @@
 //  Created by 이택성 on 2022/06/24.
 //
 
+/*
+    UI 색상값을 위한 Color extension
+ */
+
+
 import SwiftUI
 
 extension Color {
