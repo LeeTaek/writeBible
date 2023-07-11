@@ -28,14 +28,14 @@ class RealmManager: Object, ObjectKeyIdentifiable {
     
     
     func addData(document: DrawingDocument) {
-        print(#fileID, #function, #line, "경로: \(Realm.Configuration.defaultConfiguration.fileURL!)")
+        Log.debug(#fileID, #function, #line, "경로: \(Realm.Configuration.defaultConfiguration.fileURL!)")
         
         let realm = try! Realm()
         let saveData = RealmManager(document: document)
         
         if isEmpty(data: document) {
             try! realm.write {
-//                print(#fileID, #function, #line, "\(document.title)")
+//                Log.debug(#fileID, #function, #line, "\(document.title)")
                 realm.add(saveData)
             }
         }

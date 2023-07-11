@@ -67,8 +67,8 @@ struct BibleSentenceView: View {
                     // Frame 높이에 따라 그릴 Line 수 계산
                     self.textHeight = $0
                     self.line = Int((textHeight + 25 + setting.lineSpace) / (setting.baseLineHeight + setting.lineSpace)) + 1
-//                    print("chapter: \(chapter), height: \($0), line: \(self.line)")
-//                    print("space: \(setting.lineSpace), baseheight: \(setting.baseLineHeight)")
+//                    Log.debug("chapter: \(chapter), height: \($0), line: \(self.line)")
+//                    Log.debug("space: \(setting.lineSpace), baseheight: \(setting.baseLineHeight)")
                    }
                 .padding([.trailing,.leading])
         }.frame(height: self.textHeight)
@@ -92,7 +92,7 @@ struct ViewHeightKey: PreferenceKey {
 
 struct BibleSentenceView_Previews: PreviewProvider {
     static var previews: some View {
-        let bible = Bible(title: "요한계시록", chapter: 4, section: 1, sentence: "이 일 후에 내가 보니 하늘에 열린 문이 있는데 내가 들은 바 처음에 내게 말하던 나팔 소리 같은 그 음성이 이르되 이리로 올라오라 이 후에 마땅히 일어날 일들을 내가 네게 보이리라 하시더라")
+      let bible = Bible(title: .revelation, chapter: 4, section: 1, sentence: "이 일 후에 내가 보니 하늘에 열린 문이 있는데 내가 들은 바 처음에 내게 말하던 나팔 소리 같은 그 음성이 이르되 이리로 올라오라 이 후에 마땅히 일어날 일들을 내가 네게 보이리라 하시더라")
         
         
         BibleSentenceView(bibleSentence: bible, setting: .constant(SettingModel(lineSpace: 11, fontSize: 20, traking: 2)))

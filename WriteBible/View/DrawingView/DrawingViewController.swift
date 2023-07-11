@@ -60,7 +60,7 @@ class DrawingViewController: UIViewController {
     
     //MARK: -  PKdrawing 저장
     override func viewWillDisappear(_ animated: Bool) {
-//        print(#fileID, #function, #line, "\(keyTitle!), \(drawingData)")
+//       Log.debug(#fileID, #function, #line, "\(keyTitle!), \(drawingData)")
         // Drawing Data 저장
         manager.update(data: drawingData, for: keyTitle ?? "")
         

@@ -52,7 +52,7 @@ class SettingManager: Object, ObjectKeyIdentifiable {
 
         } else {
             try! realm.write {
-                print(#fileID, #function, #line, "\(setting.fontSize)")
+              Log.debug(#fileID, #function, #line, "\(setting.fontSize)")
                 realm.add(saveData)
             }
         }

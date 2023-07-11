@@ -6,7 +6,37 @@
 //
 
 import SwiftUI
+
+import ComposableArchitecture
 import RealmSwift
+
+struct MainFeature: ReducerProtocol {
+  struct State: Equatable {
+    var bible: Bible = .init(title: .genesis)
+    var showingSettingSheet: Bool = false
+    var showingTitle: Bool = false
+  }
+  
+  enum Action: Equatable {
+    case moveNextChapter
+    case moveBeforeChapter
+    case showTitle
+    case hideTitle
+    case showSettingSheet
+    case hideSettingSheet
+    case showDrawView
+    case hideDrawView
+  }
+  
+  func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    switch action {
+    default :
+      return .none
+    }
+  }
+  
+}
+
 
 struct ContentView: View {
     
@@ -28,7 +58,7 @@ struct ContentView: View {
             }.onAppear(){
                 
                 let saved = RecentWritingManager().getSetting()
-                print(saved)
+              Log.debug(saved)
                 chapterNum = Int(String(saved.components(separatedBy: "txt").last!))!
                 bibleTitle = BibleTitle(rawValue: saved.components(separatedBy: "txt").first! + "txt")!
                 

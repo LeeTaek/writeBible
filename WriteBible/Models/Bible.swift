@@ -3,8 +3,8 @@
 
 import Foundation
 
-struct Bible {
-    var title: String
+struct Bible: Equatable {
+    var title: BibleTitle
     var chapterTitle: String?
     var chapter: Int = 1
     var section: Int = 1
@@ -15,7 +15,7 @@ struct Bible {
     //MARK: - txt fileRead
     func fileRead() -> [String] {
         // 파일 경로
-        let textPath = Bundle.main.path(forResource: "\(self.title)", ofType: nil)
+        let textPath = Bundle.main.path(forResource: "\(self.title.rawValue)", ofType: nil)
         // 한글 인코딩
         let encodingEUCKR = CFStringConvertEncodingToNSStringEncoding(0x0422)
     
@@ -27,14 +27,14 @@ struct Bible {
             genesis = contents.components(separatedBy: "\r")
 
         } catch let e {
-            print(e.localizedDescription)
+          Log.debug(e.localizedDescription)
         }
         return genesis
     }
     
     
     //MARK: - 바이블 객체 생성
-    func makeBible(title: String) -> [Bible] {
+    func makeBible(title: BibleTitle) -> [Bible] {
         let str = fileRead()
         var bible = [Bible]()
         
@@ -190,15 +190,3 @@ enum BibleTitle: String, Equatable, CaseIterable {
 
 
 
-// String Extention
-extension String {
-    subscript(_ index: Int) -> Character {
-        return self[self.index(self.startIndex, offsetBy: index)]
-    }
-    
-    subscript(_ range: Range<Int>) -> String {
-         let fromIndex = self.index(self.startIndex, offsetBy: range.startIndex)
-         let toIndex = self.index(self.startIndex,offsetBy: range.endIndex)
-         return String(self[fromIndex..<toIndex])
-     }
-}

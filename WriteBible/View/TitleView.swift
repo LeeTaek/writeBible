@@ -105,7 +105,7 @@ struct TitleView: View {
     
     //MARK: - Sheet창의 장
     var bibleList: some View {
-        let lastChapter = Bible(title: bibleTitle.rawValue).getLastChapter()
+        let lastChapter = Bible(title: bibleTitle).getLastChapter()
 
         return HStack {
             // 성경 책 리스트
