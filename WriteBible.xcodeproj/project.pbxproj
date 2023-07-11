@@ -24,7 +24,6 @@
 		7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4542848804B00517BAF /* WriteBibleApp.swift */; };
 		7481B4572848804B00517BAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4562848804B00517BAF /* ContentView.swift */; };
 		7481B4592848804D00517BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481B4582848804D00517BAF /* Assets.xcassets */; };
-		7481B45C2848804D00517BAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481B45B2848804D00517BAF /* Preview Assets.xcassets */; };
 		7483622A2875457F0012B3B5 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748362292875457E0012B3B5 /* NanumMyeongjo.ttf */; };
 		748DBF5D2877E4A40059D300 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748DBF5C2877E4A40059D300 /* Launch Screen.storyboard */; };
 		748DBF5F2877E5380059D300 /* NanumBarunGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748DBF5E2877E5380059D300 /* NanumBarunGothic.ttf */; };
@@ -96,6 +95,12 @@
 		74B6227B28783F9900978FE4 /* 2-23요한일서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622B28656806001B5B1D /* 2-23요한일서.txt */; };
 		74B6227C28783F9900978FE4 /* 2-14데살로니가후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620028656805001B5B1D /* 2-14데살로니가후서.txt */; };
 		74F92056287560B600E05A77 /* RecentWritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F92055287560B600E05A77 /* RecentWritingManager.swift */; };
+		996954132A5D2587008E50B5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 996954122A5D2587008E50B5 /* ComposableArchitecture */; };
+		996954162A5D2689008E50B5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 996954152A5D2689008E50B5 /* FirebaseAnalytics */; };
+		996954182A5D2689008E50B5 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 996954172A5D2689008E50B5 /* FirebaseMessaging */; };
+		9969541A2A5D2748008E50B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 996954192A5D2748008E50B5 /* GoogleService-Info.plist */; };
+		9969541C2A5D2792008E50B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969541B2A5D2792008E50B5 /* AppDelegate.swift */; };
+		996954202A5D2866008E50B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9969541F2A5D2866008E50B5 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,13 +187,15 @@
 		7481B4542848804B00517BAF /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
 		7481B4562848804B00517BAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7481B4582848804D00517BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7481B45B2848804D00517BAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		748362292875457E0012B3B5 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
 		748DBF5C2877E4A40059D300 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		748DBF5E2877E5380059D300 /* NanumBarunGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothic.ttf; sourceTree = "<group>"; };
 		7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 꽃내음.ttf"; sourceTree = "<group>"; };
-		74DB0F52286D7C070019A646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		74DB0F52286D7C070019A646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74F92055287560B600E05A77 /* RecentWritingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWritingManager.swift; sourceTree = "<group>"; };
+		996954192A5D2748008E50B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9969541B2A5D2792008E50B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9969541F2A5D2866008E50B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +203,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996954182A5D2689008E50B5 /* FirebaseMessaging in Frameworks */,
+				996954132A5D2587008E50B5 /* ComposableArchitecture in Frameworks */,
 				7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */,
+				996954162A5D2689008E50B5 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +303,7 @@
 				7434620328656805001B5B1D /* 2-26유다서.txt */,
 				7434622428656806001B5B1D /* 2-27요한계시록.txt */,
 			);
-			name = "개역개정-text";
-			path = "WriteBible/개역개정-text";
+			path = "개역개정-text";
 			sourceTree = "<group>";
 		};
 		74436423285B27B1005241E7 /* Models */ = {
@@ -325,11 +334,6 @@
 			isa = PBXGroup;
 			children = (
 				7481B4532848804B00517BAF /* WriteBible */,
-				7495B55E287534DD009D265E /* Font */,
-				743461EC28656804001B5B1D /* 개역개정-text */,
-				7403D1292862C6BD00AB68A3 /* Managers */,
-				74436424285B27D0005241E7 /* View */,
-				74436423285B27B1005241E7 /* Models */,
 				7481B4522848804B00517BAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -345,21 +349,15 @@
 		7481B4532848804B00517BAF /* WriteBible */ = {
 			isa = PBXGroup;
 			children = (
-				74DB0F52286D7C070019A646 /* Info.plist */,
+				9969541B2A5D2792008E50B5 /* AppDelegate.swift */,
 				7481B4542848804B00517BAF /* WriteBibleApp.swift */,
-				748DBF5C2877E4A40059D300 /* Launch Screen.storyboard */,
-				7481B4582848804D00517BAF /* Assets.xcassets */,
-				7481B45B2848804D00517BAF /* Preview Assets.xcassets */,
-				7481B45A2848804D00517BAF /* Preview Content */,
+				7403D1292862C6BD00AB68A3 /* Managers */,
+				74436424285B27D0005241E7 /* View */,
+				74436423285B27B1005241E7 /* Models */,
+				99F58A122A5D1FC700BF895D /* Resource */,
+				99F58A112A5D1E0800BF895D /* Supporting Files */,
 			);
 			path = WriteBible;
-			sourceTree = "<group>";
-		};
-		7481B45A2848804D00517BAF /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		7495B55E287534DD009D265E /* Font */ = {
@@ -370,6 +368,27 @@
 				748362292875457E0012B3B5 /* NanumMyeongjo.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		99F58A112A5D1E0800BF895D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				996954192A5D2748008E50B5 /* GoogleService-Info.plist */,
+				74DB0F52286D7C070019A646 /* Info.plist */,
+				748DBF5C2877E4A40059D300 /* Launch Screen.storyboard */,
+				7481B4582848804D00517BAF /* Assets.xcassets */,
+				9969541F2A5D2866008E50B5 /* Preview Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99F58A122A5D1FC700BF895D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				7495B55E287534DD009D265E /* Font */,
+				743461EC28656804001B5B1D /* 개역개정-text */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +409,9 @@
 			name = WriteBible;
 			packageProductDependencies = (
 				7403D13B2862E49800AB68A3 /* RealmSwift */,
+				996954122A5D2587008E50B5 /* ComposableArchitecture */,
+				996954152A5D2689008E50B5 /* FirebaseAnalytics */,
+				996954172A5D2689008E50B5 /* FirebaseMessaging */,
 			);
 			productName = WriteBible;
 			productReference = 7481B4512848804B00517BAF /* WriteBible.app */;
@@ -421,6 +443,8 @@
 			mainGroup = 7481B4482848804B00517BAF;
 			packageReferences = (
 				7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				996954112A5D2587008E50B5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 7481B4522848804B00517BAF /* Products */;
 			projectDirPath = "";
@@ -459,6 +483,7 @@
 				74B6225028783F9900978FE4 /* 1-36스바냐.txt in Resources */,
 				74B6224E28783F9900978FE4 /* 1-10사무엘하.txt in Resources */,
 				74B6224728783F9900978FE4 /* 1-31오바댜.txt in Resources */,
+				996954202A5D2866008E50B5 /* Preview Assets.xcassets in Resources */,
 				74B6227728783F9900978FE4 /* 1-28호세아.txt in Resources */,
 				74B6225128783F9900978FE4 /* 1-20잠언.txt in Resources */,
 				74B6226B28783F9900978FE4 /* 1-21전도서.txt in Resources */,
@@ -471,8 +496,8 @@
 				74B6227928783F9900978FE4 /* 1-24예레미야.txt in Resources */,
 				74B6224B28783F9900978FE4 /* 2-25요한삼서.txt in Resources */,
 				74B6226D28783F9900978FE4 /* 1-19시편.txt in Resources */,
-				7481B45C2848804D00517BAF /* Preview Assets.xcassets in Resources */,
 				74B6224228783F9900978FE4 /* 1-07사사기.txt in Resources */,
+				9969541A2A5D2748008E50B5 /* GoogleService-Info.plist in Resources */,
 				74B6227528783F9900978FE4 /* 2-21베드로전서.txt in Resources */,
 				74B6224628783F9900978FE4 /* 1-22아가.txt in Resources */,
 				74B6224028783F9900978FE4 /* 2-03누가복음.txt in Resources */,
@@ -533,6 +558,7 @@
 				7403D12D2862C72A00AB68A3 /* DrawingDocument.swift in Sources */,
 				7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */,
 				74782B0E284F05F90077CDCC /* Bible.swift in Sources */,
+				9969541C2A5D2792008E50B5 /* AppDelegate.swift in Sources */,
 				7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,12 +687,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Supporting Files\"";
 				DEVELOPMENT_TEAM = H4MSW7FUBB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WriteBible/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "새기다";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -678,7 +705,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.test.WriteBible;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.WriteBible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -693,12 +720,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Supporting Files\"";
 				DEVELOPMENT_TEAM = H4MSW7FUBB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WriteBible/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "새기다";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -710,7 +738,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.test.WriteBible;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.WriteBible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -750,6 +778,22 @@
 				kind = branch;
 			};
 		};
+		996954112A5D2587008E50B5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.55.0;
+			};
+		};
+		996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -757,6 +801,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		996954122A5D2587008E50B5 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 996954112A5D2587008E50B5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		996954152A5D2689008E50B5 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		996954172A5D2689008E50B5 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
