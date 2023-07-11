@@ -48,20 +48,6 @@
                ReferencedContainer = "container:Projects/App/WriteBible.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F60F30C240075D4F8FA58C8"
-               BuildableName = "WriteBibleTest.xctest"
-               BlueprintName = "WriteBibleTest"
-               ReferencedContainer = "container:Projects/App/WriteBible.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -78,16 +64,6 @@
                BuildableName = "BibleTest.xctest"
                BlueprintName = "BibleTest"
                ReferencedContainer = "container:Projects/Bible/Bible.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F60F30C240075D4F8FA58C8"
-               BuildableName = "WriteBibleTest.xctest"
-               BlueprintName = "WriteBibleTest"
-               ReferencedContainer = "container:Projects/App/WriteBible.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

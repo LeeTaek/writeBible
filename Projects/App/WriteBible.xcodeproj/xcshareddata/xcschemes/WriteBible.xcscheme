@@ -30,16 +30,6 @@
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F60F30C240075D4F8FA58C8"
-               BuildableName = "WriteBibleTest.xctest"
-               BlueprintName = "WriteBibleTest"
-               ReferencedContainer = "container:WriteBible.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <CodeCoverageTargets>
          <BuildableReference

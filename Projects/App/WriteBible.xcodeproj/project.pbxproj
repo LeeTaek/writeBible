@@ -41,28 +41,8 @@
 		F241B37A3F3E468FFC1BF6EB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D269703543C8AF684D13FA6 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		541BFB20DE1C6F1DEA8A7703 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 481739A6ECB1495D6ED73262 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3BB042A93F3F6F02D416642C;
-			remoteInfo = WriteBible;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		826C833BFC906EF5C62DEE20 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82D69B9ACAE40A111BFAC0CB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -79,8 +59,6 @@
 		09E65A26C4ACD781EAF564C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1708ED6697352535E104A338 /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
 		1AFA83F79F823299BA4A7B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		1BE6865C0805A045ED461D54 /* WriteBibleTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WriteBibleTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22E938FE04D1645719B9A920 /* WriteBibleTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WriteBibleTest-Info.plist"; sourceTree = "<group>"; };
 		22EFA835F4B22C251CFBA242 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2328A86C2726D4570D8E51EA /* WriteBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WriteBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C032C5CADFCB6B807F9A2E /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
@@ -121,13 +99,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9FAD1524CBF17AF1E4B4774F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,14 +116,6 @@
 				C27AB6C111EE798806931B3B /* DrawingWrapper.swift */,
 			);
 			path = DrawingView;
-			sourceTree = "<group>";
-		};
-		2EC2AF4F793E5E399408B531 /* InfoPlists */ = {
-			isa = PBXGroup;
-			children = (
-				22E938FE04D1645719B9A920 /* WriteBibleTest-Info.plist */,
-			);
-			path = InfoPlists;
 			sourceTree = "<group>";
 		};
 		32FF88D5F9BA442EFCA80829 /* WriteBible */ = {
@@ -193,7 +156,6 @@
 			children = (
 				DB4D2F39135C139EB15CF389 /* Bible.framework */,
 				2328A86C2726D4570D8E51EA /* WriteBible.app */,
-				1BE6865C0805A045ED461D54 /* WriteBibleTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,7 +183,6 @@
 		81E44D2C10519157CECDD026 /* Derived */ = {
 			isa = PBXGroup;
 			children = (
-				2EC2AF4F793E5E399408B531 /* InfoPlists */,
 				3CBBEF15BCE349F979C7ABD0 /* Sources */,
 			);
 			path = Derived;
@@ -315,25 +276,6 @@
 			productReference = 2328A86C2726D4570D8E51EA /* WriteBible.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3F60F30C240075D4F8FA58C8 /* WriteBibleTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C68808B874B8831840008708 /* Build configuration list for PBXNativeTarget "WriteBibleTest" */;
-			buildPhases = (
-				023D05F89C3C8E82B0EACD8C /* Sources */,
-				B9CAF9E9F0B470638D174D3B /* Resources */,
-				82D69B9ACAE40A111BFAC0CB /* Embed Frameworks */,
-				9FAD1524CBF17AF1E4B4774F /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				63AE017581D6B15AC795E6F5 /* PBXTargetDependency */,
-			);
-			name = WriteBibleTest;
-			productName = WriteBibleTest;
-			productReference = 1BE6865C0805A045ED461D54 /* WriteBibleTest.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -342,9 +284,6 @@
 			attributes = {
 				ORGANIZATIONNAME = leetaek;
 				TargetAttributes = {
-					3F60F30C240075D4F8FA58C8 = {
-						TestTargetID = 3BB042A93F3F6F02D416642C;
-					};
 				};
 			};
 			buildConfigurationList = EB77C628CAF409F41A0E142A /* Build configuration list for PBXProject "WriteBible" */;
@@ -366,7 +305,6 @@
 			projectRoot = "";
 			targets = (
 				3BB042A93F3F6F02D416642C /* WriteBible */,
-				3F60F30C240075D4F8FA58C8 /* WriteBibleTest */,
 			);
 		};
 /* End PBXProject section */
@@ -384,23 +322,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9CAF9E9F0B470638D174D3B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		023D05F89C3C8E82B0EACD8C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A800EC9743E6FB47BAD6AD46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,67 +357,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		63AE017581D6B15AC795E6F5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WriteBible;
-			target = 3BB042A93F3F6F02D416642C /* WriteBible */;
-			targetProxy = 541BFB20DE1C6F1DEA8A7703 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		21FF3AB64BF0B49B4D2879D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/WriteBibleTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = leetaek.WriteBibleTest;
-				PRODUCT_NAME = WriteBibleTest;
-				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WriteBible.app/WriteBible";
-				TEST_TARGET_NAME = WriteBible;
-			};
-			name = Release;
-		};
-		487F7EEB9F1EE6CCABF6AC11 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/WriteBibleTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = leetaek.WriteBibleTest;
-				PRODUCT_NAME = WriteBibleTest;
-				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_COMPILATION_MODE = singlefile;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WriteBible.app/WriteBible";
-				TEST_TARGET_NAME = WriteBible;
-			};
-			name = Debug;
-		};
 		4A3478689EA635469029A4A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -656,15 +520,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C68808B874B8831840008708 /* Build configuration list for PBXNativeTarget "WriteBibleTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				487F7EEB9F1EE6CCABF6AC11 /* Debug */,
-				21FF3AB64BF0B49B4D2879D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E7DFC786A1420732C74EE86C /* Build configuration list for PBXNativeTarget "WriteBible" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

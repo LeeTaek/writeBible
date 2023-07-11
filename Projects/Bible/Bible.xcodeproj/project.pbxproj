@@ -382,7 +382,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.Bible;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.writebible.Bible;
 				PRODUCT_NAME = Bible;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -415,7 +415,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.Bible;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.writebible.Bible;
 				PRODUCT_NAME = Bible;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

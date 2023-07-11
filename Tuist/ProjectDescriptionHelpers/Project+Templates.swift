@@ -28,11 +28,11 @@ public extension Project {
         .release(name: .release)
       ], defaultSettings: .recommended)
     
-    let appTarget = Target(
+    var appTarget = Target(
       name: name,
       platform: platform,
       product: product,
-      bundleId: "kr.co.\(organizationName).\(name)",
+      bundleId: product == .app ? "kr.co.\(organizationName).\(name)" : "kr.co.\(organizationName).writebible.\(name)",
       deploymentTarget: deploymentTarget,
       infoPlist: infoPlist,
       sources: sources,
@@ -53,7 +53,12 @@ public extension Project {
     
     let schemes: [Scheme] = [.makeScheme(target: .debug, name: name)]
     
-    let targets: [Target] = [appTarget, testTarget]
+    var targets: [Target] = [appTarget]
+    
+    if product != .app {
+      targets.append(testTarget)
+    }
+    
     
     return Project(
       name: name,
