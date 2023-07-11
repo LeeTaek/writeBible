@@ -103,6 +103,7 @@
 		996954202A5D2866008E50B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9969541F2A5D2866008E50B5 /* Preview Assets.xcassets */; };
 		996954232A5D2A92008E50B5 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996954222A5D2A92008E50B5 /* OSLog+Extension.swift */; };
 		996954252A5D2F27008E50B5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996954242A5D2F27008E50B5 /* String+Extension.swift */; };
+		9969542E2A5D3859008E50B5 /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 9969542D2A5D3859008E50B5 /* TCACoordinators */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -211,6 +212,7 @@
 				996954132A5D2587008E50B5 /* ComposableArchitecture in Frameworks */,
 				7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */,
 				996954162A5D2689008E50B5 /* FirebaseAnalytics in Frameworks */,
+				9969542E2A5D3859008E50B5 /* TCACoordinators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,14 +355,9 @@
 		7481B4532848804B00517BAF /* WriteBible */ = {
 			isa = PBXGroup;
 			children = (
-				996954212A5D2A84008E50B5 /* Extension */,
-				9969541B2A5D2792008E50B5 /* AppDelegate.swift */,
-				7481B4542848804B00517BAF /* WriteBibleApp.swift */,
-				7403D1292862C6BD00AB68A3 /* Managers */,
-				74436424285B27D0005241E7 /* View */,
-				74436423285B27B1005241E7 /* Models */,
+				996954262A5D35BE008E50B5 /* Source */,
 				99F58A122A5D1FC700BF895D /* Resource */,
-				99F58A112A5D1E0800BF895D /* Supporting Files */,
+				99F58A112A5D1E0800BF895D /* Support */,
 			);
 			path = WriteBible;
 			sourceTree = "<group>";
@@ -384,7 +381,36 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		99F58A112A5D1E0800BF895D /* Supporting Files */ = {
+		996954262A5D35BE008E50B5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				996954282A5D35F0008E50B5 /* Coordinator */,
+				996954272A5D35DE008E50B5 /* Application */,
+				996954212A5D2A84008E50B5 /* Extension */,
+				7403D1292862C6BD00AB68A3 /* Managers */,
+				74436424285B27D0005241E7 /* View */,
+				74436423285B27B1005241E7 /* Models */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		996954272A5D35DE008E50B5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9969541B2A5D2792008E50B5 /* AppDelegate.swift */,
+				7481B4542848804B00517BAF /* WriteBibleApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		996954282A5D35F0008E50B5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		99F58A112A5D1E0800BF895D /* Support */ = {
 			isa = PBXGroup;
 			children = (
 				996954192A5D2748008E50B5 /* GoogleService-Info.plist */,
@@ -393,7 +419,7 @@
 				7481B4582848804D00517BAF /* Assets.xcassets */,
 				9969541F2A5D2866008E50B5 /* Preview Assets.xcassets */,
 			);
-			path = "Supporting Files";
+			path = Support;
 			sourceTree = "<group>";
 		};
 		99F58A122A5D1FC700BF895D /* Resource */ = {
@@ -426,6 +452,7 @@
 				996954122A5D2587008E50B5 /* ComposableArchitecture */,
 				996954152A5D2689008E50B5 /* FirebaseAnalytics */,
 				996954172A5D2689008E50B5 /* FirebaseMessaging */,
+				9969542D2A5D3859008E50B5 /* TCACoordinators */,
 			);
 			productName = WriteBible;
 			productReference = 7481B4512848804B00517BAF /* WriteBible.app */;
@@ -459,6 +486,7 @@
 				7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				996954112A5D2587008E50B5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9969542C2A5D3858008E50B5 /* XCRemoteSwiftPackageReference "TCACoordinators" */,
 			);
 			productRefGroup = 7481B4522848804B00517BAF /* Products */;
 			projectDirPath = "";
@@ -703,7 +731,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Supporting Files\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Support\"";
 				DEVELOPMENT_TEAM = H4MSW7FUBB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -736,7 +764,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Supporting Files\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Support\"";
 				DEVELOPMENT_TEAM = H4MSW7FUBB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -810,6 +838,14 @@
 				minimumVersion = 10.11.0;
 			};
 		};
+		9969542C2A5D3858008E50B5 /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -832,6 +868,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		9969542D2A5D3859008E50B5 /* TCACoordinators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9969542C2A5D3858008E50B5 /* XCRemoteSwiftPackageReference "TCACoordinators" */;
+			productName = TCACoordinators;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
