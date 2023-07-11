@@ -3,620 +3,312 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7403D12D2862C72A00AB68A3 /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D12C2862C72A00AB68A3 /* DrawingDocument.swift */; };
-		7403D12F2862C74E00AB68A3 /* DrawingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D12E2862C74E00AB68A3 /* DrawingManager.swift */; };
-		7403D1312862C81F00AB68A3 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1302862C81F00AB68A3 /* DrawingViewController.swift */; };
-		7403D1332862C84900AB68A3 /* DrawingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D1322862C84900AB68A3 /* DrawingWrapper.swift */; };
-		7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7403D13B2862E49800AB68A3 /* RealmSwift */; };
-		7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7403D13D2862E4AF00AB68A3 /* RealmManager.swift */; };
-		74099BDC2869CB3800ED8D23 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BDB2869CB3800ED8D23 /* SettingView.swift */; };
-		74099BDE2869CBA600ED8D23 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099BDD2869CBA600ED8D23 /* SettingModel.swift */; };
-		7434623028658233001B5B1D /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434622F28658233001B5B1D /* ColorManager.swift */; };
-		74436406285B0E67005241E7 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74436405285B0E67005241E7 /* BibleView.swift */; };
-		7471BF4B286AD26D00B38386 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BF4A286AD26D00B38386 /* SettingManager.swift */; };
-		74782B0E284F05F90077CDCC /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782B0D284F05F90077CDCC /* Bible.swift */; };
-		74782D2F284F3B300077CDCC /* BibleSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D2E284F3B300077CDCC /* BibleSentenceView.swift */; };
-		74782D5A285086D90077CDCC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74782D59285086D90077CDCC /* TitleView.swift */; };
-		7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4542848804B00517BAF /* WriteBibleApp.swift */; };
-		7481B4572848804B00517BAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481B4562848804B00517BAF /* ContentView.swift */; };
-		7481B4592848804D00517BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481B4582848804D00517BAF /* Assets.xcassets */; };
-		7483622A2875457F0012B3B5 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748362292875457E0012B3B5 /* NanumMyeongjo.ttf */; };
-		748DBF5D2877E4A40059D300 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748DBF5C2877E4A40059D300 /* Launch Screen.storyboard */; };
-		748DBF5F2877E5380059D300 /* NanumBarunGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748DBF5E2877E5380059D300 /* NanumBarunGothic.ttf */; };
-		7495B560287534EB009D265E /* 나눔손글씨 꽃내음.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */; };
-		74B6223B28783F8400978FE4 /* 1-01창세기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620228656805001B5B1D /* 1-01창세기.txt */; };
-		74B6223C28783F8D00978FE4 /* 1-02출애굽기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620428656805001B5B1D /* 1-02출애굽기.txt */; };
-		74B6223D28783F8F00978FE4 /* 1-03레위기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621528656805001B5B1D /* 1-03레위기.txt */; };
-		74B6223E28783F9200978FE4 /* 1-04민수기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621A28656806001B5B1D /* 1-04민수기.txt */; };
-		74B6223F28783F9400978FE4 /* 1-05신명기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621028656805001B5B1D /* 1-05신명기.txt */; };
-		74B6224028783F9900978FE4 /* 2-03누가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FA28656804001B5B1D /* 2-03누가복음.txt */; };
-		74B6224128783F9900978FE4 /* 2-24요한이서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622328656806001B5B1D /* 2-24요한이서.txt */; };
-		74B6224228783F9900978FE4 /* 1-07사사기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621428656805001B5B1D /* 1-07사사기.txt */; };
-		74B6224328783F9900978FE4 /* 1-25예레미야애가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622D28656807001B5B1D /* 1-25예레미야애가.txt */; };
-		74B6224428783F9900978FE4 /* 2-15디모데전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F028656804001B5B1D /* 2-15디모데전서.txt */; };
-		74B6224528783F9900978FE4 /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FD28656804001B5B1D /* 2-09갈라디아서.txt */; };
-		74B6224628783F9900978FE4 /* 1-22아가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620628656805001B5B1D /* 1-22아가.txt */; };
-		74B6224728783F9900978FE4 /* 1-31오바댜.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F728656804001B5B1D /* 1-31오바댜.txt */; };
-		74B6224828783F9900978FE4 /* 2-26유다서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620328656805001B5B1D /* 2-26유다서.txt */; };
-		74B6224928783F9900978FE4 /* 2-07고린도전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622E28656807001B5B1D /* 2-07고린도전서.txt */; };
-		74B6224A28783F9900978FE4 /* 2-11빌립보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621F28656806001B5B1D /* 2-11빌립보서.txt */; };
-		74B6224B28783F9900978FE4 /* 2-25요한삼서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622028656806001B5B1D /* 2-25요한삼서.txt */; };
-		74B6224C28783F9900978FE4 /* 1-37학개.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F328656804001B5B1D /* 1-37학개.txt */; };
-		74B6224D28783F9900978FE4 /* 2-08고린도후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620F28656805001B5B1D /* 2-08고린도후서.txt */; };
-		74B6224E28783F9900978FE4 /* 1-10사무엘하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621D28656806001B5B1D /* 1-10사무엘하.txt */; };
-		74B6224F28783F9900978FE4 /* 1-15에스라.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620D28656805001B5B1D /* 1-15에스라.txt */; };
-		74B6225028783F9900978FE4 /* 1-36스바냐.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621328656805001B5B1D /* 1-36스바냐.txt */; };
-		74B6225128783F9900978FE4 /* 1-20잠언.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FB28656804001B5B1D /* 1-20잠언.txt */; };
-		74B6225228783F9900978FE4 /* 2-10에베소서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F428656804001B5B1D /* 2-10에베소서.txt */; };
-		74B6225328783F9900978FE4 /* 1-34나훔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620A28656805001B5B1D /* 1-34나훔.txt */; };
-		74B6225428783F9900978FE4 /* 2-18빌레몬서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620728656805001B5B1D /* 2-18빌레몬서.txt */; };
-		74B6225528783F9900978FE4 /* 1-32요나.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620128656805001B5B1D /* 1-32요나.txt */; };
-		74B6225628783F9900978FE4 /* 1-29요엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461ED28656804001B5B1D /* 1-29요엘.txt */; };
-		74B6225728783F9900978FE4 /* 2-22베드로후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FC28656804001B5B1D /* 2-22베드로후서.txt */; };
-		74B6225828783F9900978FE4 /* 1-35하박국.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620928656805001B5B1D /* 1-35하박국.txt */; };
-		74B6225928783F9900978FE4 /* 1-26에스겔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622828656806001B5B1D /* 1-26에스겔.txt */; };
-		74B6225A28783F9900978FE4 /* 1-09사무엘상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622928656806001B5B1D /* 1-09사무엘상.txt */; };
-		74B6225B28783F9900978FE4 /* 1-30아모스.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F528656804001B5B1D /* 1-30아모스.txt */; };
-		74B6225C28783F9900978FE4 /* 2-19히브리서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620E28656805001B5B1D /* 2-19히브리서.txt */; };
-		74B6225D28783F9900978FE4 /* 2-05사도행전.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620828656805001B5B1D /* 2-05사도행전.txt */; };
-		74B6225E28783F9900978FE4 /* 1-13역대상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621828656806001B5B1D /* 1-13역대상.txt */; };
-		74B6225F28783F9900978FE4 /* 1-39말라기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F228656804001B5B1D /* 1-39말라기.txt */; };
-		74B6226028783F9900978FE4 /* 1-16느헤미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622128656806001B5B1D /* 1-16느헤미야.txt */; };
-		74B6226128783F9900978FE4 /* 2-17디도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620528656805001B5B1D /* 2-17디도서.txt */; };
-		74B6226228783F9900978FE4 /* 2-20야고보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F128656804001B5B1D /* 2-20야고보서.txt */; };
-		74B6226328783F9900978FE4 /* 1-11열왕기상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621C28656806001B5B1D /* 1-11열왕기상.txt */; };
-		74B6226428783F9900978FE4 /* 2-27요한계시록.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622428656806001B5B1D /* 2-27요한계시록.txt */; };
-		74B6226528783F9900978FE4 /* 1-23이사야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621728656806001B5B1D /* 1-23이사야.txt */; };
-		74B6226628783F9900978FE4 /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622C28656807001B5B1D /* 1-17에스더.txt */; };
-		74B6226728783F9900978FE4 /* 1-14역대하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621928656806001B5B1D /* 1-14역대하.txt */; };
-		74B6226828783F9900978FE4 /* 1-27다니엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621228656805001B5B1D /* 1-27다니엘.txt */; };
-		74B6226928783F9900978FE4 /* 2-16디모데후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622A28656806001B5B1D /* 2-16디모데후서.txt */; };
-		74B6226A28783F9900978FE4 /* 1-12열왕기하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621128656805001B5B1D /* 1-12열왕기하.txt */; };
-		74B6226B28783F9900978FE4 /* 1-21전도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621B28656806001B5B1D /* 1-21전도서.txt */; };
-		74B6226C28783F9900978FE4 /* 1-08룻기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621E28656806001B5B1D /* 1-08룻기.txt */; };
-		74B6226D28783F9900978FE4 /* 1-19시편.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FF28656804001B5B1D /* 1-19시편.txt */; };
-		74B6226E28783F9900978FE4 /* 2-02마가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461FE28656804001B5B1D /* 2-02마가복음.txt */; };
-		74B6226F28783F9900978FE4 /* 1-38스가랴.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620B28656805001B5B1D /* 1-38스가랴.txt */; };
-		74B6227028783F9900978FE4 /* 2-01마태복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622628656806001B5B1D /* 2-01마태복음.txt */; };
-		74B6227128783F9900978FE4 /* 2-04요한복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F928656804001B5B1D /* 2-04요한복음.txt */; };
-		74B6227228783F9900978FE4 /* 2-06로마서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434621628656806001B5B1D /* 2-06로마서.txt */; };
-		74B6227328783F9900978FE4 /* 1-18욥기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461EE28656804001B5B1D /* 1-18욥기.txt */; };
-		74B6227428783F9900978FE4 /* 2-12골로새서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622728656806001B5B1D /* 2-12골로새서.txt */; };
-		74B6227528783F9900978FE4 /* 2-21베드로전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F628656804001B5B1D /* 2-21베드로전서.txt */; };
-		74B6227628783F9900978FE4 /* 2-13데살로니가전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620C28656805001B5B1D /* 2-13데살로니가전서.txt */; };
-		74B6227728783F9900978FE4 /* 1-28호세아.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622228656806001B5B1D /* 1-28호세아.txt */; };
-		74B6227828783F9900978FE4 /* 1-06여호수아.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461EF28656804001B5B1D /* 1-06여호수아.txt */; };
-		74B6227928783F9900978FE4 /* 1-24예레미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743461F828656804001B5B1D /* 1-24예레미야.txt */; };
-		74B6227A28783F9900978FE4 /* 1-33미가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622528656806001B5B1D /* 1-33미가.txt */; };
-		74B6227B28783F9900978FE4 /* 2-23요한일서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434622B28656806001B5B1D /* 2-23요한일서.txt */; };
-		74B6227C28783F9900978FE4 /* 2-14데살로니가후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7434620028656805001B5B1D /* 2-14데살로니가후서.txt */; };
-		74F92056287560B600E05A77 /* RecentWritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F92055287560B600E05A77 /* RecentWritingManager.swift */; };
-		996954132A5D2587008E50B5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 996954122A5D2587008E50B5 /* ComposableArchitecture */; };
-		996954162A5D2689008E50B5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 996954152A5D2689008E50B5 /* FirebaseAnalytics */; };
-		996954182A5D2689008E50B5 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 996954172A5D2689008E50B5 /* FirebaseMessaging */; };
-		9969541A2A5D2748008E50B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 996954192A5D2748008E50B5 /* GoogleService-Info.plist */; };
-		9969541C2A5D2792008E50B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969541B2A5D2792008E50B5 /* AppDelegate.swift */; };
-		996954202A5D2866008E50B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9969541F2A5D2866008E50B5 /* Preview Assets.xcassets */; };
-		996954232A5D2A92008E50B5 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996954222A5D2A92008E50B5 /* OSLog+Extension.swift */; };
-		996954252A5D2F27008E50B5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996954242A5D2F27008E50B5 /* String+Extension.swift */; };
-		9969542E2A5D3859008E50B5 /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 9969542D2A5D3859008E50B5 /* TCACoordinators */; };
+		003E5C085DF41FCEB81BCEFD /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7A5453B20A3EFFDCE4E76 /* ScrollPreferenceKey.swift */; };
+		00557663F775C07D7FD66674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382A7F79386EE675AB7B3A5 /* AppDelegate.swift */; };
+		11FA0FE069390893511DBA25 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF4565964DEBBFA91F88EB /* OSLog+Extension.swift */; };
+		1F6D21F57987A0DCC36C9FA4 /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE0AB85FE3096A1035DDDA9 /* DrawingDocument.swift */; };
+		3DDBDA800BA64D1F3F275090 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2828A583E61E17A2BC75D229 /* String+Extension.swift */; };
+		4EBEA78F6D4336F84150528F /* DrawingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C032C5CADFCB6B807F9A2E /* DrawingManager.swift */; };
+		5CE8E4CC1894805FD7272BCC /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4609BE0C18EE45A81AF74 /* RealmManager.swift */; };
+		5F507B2064EDA0870D97FDAD /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F641F3EA62776B2B95A636B2 /* Bible.swift */; };
+		7D707AF0BC6914DADF51383B /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31715E9759466668E1E133D4 /* TitleView.swift */; };
+		A2EB3A6F1F6A60FDEF4919A3 /* WriteBibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708ED6697352535E104A338 /* WriteBibleApp.swift */; };
+		B1C8DE1FCB4B1D69DF96B6CE /* RecentWritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA418464188CA5E541E17F /* RecentWritingManager.swift */; };
+		B20F0959EFFF950DE4ADAB7C /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E0588D038E864B7AD28A4 /* SettingManager.swift */; };
+		B7BD8ED2EB4C90C1A13D321E /* BibleSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E774441C7FEE5FB235F08 /* BibleSentenceView.swift */; };
+		C4D73D440D4B14CA7B9C5627 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49256E0675F28C7AED4B3762 /* SettingModel.swift */; };
+		C929FE1CE828CC1792033701 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F89BC69271C947336F45C /* DrawingViewController.swift */; };
+		CFB4FD6C39DEFE80F9A3308C /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4E0AD7B88704B68908602 /* BibleView.swift */; };
+		D617E85F7BB0432CE095195C /* DrawingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27AB6C111EE798806931B3B /* DrawingWrapper.swift */; };
+		E48C87F87AF7958713900B3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4156B51CEECBE88FABFFBDA /* ContentView.swift */; };
+		ED1B8C8EEB1DECBA4A9D9C1C /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307ECFDAA499969CEA82BE77 /* ColorManager.swift */; };
+		F241B37A3F3E468FFC1BF6EB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D269703543C8AF684D13FA6 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		826C833BFC906EF5C62DEE20 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		7403D12C2862C72A00AB68A3 /* DrawingDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDocument.swift; sourceTree = "<group>"; };
-		7403D12E2862C74E00AB68A3 /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
-		7403D1302862C81F00AB68A3 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
-		7403D1322862C84900AB68A3 /* DrawingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingWrapper.swift; sourceTree = "<group>"; };
-		7403D13D2862E4AF00AB68A3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		74099BDB2869CB3800ED8D23 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		74099BDD2869CBA600ED8D23 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
-		743461ED28656804001B5B1D /* 1-29요엘.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-29요엘.txt"; sourceTree = "<group>"; };
-		743461EE28656804001B5B1D /* 1-18욥기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-18욥기.txt"; sourceTree = "<group>"; };
-		743461EF28656804001B5B1D /* 1-06여호수아.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-06여호수아.txt"; sourceTree = "<group>"; };
-		743461F028656804001B5B1D /* 2-15디모데전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-15디모데전서.txt"; sourceTree = "<group>"; };
-		743461F128656804001B5B1D /* 2-20야고보서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-20야고보서.txt"; sourceTree = "<group>"; };
-		743461F228656804001B5B1D /* 1-39말라기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-39말라기.txt"; sourceTree = "<group>"; };
-		743461F328656804001B5B1D /* 1-37학개.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-37학개.txt"; sourceTree = "<group>"; };
-		743461F428656804001B5B1D /* 2-10에베소서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-10에베소서.txt"; sourceTree = "<group>"; };
-		743461F528656804001B5B1D /* 1-30아모스.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-30아모스.txt"; sourceTree = "<group>"; };
-		743461F628656804001B5B1D /* 2-21베드로전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-21베드로전서.txt"; sourceTree = "<group>"; };
-		743461F728656804001B5B1D /* 1-31오바댜.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-31오바댜.txt"; sourceTree = "<group>"; };
-		743461F828656804001B5B1D /* 1-24예레미야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-24예레미야.txt"; sourceTree = "<group>"; };
-		743461F928656804001B5B1D /* 2-04요한복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-04요한복음.txt"; sourceTree = "<group>"; };
-		743461FA28656804001B5B1D /* 2-03누가복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-03누가복음.txt"; sourceTree = "<group>"; };
-		743461FB28656804001B5B1D /* 1-20잠언.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-20잠언.txt"; sourceTree = "<group>"; };
-		743461FC28656804001B5B1D /* 2-22베드로후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-22베드로후서.txt"; sourceTree = "<group>"; };
-		743461FD28656804001B5B1D /* 2-09갈라디아서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-09갈라디아서.txt"; sourceTree = "<group>"; };
-		743461FE28656804001B5B1D /* 2-02마가복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-02마가복음.txt"; sourceTree = "<group>"; };
-		743461FF28656804001B5B1D /* 1-19시편.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-19시편.txt"; sourceTree = "<group>"; };
-		7434620028656805001B5B1D /* 2-14데살로니가후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-14데살로니가후서.txt"; sourceTree = "<group>"; };
-		7434620128656805001B5B1D /* 1-32요나.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-32요나.txt"; sourceTree = "<group>"; };
-		7434620228656805001B5B1D /* 1-01창세기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
-		7434620328656805001B5B1D /* 2-26유다서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-26유다서.txt"; sourceTree = "<group>"; };
-		7434620428656805001B5B1D /* 1-02출애굽기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-02출애굽기.txt"; sourceTree = "<group>"; };
-		7434620528656805001B5B1D /* 2-17디도서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-17디도서.txt"; sourceTree = "<group>"; };
-		7434620628656805001B5B1D /* 1-22아가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-22아가.txt"; sourceTree = "<group>"; };
-		7434620728656805001B5B1D /* 2-18빌레몬서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-18빌레몬서.txt"; sourceTree = "<group>"; };
-		7434620828656805001B5B1D /* 2-05사도행전.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-05사도행전.txt"; sourceTree = "<group>"; };
-		7434620928656805001B5B1D /* 1-35하박국.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-35하박국.txt"; sourceTree = "<group>"; };
-		7434620A28656805001B5B1D /* 1-34나훔.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-34나훔.txt"; sourceTree = "<group>"; };
-		7434620B28656805001B5B1D /* 1-38스가랴.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-38스가랴.txt"; sourceTree = "<group>"; };
-		7434620C28656805001B5B1D /* 2-13데살로니가전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-13데살로니가전서.txt"; sourceTree = "<group>"; };
-		7434620D28656805001B5B1D /* 1-15에스라.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-15에스라.txt"; sourceTree = "<group>"; };
-		7434620E28656805001B5B1D /* 2-19히브리서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-19히브리서.txt"; sourceTree = "<group>"; };
-		7434620F28656805001B5B1D /* 2-08고린도후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-08고린도후서.txt"; sourceTree = "<group>"; };
-		7434621028656805001B5B1D /* 1-05신명기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-05신명기.txt"; sourceTree = "<group>"; };
-		7434621128656805001B5B1D /* 1-12열왕기하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-12열왕기하.txt"; sourceTree = "<group>"; };
-		7434621228656805001B5B1D /* 1-27다니엘.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-27다니엘.txt"; sourceTree = "<group>"; };
-		7434621328656805001B5B1D /* 1-36스바냐.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-36스바냐.txt"; sourceTree = "<group>"; };
-		7434621428656805001B5B1D /* 1-07사사기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-07사사기.txt"; sourceTree = "<group>"; };
-		7434621528656805001B5B1D /* 1-03레위기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-03레위기.txt"; sourceTree = "<group>"; };
-		7434621628656806001B5B1D /* 2-06로마서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-06로마서.txt"; sourceTree = "<group>"; };
-		7434621728656806001B5B1D /* 1-23이사야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-23이사야.txt"; sourceTree = "<group>"; };
-		7434621828656806001B5B1D /* 1-13역대상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-13역대상.txt"; sourceTree = "<group>"; };
-		7434621928656806001B5B1D /* 1-14역대하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-14역대하.txt"; sourceTree = "<group>"; };
-		7434621A28656806001B5B1D /* 1-04민수기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-04민수기.txt"; sourceTree = "<group>"; };
-		7434621B28656806001B5B1D /* 1-21전도서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-21전도서.txt"; sourceTree = "<group>"; };
-		7434621C28656806001B5B1D /* 1-11열왕기상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-11열왕기상.txt"; sourceTree = "<group>"; };
-		7434621D28656806001B5B1D /* 1-10사무엘하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-10사무엘하.txt"; sourceTree = "<group>"; };
-		7434621E28656806001B5B1D /* 1-08룻기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-08룻기.txt"; sourceTree = "<group>"; };
-		7434621F28656806001B5B1D /* 2-11빌립보서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-11빌립보서.txt"; sourceTree = "<group>"; };
-		7434622028656806001B5B1D /* 2-25요한삼서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-25요한삼서.txt"; sourceTree = "<group>"; };
-		7434622128656806001B5B1D /* 1-16느헤미야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-16느헤미야.txt"; sourceTree = "<group>"; };
-		7434622228656806001B5B1D /* 1-28호세아.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-28호세아.txt"; sourceTree = "<group>"; };
-		7434622328656806001B5B1D /* 2-24요한이서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-24요한이서.txt"; sourceTree = "<group>"; };
-		7434622428656806001B5B1D /* 2-27요한계시록.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-27요한계시록.txt"; sourceTree = "<group>"; };
-		7434622528656806001B5B1D /* 1-33미가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-33미가.txt"; sourceTree = "<group>"; };
-		7434622628656806001B5B1D /* 2-01마태복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-01마태복음.txt"; sourceTree = "<group>"; };
-		7434622728656806001B5B1D /* 2-12골로새서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-12골로새서.txt"; sourceTree = "<group>"; };
-		7434622828656806001B5B1D /* 1-26에스겔.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-26에스겔.txt"; sourceTree = "<group>"; };
-		7434622928656806001B5B1D /* 1-09사무엘상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-09사무엘상.txt"; sourceTree = "<group>"; };
-		7434622A28656806001B5B1D /* 2-16디모데후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-16디모데후서.txt"; sourceTree = "<group>"; };
-		7434622B28656806001B5B1D /* 2-23요한일서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-23요한일서.txt"; sourceTree = "<group>"; };
-		7434622C28656807001B5B1D /* 1-17에스더.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
-		7434622D28656807001B5B1D /* 1-25예레미야애가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-25예레미야애가.txt"; sourceTree = "<group>"; };
-		7434622E28656807001B5B1D /* 2-07고린도전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-07고린도전서.txt"; sourceTree = "<group>"; };
-		7434622F28658233001B5B1D /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
-		74436405285B0E67005241E7 /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
-		7471BF4A286AD26D00B38386 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
-		74782B0D284F05F90077CDCC /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
-		74782D2E284F3B300077CDCC /* BibleSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleSentenceView.swift; sourceTree = "<group>"; };
-		74782D59285086D90077CDCC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		7481B4512848804B00517BAF /* WriteBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WriteBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7481B4542848804B00517BAF /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
-		7481B4562848804B00517BAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7481B4582848804D00517BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		748362292875457E0012B3B5 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
-		748DBF5C2877E4A40059D300 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		748DBF5E2877E5380059D300 /* NanumBarunGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothic.ttf; sourceTree = "<group>"; };
-		7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 꽃내음.ttf"; sourceTree = "<group>"; };
-		74DB0F52286D7C070019A646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74F92055287560B600E05A77 /* RecentWritingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWritingManager.swift; sourceTree = "<group>"; };
-		996954192A5D2748008E50B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9969541B2A5D2792008E50B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9969541F2A5D2866008E50B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		996954222A5D2A92008E50B5 /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
-		996954242A5D2F27008E50B5 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		01D4E0AD7B88704B68908602 /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
+		1708ED6697352535E104A338 /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
+		2328A86C2726D4570D8E51EA /* WriteBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WriteBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		241C4A07AC735C30CF7F7CAD /* WriteBible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WriteBible-Info.plist"; sourceTree = "<group>"; };
+		25C032C5CADFCB6B807F9A2E /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
+		2828A583E61E17A2BC75D229 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		307ECFDAA499969CEA82BE77 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		31715E9759466668E1E133D4 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		354E774441C7FEE5FB235F08 /* BibleSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleSentenceView.swift; sourceTree = "<group>"; };
+		49256E0675F28C7AED4B3762 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		51FF4565964DEBBFA91F88EB /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
+		6CAA418464188CA5E541E17F /* RecentWritingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWritingManager.swift; sourceTree = "<group>"; };
+		6FE0AB85FE3096A1035DDDA9 /* DrawingDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDocument.swift; sourceTree = "<group>"; };
+		75F7A5453B20A3EFFDCE4E76 /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
+		7D269703543C8AF684D13FA6 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		B48F89BC69271C947336F45C /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		BFC4609BE0C18EE45A81AF74 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		C27AB6C111EE798806931B3B /* DrawingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingWrapper.swift; sourceTree = "<group>"; };
+		D09E0588D038E864B7AD28A4 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
+		D382A7F79386EE675AB7B3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4156B51CEECBE88FABFFBDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F641F3EA62776B2B95A636B2 /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7481B44E2848804B00517BAF /* Frameworks */ = {
+		0376C10C28EF25CB1D4943DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				996954182A5D2689008E50B5 /* FirebaseMessaging in Frameworks */,
-				996954132A5D2587008E50B5 /* ComposableArchitecture in Frameworks */,
-				7403D13C2862E49800AB68A3 /* RealmSwift in Frameworks */,
-				996954162A5D2689008E50B5 /* FirebaseAnalytics in Frameworks */,
-				9969542E2A5D3859008E50B5 /* TCACoordinators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7403D1262862C69A00AB68A3 /* DrawingView */ = {
+		0C4626C6A5BD7546693B86D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7403D1322862C84900AB68A3 /* DrawingWrapper.swift */,
-				7403D1302862C81F00AB68A3 /* DrawingViewController.swift */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		176094DF31EC7E7D7BD4287A /* DrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				B48F89BC69271C947336F45C /* DrawingViewController.swift */,
+				C27AB6C111EE798806931B3B /* DrawingWrapper.swift */,
 			);
 			path = DrawingView;
 			sourceTree = "<group>";
 		};
-		7403D1292862C6BD00AB68A3 /* Managers */ = {
+		2EC2AF4F793E5E399408B531 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
-				7403D12E2862C74E00AB68A3 /* DrawingManager.swift */,
-				7403D13D2862E4AF00AB68A3 /* RealmManager.swift */,
-				7471BF4A286AD26D00B38386 /* SettingManager.swift */,
-				74F92055287560B600E05A77 /* RecentWritingManager.swift */,
+				241C4A07AC735C30CF7F7CAD /* WriteBible-Info.plist */,
 			);
-			path = Managers;
+			path = InfoPlists;
 			sourceTree = "<group>";
 		};
-		743461EC28656804001B5B1D /* 개역개정-text */ = {
+		32FF88D5F9BA442EFCA80829 /* WriteBible */ = {
 			isa = PBXGroup;
 			children = (
-				7434620228656805001B5B1D /* 1-01창세기.txt */,
-				7434620428656805001B5B1D /* 1-02출애굽기.txt */,
-				7434621528656805001B5B1D /* 1-03레위기.txt */,
-				7434621A28656806001B5B1D /* 1-04민수기.txt */,
-				7434621028656805001B5B1D /* 1-05신명기.txt */,
-				743461EF28656804001B5B1D /* 1-06여호수아.txt */,
-				7434621428656805001B5B1D /* 1-07사사기.txt */,
-				7434621E28656806001B5B1D /* 1-08룻기.txt */,
-				7434622928656806001B5B1D /* 1-09사무엘상.txt */,
-				7434621D28656806001B5B1D /* 1-10사무엘하.txt */,
-				7434621C28656806001B5B1D /* 1-11열왕기상.txt */,
-				7434621128656805001B5B1D /* 1-12열왕기하.txt */,
-				7434621828656806001B5B1D /* 1-13역대상.txt */,
-				7434621928656806001B5B1D /* 1-14역대하.txt */,
-				7434620D28656805001B5B1D /* 1-15에스라.txt */,
-				7434622128656806001B5B1D /* 1-16느헤미야.txt */,
-				7434622C28656807001B5B1D /* 1-17에스더.txt */,
-				743461EE28656804001B5B1D /* 1-18욥기.txt */,
-				743461FF28656804001B5B1D /* 1-19시편.txt */,
-				743461FB28656804001B5B1D /* 1-20잠언.txt */,
-				7434621B28656806001B5B1D /* 1-21전도서.txt */,
-				7434620628656805001B5B1D /* 1-22아가.txt */,
-				7434621728656806001B5B1D /* 1-23이사야.txt */,
-				743461F828656804001B5B1D /* 1-24예레미야.txt */,
-				7434622D28656807001B5B1D /* 1-25예레미야애가.txt */,
-				7434622828656806001B5B1D /* 1-26에스겔.txt */,
-				7434621228656805001B5B1D /* 1-27다니엘.txt */,
-				7434622228656806001B5B1D /* 1-28호세아.txt */,
-				743461ED28656804001B5B1D /* 1-29요엘.txt */,
-				743461F528656804001B5B1D /* 1-30아모스.txt */,
-				743461F728656804001B5B1D /* 1-31오바댜.txt */,
-				7434620128656805001B5B1D /* 1-32요나.txt */,
-				7434622528656806001B5B1D /* 1-33미가.txt */,
-				7434620A28656805001B5B1D /* 1-34나훔.txt */,
-				7434620928656805001B5B1D /* 1-35하박국.txt */,
-				7434621328656805001B5B1D /* 1-36스바냐.txt */,
-				743461F328656804001B5B1D /* 1-37학개.txt */,
-				7434620B28656805001B5B1D /* 1-38스가랴.txt */,
-				743461F228656804001B5B1D /* 1-39말라기.txt */,
-				7434622628656806001B5B1D /* 2-01마태복음.txt */,
-				743461FE28656804001B5B1D /* 2-02마가복음.txt */,
-				743461FA28656804001B5B1D /* 2-03누가복음.txt */,
-				743461F928656804001B5B1D /* 2-04요한복음.txt */,
-				7434620828656805001B5B1D /* 2-05사도행전.txt */,
-				7434621628656806001B5B1D /* 2-06로마서.txt */,
-				7434622E28656807001B5B1D /* 2-07고린도전서.txt */,
-				7434620F28656805001B5B1D /* 2-08고린도후서.txt */,
-				743461FD28656804001B5B1D /* 2-09갈라디아서.txt */,
-				743461F428656804001B5B1D /* 2-10에베소서.txt */,
-				7434621F28656806001B5B1D /* 2-11빌립보서.txt */,
-				7434622728656806001B5B1D /* 2-12골로새서.txt */,
-				7434620C28656805001B5B1D /* 2-13데살로니가전서.txt */,
-				7434620028656805001B5B1D /* 2-14데살로니가후서.txt */,
-				743461F028656804001B5B1D /* 2-15디모데전서.txt */,
-				7434622A28656806001B5B1D /* 2-16디모데후서.txt */,
-				7434620528656805001B5B1D /* 2-17디도서.txt */,
-				7434620728656805001B5B1D /* 2-18빌레몬서.txt */,
-				7434620E28656805001B5B1D /* 2-19히브리서.txt */,
-				743461F128656804001B5B1D /* 2-20야고보서.txt */,
-				743461F628656804001B5B1D /* 2-21베드로전서.txt */,
-				743461FC28656804001B5B1D /* 2-22베드로후서.txt */,
-				7434622B28656806001B5B1D /* 2-23요한일서.txt */,
-				7434622328656806001B5B1D /* 2-24요한이서.txt */,
-				7434622028656806001B5B1D /* 2-25요한삼서.txt */,
-				7434620328656805001B5B1D /* 2-26유다서.txt */,
-				7434622428656806001B5B1D /* 2-27요한계시록.txt */,
-			);
-			path = "개역개정-text";
-			sourceTree = "<group>";
-		};
-		74436423285B27B1005241E7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7403D12C2862C72A00AB68A3 /* DrawingDocument.swift */,
-				74782B0D284F05F90077CDCC /* Bible.swift */,
-				74099BDD2869CBA600ED8D23 /* SettingModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		74436424285B27D0005241E7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7434622F28658233001B5B1D /* ColorManager.swift */,
-				7481B4562848804B00517BAF /* ContentView.swift */,
-				74782D59285086D90077CDCC /* TitleView.swift */,
-				74099BDB2869CB3800ED8D23 /* SettingView.swift */,
-				74782D2E284F3B300077CDCC /* BibleSentenceView.swift */,
-				74436405285B0E67005241E7 /* BibleView.swift */,
-				7403D1262862C69A00AB68A3 /* DrawingView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7481B4482848804B00517BAF = {
-			isa = PBXGroup;
-			children = (
-				7481B4532848804B00517BAF /* WriteBible */,
-				7481B4522848804B00517BAF /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		7481B4522848804B00517BAF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7481B4512848804B00517BAF /* WriteBible.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7481B4532848804B00517BAF /* WriteBible */ = {
-			isa = PBXGroup;
-			children = (
-				996954262A5D35BE008E50B5 /* Source */,
-				99F58A122A5D1FC700BF895D /* Resource */,
-				99F58A112A5D1E0800BF895D /* Support */,
+				C4058E5BEC67252AFC7793D8 /* Source */,
 			);
 			path = WriteBible;
 			sourceTree = "<group>";
 		};
-		7495B55E287534DD009D265E /* Font */ = {
+		4E2D5C1E18EBC87FD00CDF98 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7495B55F287534EB009D265E /* 나눔손글씨 꽃내음.ttf */,
-				748DBF5E2877E5380059D300 /* NanumBarunGothic.ttf */,
-				748362292875457E0012B3B5 /* NanumMyeongjo.ttf */,
+				176094DF31EC7E7D7BD4287A /* DrawingView */,
+				354E774441C7FEE5FB235F08 /* BibleSentenceView.swift */,
+				01D4E0AD7B88704B68908602 /* BibleView.swift */,
+				307ECFDAA499969CEA82BE77 /* ColorManager.swift */,
+				D4156B51CEECBE88FABFFBDA /* ContentView.swift */,
+				7D269703543C8AF684D13FA6 /* SettingView.swift */,
+				31715E9759466668E1E133D4 /* TitleView.swift */,
 			);
-			path = Font;
+			path = View;
 			sourceTree = "<group>";
 		};
-		996954212A5D2A84008E50B5 /* Extension */ = {
+		687C90039BADBD61E2DAF87F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				996954222A5D2A92008E50B5 /* OSLog+Extension.swift */,
-				996954242A5D2F27008E50B5 /* String+Extension.swift */,
+				2328A86C2726D4570D8E51EA /* WriteBible.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75A2C5ADDE94B9FCCFA8D74E = {
+			isa = PBXGroup;
+			children = (
+				9D5DC33D667B23F2C389C28C /* Project */,
+				0C4626C6A5BD7546693B86D5 /* Frameworks */,
+				687C90039BADBD61E2DAF87F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		806A6A31F4313A4FA6B95A46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F641F3EA62776B2B95A636B2 /* Bible.swift */,
+				6FE0AB85FE3096A1035DDDA9 /* DrawingDocument.swift */,
+				75F7A5453B20A3EFFDCE4E76 /* ScrollPreferenceKey.swift */,
+				49256E0675F28C7AED4B3762 /* SettingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81E44D2C10519157CECDD026 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				2EC2AF4F793E5E399408B531 /* InfoPlists */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		82BA6BC6806FE85518E6DE06 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				51FF4565964DEBBFA91F88EB /* OSLog+Extension.swift */,
+				2828A583E61E17A2BC75D229 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		996954262A5D35BE008E50B5 /* Source */ = {
+		85C6CE563FA0D3BDD12DD618 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				996954282A5D35F0008E50B5 /* Coordinator */,
-				996954272A5D35DE008E50B5 /* Application */,
-				996954212A5D2A84008E50B5 /* Extension */,
-				7403D1292862C6BD00AB68A3 /* Managers */,
-				74436424285B27D0005241E7 /* View */,
-				74436423285B27B1005241E7 /* Models */,
+				25C032C5CADFCB6B807F9A2E /* DrawingManager.swift */,
+				BFC4609BE0C18EE45A81AF74 /* RealmManager.swift */,
+				6CAA418464188CA5E541E17F /* RecentWritingManager.swift */,
+				D09E0588D038E864B7AD28A4 /* SettingManager.swift */,
 			);
-			path = Source;
+			path = Managers;
 			sourceTree = "<group>";
 		};
-		996954272A5D35DE008E50B5 /* Application */ = {
+		8C4F1483945F86C6B3596FE8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				9969541B2A5D2792008E50B5 /* AppDelegate.swift */,
-				7481B4542848804B00517BAF /* WriteBibleApp.swift */,
+				D382A7F79386EE675AB7B3A5 /* AppDelegate.swift */,
+				1708ED6697352535E104A338 /* WriteBibleApp.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		996954282A5D35F0008E50B5 /* Coordinator */ = {
+		9D5DC33D667B23F2C389C28C /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				81E44D2C10519157CECDD026 /* Derived */,
+				32FF88D5F9BA442EFCA80829 /* WriteBible */,
 			);
-			path = Coordinator;
+			name = Project;
 			sourceTree = "<group>";
 		};
-		99F58A112A5D1E0800BF895D /* Support */ = {
+		C4058E5BEC67252AFC7793D8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				996954192A5D2748008E50B5 /* GoogleService-Info.plist */,
-				74DB0F52286D7C070019A646 /* Info.plist */,
-				748DBF5C2877E4A40059D300 /* Launch Screen.storyboard */,
-				7481B4582848804D00517BAF /* Assets.xcassets */,
-				9969541F2A5D2866008E50B5 /* Preview Assets.xcassets */,
+				8C4F1483945F86C6B3596FE8 /* Application */,
+				82BA6BC6806FE85518E6DE06 /* Extension */,
+				85C6CE563FA0D3BDD12DD618 /* Managers */,
+				806A6A31F4313A4FA6B95A46 /* Models */,
+				4E2D5C1E18EBC87FD00CDF98 /* View */,
 			);
-			path = Support;
-			sourceTree = "<group>";
-		};
-		99F58A122A5D1FC700BF895D /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				7495B55E287534DD009D265E /* Font */,
-				743461EC28656804001B5B1D /* 개역개정-text */,
-			);
-			path = Resource;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7481B4502848804B00517BAF /* WriteBible */ = {
+		3BB042A93F3F6F02D416642C /* WriteBible */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7481B45F2848804D00517BAF /* Build configuration list for PBXNativeTarget "WriteBible" */;
+			buildConfigurationList = E7DFC786A1420732C74EE86C /* Build configuration list for PBXNativeTarget "WriteBible" */;
 			buildPhases = (
-				7481B44D2848804B00517BAF /* Sources */,
-				7481B44E2848804B00517BAF /* Frameworks */,
-				7481B44F2848804B00517BAF /* Resources */,
+				A800EC9743E6FB47BAD6AD46 /* Sources */,
+				69F72D0022A35F604C2C4006 /* Resources */,
+				826C833BFC906EF5C62DEE20 /* Embed Frameworks */,
+				0376C10C28EF25CB1D4943DA /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = WriteBible;
-			packageProductDependencies = (
-				7403D13B2862E49800AB68A3 /* RealmSwift */,
-				996954122A5D2587008E50B5 /* ComposableArchitecture */,
-				996954152A5D2689008E50B5 /* FirebaseAnalytics */,
-				996954172A5D2689008E50B5 /* FirebaseMessaging */,
-				9969542D2A5D3859008E50B5 /* TCACoordinators */,
-			);
 			productName = WriteBible;
-			productReference = 7481B4512848804B00517BAF /* WriteBible.app */;
+			productReference = 2328A86C2726D4570D8E51EA /* WriteBible.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7481B4492848804B00517BAF /* Project object */ = {
+		481739A6ECB1495D6ED73262 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				ORGANIZATIONNAME = Leetaek;
 				TargetAttributes = {
-					7481B4502848804B00517BAF = {
-						CreatedOnToolsVersion = 13.4;
-					};
 				};
 			};
-			buildConfigurationList = 7481B44C2848804B00517BAF /* Build configuration list for PBXProject "WriteBible" */;
+			buildConfigurationList = EB77C628CAF409F41A0E142A /* Build configuration list for PBXProject "WriteBible" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = 7481B4482848804B00517BAF;
-			packageReferences = (
-				7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				996954112A5D2587008E50B5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				9969542C2A5D3858008E50B5 /* XCRemoteSwiftPackageReference "TCACoordinators" */,
-			);
-			productRefGroup = 7481B4522848804B00517BAF /* Products */;
+			mainGroup = 75A2C5ADDE94B9FCCFA8D74E;
+			productRefGroup = 687C90039BADBD61E2DAF87F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7481B4502848804B00517BAF /* WriteBible */,
+				3BB042A93F3F6F02D416642C /* WriteBible */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7481B44F2848804B00517BAF /* Resources */ = {
+		69F72D0022A35F604C2C4006 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74B6227428783F9900978FE4 /* 2-12골로새서.txt in Resources */,
-				74B6224C28783F9900978FE4 /* 1-37학개.txt in Resources */,
-				74B6226528783F9900978FE4 /* 1-23이사야.txt in Resources */,
-				74B6224428783F9900978FE4 /* 2-15디모데전서.txt in Resources */,
-				74B6224D28783F9900978FE4 /* 2-08고린도후서.txt in Resources */,
-				74B6226E28783F9900978FE4 /* 2-02마가복음.txt in Resources */,
-				74B6224F28783F9900978FE4 /* 1-15에스라.txt in Resources */,
-				74B6224328783F9900978FE4 /* 1-25예레미야애가.txt in Resources */,
-				74B6224A28783F9900978FE4 /* 2-11빌립보서.txt in Resources */,
-				74B6225428783F9900978FE4 /* 2-18빌레몬서.txt in Resources */,
-				7483622A2875457F0012B3B5 /* NanumMyeongjo.ttf in Resources */,
-				74B6225C28783F9900978FE4 /* 2-19히브리서.txt in Resources */,
-				74B6225528783F9900978FE4 /* 1-32요나.txt in Resources */,
-				74B6223F28783F9400978FE4 /* 1-05신명기.txt in Resources */,
-				74B6225628783F9900978FE4 /* 1-29요엘.txt in Resources */,
-				74B6227C28783F9900978FE4 /* 2-14데살로니가후서.txt in Resources */,
-				74B6226428783F9900978FE4 /* 2-27요한계시록.txt in Resources */,
-				74B6225728783F9900978FE4 /* 2-22베드로후서.txt in Resources */,
-				74B6225F28783F9900978FE4 /* 1-39말라기.txt in Resources */,
-				74B6226728783F9900978FE4 /* 1-14역대하.txt in Resources */,
-				74B6225028783F9900978FE4 /* 1-36스바냐.txt in Resources */,
-				74B6224E28783F9900978FE4 /* 1-10사무엘하.txt in Resources */,
-				74B6224728783F9900978FE4 /* 1-31오바댜.txt in Resources */,
-				996954202A5D2866008E50B5 /* Preview Assets.xcassets in Resources */,
-				74B6227728783F9900978FE4 /* 1-28호세아.txt in Resources */,
-				74B6225128783F9900978FE4 /* 1-20잠언.txt in Resources */,
-				74B6226B28783F9900978FE4 /* 1-21전도서.txt in Resources */,
-				74B6227128783F9900978FE4 /* 2-04요한복음.txt in Resources */,
-				74B6224928783F9900978FE4 /* 2-07고린도전서.txt in Resources */,
-				74B6223E28783F9200978FE4 /* 1-04민수기.txt in Resources */,
-				74B6226828783F9900978FE4 /* 1-27다니엘.txt in Resources */,
-				74B6224828783F9900978FE4 /* 2-26유다서.txt in Resources */,
-				74B6225A28783F9900978FE4 /* 1-09사무엘상.txt in Resources */,
-				74B6227928783F9900978FE4 /* 1-24예레미야.txt in Resources */,
-				74B6224B28783F9900978FE4 /* 2-25요한삼서.txt in Resources */,
-				74B6226D28783F9900978FE4 /* 1-19시편.txt in Resources */,
-				74B6224228783F9900978FE4 /* 1-07사사기.txt in Resources */,
-				9969541A2A5D2748008E50B5 /* GoogleService-Info.plist in Resources */,
-				74B6227528783F9900978FE4 /* 2-21베드로전서.txt in Resources */,
-				74B6224628783F9900978FE4 /* 1-22아가.txt in Resources */,
-				74B6224028783F9900978FE4 /* 2-03누가복음.txt in Resources */,
-				74B6227628783F9900978FE4 /* 2-13데살로니가전서.txt in Resources */,
-				74B6226A28783F9900978FE4 /* 1-12열왕기하.txt in Resources */,
-				74B6225228783F9900978FE4 /* 2-10에베소서.txt in Resources */,
-				7495B560287534EB009D265E /* 나눔손글씨 꽃내음.ttf in Resources */,
-				74B6226C28783F9900978FE4 /* 1-08룻기.txt in Resources */,
-				74B6225328783F9900978FE4 /* 1-34나훔.txt in Resources */,
-				74B6226928783F9900978FE4 /* 2-16디모데후서.txt in Resources */,
-				74B6226328783F9900978FE4 /* 1-11열왕기상.txt in Resources */,
-				74B6223C28783F8D00978FE4 /* 1-02출애굽기.txt in Resources */,
-				74B6225D28783F9900978FE4 /* 2-05사도행전.txt in Resources */,
-				74B6227228783F9900978FE4 /* 2-06로마서.txt in Resources */,
-				74B6227B28783F9900978FE4 /* 2-23요한일서.txt in Resources */,
-				74B6226628783F9900978FE4 /* 1-17에스더.txt in Resources */,
-				74B6227828783F9900978FE4 /* 1-06여호수아.txt in Resources */,
-				74B6225928783F9900978FE4 /* 1-26에스겔.txt in Resources */,
-				74B6226028783F9900978FE4 /* 1-16느헤미야.txt in Resources */,
-				74B6226228783F9900978FE4 /* 2-20야고보서.txt in Resources */,
-				74B6224128783F9900978FE4 /* 2-24요한이서.txt in Resources */,
-				74B6225828783F9900978FE4 /* 1-35하박국.txt in Resources */,
-				748DBF5F2877E5380059D300 /* NanumBarunGothic.ttf in Resources */,
-				74B6227A28783F9900978FE4 /* 1-33미가.txt in Resources */,
-				74B6225E28783F9900978FE4 /* 1-13역대상.txt in Resources */,
-				74B6227328783F9900978FE4 /* 1-18욥기.txt in Resources */,
-				7481B4592848804D00517BAF /* Assets.xcassets in Resources */,
-				74B6223B28783F8400978FE4 /* 1-01창세기.txt in Resources */,
-				74B6223D28783F8F00978FE4 /* 1-03레위기.txt in Resources */,
-				74B6227028783F9900978FE4 /* 2-01마태복음.txt in Resources */,
-				74B6225B28783F9900978FE4 /* 1-30아모스.txt in Resources */,
-				74B6224528783F9900978FE4 /* 2-09갈라디아서.txt in Resources */,
-				748DBF5D2877E4A40059D300 /* Launch Screen.storyboard in Resources */,
-				74B6226128783F9900978FE4 /* 2-17디도서.txt in Resources */,
-				74B6226F28783F9900978FE4 /* 1-38스가랴.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7481B44D2848804B00517BAF /* Sources */ = {
+		A800EC9743E6FB47BAD6AD46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7481B4572848804B00517BAF /* ContentView.swift in Sources */,
-				7403D1332862C84900AB68A3 /* DrawingWrapper.swift in Sources */,
-				74782D5A285086D90077CDCC /* TitleView.swift in Sources */,
-				996954252A5D2F27008E50B5 /* String+Extension.swift in Sources */,
-				7434623028658233001B5B1D /* ColorManager.swift in Sources */,
-				74099BDC2869CB3800ED8D23 /* SettingView.swift in Sources */,
-				74099BDE2869CBA600ED8D23 /* SettingModel.swift in Sources */,
-				996954232A5D2A92008E50B5 /* OSLog+Extension.swift in Sources */,
-				74436406285B0E67005241E7 /* BibleView.swift in Sources */,
-				7403D12F2862C74E00AB68A3 /* DrawingManager.swift in Sources */,
-				74F92056287560B600E05A77 /* RecentWritingManager.swift in Sources */,
-				7471BF4B286AD26D00B38386 /* SettingManager.swift in Sources */,
-				7403D1312862C81F00AB68A3 /* DrawingViewController.swift in Sources */,
-				74782D2F284F3B300077CDCC /* BibleSentenceView.swift in Sources */,
-				7403D12D2862C72A00AB68A3 /* DrawingDocument.swift in Sources */,
-				7403D13E2862E4AF00AB68A3 /* RealmManager.swift in Sources */,
-				74782B0E284F05F90077CDCC /* Bible.swift in Sources */,
-				9969541C2A5D2792008E50B5 /* AppDelegate.swift in Sources */,
-				7481B4552848804B00517BAF /* WriteBibleApp.swift in Sources */,
+				00557663F775C07D7FD66674 /* AppDelegate.swift in Sources */,
+				A2EB3A6F1F6A60FDEF4919A3 /* WriteBibleApp.swift in Sources */,
+				11FA0FE069390893511DBA25 /* OSLog+Extension.swift in Sources */,
+				3DDBDA800BA64D1F3F275090 /* String+Extension.swift in Sources */,
+				4EBEA78F6D4336F84150528F /* DrawingManager.swift in Sources */,
+				5CE8E4CC1894805FD7272BCC /* RealmManager.swift in Sources */,
+				B1C8DE1FCB4B1D69DF96B6CE /* RecentWritingManager.swift in Sources */,
+				B20F0959EFFF950DE4ADAB7C /* SettingManager.swift in Sources */,
+				5F507B2064EDA0870D97FDAD /* Bible.swift in Sources */,
+				1F6D21F57987A0DCC36C9FA4 /* DrawingDocument.swift in Sources */,
+				003E5C085DF41FCEB81BCEFD /* ScrollPreferenceKey.swift in Sources */,
+				C4D73D440D4B14CA7B9C5627 /* SettingModel.swift in Sources */,
+				B7BD8ED2EB4C90C1A13D321E /* BibleSentenceView.swift in Sources */,
+				CFB4FD6C39DEFE80F9A3308C /* BibleView.swift in Sources */,
+				ED1B8C8EEB1DECBA4A9D9C1C /* ColorManager.swift in Sources */,
+				E48C87F87AF7958713900B3C /* ContentView.swift in Sources */,
+				C929FE1CE828CC1792033701 /* DrawingViewController.swift in Sources */,
+				D617E85F7BB0432CE095195C /* DrawingWrapper.swift in Sources */,
+				F241B37A3F3E468FFC1BF6EB /* SettingView.swift in Sources */,
+				7D707AF0BC6914DADF51383B /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7481B45D2848804D00517BAF /* Debug */ = {
+		4A3478689EA635469029A4A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -643,6 +335,107 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		600F4B41F92D6BAE76385D98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/WriteBible-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.WriteBible;
+				PRODUCT_NAME = WriteBible;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B603EDFF30A290473B89C27A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/WriteBible-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.WriteBible;
+				PRODUCT_NAME = WriteBible;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C8768D8FF739ACADA9033CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -660,221 +453,34 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
-		};
-		7481B45E2848804D00517BAF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7481B4602848804D00517BAF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Support\"";
-				DEVELOPMENT_TEAM = H4MSW7FUBB;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WriteBible/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "새기다";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.WriteBible;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Debug;
-		};
-		7481B4612848804D00517BAF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WriteBible/Support\"";
-				DEVELOPMENT_TEAM = H4MSW7FUBB;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WriteBible/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "새기다";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.WriteBible;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7481B44C2848804B00517BAF /* Build configuration list for PBXProject "WriteBible" */ = {
+		E7DFC786A1420732C74EE86C /* Build configuration list for PBXNativeTarget "WriteBible" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7481B45D2848804D00517BAF /* Debug */,
-				7481B45E2848804D00517BAF /* Release */,
+				600F4B41F92D6BAE76385D98 /* Debug */,
+				B603EDFF30A290473B89C27A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7481B45F2848804D00517BAF /* Build configuration list for PBXNativeTarget "WriteBible" */ = {
+		EB77C628CAF409F41A0E142A /* Build configuration list for PBXProject "WriteBible" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7481B4602848804D00517BAF /* Debug */,
-				7481B4612848804D00517BAF /* Release */,
+				C8768D8FF739ACADA9033CEE /* Debug */,
+				4A3478689EA635469029A4A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		996954112A5D2587008E50B5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.55.0;
-			};
-		};
-		996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.11.0;
-			};
-		};
-		9969542C2A5D3858008E50B5 /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7403D13B2862E49800AB68A3 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7403D13A2862E49800AB68A3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-		996954122A5D2587008E50B5 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 996954112A5D2587008E50B5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-		996954152A5D2689008E50B5 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		996954172A5D2689008E50B5 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 996954142A5D2689008E50B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-		9969542D2A5D3859008E50B5 /* TCACoordinators */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9969542C2A5D3858008E50B5 /* XCRemoteSwiftPackageReference "TCACoordinators" */;
-			productName = TCACoordinators;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 7481B4492848804B00517BAF /* Project object */;
+	rootObject = 481739A6ECB1495D6ED73262 /* Project object */;
 }

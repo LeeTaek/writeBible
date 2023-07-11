@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		003E5C085DF41FCEB81BCEFD /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7A5453B20A3EFFDCE4E76 /* ScrollPreferenceKey.swift */; };
+		00557663F775C07D7FD66674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382A7F79386EE675AB7B3A5 /* AppDelegate.swift */; };
+		11FA0FE069390893511DBA25 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF4565964DEBBFA91F88EB /* OSLog+Extension.swift */; };
+		1CA644BEE9F26B0A7A0A5025 /* TCAArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5A6F9177A1A28726AF46C6FB /* TCAArchitecture */; };
+		1DA440D0843FFCA549B08D82 /* Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4D2F39135C139EB15CF389 /* Bible.framework */; platformFilter = ios; };
+		1F6D21F57987A0DCC36C9FA4 /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE0AB85FE3096A1035DDDA9 /* DrawingDocument.swift */; };
+		2066DD19E194F987C3D5473C /* TCACoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = A8651FDABFDBD8CAFDF69A24 /* TCACoordinator */; };
+		324DBFF021277F6A88776A03 /* TuistBundle+WriteBible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88B6AE831018E227342CEF /* TuistBundle+WriteBible.swift */; };
+		34A2C6FD4199C57A82951CA8 /* TuistAssets+WriteBible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D2514ACA527264B6320FE /* TuistAssets+WriteBible.swift */; };
+		37274B31EA9A3B20847074D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22EFA835F4B22C251CFBA242 /* Preview Assets.xcassets */; };
+		3DDBDA800BA64D1F3F275090 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2828A583E61E17A2BC75D229 /* String+Extension.swift */; };
+		4E002468AFA121D613D129B7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471FD721E54E399D7FC0B57C /* Launch Screen.storyboard */; };
+		4EBEA78F6D4336F84150528F /* DrawingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C032C5CADFCB6B807F9A2E /* DrawingManager.swift */; };
+		544C6E43925AF6843AE74D93 /* Firebase in Frameworks */ = {isa = PBXBuildFile; productRef = 0D6D1FBDB5AFE081A4718388 /* Firebase */; };
+		5CE8E4CC1894805FD7272BCC /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4609BE0C18EE45A81AF74 /* RealmManager.swift */; };
+		5F507B2064EDA0870D97FDAD /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F641F3EA62776B2B95A636B2 /* Bible.swift */; };
+		7D707AF0BC6914DADF51383B /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31715E9759466668E1E133D4 /* TitleView.swift */; };
+		A2EB3A6F1F6A60FDEF4919A3 /* WriteBibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708ED6697352535E104A338 /* WriteBibleApp.swift */; };
+		AC1C8FC2580F5D1549D4422A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580F057476ECF13F22700987 /* Assets.xcassets */; };
+		B1C8DE1FCB4B1D69DF96B6CE /* RecentWritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA418464188CA5E541E17F /* RecentWritingManager.swift */; };
+		B20F0959EFFF950DE4ADAB7C /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E0588D038E864B7AD28A4 /* SettingManager.swift */; };
+		B7BD8ED2EB4C90C1A13D321E /* BibleSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E774441C7FEE5FB235F08 /* BibleSentenceView.swift */; };
+		BB5DB5D104836C11B5279879 /* TuistPlists+WriteBible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E0936FBEC783C866AED039 /* TuistPlists+WriteBible.swift */; };
+		C4D73D440D4B14CA7B9C5627 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49256E0675F28C7AED4B3762 /* SettingModel.swift */; };
+		C929FE1CE828CC1792033701 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F89BC69271C947336F45C /* DrawingViewController.swift */; };
+		CFB4FD6C39DEFE80F9A3308C /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D4E0AD7B88704B68908602 /* BibleView.swift */; };
+		D1F62DB4CE13266E0A096495 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AFA83F79F823299BA4A7B07 /* Info.plist */; };
+		D617E85F7BB0432CE095195C /* DrawingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27AB6C111EE798806931B3B /* DrawingWrapper.swift */; };
+		E35BA2B4D439A0C672A15992 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09E65A26C4ACD781EAF564C6 /* GoogleService-Info.plist */; };
+		E48C87F87AF7958713900B3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4156B51CEECBE88FABFFBDA /* ContentView.swift */; };
+		ED1B8C8EEB1DECBA4A9D9C1C /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307ECFDAA499969CEA82BE77 /* ColorManager.swift */; };
+		F241B37A3F3E468FFC1BF6EB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D269703543C8AF684D13FA6 /* SettingView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		541BFB20DE1C6F1DEA8A7703 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 481739A6ECB1495D6ED73262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BB042A93F3F6F02D416642C;
+			remoteInfo = WriteBible;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		826C833BFC906EF5C62DEE20 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82D69B9ACAE40A111BFAC0CB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01D4E0AD7B88704B68908602 /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
+		09E65A26C4ACD781EAF564C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1708ED6697352535E104A338 /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
+		1AFA83F79F823299BA4A7B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1BE6865C0805A045ED461D54 /* WriteBibleTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WriteBibleTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E938FE04D1645719B9A920 /* WriteBibleTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WriteBibleTest-Info.plist"; sourceTree = "<group>"; };
+		22EFA835F4B22C251CFBA242 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2328A86C2726D4570D8E51EA /* WriteBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WriteBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25C032C5CADFCB6B807F9A2E /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
+		2828A583E61E17A2BC75D229 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		307ECFDAA499969CEA82BE77 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		31715E9759466668E1E133D4 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		354E774441C7FEE5FB235F08 /* BibleSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleSentenceView.swift; sourceTree = "<group>"; };
+		3A88B6AE831018E227342CEF /* TuistBundle+WriteBible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+WriteBible.swift"; sourceTree = "<group>"; };
+		471FD721E54E399D7FC0B57C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		49256E0675F28C7AED4B3762 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		51FF4565964DEBBFA91F88EB /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
+		536D2514ACA527264B6320FE /* TuistAssets+WriteBible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+WriteBible.swift"; sourceTree = "<group>"; };
+		580F057476ECF13F22700987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CAA418464188CA5E541E17F /* RecentWritingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWritingManager.swift; sourceTree = "<group>"; };
+		6FE0AB85FE3096A1035DDDA9 /* DrawingDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDocument.swift; sourceTree = "<group>"; };
+		75F7A5453B20A3EFFDCE4E76 /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
+		7D269703543C8AF684D13FA6 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		A3E0936FBEC783C866AED039 /* TuistPlists+WriteBible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistPlists+WriteBible.swift"; sourceTree = "<group>"; };
+		B48F89BC69271C947336F45C /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		BFC4609BE0C18EE45A81AF74 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		C27AB6C111EE798806931B3B /* DrawingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingWrapper.swift; sourceTree = "<group>"; };
+		D09E0588D038E864B7AD28A4 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
+		D382A7F79386EE675AB7B3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4156B51CEECBE88FABFFBDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB4D2F39135C139EB15CF389 /* Bible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F641F3EA62776B2B95A636B2 /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0376C10C28EF25CB1D4943DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA440D0843FFCA549B08D82 /* Bible.framework in Frameworks */,
+				544C6E43925AF6843AE74D93 /* Firebase in Frameworks */,
+				1CA644BEE9F26B0A7A0A5025 /* TCAArchitecture in Frameworks */,
+				2066DD19E194F987C3D5473C /* TCACoordinator in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FAD1524CBF17AF1E4B4774F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C4626C6A5BD7546693B86D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		176094DF31EC7E7D7BD4287A /* DrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				B48F89BC69271C947336F45C /* DrawingViewController.swift */,
+				C27AB6C111EE798806931B3B /* DrawingWrapper.swift */,
+			);
+			path = DrawingView;
+			sourceTree = "<group>";
+		};
+		2EC2AF4F793E5E399408B531 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				22E938FE04D1645719B9A920 /* WriteBibleTest-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		32FF88D5F9BA442EFCA80829 /* WriteBible */ = {
+			isa = PBXGroup;
+			children = (
+				C4058E5BEC67252AFC7793D8 /* Source */,
+				B46907C60F3EA7A115197D83 /* Support */,
+			);
+			path = WriteBible;
+			sourceTree = "<group>";
+		};
+		3CBBEF15BCE349F979C7ABD0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				536D2514ACA527264B6320FE /* TuistAssets+WriteBible.swift */,
+				3A88B6AE831018E227342CEF /* TuistBundle+WriteBible.swift */,
+				A3E0936FBEC783C866AED039 /* TuistPlists+WriteBible.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		4E2D5C1E18EBC87FD00CDF98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176094DF31EC7E7D7BD4287A /* DrawingView */,
+				354E774441C7FEE5FB235F08 /* BibleSentenceView.swift */,
+				01D4E0AD7B88704B68908602 /* BibleView.swift */,
+				307ECFDAA499969CEA82BE77 /* ColorManager.swift */,
+				D4156B51CEECBE88FABFFBDA /* ContentView.swift */,
+				7D269703543C8AF684D13FA6 /* SettingView.swift */,
+				31715E9759466668E1E133D4 /* TitleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		687C90039BADBD61E2DAF87F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB4D2F39135C139EB15CF389 /* Bible.framework */,
+				2328A86C2726D4570D8E51EA /* WriteBible.app */,
+				1BE6865C0805A045ED461D54 /* WriteBibleTest.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75A2C5ADDE94B9FCCFA8D74E = {
+			isa = PBXGroup;
+			children = (
+				9D5DC33D667B23F2C389C28C /* Project */,
+				0C4626C6A5BD7546693B86D5 /* Frameworks */,
+				687C90039BADBD61E2DAF87F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		806A6A31F4313A4FA6B95A46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F641F3EA62776B2B95A636B2 /* Bible.swift */,
+				6FE0AB85FE3096A1035DDDA9 /* DrawingDocument.swift */,
+				75F7A5453B20A3EFFDCE4E76 /* ScrollPreferenceKey.swift */,
+				49256E0675F28C7AED4B3762 /* SettingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81E44D2C10519157CECDD026 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				2EC2AF4F793E5E399408B531 /* InfoPlists */,
+				3CBBEF15BCE349F979C7ABD0 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		82BA6BC6806FE85518E6DE06 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				51FF4565964DEBBFA91F88EB /* OSLog+Extension.swift */,
+				2828A583E61E17A2BC75D229 /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		85C6CE563FA0D3BDD12DD618 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				25C032C5CADFCB6B807F9A2E /* DrawingManager.swift */,
+				BFC4609BE0C18EE45A81AF74 /* RealmManager.swift */,
+				6CAA418464188CA5E541E17F /* RecentWritingManager.swift */,
+				D09E0588D038E864B7AD28A4 /* SettingManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8C4F1483945F86C6B3596FE8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D382A7F79386EE675AB7B3A5 /* AppDelegate.swift */,
+				1708ED6697352535E104A338 /* WriteBibleApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9D5DC33D667B23F2C389C28C /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				81E44D2C10519157CECDD026 /* Derived */,
+				32FF88D5F9BA442EFCA80829 /* WriteBible */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		B46907C60F3EA7A115197D83 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				580F057476ECF13F22700987 /* Assets.xcassets */,
+				09E65A26C4ACD781EAF564C6 /* GoogleService-Info.plist */,
+				1AFA83F79F823299BA4A7B07 /* Info.plist */,
+				471FD721E54E399D7FC0B57C /* Launch Screen.storyboard */,
+				22EFA835F4B22C251CFBA242 /* Preview Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C4058E5BEC67252AFC7793D8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F1483945F86C6B3596FE8 /* Application */,
+				82BA6BC6806FE85518E6DE06 /* Extension */,
+				85C6CE563FA0D3BDD12DD618 /* Managers */,
+				806A6A31F4313A4FA6B95A46 /* Models */,
+				4E2D5C1E18EBC87FD00CDF98 /* View */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BB042A93F3F6F02D416642C /* WriteBible */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7DFC786A1420732C74EE86C /* Build configuration list for PBXNativeTarget "WriteBible" */;
+			buildPhases = (
+				A800EC9743E6FB47BAD6AD46 /* Sources */,
+				69F72D0022A35F604C2C4006 /* Resources */,
+				826C833BFC906EF5C62DEE20 /* Embed Frameworks */,
+				0376C10C28EF25CB1D4943DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WriteBible;
+			packageProductDependencies = (
+				0D6D1FBDB5AFE081A4718388 /* Firebase */,
+				5A6F9177A1A28726AF46C6FB /* TCAArchitecture */,
+				A8651FDABFDBD8CAFDF69A24 /* TCACoordinator */,
+			);
+			productName = WriteBible;
+			productReference = 2328A86C2726D4570D8E51EA /* WriteBible.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F60F30C240075D4F8FA58C8 /* WriteBibleTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C68808B874B8831840008708 /* Build configuration list for PBXNativeTarget "WriteBibleTest" */;
+			buildPhases = (
+				023D05F89C3C8E82B0EACD8C /* Sources */,
+				B9CAF9E9F0B470638D174D3B /* Resources */,
+				82D69B9ACAE40A111BFAC0CB /* Embed Frameworks */,
+				9FAD1524CBF17AF1E4B4774F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63AE017581D6B15AC795E6F5 /* PBXTargetDependency */,
+			);
+			name = WriteBibleTest;
+			productName = WriteBibleTest;
+			productReference = 1BE6865C0805A045ED461D54 /* WriteBibleTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		481739A6ECB1495D6ED73262 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = leetaek;
+				TargetAttributes = {
+					3F60F30C240075D4F8FA58C8 = {
+						TestTargetID = 3BB042A93F3F6F02D416642C;
+					};
+				};
+			};
+			buildConfigurationList = EB77C628CAF409F41A0E142A /* Build configuration list for PBXProject "WriteBible" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 75A2C5ADDE94B9FCCFA8D74E;
+			packageReferences = (
+				768765391D9F11F1DBEB9C50 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				781283C80830EFBABC9857F0 /* XCRemoteSwiftPackageReference "TCACoordinators" */,
+				AA8873BFB35E26A0067AFEC9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = 687C90039BADBD61E2DAF87F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BB042A93F3F6F02D416642C /* WriteBible */,
+				3F60F30C240075D4F8FA58C8 /* WriteBibleTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69F72D0022A35F604C2C4006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC1C8FC2580F5D1549D4422A /* Assets.xcassets in Resources */,
+				E35BA2B4D439A0C672A15992 /* GoogleService-Info.plist in Resources */,
+				D1F62DB4CE13266E0A096495 /* Info.plist in Resources */,
+				4E002468AFA121D613D129B7 /* Launch Screen.storyboard in Resources */,
+				37274B31EA9A3B20847074D6 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9CAF9E9F0B470638D174D3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		023D05F89C3C8E82B0EACD8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A800EC9743E6FB47BAD6AD46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34A2C6FD4199C57A82951CA8 /* TuistAssets+WriteBible.swift in Sources */,
+				324DBFF021277F6A88776A03 /* TuistBundle+WriteBible.swift in Sources */,
+				BB5DB5D104836C11B5279879 /* TuistPlists+WriteBible.swift in Sources */,
+				00557663F775C07D7FD66674 /* AppDelegate.swift in Sources */,
+				A2EB3A6F1F6A60FDEF4919A3 /* WriteBibleApp.swift in Sources */,
+				11FA0FE069390893511DBA25 /* OSLog+Extension.swift in Sources */,
+				3DDBDA800BA64D1F3F275090 /* String+Extension.swift in Sources */,
+				4EBEA78F6D4336F84150528F /* DrawingManager.swift in Sources */,
+				5CE8E4CC1894805FD7272BCC /* RealmManager.swift in Sources */,
+				B1C8DE1FCB4B1D69DF96B6CE /* RecentWritingManager.swift in Sources */,
+				B20F0959EFFF950DE4ADAB7C /* SettingManager.swift in Sources */,
+				5F507B2064EDA0870D97FDAD /* Bible.swift in Sources */,
+				1F6D21F57987A0DCC36C9FA4 /* DrawingDocument.swift in Sources */,
+				003E5C085DF41FCEB81BCEFD /* ScrollPreferenceKey.swift in Sources */,
+				C4D73D440D4B14CA7B9C5627 /* SettingModel.swift in Sources */,
+				B7BD8ED2EB4C90C1A13D321E /* BibleSentenceView.swift in Sources */,
+				CFB4FD6C39DEFE80F9A3308C /* BibleView.swift in Sources */,
+				ED1B8C8EEB1DECBA4A9D9C1C /* ColorManager.swift in Sources */,
+				E48C87F87AF7958713900B3C /* ContentView.swift in Sources */,
+				C929FE1CE828CC1792033701 /* DrawingViewController.swift in Sources */,
+				D617E85F7BB0432CE095195C /* DrawingWrapper.swift in Sources */,
+				F241B37A3F3E468FFC1BF6EB /* SettingView.swift in Sources */,
+				7D707AF0BC6914DADF51383B /* TitleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63AE017581D6B15AC795E6F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WriteBible;
+			target = 3BB042A93F3F6F02D416642C /* WriteBible */;
+			targetProxy = 541BFB20DE1C6F1DEA8A7703 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		21FF3AB64BF0B49B4D2879D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/WriteBibleTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leetaek.WriteBibleTest;
+				PRODUCT_NAME = WriteBibleTest;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WriteBible.app/WriteBible";
+				TEST_TARGET_NAME = WriteBible;
+			};
+			name = Release;
+		};
+		487F7EEB9F1EE6CCABF6AC11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/WriteBibleTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leetaek.WriteBibleTest;
+				PRODUCT_NAME = WriteBibleTest;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WriteBible.app/WriteBible";
+				TEST_TARGET_NAME = WriteBible;
+			};
+			name = Debug;
+		};
+		4A3478689EA635469029A4A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		600F4B41F92D6BAE76385D98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WriteBible/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.WriteBible;
+				PRODUCT_NAME = WriteBible;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B603EDFF30A290473B89C27A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WriteBible/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.WriteBible;
+				PRODUCT_NAME = WriteBible;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C8768D8FF739ACADA9033CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C68808B874B8831840008708 /* Build configuration list for PBXNativeTarget "WriteBibleTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				487F7EEB9F1EE6CCABF6AC11 /* Debug */,
+				21FF3AB64BF0B49B4D2879D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7DFC786A1420732C74EE86C /* Build configuration list for PBXNativeTarget "WriteBible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600F4B41F92D6BAE76385D98 /* Debug */,
+				B603EDFF30A290473B89C27A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB77C628CAF409F41A0E142A /* Build configuration list for PBXProject "WriteBible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8768D8FF739ACADA9033CEE /* Debug */,
+				4A3478689EA635469029A4A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		768765391D9F11F1DBEB9C50 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.11.0;
+			};
+		};
+		781283C80830EFBABC9857F0 /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		AA8873BFB35E26A0067AFEC9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.55.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0D6D1FBDB5AFE081A4718388 /* Firebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Firebase;
+		};
+		5A6F9177A1A28726AF46C6FB /* TCAArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TCAArchitecture;
+		};
+		A8651FDABFDBD8CAFDF69A24 /* TCACoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TCACoordinator;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 481739A6ECB1495D6ED73262 /* Project object */;
+}
