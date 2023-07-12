@@ -11,11 +11,10 @@ import ProjectDescriptionHelpers
 let project = Project.makeModule(
     name: "Bible",
     product: .staticFramework,
-    packages: [.Realm, .TCAArchitecture, .TCACoordinator],
     dependencies: [
-        .Realm,
-        .TCAArchitecture,
-        .TCACoordinator
+      .RealmSwift,
+      .TCAArchitecture,
+      .TCACoordinator
     ],
     sources: "Feature/**"
 )

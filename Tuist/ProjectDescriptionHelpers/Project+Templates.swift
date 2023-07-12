@@ -14,7 +14,7 @@ public extension Project {
     product: Product,
     organizationName: String = "leetaek",
     packages: [Package] = [],
-    deploymentTarget: DeploymentTarget? = .iOS(targetVersion: "15.0", devices: [.iphone]),
+    deploymentTarget: DeploymentTarget? = .iOS(targetVersion: "15.0", devices: [.ipad]),
     dependencies: [TargetDependency] = [],
     sources: SourceFilesList = "Source/**",
     resources: ResourceFileElements? = nil,
@@ -91,8 +91,6 @@ extension Scheme {
 }
 
 
-
-
 // MARK: SourceFile
 public extension SourceFilesList {
     static let sources: SourceFilesList = "Source/**"
@@ -114,17 +112,19 @@ public extension Array where Element == FileElement {
     }
 }
 
-
 public extension TargetDependency {
-  static let Realm: TargetDependency = .package(product: "Realm")
-  static let TCAArchitecture: TargetDependency = .package(product: "TCAArchitecture")
-  static let Firebase: TargetDependency = .package(product: "Firebase")
-  static let TCACoordinator: TargetDependency = .package(product: "TCACoordinator")
+  static let RealmSwift: TargetDependency = .external(name: "RealmSwift")
+  static let TCAArchitecture: TargetDependency = .external(name: "ComposableArchitecture")
+  static let FirebaseAnalytics: TargetDependency = .external(name: "FirebaseAnalyticsSwift")
+  static let FirebaseMessaging: TargetDependency = .external(name: "FirebaseMessaging")
+  static let TCACoordinator: TargetDependency = .external(name: "TCACoordinators")
 }
+
 
 public extension Package {
-  static let Realm: Package = .package(url: "https://github.com/realm/realm-swift", .branch("master"))
-  static let TCAArchitecture: Package = .package(url: "https://github.com/pointfreeco/swift-composable-architecture", .upToNextMajor(from: "0.55.0"))
-  static let Firebase: Package = .package(url: "https://github.com/firebase/firebase-ios-sdk.git", .upToNextMajor(from: "10.11.0"))
-  static let TCACoordinator: Package = .package(url: "https://github.com/johnpatrickmorgan/TCACoordinators", .upToNextMajor(from: "0.4.0"))
+  static let Realm: Package = .remote(url: "https://github.com/realm/realm-swift", requirement: .upToNextMajor(from: "10.41.0"))
+  static let Firebase: Package = .remote(url: "https://github.com/firebase/firebase-ios-sdk.git", requirement: .upToNextMajor(from: "10.11.0"))
+  static let TCAArchitecture: Package = .remote(url: "https://github.com/pointfreeco/swift-composable-architecture", requirement: .upToNextMajor(from: "0.55.0"))
+  static let TCACoordinator: Package = .remote(url: "https://github.com/johnpatrickmorgan/TCACoordinators", requirement: .upToNextMajor(from: "0.4.0"))
 }
+

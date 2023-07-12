@@ -3,30 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011561BC629AE406CFB93AF1 /* TCACoordinators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91718953B8FA5E5C05429C35 /* TCACoordinators.framework */; platformFilter = ios; };
+		05CDD4AB4B5D9595B4E04EB2 /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691A9271F530AB164BAC9A43 /* CasePaths.framework */; platformFilter = ios; };
 		0C880CCD32A6118D27577D4A /* Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24608C1203183B7DCFD79EC7 /* Bible.framework */; platformFilter = ios; };
 		28A4647D5AD78BFFA15E7E20 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A55CFAD925FD7D6A12513D3 /* DrawingViewController.swift */; };
 		28A9D182BD4B712A19939782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFFE4BF4C2BA2DC0E35B59E /* ContentView.swift */; };
 		3697A7D22E8DD5EE851FCB30 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD818E8D0588C5A1AAA51715 /* SettingModel.swift */; };
+		380FF391DFC65DA4728834E9 /* ComposableArchitecture.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = B6B0FAE16BAFE4CF5C6F0622 /* ComposableArchitecture.framework */; platformFilter = ios; };
 		38715F5CE0C5F878229C90B9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E9B25B4B3084DEA0149EBA /* Coordinator.swift */; };
 		394E8915D6DCFA11C305E3BF /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ADB563219A89FA47A0D675 /* ColorManager.swift */; };
+		460D9C79C593D544DFB60752 /* SwiftUINavigationCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95B89F5102909BA48ECD2D7 /* SwiftUINavigationCore.framework */; platformFilter = ios; };
+		48A109579A16A250525BB3FC /* Clocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01F1F422CBF4C8B8D2CBA65 /* Clocks.framework */; platformFilter = ios; };
 		4A6FD160F4CF1E419EAD993D /* DrawingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD39BCCB5A5C4948B6B2C0 /* DrawingManager.swift */; };
 		4F18E68BFEB09E73889E5F5C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E871D6F56F2053C336CBF43 /* Error.swift */; };
 		52C63C6BCB85C2EEB1AD0453 /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5172044350588967C767E40 /* Bible.swift */; };
+		5FBBE2CB40565167F68A52F0 /* ComposableArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B0FAE16BAFE4CF5C6F0622 /* ComposableArchitecture.framework */; platformFilter = ios; };
 		64AF18CC71493190D1B11207 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4392FE4EE3D5CFB71918C /* TitleView.swift */; };
-		8B87BD3DA53CF6A1D5D231E2 /* TCACoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA91D562C159BF4631193E0 /* TCACoordinator */; };
+		6A06583CEB3D37D66607D878 /* Realm.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 936F575771B74448EC709F81 /* Realm.framework */; platformFilter = ios; };
+		6D53D05BE1D73E836C945ADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA108062FB516F8CFAA53A9A /* Foundation.framework */; };
+		7204F26B9DDCD426FA140C5D /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A74240032254ED93B14248 /* libcompression.tbd */; };
+		7D1801CAB7771A3AEF6DA7EE /* RealmSwift.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = EDB4C9BF3A4E93506AEF7318 /* RealmSwift.framework */; platformFilter = ios; };
+		8B9451DF95E6BA53F2D0A277 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5CD8341F07939B6EC0D33B /* libz.tbd */; };
+		917EF027877151A7394B0557 /* CombineSchedulers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4697EDA916F27DCFE38739BE /* CombineSchedulers.framework */; platformFilter = ios; };
+		9579F3B418080360805BB1B7 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936F575771B74448EC709F81 /* Realm.framework */; platformFilter = ios; };
 		95C9FA2C832C282ACC67065C /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B354F6E7091B31BD95323E4 /* DrawingDocument.swift */; };
 		A0075984636350017DDC9664 /* BibleSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF43435E78E0496BD07DD4 /* BibleSentenceView.swift */; };
+		A0AAFDCD5BF86EB4290A074A /* Bid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2752400D45588A2D91BBE1 /* Bid.framework */; platformFilter = ios; };
 		A40445F4BDD629EC7EF3E382 /* RecentWritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283CB0EEA2B5731A9CD8677B /* RecentWritingManager.swift */; };
-		AE29047DFBE3AA61968C1656 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3AEA3F9002494109E22C812C /* Realm */; };
+		A43DE416C28C0CF8A228C7CD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB4C9BF3A4E93506AEF7318 /* RealmSwift.framework */; platformFilter = ios; };
+		AAF8C0108D408A50A8AB1605 /* XCTestDynamicOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD42C145F763986525B545D9 /* XCTestDynamicOverlay.framework */; platformFilter = ios; };
+		AF32CDC6D16F503327BFF6D1 /* OrderedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB71CE33B3B1A7ECE33FCB /* OrderedCollections.framework */; platformFilter = ios; };
 		BC4807A3A958FFC57E4CEF6D /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C9C0D11B6B578CB2AE62EE /* SettingView.swift */; };
+		BCD4B9B2419EDE010171BBE3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35379B8E4C3B44BE0F54B653 /* Security.framework */; };
+		C51036241AE68B3633137768 /* TCACoordinators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91718953B8FA5E5C05429C35 /* TCACoordinators.framework */; platformFilter = ios; };
 		C54F56920D6D898541759B12 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E415466FD7F11B5224CE9F /* BibleView.swift */; };
 		C8D330894639AEE2C83AFC8D /* DrawingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164998FF6BA3F73D493A5618 /* DrawingWrapper.swift */; };
-		C9BCAB91DFDEF91B262191E7 /* TCAArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 0F29EB768547FB453B0BB3D9 /* TCAArchitecture */; };
+		C99D68EEC688E3EB8AB1301E /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06D976AAF71ADF927863A5C /* Dependencies.framework */; platformFilter = ios; };
+		CA3D8A242F8667644AC13E31 /* CustomDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04B28ACF1871D02FE6DB950 /* CustomDump.framework */; platformFilter = ios; };
 		D27008D332746B7586AB1A22 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318F6AAB3FA712E93E70FC /* RealmManager.swift */; };
+		DAB29C6129ED255E9B4310CB /* RealmCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55085FE184FAD3B344846A5F /* RealmCore.framework */; platformFilter = ios; };
+		DE1CBBAD47D258F181C0F3F3 /* IdentifiedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725FC4261CA1DB6C5D34033C /* IdentifiedCollections.framework */; platformFilter = ios; };
 		DFAF09DDF30AE83FF8C2B7AB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D729CC549B0FC7F914B999 /* String+Extension.swift */; };
 		ED7497B009A6F3DE65F20A86 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509740F7B03F8597AC1574AB /* ScrollPreferenceKey.swift */; };
 		F3AC0522E01B50C4E5428506 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485507CD44C7DBB010317B09 /* SettingManager.swift */; };
@@ -54,6 +74,18 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DD61DFE8682DAB686213DC6 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				380FF391DFC65DA4728834E9 /* ComposableArchitecture.framework in Dependencies */,
+				6A06583CEB3D37D66607D878 /* Realm.framework in Dependencies */,
+				7D1801CAB7771A3AEF6DA7EE /* RealmSwift.framework in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		A75B5D9DD7D98440165B8275 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,6 +99,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04A74240032254ED93B14248 /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libcompression.tbd; sourceTree = DEVELOPER_DIR; };
 		12E9B25B4B3084DEA0149EBA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		164998FF6BA3F73D493A5618 /* DrawingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingWrapper.swift; sourceTree = "<group>"; };
 		1B354F6E7091B31BD95323E4 /* DrawingDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDocument.swift; sourceTree = "<group>"; };
@@ -77,20 +110,38 @@
 		29A4392FE4EE3D5CFB71918C /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		2FD76B1B86AE2EC4C3F2B38A /* BibleTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BibleTest-Info.plist"; sourceTree = "<group>"; };
 		32D729CC549B0FC7F914B999 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		35379B8E4C3B44BE0F54B653 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		42C9C0D11B6B578CB2AE62EE /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		4697EDA916F27DCFE38739BE /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		485507CD44C7DBB010317B09 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 		4A55CFAD925FD7D6A12513D3 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		509740F7B03F8597AC1574AB /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
+		55085FE184FAD3B344846A5F /* RealmCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		691A9271F530AB164BAC9A43 /* CasePaths.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CasePaths.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		725FC4261CA1DB6C5D34033C /* IdentifiedCollections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IdentifiedCollections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77318F6AAB3FA712E93E70FC /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		8BFFE4BF4C2BA2DC0E35B59E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		91718953B8FA5E5C05429C35 /* TCACoordinators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TCACoordinators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		936F575771B74448EC709F81 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ADB563219A89FA47A0D675 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		A5172044350588967C767E40 /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
+		B2BB71CE33B3B1A7ECE33FCB /* OrderedCollections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OrderedCollections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6B0FAE16BAFE4CF5C6F0622 /* ComposableArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComposableArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7DEE92B1B5D7EF35E3FDE5E /* Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible-Info.plist"; sourceTree = "<group>"; };
+		BA108062FB516F8CFAA53A9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BD42C145F763986525B545D9 /* XCTestDynamicOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTestDynamicOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF94266FE4055B0D7404B7AA /* BibleTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibleTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C01F1F422CBF4C8B8D2CBA65 /* Clocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DA0B0E9BFCB5904B47EB87 /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
+		CB5CD8341F07939B6EC0D33B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 		CD818E8D0588C5A1AAA51715 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		D95B89F5102909BA48ECD2D7 /* SwiftUINavigationCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUINavigationCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E06D976AAF71ADF927863A5C /* Dependencies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dependencies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E415466FD7F11B5224CE9F /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
+		EA2752400D45588A2D91BBE1 /* Bid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFD39BCCB5A5C4948B6B2C0 /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
+		EDB4C9BF3A4E93506AEF7318 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F04B28ACF1871D02FE6DB950 /* CustomDump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomDump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +149,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D53D05BE1D73E836C945ADB /* Foundation.framework in Frameworks */,
+				BCD4B9B2419EDE010171BBE3 /* Security.framework in Frameworks */,
+				7204F26B9DDCD426FA140C5D /* libcompression.tbd in Frameworks */,
+				8B9451DF95E6BA53F2D0A277 /* libz.tbd in Frameworks */,
 				0C880CCD32A6118D27577D4A /* Bible.framework in Frameworks */,
+				A0AAFDCD5BF86EB4290A074A /* Bid.framework in Frameworks */,
+				05CDD4AB4B5D9595B4E04EB2 /* CasePaths.framework in Frameworks */,
+				48A109579A16A250525BB3FC /* Clocks.framework in Frameworks */,
+				917EF027877151A7394B0557 /* CombineSchedulers.framework in Frameworks */,
+				5FBBE2CB40565167F68A52F0 /* ComposableArchitecture.framework in Frameworks */,
+				CA3D8A242F8667644AC13E31 /* CustomDump.framework in Frameworks */,
+				C99D68EEC688E3EB8AB1301E /* Dependencies.framework in Frameworks */,
+				DE1CBBAD47D258F181C0F3F3 /* IdentifiedCollections.framework in Frameworks */,
+				AF32CDC6D16F503327BFF6D1 /* OrderedCollections.framework in Frameworks */,
+				9579F3B418080360805BB1B7 /* Realm.framework in Frameworks */,
+				DAB29C6129ED255E9B4310CB /* RealmCore.framework in Frameworks */,
+				A43DE416C28C0CF8A228C7CD /* RealmSwift.framework in Frameworks */,
+				460D9C79C593D544DFB60752 /* SwiftUINavigationCore.framework in Frameworks */,
+				011561BC629AE406CFB93AF1 /* TCACoordinators.framework in Frameworks */,
+				AAF8C0108D408A50A8AB1605 /* XCTestDynamicOverlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,9 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE29047DFBE3AA61968C1656 /* Realm in Frameworks */,
-				C9BCAB91DFDEF91B262191E7 /* TCAArchitecture in Frameworks */,
-				8B87BD3DA53CF6A1D5D231E2 /* TCACoordinator in Frameworks */,
+				C51036241AE68B3633137768 /* TCACoordinators.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +235,10 @@
 		33916AEA960817B52F9B542C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA108062FB516F8CFAA53A9A /* Foundation.framework */,
+				04A74240032254ED93B14248 /* libcompression.tbd */,
+				CB5CD8341F07939B6EC0D33B /* libz.tbd */,
+				35379B8E4C3B44BE0F54B653 /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,6 +303,21 @@
 			children = (
 				24608C1203183B7DCFD79EC7 /* Bible.framework */,
 				BF94266FE4055B0D7404B7AA /* BibleTest.xctest */,
+				EA2752400D45588A2D91BBE1 /* Bid.framework */,
+				691A9271F530AB164BAC9A43 /* CasePaths.framework */,
+				C01F1F422CBF4C8B8D2CBA65 /* Clocks.framework */,
+				4697EDA916F27DCFE38739BE /* CombineSchedulers.framework */,
+				B6B0FAE16BAFE4CF5C6F0622 /* ComposableArchitecture.framework */,
+				F04B28ACF1871D02FE6DB950 /* CustomDump.framework */,
+				E06D976AAF71ADF927863A5C /* Dependencies.framework */,
+				725FC4261CA1DB6C5D34033C /* IdentifiedCollections.framework */,
+				B2BB71CE33B3B1A7ECE33FCB /* OrderedCollections.framework */,
+				936F575771B74448EC709F81 /* Realm.framework */,
+				55085FE184FAD3B344846A5F /* RealmCore.framework */,
+				EDB4C9BF3A4E93506AEF7318 /* RealmSwift.framework */,
+				D95B89F5102909BA48ECD2D7 /* SwiftUINavigationCore.framework */,
+				91718953B8FA5E5C05429C35 /* TCACoordinators.framework */,
+				BD42C145F763986525B545D9 /* XCTestDynamicOverlay.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,17 +403,13 @@
 				52B4EF00E990C23E8A8EC25B /* Resources */,
 				3ABC6B408BAAAB3678C0254B /* Embed Frameworks */,
 				920A0CA91D0FA0D5E3C43730 /* Frameworks */,
+				7DD61DFE8682DAB686213DC6 /* Dependencies */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Bible;
-			packageProductDependencies = (
-				3AEA3F9002494109E22C812C /* Realm */,
-				0F29EB768547FB453B0BB3D9 /* TCAArchitecture */,
-				8EA91D562C159BF4631193E0 /* TCACoordinator */,
-			);
 			productName = Bible;
 			productReference = 24608C1203183B7DCFD79EC7 /* Bible.framework */;
 			productType = "com.apple.product-type.framework";
@@ -369,11 +452,6 @@
 				en,
 			);
 			mainGroup = 99A268F3C5D681C073751ECC;
-			packageReferences = (
-				FD920D2CD941D1F98A244A11 /* XCRemoteSwiftPackageReference "TCACoordinators" */,
-				73451B0A34CA68ADA12A4E55 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				B3E8F98CD1C883F6653BBD90 /* XCRemoteSwiftPackageReference "realm-swift" */,
-			);
 			productRefGroup = 898F5F6AF1F3D09A798D3B4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -518,6 +596,21 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/external/IntelRDFPMathLib20U2/LIBRARY/src/Bid.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/module.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-swift/include/module.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = (
+					"$(inherited)",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/external/IntelRDFPMathLib20U2/LIBRARY/src/Bid.modulemap",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/module.modulemap",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-swift/include/module.modulemap",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = leetaek.BibleTest;
 				PRODUCT_NAME = BibleTest;
 				SDKROOT = iphoneos;
@@ -525,7 +618,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -540,6 +633,21 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/external/IntelRDFPMathLib20U2/LIBRARY/src/Bid.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/module.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-swift/include/module.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = (
+					"$(inherited)",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/external/IntelRDFPMathLib20U2/LIBRARY/src/Bid.modulemap",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/module.modulemap",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-swift/include/module.modulemap",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = leetaek.BibleTest;
 				PRODUCT_NAME = BibleTest;
 				SDKROOT = iphoneos;
@@ -548,7 +656,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -570,6 +678,21 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/external/IntelRDFPMathLib20U2/LIBRARY/src/Bid.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/module.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-swift/include/module.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = (
+					"$(inherited)",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/external/IntelRDFPMathLib20U2/LIBRARY/src/Bid.modulemap",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/module.modulemap",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-swift/include/module.modulemap",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.writebible.Bible;
 				PRODUCT_NAME = Bible;
 				SDKROOT = iphoneos;
@@ -579,7 +702,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -603,6 +726,21 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/external/IntelRDFPMathLib20U2/LIBRARY/src/Bid.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/module.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-swift/include/module.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = (
+					"$(inherited)",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/external/IntelRDFPMathLib20U2/LIBRARY/src/Bid.modulemap",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-core/src/module.modulemap",
+					"-Xcc",
+					"-fmodule-map-file=$(SRCROOT)/../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/realm-swift/include/module.modulemap",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.writebible.Bible;
 				PRODUCT_NAME = Bible;
 				SDKROOT = iphoneos;
@@ -611,7 +749,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -701,48 +839,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		73451B0A34CA68ADA12A4E55 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.55.0;
-			};
-		};
-		B3E8F98CD1C883F6653BBD90 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		FD920D2CD941D1F98A244A11 /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0F29EB768547FB453B0BB3D9 /* TCAArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TCAArchitecture;
-		};
-		3AEA3F9002494109E22C812C /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Realm;
-		};
-		8EA91D562C159BF4631193E0 /* TCACoordinator */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TCACoordinator;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 77AC0A7F0DB2CAC8D7AD95CD /* Project object */;
 }

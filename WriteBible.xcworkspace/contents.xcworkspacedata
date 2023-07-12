@@ -11,4 +11,84 @@
          location = "group:Bible/Bible.xcodeproj">
       </FileRef>
    </Group>
+   <Group
+      location = "group:Tuist"
+      name = "Tuist">
+      <Group
+         location = "group:Dependencies"
+         name = "Dependencies">
+         <Group
+            location = "group:SwiftPackageManager"
+            name = "SwiftPackageManager">
+            <Group
+               location = "group:.build"
+               name = ".build">
+               <Group
+                  location = "group:checkouts"
+                  name = "checkouts">
+                  <FileRef
+                     location = "group:FlowStacks/FlowStacks.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:GoogleAppMeasurement/GoogleAppMeasurement.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:GoogleDataTransport/GoogleDataTransport.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:GoogleUtilities/GoogleUtilities.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:TCACoordinators/TCACoordinators.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:combine-schedulers/combine-schedulers.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:firebase-ios-sdk/Firebase.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:nanopb/nanopb.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:promises/Promises.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:realm-core/RealmDatabase.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:realm-swift/Realm.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:swift-case-paths/swift-case-paths.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:swift-clocks/swift-clocks.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:swift-collections/swift-collections.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:swift-composable-architecture/swift-composable-architecture.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:swift-custom-dump/swift-custom-dump.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:swift-dependencies/swift-dependencies.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:swift-identified-collections/swift-identified-collections.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:swiftui-navigation/swiftui-navigation.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:xctest-dynamic-overlay/xctest-dynamic-overlay.xcodeproj">
+                  </FileRef>
+               </Group>
+            </Group>
+         </Group>
+      </Group>
+   </Group>
 </Workspace>
