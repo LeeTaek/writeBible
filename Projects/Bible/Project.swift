@@ -16,5 +16,6 @@ let project = Project.makeModule(
         .Realm,
         .TCAArchitecture,
         .TCACoordinator
-    ]
+    ],
+    sources: "Feature/**"
 )

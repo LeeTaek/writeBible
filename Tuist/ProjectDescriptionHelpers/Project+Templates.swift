@@ -28,7 +28,7 @@ public extension Project {
         .release(name: .release)
       ], defaultSettings: .recommended)
     
-    var appTarget = Target(
+    let appTarget = Target(
       name: name,
       platform: platform,
       product: product,

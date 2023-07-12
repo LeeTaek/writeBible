@@ -13,6 +13,6 @@ let project = Project.makeModule(
       .TCACoordinator
     ],
     sources: "WriteBible/Source/**",
-    resources: "WriteBible/Support/**",
-    infoPlist: .file(path:  "WriteBible/Support/Info.plist")
+    resources: "WriteBible/Resource/**",
+    infoPlist: .file(path:  "WriteBible/Resource/Info.plist")
 )
