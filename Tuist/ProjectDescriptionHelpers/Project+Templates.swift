@@ -1,6 +1,6 @@
 //
 //  Project+Templates.swift
-//  writeBibleManifests
+//  CarveManifests
 //
 //  Created by leetaek on 2023/07/11.
 //
@@ -32,7 +32,7 @@ public extension Project {
       name: name,
       platform: platform,
       product: product,
-      bundleId: product == .app ? "kr.co.\(organizationName).\(name)" : "kr.co.\(organizationName).writebible.\(name)",
+      bundleId: product == .app ? "kr.co.\(organizationName).\(name)" : "kr.co.\(organizationName).Carve.\(name)",
       deploymentTarget: deploymentTarget,
       infoPlist: infoPlist,
       sources: sources,
@@ -91,33 +91,14 @@ extension Scheme {
 }
 
 
-// MARK: SourceFile
-public extension SourceFilesList {
-    static let sources: SourceFilesList = "Source/**"
-    static let tests: SourceFilesList = "Test/**"
-}
-
-
-// MARK: Resource
-public enum ResourceType: String {
-    case xibs = "Source/**/*.xib"
-    case storyboards = "Resources/**/*.storyboard"
-    case assets = "WriteBible/Resource/**"
-}
-
 // MARK: Extension
-public extension Array where Element == FileElement {
-    static func resources(with resources: [ResourceType]) -> [FileElement] {
-        resources.map { FileElement(stringLiteral: $0.rawValue) }
-    }
-}
 
 public extension TargetDependency {
-  static let RealmSwift: TargetDependency = .external(name: "RealmSwift")
-  static let TCAArchitecture: TargetDependency = .external(name: "ComposableArchitecture")
-  static let FirebaseAnalytics: TargetDependency = .external(name: "FirebaseAnalyticsSwift")
-  static let FirebaseMessaging: TargetDependency = .external(name: "FirebaseMessaging")
-  static let TCACoordinator: TargetDependency = .external(name: "TCACoordinators")
+  static let RealmSwift: TargetDependency = .package(product: "RealmSwift")
+  static let TCAArchitecture: TargetDependency = .package(product:  "ComposableArchitecture")
+  static let FirebaseAnalytics: TargetDependency = .package(product:  "FirebaseAnalyticsSwift")
+  static let FirebaseMessaging: TargetDependency = .package(product:  "FirebaseMessaging")
+  static let TCACoordinator: TargetDependency = .package(product: "TCACoordinators")
 }
 
 

@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F176E7CDEB2D8D5EE0D7D2B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B5B4DB7F3D867901CDD4D243 /* FirebaseMessaging */; };
+		16EE9ADE193E7C3ECD15077D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67189EBB192472C8DFDA5AB9 /* AppDelegate.swift */; };
+		2D3DB539C35525AF3A613D44 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A65EAEF607DF6ECC7CF487EC /* FirebaseAnalyticsSwift */; };
+		2EA204160BAA2A3B590285E7 /* Bible_Bible.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 87A279AFAFDCF3FAA73744AF /* Bible_Bible.bundle */; platformFilter = ios; };
+		3BE1C9D6BAF7A503FA18F82D /* BibleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8299E4B97C2A4437F49E57 /* BibleAssembly.swift */; };
+		5190988A9A4B5DCEEB8AC7ED /* WriteBibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F09E66505F3238BC83B85E /* WriteBibleApp.swift */; };
+		78E9318C608F091C2BC8C7E4 /* Bible_Bible.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87A279AFAFDCF3FAA73744AF /* Bible_Bible.bundle */; };
+		7934C922E539566778DBD0A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7950B1226DAC35ED94479D1 /* Preview Assets.xcassets */; };
+		8C4F0D1A5C3C3D3F3ED44FF5 /* Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A2ADDA255CEEF80C551F73 /* Bible.framework */; platformFilter = ios; };
+		8D99FC6DE0F51B3509CB686A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A39550908CB6D2A1E8DF4 /* AppCoordinator.swift */; };
+		97D7B2D40EA5CCF41EA4E690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CC70BF846E4A7BC975BF43 /* Assets.xcassets */; };
+		A9F68BB00C0176F31ED98EB3 /* TuistAssets+Carve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B714E2812B624AEDA5E9039 /* TuistAssets+Carve.swift */; };
+		E395AFBDFF76E7941C5C1553 /* TuistBundle+Carve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C1F54911FF23AF757CCBD /* TuistBundle+Carve.swift */; };
+		EC079C4C8915F8FD051B9673 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C92FF9C6D49207462AA343 /* CoordinatorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C1CD0265DFA1036529DDCB5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB819EC12BA5410A2981F4DD /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				2EA204160BAA2A3B590285E7 /* Bible_Bible.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02CC70BF846E4A7BC975BF43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0EE26D3EEC48EEF578BD481A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2FA2B28A120AD43A5C87DA24 /* Carve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carve.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B714E2812B624AEDA5E9039 /* TuistAssets+Carve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Carve.swift"; sourceTree = "<group>"; };
+		62C92FF9C6D49207462AA343 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		67189EBB192472C8DFDA5AB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F8C1F54911FF23AF757CCBD /* TuistBundle+Carve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Carve.swift"; sourceTree = "<group>"; };
+		72F09E66505F3238BC83B85E /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
+		87A279AFAFDCF3FAA73744AF /* Bible_Bible.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bible_Bible.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3A39550908CB6D2A1E8DF4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B7950B1226DAC35ED94479D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB8299E4B97C2A4437F49E57 /* BibleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleAssembly.swift; sourceTree = "<group>"; };
+		E3A2ADDA255CEEF80C551F73 /* Bible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A639F0E7B8E6264128896110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4F0D1A5C3C3D3F3ED44FF5 /* Bible.framework in Frameworks */,
+				2D3DB539C35525AF3A613D44 /* FirebaseAnalyticsSwift in Frameworks */,
+				0F176E7CDEB2D8D5EE0D7D2B /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11CD906E4601936F73E57677 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5B714E2812B624AEDA5E9039 /* TuistAssets+Carve.swift */,
+				6F8C1F54911FF23AF757CCBD /* TuistBundle+Carve.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2579D6A75D3D487B6071A6CB /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				11CD906E4601936F73E57677 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		6270727C7FCCDCC9F399793E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				67189EBB192472C8DFDA5AB9 /* AppDelegate.swift */,
+				72F09E66505F3238BC83B85E /* WriteBibleApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6717C43DE7708C503E928B21 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				02CC70BF846E4A7BC975BF43 /* Assets.xcassets */,
+				B7950B1226DAC35ED94479D1 /* Preview Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6A93277BD78DE72014AE441E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6270727C7FCCDCC9F399793E /* Application */,
+				B59E6437154EBF22C397C9A8 /* Coordinator */,
+				C82A78CFD5EBE3CCA6BE7AD1 /* DI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		6B662B0C5F3B99427D812E1B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0EE26D3EEC48EEF578BD481A /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		70E932CAC43C011750402F4B /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				2579D6A75D3D487B6071A6CB /* Derived */,
+				6717C43DE7708C503E928B21 /* Resource */,
+				6A93277BD78DE72014AE441E /* Source */,
+				6B662B0C5F3B99427D812E1B /* Support */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		8ADA46A819556F2EE13C7F3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B59E6437154EBF22C397C9A8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9C3A39550908CB6D2A1E8DF4 /* AppCoordinator.swift */,
+				62C92FF9C6D49207462AA343 /* CoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C82A78CFD5EBE3CCA6BE7AD1 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				CB8299E4B97C2A4437F49E57 /* BibleAssembly.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		E5745617D5561A4EBCAC750C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87A279AFAFDCF3FAA73744AF /* Bible_Bible.bundle */,
+				E3A2ADDA255CEEF80C551F73 /* Bible.framework */,
+				2FA2B28A120AD43A5C87DA24 /* Carve.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF7D0889A0C2653F2F829D95 = {
+			isa = PBXGroup;
+			children = (
+				70E932CAC43C011750402F4B /* Project */,
+				8ADA46A819556F2EE13C7F3C /* Frameworks */,
+				E5745617D5561A4EBCAC750C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBB2CBCE8C1F9B7996B244EC /* Carve */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C63721114FE450021B421562 /* Build configuration list for PBXNativeTarget "Carve" */;
+			buildPhases = (
+				9E7D5945EF6940154CE80918 /* Sources */,
+				0278F4D1163E343475298914 /* Resources */,
+				8C1CD0265DFA1036529DDCB5 /* Embed Frameworks */,
+				A639F0E7B8E6264128896110 /* Frameworks */,
+				FB819EC12BA5410A2981F4DD /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Carve;
+			packageProductDependencies = (
+				A65EAEF607DF6ECC7CF487EC /* FirebaseAnalyticsSwift */,
+				B5B4DB7F3D867901CDD4D243 /* FirebaseMessaging */,
+			);
+			productName = Carve;
+			productReference = 2FA2B28A120AD43A5C87DA24 /* Carve.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B89685F231F6AE171A68263 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = leetaek;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = C8665897A1FA99D5B3BCA95B /* Build configuration list for PBXProject "Carve" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = FF7D0889A0C2653F2F829D95;
+			packageReferences = (
+				73FA8BCFCE250397270F7674 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = E5745617D5561A4EBCAC750C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBB2CBCE8C1F9B7996B244EC /* Carve */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0278F4D1163E343475298914 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97D7B2D40EA5CCF41EA4E690 /* Assets.xcassets in Resources */,
+				7934C922E539566778DBD0A2 /* Preview Assets.xcassets in Resources */,
+				78E9318C608F091C2BC8C7E4 /* Bible_Bible.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E7D5945EF6940154CE80918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9F68BB00C0176F31ED98EB3 /* TuistAssets+Carve.swift in Sources */,
+				E395AFBDFF76E7941C5C1553 /* TuistBundle+Carve.swift in Sources */,
+				16EE9ADE193E7C3ECD15077D /* AppDelegate.swift in Sources */,
+				5190988A9A4B5DCEEB8AC7ED /* WriteBibleApp.swift in Sources */,
+				8D99FC6DE0F51B3509CB686A /* AppCoordinator.swift in Sources */,
+				EC079C4C8915F8FD051B9673 /* CoordinatorView.swift in Sources */,
+				3BE1C9D6BAF7A503FA18F82D /* BibleAssembly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		26AAA5A9B71608DA3B79BF0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.Carve;
+				PRODUCT_NAME = Carve;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		6205238E7A9EC6BA7944C74C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A47906965CA0D0F9B173FF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EACE147FB0A3A24AE3C7A3BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.leetaek.Carve;
+				PRODUCT_NAME = Carve;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C63721114FE450021B421562 /* Build configuration list for PBXNativeTarget "Carve" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACE147FB0A3A24AE3C7A3BE /* Debug */,
+				26AAA5A9B71608DA3B79BF0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8665897A1FA99D5B3BCA95B /* Build configuration list for PBXProject "Carve" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A47906965CA0D0F9B173FF69 /* Debug */,
+				6205238E7A9EC6BA7944C74C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		73FA8BCFCE250397270F7674 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A65EAEF607DF6ECC7CF487EC /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseAnalyticsSwift;
+		};
+		B5B4DB7F3D867901CDD4D243 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8B89685F231F6AE171A68263 /* Project object */;
+}

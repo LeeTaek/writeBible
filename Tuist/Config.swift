@@ -1,6 +1,6 @@
 //
 //  Config.swift
-//  writeBibleManifests
+//  CarveManifests
 //
 //  Created by leetaek on 2023/07/11.
 //

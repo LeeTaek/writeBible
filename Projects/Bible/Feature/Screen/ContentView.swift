@@ -38,7 +38,7 @@ struct MainFeature: ReducerProtocol {
 }
 
 
-struct ContentView: View {
+public struct ContentView: View {
     
     @State var bibleTitle: BibleTitle = .genesis
     @State var chapterNum: Int = 1
@@ -47,8 +47,14 @@ struct ContentView: View {
     @ObservedResults(SettingManager.self, configuration: Realm.Configuration(schemaVersion: 1)) var settingValue        //셋팅값을 위한 RealmDB
 
         
+  public init() {
+    self.bibleTitle = .genesis
+    self.chapterNum = 1
+    self.showingSheet = false
+    self.showTitle = false
+  }
     
-    var body: some View {
+    public var body: some View {
         let setting = settingValue.first ?? SettingManager()      
 
         return BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum, showTitle: $showTitle, settingValue: setting)
