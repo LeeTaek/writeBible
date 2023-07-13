@@ -3,107 +3,107 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		002B21079212997E53DBEBF5 /* 2-11빌립보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AB77DA571DB166292DE8C08 /* 2-11빌립보서.txt */; };
 		0079B8BA3C6DADBC924AF5AE /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28638A02E25D66040CEE2544 /* NanumMyeongjo.ttf */; };
-		03426FC7FD04AA1838B24D50 /* 1-10사무엘하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 143D9CBB4C9022836AE2C5C1 /* 1-10사무엘하.txt */; };
-		095C28980D6C8245C7985221 /* 1-35하박국.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7231080C42DF3C03C5562596 /* 1-35하박국.txt */; };
+		02FD1A5D9B68194684C9DE1F /* 2-12골로새서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B58F74C63EE69347CCD0970 /* 2-12골로새서.txt */; };
+		0811973629486212C4352D54 /* 2-01마태복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C9122BC5B2E68A8C3A59864 /* 2-01마태복음.txt */; };
+		09EFF0CDF47796F310966BEC /* 2-26유다서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99E48CC48CCB3011B0EB7840 /* 2-26유다서.txt */; };
+		0C28F21438EC1B9A937B4CBA /* 2-11빌립보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E271CA129B069A445946591 /* 2-11빌립보서.txt */; };
 		0C880CCD32A6118D27577D4A /* Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24608C1203183B7DCFD79EC7 /* Bible.framework */; platformFilter = ios; };
 		0D558FFE5D7F649E8F9F2F09 /* TuistFonts+Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02874A1D84A442622EAB51FC /* TuistFonts+Bible.swift */; };
-		0F09446ABF5D0A464BBB7F5C /* 2-12골로새서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1483C95A423009006DF1AFEF /* 2-12골로새서.txt */; };
-		10DD9684537ECE115C592BAB /* 2-03누가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 895C01C1DE6A0BAFC2D712E5 /* 2-03누가복음.txt */; };
-		199E387767F8CAAB326A6A63 /* 2-25요한삼서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E7993439E133E4833137E /* 2-25요한삼서.txt */; };
-		1AD09BC8E96F3E026F11DCFE /* 1-12열왕기하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 47939CCBC6471CBD92A28723 /* 1-12열왕기하.txt */; };
-		1BC02D6E117F06A40CAD83EB /* 1-24예레미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5DC5FCE823EF4B4A02AFFF5F /* 1-24예레미야.txt */; };
-		1CCD4927FDEB359BE35119E5 /* 2-13데살로니가전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = F34683DBBA73F36FC0C27783 /* 2-13데살로니가전서.txt */; };
-		1CD89FEF1BF114290C4FD74F /* 1-33미가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A0136F28BF219353B2D2914 /* 1-33미가.txt */; };
-		21B60F3FE18739D3AAA9CB7B /* 1-14역대하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A18971DBBC12B1DE08CC409 /* 1-14역대하.txt */; };
-		27E446783E151E44EE3518F5 /* 1-09사무엘상.txt in Resources */ = {isa = PBXBuildFile; fileRef = B869A2DC36CB25850EB9B4C5 /* 1-09사무엘상.txt */; };
+		0EB0AB6D0C09B1FC8A2312D5 /* 1-26에스겔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 738FAE0E93A738D6D7C523D1 /* 1-26에스겔.txt */; };
+		12908A1913798BD34C208735 /* 2-20야고보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = F67812B2E49B4A66D6EE634E /* 2-20야고보서.txt */; };
+		13431A6638AF7FBC4497654D /* 1-12열왕기하.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF889B7F0C686E75F21C8A /* 1-12열왕기하.txt */; };
+		1C047143BB58A53273CC92A7 /* 2-24요한이서.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFB2AA2150E60612FE9EBFA1 /* 2-24요한이서.txt */; };
+		24367C7D91AC141294C586E8 /* 2-14데살로니가후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECD94CDE031602F5427CB2AE /* 2-14데살로니가후서.txt */; };
+		251B8A012A0AAE2D14C2493C /* 1-32요나.txt in Resources */ = {isa = PBXBuildFile; fileRef = DBCA8CECB2FBC3C289D72882 /* 1-32요나.txt */; };
+		277BD147D700939E26718A65 /* 2-05사도행전.txt in Resources */ = {isa = PBXBuildFile; fileRef = 03E2F3117D905AFA1F7468CB /* 2-05사도행전.txt */; };
+		28964E4EED0179458D0341CE /* 2-13데살로니가전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A6CEC257BD7496B9ABCBD /* 2-13데살로니가전서.txt */; };
 		28A4647D5AD78BFFA15E7E20 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A55CFAD925FD7D6A12513D3 /* DrawingViewController.swift */; };
 		28A9D182BD4B712A19939782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFFE4BF4C2BA2DC0E35B59E /* ContentView.swift */; };
-		2C23F4BDDB86A80FA214DB77 /* 2-21베드로전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1341B65AA35B2411BAC2F611 /* 2-21베드로전서.txt */; };
-		2E5E7B65E78FAFF63D0505F3 /* 1-05신명기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB988493685C64E55B60DE8 /* 1-05신명기.txt */; };
-		30085CC509800472A0C228E5 /* 1-27다니엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = C961631B83A1D64FA4C65824 /* 1-27다니엘.txt */; };
-		32C9574341D74BE28D46C04B /* 1-34나훔.txt in Resources */ = {isa = PBXBuildFile; fileRef = C02AA41FAD4D6101783EB01F /* 1-34나훔.txt */; };
+		2E63083D315C008212019695 /* 2-07고린도전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 308D25A8104D45126E4CA203 /* 2-07고린도전서.txt */; };
+		2EE526CBE3B324AD45B32B94 /* 1-24예레미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7B6077CF6D015D209F144605 /* 1-24예레미야.txt */; };
+		307994269BE11D33BDB891B9 /* 2-03누가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCBC5B6B4FABEBA292B8BB41 /* 2-03누가복음.txt */; };
 		3697A7D22E8DD5EE851FCB30 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD818E8D0588C5A1AAA51715 /* SettingModel.swift */; };
 		38715F5CE0C5F878229C90B9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E9B25B4B3084DEA0149EBA /* Coordinator.swift */; };
 		394E8915D6DCFA11C305E3BF /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ADB563219A89FA47A0D675 /* ColorManager.swift */; };
-		3AFC1CA43A858EB49CADFCD9 /* 2-06로마서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 017FE62BF24CCBED12E2B296 /* 2-06로마서.txt */; };
-		3B3960F94F24ABC5152C969D /* 1-23이사야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A6851810637A8C1139F9177 /* 1-23이사야.txt */; };
-		3BF782E573FE6B6EE4451D17 /* 1-22아가.txt in Resources */ = {isa = PBXBuildFile; fileRef = E993C7317281DE9825BD057F /* 1-22아가.txt */; };
-		3F8A27DC81614B2D49194F89 /* 2-10에베소서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5749F28AD822A8136623283D /* 2-10에베소서.txt */; };
-		438A71DF47CCB1B8D547F2C1 /* 1-30아모스.txt in Resources */ = {isa = PBXBuildFile; fileRef = 890313FA7288AB2FE67F2834 /* 1-30아모스.txt */; };
-		47B886E888BD7C81F81DFF5E /* 1-11열왕기상.txt in Resources */ = {isa = PBXBuildFile; fileRef = BBE40D762B58A8D24E13BE8D /* 1-11열왕기상.txt */; };
-		48D081D4B5017571B84A4924 /* 1-21전도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C94BEBB8D0093598F8A0D85 /* 1-21전도서.txt */; };
-		493C32BC48127E22F4FEB5F7 /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEA916734A8CAA0F632EC110 /* 2-09갈라디아서.txt */; };
+		39EE5E5F6FF979618F7D4D8E /* 1-10사무엘하.txt in Resources */ = {isa = PBXBuildFile; fileRef = C5450C21AF99C2FED3496A35 /* 1-10사무엘하.txt */; };
+		465E4EE1BA41627C4BD15652 /* 1-06여호수아.txt in Resources */ = {isa = PBXBuildFile; fileRef = 34B379741C994A37C2424C1D /* 1-06여호수아.txt */; };
+		49A027E5A51C51AD5193B480 /* 1-15에스라.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED53DDD9A90996429DBE0E78 /* 1-15에스라.txt */; };
 		4A6FD160F4CF1E419EAD993D /* DrawingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD39BCCB5A5C4948B6B2C0 /* DrawingManager.swift */; };
+		4B26C5A27BAC4054169EADB5 /* 1-19시편.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BAF5A9B4CDBC19F969FEBF /* 1-19시편.txt */; };
+		4DB83BA22B8EC9E8E5117FEF /* 1-03레위기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6010D81B0FA6AA0612CF2E24 /* 1-03레위기.txt */; };
 		4F18E68BFEB09E73889E5F5C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E871D6F56F2053C336CBF43 /* Error.swift */; };
-		50FD6DF7C03650536CDE624E /* 1-18욥기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02715348632A05C2C3EA8584 /* 1-18욥기.txt */; };
 		52C63C6BCB85C2EEB1AD0453 /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5172044350588967C767E40 /* Bible.swift */; };
+		540DFF0557AE32BD4FF6AC8F /* 2-27요한계시록.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE3A8E9AC5F3D61B5A519BB4 /* 2-27요한계시록.txt */; };
 		57E9A38152A91E49787CB245 /* NanumBarunGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7A6AC4752785432413BE2AB /* NanumBarunGothic.ttf */; };
-		5A36C908852A909159FDD88E /* 1-29요엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 52F8BAB69B5149E311B7F218 /* 1-29요엘.txt */; };
-		5B88AD9E9742ABE170DC5D71 /* 1-39말라기.txt in Resources */ = {isa = PBXBuildFile; fileRef = E5E5ECCBC3772420995A5D1F /* 1-39말라기.txt */; };
-		5CA161E067F72903EB02566B /* 2-16디모데후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A85A17849D4C3CB1AE877B7 /* 2-16디모데후서.txt */; };
-		5D59596D4BD528B2376BA5DF /* 2-18빌레몬서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 25851042BFE3D5204236763E /* 2-18빌레몬서.txt */; };
+		58ABEB31D3CA699080FF1162 /* 1-34나훔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 536497955641741AACC7BB86 /* 1-34나훔.txt */; };
 		64AF18CC71493190D1B11207 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4392FE4EE3D5CFB71918C /* TitleView.swift */; };
-		675983049EF43F58A4A2CA66 /* 2-20야고보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7721D0FDC17226422E067F6B /* 2-20야고보서.txt */; };
-		6D050CA700258CA01228563B /* 2-27요한계시록.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83D1614EBFA119C45FA2E1D1 /* 2-27요한계시록.txt */; };
-		76F51E62AAC47AA5686181F2 /* 2-23요한일서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C1FEC9C626B9AE977DA2E5F /* 2-23요한일서.txt */; };
-		7E78A152A3EC9AAFD43CF7DF /* 1-19시편.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED833EAEFEC2CBCD833A5A48 /* 1-19시편.txt */; };
-		82C9A796EBAA2C017D9C1D4B /* 2-07고린도전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = E93599D49AF8544A419A3F01 /* 2-07고린도전서.txt */; };
-		8AFECF4C0B7FBE098C0D7224 /* 1-28호세아.txt in Resources */ = {isa = PBXBuildFile; fileRef = C3641F671E0AEEF265E5CFD3 /* 1-28호세아.txt */; };
+		64E2DB24570254A42CC9D066 /* 1-22아가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 822F3EC1EE879AD8DA31EC96 /* 1-22아가.txt */; };
+		663BE2D2C5D83CEDC5951A6F /* 1-31오바댜.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3E0B75C8CD1E3B3DE5422979 /* 1-31오바댜.txt */; };
+		69B95363B47C7708263BF97C /* 2-16디모데후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5448B029983072C0BD9B3829 /* 2-16디모데후서.txt */; };
+		6CD4C836770EEA0171A95B8A /* 1-25예레미야애가.txt in Resources */ = {isa = PBXBuildFile; fileRef = C67CEE70168FCBB00FE32DC0 /* 1-25예레미야애가.txt */; };
+		7300F1D51A1D93A6259F2EB5 /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A3D18B72E4DD5B0BBA9D36A /* 1-17에스더.txt */; };
+		734F020E751082745E084D51 /* 1-33미가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F426A919A48527C875D4A2F /* 1-33미가.txt */; };
+		74A4FD2610DA75FDBE186705 /* 2-15디모데전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 155508F002F9B451306ED2C3 /* 2-15디모데전서.txt */; };
+		775DA539E4BBCAEEB04E50C5 /* 1-18욥기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 97BBD4361E3C3197E410A725 /* 1-18욥기.txt */; };
+		784152F8A9490B09990B609D /* 2-08고린도후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B4936C70A5F666563DCCDAD /* 2-08고린도후서.txt */; };
+		7B8DA5B3802BACC708584B8F /* 1-21전도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 60FB537F3251BF947096DA56 /* 1-21전도서.txt */; };
+		808CD24C2FB0BCB0B321CC67 /* 1-20잠언.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0811F70CC0B8C34D58DDCCB /* 1-20잠언.txt */; };
+		8284CC8BEA7B76246C750916 /* 2-22베드로후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 09AEC4E44A397A8444A6F900 /* 2-22베드로후서.txt */; };
+		861AA8D5D3905249BE690C0F /* 2-21베드로전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6814A3392B80F3EF6D39E3F4 /* 2-21베드로전서.txt */; };
+		862E7B71DFAE6B037807948B /* 2-25요한삼서.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD41A88BDEDB261C0F45D9E0 /* 2-25요한삼서.txt */; };
+		8630B387A0952F02632EBA23 /* 1-05신명기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C028289F71FA53616B1E21B /* 1-05신명기.txt */; };
 		8B87BD3DA53CF6A1D5D231E2 /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1732FAEF9F8744C021F53E /* TCACoordinators */; };
-		8B9B9F33A0F25A251F8827AA /* 1-06여호수아.txt in Resources */ = {isa = PBXBuildFile; fileRef = E129F12C6F0353546D41F1BD /* 1-06여호수아.txt */; };
-		8C32DBCC98B52CD633511176 /* 1-32요나.txt in Resources */ = {isa = PBXBuildFile; fileRef = 77AA3BF0AFC52691B72DE303 /* 1-32요나.txt */; };
-		8E332D9EF6B1E17E45531263 /* 2-19히브리서.txt in Resources */ = {isa = PBXBuildFile; fileRef = A46517F088AC64051EC668D1 /* 2-19히브리서.txt */; };
-		8FDC2F33B8A94A4F748BFE3B /* 2-26유다서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C8CFF8B1D1E447AA2991FB0 /* 2-26유다서.txt */; };
-		9497EE46FB1B13809C1C81BB /* 1-26에스겔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40F3CF9B684BBD50761AA3F7 /* 1-26에스겔.txt */; };
-		952A01B41B0CFA3D5EC7E442 /* 2-01마태복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6E53EE49A921CB115A6C5D35 /* 2-01마태복음.txt */; };
+		8CE6A6D98FDABFE09B2FB9DB /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 059887ACBDFE25F65F31FDBF /* 2-09갈라디아서.txt */; };
 		95C9FA2C832C282ACC67065C /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B354F6E7091B31BD95323E4 /* DrawingDocument.swift */; };
-		98369D574CFAAF709B60CBFE /* 2-08고린도후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF809CEDBB87522D2483E5 /* 2-08고린도후서.txt */; };
-		9B796AB4BB9C2A3BE171E6EC /* 1-16느헤미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07BFA1D0ED71D07DAFC54B3F /* 1-16느헤미야.txt */; };
-		9E43FF40BE98C115C9AFA322 /* 2-24요한이서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7FE3ACC702A072CCDB53FB88 /* 2-24요한이서.txt */; };
+		95EE392AF50C31F3C6C40CD8 /* 2-17디도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CC7D9D9028C0F4ECB7254 /* 2-17디도서.txt */; };
+		9DBFCF65BFA72D229F8DB033 /* 1-27다니엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DB11E00EB77A06DF2473E /* 1-27다니엘.txt */; };
+		9DC00B65B5E1C35AB1A4F9B4 /* 1-14역대하.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3FEC98884A554CFB2CD50B1 /* 1-14역대하.txt */; };
+		9DDFB4A10D4A0ECC0616E205 /* 1-13역대상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 782EF7CC07F839E8800DE450 /* 1-13역대상.txt */; };
 		A0075984636350017DDC9664 /* BibleSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF43435E78E0496BD07DD4 /* BibleSentenceView.swift */; };
-		A29CE58FD41263C3987F2C2B /* 1-38스가랴.txt in Resources */ = {isa = PBXBuildFile; fileRef = 98C880ECC1FF4583AEC66155 /* 1-38스가랴.txt */; };
+		A16E279E11542A22ADD64920 /* 1-39말라기.txt in Resources */ = {isa = PBXBuildFile; fileRef = F91A90BF00C30E0208002216 /* 1-39말라기.txt */; };
 		A40445F4BDD629EC7EF3E382 /* RecentWritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283CB0EEA2B5731A9CD8677B /* RecentWritingManager.swift */; };
-		A74E8EB5695CF10303D355C8 /* 1-08룻기.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFE0A6ED0F2F6FDE7C4FE92C /* 1-08룻기.txt */; };
-		AB4B1D8DE749E99EF001A064 /* 2-22베드로후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19A6CB2C4517CE4E452E4265 /* 2-22베드로후서.txt */; };
+		A918BD5173DC4F09BB392716 /* 1-02출애굽기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C5734C8CAA07163B9B599DE /* 1-02출애굽기.txt */; };
+		AC714AA0330DA50700A2E0CA /* 1-23이사야.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB6A85EC906E239DBA9D40E5 /* 1-23이사야.txt */; };
 		AE29047DFBE3AA61968C1656 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 227DF1CD85CFC32BCC54B24F /* RealmSwift */; };
-		B02F87264544ECBE1BD242A1 /* 1-37학개.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC09D8F2AF9F86D67365FBB3 /* 1-37학개.txt */; };
-		B1D332A9D01E96C0DB86AA53 /* 2-05사도행전.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50579C3D5F43847A66ED74FA /* 2-05사도행전.txt */; };
+		AE6BB3889871E64062E71496 /* 1-30아모스.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3C07AEEA6F6A0BAA59EA082 /* 1-30아모스.txt */; };
 		B675279A012C77AC2D49494D /* 나눔손글씨 꽃내음.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2263C6A5D59951589212B8BB /* 나눔손글씨 꽃내음.ttf */; };
-		B6D6E223A62A04CC70CB04FF /* 2-17디도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 841E196577BA46EEC0C36AE2 /* 2-17디도서.txt */; };
 		B790EA8CD72DAD8BAB7A81D1 /* Bible_Bible.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = CED0E1E1CA34FD2A7200B396 /* Bible_Bible.bundle */; platformFilter = ios; };
-		BC0803323947DC853BD446BD /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 320EC0D5F136323DDC668C10 /* 1-17에스더.txt */; };
 		BC4807A3A958FFC57E4CEF6D /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C9C0D11B6B578CB2AE62EE /* SettingView.swift */; };
-		BFFDB3A3064B488349F4CE00 /* 1-13역대상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 740EDA9208EFFBCB9A4C023D /* 1-13역대상.txt */; };
-		C2E2F466E5581A68CBABB510 /* 1-07사사기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13C67F9F9E11CB1F8D392B24 /* 1-07사사기.txt */; };
+		BCA65C82EE361A40009BB3FF /* 1-08룻기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 390C4F3801073F1396552FE5 /* 1-08룻기.txt */; };
+		BCBA0F316C03C808C620C447 /* 2-18빌레몬서.txt in Resources */ = {isa = PBXBuildFile; fileRef = DDADEA00CA1409D278507FB6 /* 2-18빌레몬서.txt */; };
+		BEA0676CD26E76D54D798F03 /* 1-36스바냐.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92A17C08DBD910EC4D8D2E92 /* 1-36스바냐.txt */; };
+		BEDC678103918740067EABDB /* 1-07사사기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88A4B367FFC52FE2AB0EBC20 /* 1-07사사기.txt */; };
+		BF82CCB38F175B77D25F6700 /* 2-04요한복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = ABB9543D33C979AD2E0E7694 /* 2-04요한복음.txt */; };
+		C0CA319D8040056A551C7AD6 /* 2-02마가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28E590894734B8037EC41A44 /* 2-02마가복음.txt */; };
 		C4649598AFD2C6B0D2BC50F3 /* TuistBundle+Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F3F728561DA2186B5B0F66 /* TuistBundle+Bible.swift */; };
 		C54F56920D6D898541759B12 /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E415466FD7F11B5224CE9F /* BibleView.swift */; };
+		C59715C02F6034D22FCA85A0 /* 1-04민수기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8020DCC12CAE1D9E4B672227 /* 1-04민수기.txt */; };
 		C8D330894639AEE2C83AFC8D /* DrawingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164998FF6BA3F73D493A5618 /* DrawingWrapper.swift */; };
+		C9331A50074F22E851C9443A /* 1-29요엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0CDD093B46EB6AF535BC4D44 /* 1-29요엘.txt */; };
 		C9BCAB91DFDEF91B262191E7 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 306BF86B6A6EAF78B5D8D07F /* ComposableArchitecture */; };
 		D27008D332746B7586AB1A22 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318F6AAB3FA712E93E70FC /* RealmManager.swift */; };
 		D2FBE763E4F0DD60ACB0DC2C /* Bible_Bible.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED0E1E1CA34FD2A7200B396 /* Bible_Bible.bundle */; };
-		D6AD40ACBBB900A70774164A /* 1-20잠언.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D245DBD1BA7A22A16C977ED /* 1-20잠언.txt */; };
-		D8077F51D0AFFEB686C7A1D5 /* 1-03레위기.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA584BCB602DC0E49E9645C6 /* 1-03레위기.txt */; };
-		DA9B1EC0CEDB0B13DB986EDD /* 1-04민수기.txt in Resources */ = {isa = PBXBuildFile; fileRef = B1217C594388B6ED874CA4CA /* 1-04민수기.txt */; };
+		D85754B7957929DB29B944B6 /* 2-23요한일서.txt in Resources */ = {isa = PBXBuildFile; fileRef = D45F9912B2103718F5C967C0 /* 2-23요한일서.txt */; };
+		D88BFF327B37BE36F829D824 /* 1-09사무엘상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 870F61F9A1F1F9936D6933D1 /* 1-09사무엘상.txt */; };
+		D8DF467FB903398BF01BE725 /* 2-19히브리서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3E19B1830AC9F16C973CD143 /* 2-19히브리서.txt */; };
+		DF225C654CF8CD29FCE2C5C1 /* 1-38스가랴.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A0B499CE3C99BEC0892AA /* 1-38스가랴.txt */; };
 		DFAF09DDF30AE83FF8C2B7AB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D729CC549B0FC7F914B999 /* String+Extension.swift */; };
-		E2062954323083107452E858 /* 1-25예레미야애가.txt in Resources */ = {isa = PBXBuildFile; fileRef = B5500A273A7BEEE5CAFDE64C /* 1-25예레미야애가.txt */; };
-		E22FB97E92C74DEB87E08D2E /* 2-15디모데전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02EC8AE092128A6EB50BD3AE /* 2-15디모데전서.txt */; };
-		E6DD75059AD1717578D064C8 /* 1-02출애굽기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3DE66307D5145A92ADBAA988 /* 1-02출애굽기.txt */; };
-		E9B7299108E80F6D9D63F93B /* 2-14데살로니가후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = F61283B6D5F6933788996933 /* 2-14데살로니가후서.txt */; };
-		EC2B43B5430F603FE355138A /* 1-31오바댜.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43ED7970CC80DC923FBE460F /* 1-31오바댜.txt */; };
-		ED44B76412949EBF56E71BDD /* 1-01창세기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18D77EC85BDEC0B38DE5F0FF /* 1-01창세기.txt */; };
+		E3B41493CAF794770B3BD9CA /* 2-06로마서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 11F9FE6960A26D66B8F16EA5 /* 2-06로마서.txt */; };
+		E5796C5ADB0CF6D849A13F55 /* 1-11열왕기상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28313E81A1214190F17AF4CC /* 1-11열왕기상.txt */; };
+		E8A7D6627D6B1E5AC5EB97D1 /* 1-35하박국.txt in Resources */ = {isa = PBXBuildFile; fileRef = 94E4B9FFC7DF25DEB200B595 /* 1-35하박국.txt */; };
+		E9D8B6B5E232D7A5D97DD9B2 /* 1-16느헤미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74833548980BD17DF238BCAB /* 1-16느헤미야.txt */; };
 		ED7497B009A6F3DE65F20A86 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509740F7B03F8597AC1574AB /* ScrollPreferenceKey.swift */; };
-		EE1D330FB124ECCBA3F6D77C /* 1-36스바냐.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37EAD6938E2D07F0BC1AA880 /* 1-36스바냐.txt */; };
+		F05755821394885468CEF8E4 /* 1-28호세아.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8390F455D377296D78940C4D /* 1-28호세아.txt */; };
 		F3AC0522E01B50C4E5428506 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485507CD44C7DBB010317B09 /* SettingManager.swift */; };
 		F3FB0345FC07C45754886536 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA0B0E9BFCB5904B47EB87 /* OSLog+Extension.swift */; };
-		F8F75BB6C71C33F4C7F99A0E /* 1-15에스라.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B13446DB97D953ED8D130 /* 1-15에스라.txt */; };
-		F93D829E39A319ACAA0AE9CF /* 2-02마가복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A4ACD0C191A5248269A0C35 /* 2-02마가복음.txt */; };
-		FCF548C73AC31F713F462D87 /* 2-04요한복음.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED3110288D9390ABF1996E51 /* 2-04요한복음.txt */; };
+		F405DA5030E2F368DFFB6EFE /* 2-10에베소서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4140BB2624581318A5578E51 /* 2-10에베소서.txt */; };
+		FC6D66FA38192C6745FFCB99 /* 1-37학개.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C864A96F81B2B609AA03B0B /* 1-37학개.txt */; };
+		FF4E8E4AD98DC1400C2C7CD1 /* 1-01창세기.txt in Resources */ = {isa = PBXBuildFile; fileRef = B17EB4E777A53A66FA6A5726 /* 1-01창세기.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,103 +167,103 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		017FE62BF24CCBED12E2B296 /* 2-06로마서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-06로마서.txt"; sourceTree = "<group>"; };
-		02715348632A05C2C3EA8584 /* 1-18욥기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-18욥기.txt"; sourceTree = "<group>"; };
 		02874A1D84A442622EAB51FC /* TuistFonts+Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+Bible.swift"; sourceTree = "<group>"; };
-		02EC8AE092128A6EB50BD3AE /* 2-15디모데전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-15디모데전서.txt"; sourceTree = "<group>"; };
-		07BFA1D0ED71D07DAFC54B3F /* 1-16느헤미야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-16느헤미야.txt"; sourceTree = "<group>"; };
-		0A18971DBBC12B1DE08CC409 /* 1-14역대하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-14역대하.txt"; sourceTree = "<group>"; };
-		0A85A17849D4C3CB1AE877B7 /* 2-16디모데후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-16디모데후서.txt"; sourceTree = "<group>"; };
-		0D245DBD1BA7A22A16C977ED /* 1-20잠언.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-20잠언.txt"; sourceTree = "<group>"; };
+		03E2F3117D905AFA1F7468CB /* 2-05사도행전.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-05사도행전.txt"; sourceTree = "<group>"; };
+		059887ACBDFE25F65F31FDBF /* 2-09갈라디아서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-09갈라디아서.txt"; sourceTree = "<group>"; };
+		09AEC4E44A397A8444A6F900 /* 2-22베드로후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-22베드로후서.txt"; sourceTree = "<group>"; };
+		0A3D18B72E4DD5B0BBA9D36A /* 1-17에스더.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
+		0CDD093B46EB6AF535BC4D44 /* 1-29요엘.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-29요엘.txt"; sourceTree = "<group>"; };
+		11F9FE6960A26D66B8F16EA5 /* 2-06로마서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-06로마서.txt"; sourceTree = "<group>"; };
 		12E9B25B4B3084DEA0149EBA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		1341B65AA35B2411BAC2F611 /* 2-21베드로전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-21베드로전서.txt"; sourceTree = "<group>"; };
-		13C67F9F9E11CB1F8D392B24 /* 1-07사사기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-07사사기.txt"; sourceTree = "<group>"; };
-		143D9CBB4C9022836AE2C5C1 /* 1-10사무엘하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-10사무엘하.txt"; sourceTree = "<group>"; };
-		1483C95A423009006DF1AFEF /* 2-12골로새서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-12골로새서.txt"; sourceTree = "<group>"; };
+		155508F002F9B451306ED2C3 /* 2-15디모데전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-15디모데전서.txt"; sourceTree = "<group>"; };
 		164998FF6BA3F73D493A5618 /* DrawingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingWrapper.swift; sourceTree = "<group>"; };
-		18D77EC85BDEC0B38DE5F0FF /* 1-01창세기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
-		19A6CB2C4517CE4E452E4265 /* 2-22베드로후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-22베드로후서.txt"; sourceTree = "<group>"; };
-		1A6851810637A8C1139F9177 /* 1-23이사야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-23이사야.txt"; sourceTree = "<group>"; };
 		1B354F6E7091B31BD95323E4 /* DrawingDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDocument.swift; sourceTree = "<group>"; };
 		1E871D6F56F2053C336CBF43 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		1EDF809CEDBB87522D2483E5 /* 2-08고린도후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-08고린도후서.txt"; sourceTree = "<group>"; };
 		1FBF43435E78E0496BD07DD4 /* BibleSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleSentenceView.swift; sourceTree = "<group>"; };
 		2263C6A5D59951589212B8BB /* 나눔손글씨 꽃내음.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 꽃내음.ttf"; sourceTree = "<group>"; };
 		24608C1203183B7DCFD79EC7 /* Bible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25851042BFE3D5204236763E /* 2-18빌레몬서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-18빌레몬서.txt"; sourceTree = "<group>"; };
+		28313E81A1214190F17AF4CC /* 1-11열왕기상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-11열왕기상.txt"; sourceTree = "<group>"; };
 		283CB0EEA2B5731A9CD8677B /* RecentWritingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWritingManager.swift; sourceTree = "<group>"; };
 		28638A02E25D66040CEE2544 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
+		28E590894734B8037EC41A44 /* 2-02마가복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-02마가복음.txt"; sourceTree = "<group>"; };
 		29A4392FE4EE3D5CFB71918C /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		2A4ACD0C191A5248269A0C35 /* 2-02마가복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-02마가복음.txt"; sourceTree = "<group>"; };
+		2C7A0B499CE3C99BEC0892AA /* 1-38스가랴.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-38스가랴.txt"; sourceTree = "<group>"; };
 		2FD76B1B86AE2EC4C3F2B38A /* BibleTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BibleTest-Info.plist"; sourceTree = "<group>"; };
-		320EC0D5F136323DDC668C10 /* 1-17에스더.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-17에스더.txt"; sourceTree = "<group>"; };
+		308D25A8104D45126E4CA203 /* 2-07고린도전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-07고린도전서.txt"; sourceTree = "<group>"; };
 		32D729CC549B0FC7F914B999 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		37EAD6938E2D07F0BC1AA880 /* 1-36스바냐.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-36스바냐.txt"; sourceTree = "<group>"; };
-		3AB77DA571DB166292DE8C08 /* 2-11빌립보서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-11빌립보서.txt"; sourceTree = "<group>"; };
-		3DE66307D5145A92ADBAA988 /* 1-02출애굽기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-02출애굽기.txt"; sourceTree = "<group>"; };
-		40F3CF9B684BBD50761AA3F7 /* 1-26에스겔.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-26에스겔.txt"; sourceTree = "<group>"; };
+		34B379741C994A37C2424C1D /* 1-06여호수아.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-06여호수아.txt"; sourceTree = "<group>"; };
+		390C4F3801073F1396552FE5 /* 1-08룻기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-08룻기.txt"; sourceTree = "<group>"; };
+		3E0B75C8CD1E3B3DE5422979 /* 1-31오바댜.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-31오바댜.txt"; sourceTree = "<group>"; };
+		3E19B1830AC9F16C973CD143 /* 2-19히브리서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-19히브리서.txt"; sourceTree = "<group>"; };
+		4140BB2624581318A5578E51 /* 2-10에베소서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-10에베소서.txt"; sourceTree = "<group>"; };
 		42C9C0D11B6B578CB2AE62EE /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		43ED7970CC80DC923FBE460F /* 1-31오바댜.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-31오바댜.txt"; sourceTree = "<group>"; };
-		47939CCBC6471CBD92A28723 /* 1-12열왕기하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-12열왕기하.txt"; sourceTree = "<group>"; };
 		485507CD44C7DBB010317B09 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 		4A55CFAD925FD7D6A12513D3 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
-		4C8CFF8B1D1E447AA2991FB0 /* 2-26유다서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-26유다서.txt"; sourceTree = "<group>"; };
-		4FB988493685C64E55B60DE8 /* 1-05신명기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-05신명기.txt"; sourceTree = "<group>"; };
-		50579C3D5F43847A66ED74FA /* 2-05사도행전.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-05사도행전.txt"; sourceTree = "<group>"; };
+		4E271CA129B069A445946591 /* 2-11빌립보서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-11빌립보서.txt"; sourceTree = "<group>"; };
 		509740F7B03F8597AC1574AB /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
-		52F8BAB69B5149E311B7F218 /* 1-29요엘.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-29요엘.txt"; sourceTree = "<group>"; };
-		5749F28AD822A8136623283D /* 2-10에베소서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-10에베소서.txt"; sourceTree = "<group>"; };
-		5A0136F28BF219353B2D2914 /* 1-33미가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-33미가.txt"; sourceTree = "<group>"; };
-		5DC5FCE823EF4B4A02AFFF5F /* 1-24예레미야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-24예레미야.txt"; sourceTree = "<group>"; };
-		6C0B13446DB97D953ED8D130 /* 1-15에스라.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-15에스라.txt"; sourceTree = "<group>"; };
-		6E53EE49A921CB115A6C5D35 /* 2-01마태복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-01마태복음.txt"; sourceTree = "<group>"; };
+		536497955641741AACC7BB86 /* 1-34나훔.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-34나훔.txt"; sourceTree = "<group>"; };
+		5448B029983072C0BD9B3829 /* 2-16디모데후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-16디모데후서.txt"; sourceTree = "<group>"; };
+		5B58F74C63EE69347CCD0970 /* 2-12골로새서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-12골로새서.txt"; sourceTree = "<group>"; };
+		6010D81B0FA6AA0612CF2E24 /* 1-03레위기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-03레위기.txt"; sourceTree = "<group>"; };
+		60FB537F3251BF947096DA56 /* 1-21전도서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-21전도서.txt"; sourceTree = "<group>"; };
+		6814A3392B80F3EF6D39E3F4 /* 2-21베드로전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-21베드로전서.txt"; sourceTree = "<group>"; };
+		6C5734C8CAA07163B9B599DE /* 1-02출애굽기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-02출애굽기.txt"; sourceTree = "<group>"; };
+		6C9122BC5B2E68A8C3A59864 /* 2-01마태복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-01마태복음.txt"; sourceTree = "<group>"; };
 		71F3F728561DA2186B5B0F66 /* TuistBundle+Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Bible.swift"; sourceTree = "<group>"; };
-		7231080C42DF3C03C5562596 /* 1-35하박국.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-35하박국.txt"; sourceTree = "<group>"; };
-		740EDA9208EFFBCB9A4C023D /* 1-13역대상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-13역대상.txt"; sourceTree = "<group>"; };
-		7721D0FDC17226422E067F6B /* 2-20야고보서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-20야고보서.txt"; sourceTree = "<group>"; };
+		738FAE0E93A738D6D7C523D1 /* 1-26에스겔.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-26에스겔.txt"; sourceTree = "<group>"; };
+		74833548980BD17DF238BCAB /* 1-16느헤미야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-16느헤미야.txt"; sourceTree = "<group>"; };
 		77318F6AAB3FA712E93E70FC /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		77AA3BF0AFC52691B72DE303 /* 1-32요나.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-32요나.txt"; sourceTree = "<group>"; };
-		7FE3ACC702A072CCDB53FB88 /* 2-24요한이서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-24요한이서.txt"; sourceTree = "<group>"; };
-		83D1614EBFA119C45FA2E1D1 /* 2-27요한계시록.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-27요한계시록.txt"; sourceTree = "<group>"; };
-		841E196577BA46EEC0C36AE2 /* 2-17디도서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-17디도서.txt"; sourceTree = "<group>"; };
-		890313FA7288AB2FE67F2834 /* 1-30아모스.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-30아모스.txt"; sourceTree = "<group>"; };
-		895C01C1DE6A0BAFC2D712E5 /* 2-03누가복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-03누가복음.txt"; sourceTree = "<group>"; };
+		782EF7CC07F839E8800DE450 /* 1-13역대상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-13역대상.txt"; sourceTree = "<group>"; };
+		7B6077CF6D015D209F144605 /* 1-24예레미야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-24예레미야.txt"; sourceTree = "<group>"; };
+		8020DCC12CAE1D9E4B672227 /* 1-04민수기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-04민수기.txt"; sourceTree = "<group>"; };
+		822F3EC1EE879AD8DA31EC96 /* 1-22아가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-22아가.txt"; sourceTree = "<group>"; };
+		8390F455D377296D78940C4D /* 1-28호세아.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-28호세아.txt"; sourceTree = "<group>"; };
+		870F61F9A1F1F9936D6933D1 /* 1-09사무엘상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-09사무엘상.txt"; sourceTree = "<group>"; };
+		88A4B367FFC52FE2AB0EBC20 /* 1-07사사기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-07사사기.txt"; sourceTree = "<group>"; };
 		8BFFE4BF4C2BA2DC0E35B59E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8F9E7993439E133E4833137E /* 2-25요한삼서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-25요한삼서.txt"; sourceTree = "<group>"; };
+		8C028289F71FA53616B1E21B /* 1-05신명기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-05신명기.txt"; sourceTree = "<group>"; };
+		8C3A6CEC257BD7496B9ABCBD /* 2-13데살로니가전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-13데살로니가전서.txt"; sourceTree = "<group>"; };
+		8C864A96F81B2B609AA03B0B /* 1-37학개.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-37학개.txt"; sourceTree = "<group>"; };
+		92A17C08DBD910EC4D8D2E92 /* 1-36스바냐.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-36스바냐.txt"; sourceTree = "<group>"; };
 		94ADB563219A89FA47A0D675 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
-		98C880ECC1FF4583AEC66155 /* 1-38스가랴.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-38스가랴.txt"; sourceTree = "<group>"; };
-		9C1FEC9C626B9AE977DA2E5F /* 2-23요한일서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-23요한일서.txt"; sourceTree = "<group>"; };
-		9C94BEBB8D0093598F8A0D85 /* 1-21전도서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-21전도서.txt"; sourceTree = "<group>"; };
-		A46517F088AC64051EC668D1 /* 2-19히브리서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-19히브리서.txt"; sourceTree = "<group>"; };
+		94E4B9FFC7DF25DEB200B595 /* 1-35하박국.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-35하박국.txt"; sourceTree = "<group>"; };
+		97BBD4361E3C3197E410A725 /* 1-18욥기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-18욥기.txt"; sourceTree = "<group>"; };
+		99E48CC48CCB3011B0EB7840 /* 2-26유다서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-26유다서.txt"; sourceTree = "<group>"; };
+		9A3CC7D9D9028C0F4ECB7254 /* 2-17디도서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-17디도서.txt"; sourceTree = "<group>"; };
+		9B4936C70A5F666563DCCDAD /* 2-08고린도후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-08고린도후서.txt"; sourceTree = "<group>"; };
+		9C6DB11E00EB77A06DF2473E /* 1-27다니엘.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-27다니엘.txt"; sourceTree = "<group>"; };
+		9F426A919A48527C875D4A2F /* 1-33미가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-33미가.txt"; sourceTree = "<group>"; };
+		9FFF889B7F0C686E75F21C8A /* 1-12열왕기하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-12열왕기하.txt"; sourceTree = "<group>"; };
+		A3FEC98884A554CFB2CD50B1 /* 1-14역대하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-14역대하.txt"; sourceTree = "<group>"; };
 		A5172044350588967C767E40 /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
-		AFE0A6ED0F2F6FDE7C4FE92C /* 1-08룻기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-08룻기.txt"; sourceTree = "<group>"; };
-		B1217C594388B6ED874CA4CA /* 1-04민수기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-04민수기.txt"; sourceTree = "<group>"; };
+		A6BAF5A9B4CDBC19F969FEBF /* 1-19시편.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-19시편.txt"; sourceTree = "<group>"; };
+		ABB9543D33C979AD2E0E7694 /* 2-04요한복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-04요한복음.txt"; sourceTree = "<group>"; };
+		B0811F70CC0B8C34D58DDCCB /* 1-20잠언.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-20잠언.txt"; sourceTree = "<group>"; };
+		B17EB4E777A53A66FA6A5726 /* 1-01창세기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
 		B49A3DABB00A86699075306D /* Bible_Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible_Bible-Info.plist"; sourceTree = "<group>"; };
-		B5500A273A7BEEE5CAFDE64C /* 1-25예레미야애가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-25예레미야애가.txt"; sourceTree = "<group>"; };
 		B7DEE92B1B5D7EF35E3FDE5E /* Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible-Info.plist"; sourceTree = "<group>"; };
-		B869A2DC36CB25850EB9B4C5 /* 1-09사무엘상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-09사무엘상.txt"; sourceTree = "<group>"; };
-		BBE40D762B58A8D24E13BE8D /* 1-11열왕기상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-11열왕기상.txt"; sourceTree = "<group>"; };
+		BE3A8E9AC5F3D61B5A519BB4 /* 2-27요한계시록.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-27요한계시록.txt"; sourceTree = "<group>"; };
 		BF94266FE4055B0D7404B7AA /* BibleTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibleTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C02AA41FAD4D6101783EB01F /* 1-34나훔.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-34나훔.txt"; sourceTree = "<group>"; };
-		C3641F671E0AEEF265E5CFD3 /* 1-28호세아.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-28호세아.txt"; sourceTree = "<group>"; };
+		C5450C21AF99C2FED3496A35 /* 1-10사무엘하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-10사무엘하.txt"; sourceTree = "<group>"; };
+		C67CEE70168FCBB00FE32DC0 /* 1-25예레미야애가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-25예레미야애가.txt"; sourceTree = "<group>"; };
 		C7A6AC4752785432413BE2AB /* NanumBarunGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothic.ttf; sourceTree = "<group>"; };
-		C961631B83A1D64FA4C65824 /* 1-27다니엘.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-27다니엘.txt"; sourceTree = "<group>"; };
 		C9DA0B0E9BFCB5904B47EB87 /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
+		CB6A85EC906E239DBA9D40E5 /* 1-23이사야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-23이사야.txt"; sourceTree = "<group>"; };
 		CD818E8D0588C5A1AAA51715 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
-		CEA916734A8CAA0F632EC110 /* 2-09갈라디아서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-09갈라디아서.txt"; sourceTree = "<group>"; };
 		CED0E1E1CA34FD2A7200B396 /* Bible_Bible.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bible_Bible.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		E129F12C6F0353546D41F1BD /* 1-06여호수아.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-06여호수아.txt"; sourceTree = "<group>"; };
-		E5E5ECCBC3772420995A5D1F /* 1-39말라기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-39말라기.txt"; sourceTree = "<group>"; };
+		D45F9912B2103718F5C967C0 /* 2-23요한일서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-23요한일서.txt"; sourceTree = "<group>"; };
+		DBCA8CECB2FBC3C289D72882 /* 1-32요나.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-32요나.txt"; sourceTree = "<group>"; };
+		DCBC5B6B4FABEBA292B8BB41 /* 2-03누가복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-03누가복음.txt"; sourceTree = "<group>"; };
+		DDADEA00CA1409D278507FB6 /* 2-18빌레몬서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-18빌레몬서.txt"; sourceTree = "<group>"; };
 		E8E415466FD7F11B5224CE9F /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
-		E93599D49AF8544A419A3F01 /* 2-07고린도전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-07고린도전서.txt"; sourceTree = "<group>"; };
-		E993C7317281DE9825BD057F /* 1-22아가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-22아가.txt"; sourceTree = "<group>"; };
-		EA584BCB602DC0E49E9645C6 /* 1-03레위기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-03레위기.txt"; sourceTree = "<group>"; };
 		EBFD39BCCB5A5C4948B6B2C0 /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
-		EC09D8F2AF9F86D67365FBB3 /* 1-37학개.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-37학개.txt"; sourceTree = "<group>"; };
-		ED3110288D9390ABF1996E51 /* 2-04요한복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-04요한복음.txt"; sourceTree = "<group>"; };
-		ED833EAEFEC2CBCD833A5A48 /* 1-19시편.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-19시편.txt"; sourceTree = "<group>"; };
-		F34683DBBA73F36FC0C27783 /* 2-13데살로니가전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-13데살로니가전서.txt"; sourceTree = "<group>"; };
-		F61283B6D5F6933788996933 /* 2-14데살로니가후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-14데살로니가후서.txt"; sourceTree = "<group>"; };
+		ECD94CDE031602F5427CB2AE /* 2-14데살로니가후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-14데살로니가후서.txt"; sourceTree = "<group>"; };
+		ED53DDD9A90996429DBE0E78 /* 1-15에스라.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-15에스라.txt"; sourceTree = "<group>"; };
+		F3C07AEEA6F6A0BAA59EA082 /* 1-30아모스.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-30아모스.txt"; sourceTree = "<group>"; };
+		F67812B2E49B4A66D6EE634E /* 2-20야고보서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-20야고보서.txt"; sourceTree = "<group>"; };
+		F91A90BF00C30E0208002216 /* 1-39말라기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-39말라기.txt"; sourceTree = "<group>"; };
+		FD41A88BDEDB261C0F45D9E0 /* 2-25요한삼서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-25요한삼서.txt"; sourceTree = "<group>"; };
+		FFB2AA2150E60612FE9EBFA1 /* 2-24요한이서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-24요한이서.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +323,79 @@
 				485507CD44C7DBB010317B09 /* SettingManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2012ED124D94EC8CAD05AF18 /* 개역개정-text */ = {
+			isa = PBXGroup;
+			children = (
+				B17EB4E777A53A66FA6A5726 /* 1-01창세기.txt */,
+				6C5734C8CAA07163B9B599DE /* 1-02출애굽기.txt */,
+				6010D81B0FA6AA0612CF2E24 /* 1-03레위기.txt */,
+				8020DCC12CAE1D9E4B672227 /* 1-04민수기.txt */,
+				8C028289F71FA53616B1E21B /* 1-05신명기.txt */,
+				34B379741C994A37C2424C1D /* 1-06여호수아.txt */,
+				88A4B367FFC52FE2AB0EBC20 /* 1-07사사기.txt */,
+				390C4F3801073F1396552FE5 /* 1-08룻기.txt */,
+				870F61F9A1F1F9936D6933D1 /* 1-09사무엘상.txt */,
+				C5450C21AF99C2FED3496A35 /* 1-10사무엘하.txt */,
+				28313E81A1214190F17AF4CC /* 1-11열왕기상.txt */,
+				9FFF889B7F0C686E75F21C8A /* 1-12열왕기하.txt */,
+				782EF7CC07F839E8800DE450 /* 1-13역대상.txt */,
+				A3FEC98884A554CFB2CD50B1 /* 1-14역대하.txt */,
+				ED53DDD9A90996429DBE0E78 /* 1-15에스라.txt */,
+				74833548980BD17DF238BCAB /* 1-16느헤미야.txt */,
+				0A3D18B72E4DD5B0BBA9D36A /* 1-17에스더.txt */,
+				97BBD4361E3C3197E410A725 /* 1-18욥기.txt */,
+				A6BAF5A9B4CDBC19F969FEBF /* 1-19시편.txt */,
+				B0811F70CC0B8C34D58DDCCB /* 1-20잠언.txt */,
+				60FB537F3251BF947096DA56 /* 1-21전도서.txt */,
+				822F3EC1EE879AD8DA31EC96 /* 1-22아가.txt */,
+				CB6A85EC906E239DBA9D40E5 /* 1-23이사야.txt */,
+				7B6077CF6D015D209F144605 /* 1-24예레미야.txt */,
+				C67CEE70168FCBB00FE32DC0 /* 1-25예레미야애가.txt */,
+				738FAE0E93A738D6D7C523D1 /* 1-26에스겔.txt */,
+				9C6DB11E00EB77A06DF2473E /* 1-27다니엘.txt */,
+				8390F455D377296D78940C4D /* 1-28호세아.txt */,
+				0CDD093B46EB6AF535BC4D44 /* 1-29요엘.txt */,
+				F3C07AEEA6F6A0BAA59EA082 /* 1-30아모스.txt */,
+				3E0B75C8CD1E3B3DE5422979 /* 1-31오바댜.txt */,
+				DBCA8CECB2FBC3C289D72882 /* 1-32요나.txt */,
+				9F426A919A48527C875D4A2F /* 1-33미가.txt */,
+				536497955641741AACC7BB86 /* 1-34나훔.txt */,
+				94E4B9FFC7DF25DEB200B595 /* 1-35하박국.txt */,
+				92A17C08DBD910EC4D8D2E92 /* 1-36스바냐.txt */,
+				8C864A96F81B2B609AA03B0B /* 1-37학개.txt */,
+				2C7A0B499CE3C99BEC0892AA /* 1-38스가랴.txt */,
+				F91A90BF00C30E0208002216 /* 1-39말라기.txt */,
+				6C9122BC5B2E68A8C3A59864 /* 2-01마태복음.txt */,
+				28E590894734B8037EC41A44 /* 2-02마가복음.txt */,
+				DCBC5B6B4FABEBA292B8BB41 /* 2-03누가복음.txt */,
+				ABB9543D33C979AD2E0E7694 /* 2-04요한복음.txt */,
+				03E2F3117D905AFA1F7468CB /* 2-05사도행전.txt */,
+				11F9FE6960A26D66B8F16EA5 /* 2-06로마서.txt */,
+				308D25A8104D45126E4CA203 /* 2-07고린도전서.txt */,
+				9B4936C70A5F666563DCCDAD /* 2-08고린도후서.txt */,
+				059887ACBDFE25F65F31FDBF /* 2-09갈라디아서.txt */,
+				4140BB2624581318A5578E51 /* 2-10에베소서.txt */,
+				4E271CA129B069A445946591 /* 2-11빌립보서.txt */,
+				5B58F74C63EE69347CCD0970 /* 2-12골로새서.txt */,
+				8C3A6CEC257BD7496B9ABCBD /* 2-13데살로니가전서.txt */,
+				ECD94CDE031602F5427CB2AE /* 2-14데살로니가후서.txt */,
+				155508F002F9B451306ED2C3 /* 2-15디모데전서.txt */,
+				5448B029983072C0BD9B3829 /* 2-16디모데후서.txt */,
+				9A3CC7D9D9028C0F4ECB7254 /* 2-17디도서.txt */,
+				DDADEA00CA1409D278507FB6 /* 2-18빌레몬서.txt */,
+				3E19B1830AC9F16C973CD143 /* 2-19히브리서.txt */,
+				F67812B2E49B4A66D6EE634E /* 2-20야고보서.txt */,
+				6814A3392B80F3EF6D39E3F4 /* 2-21베드로전서.txt */,
+				09AEC4E44A397A8444A6F900 /* 2-22베드로후서.txt */,
+				D45F9912B2103718F5C967C0 /* 2-23요한일서.txt */,
+				FFB2AA2150E60612FE9EBFA1 /* 2-24요한이서.txt */,
+				FD41A88BDEDB261C0F45D9E0 /* 2-25요한삼서.txt */,
+				99E48CC48CCB3011B0EB7840 /* 2-26유다서.txt */,
+				BE3A8E9AC5F3D61B5A519BB4 /* 2-27요한계시록.txt */,
+			);
+			path = "개역개정-text";
 			sourceTree = "<group>";
 		};
 		2201EEE9382FD0F77C0BE6EF /* Extensions */ = {
@@ -457,7 +530,7 @@
 		C02BEBCFC600F0747066E7A6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				FF8B9CA785ADA031EF43BF7D /* 개역개정-text */,
+				2012ED124D94EC8CAD05AF18 /* 개역개정-text */,
 				BDB394831F91DAD1BE16FA51 /* Font */,
 			);
 			path = Resource;
@@ -515,79 +588,6 @@
 				164998FF6BA3F73D493A5618 /* DrawingWrapper.swift */,
 			);
 			path = Drawing;
-			sourceTree = "<group>";
-		};
-		FF8B9CA785ADA031EF43BF7D /* 개역개정-text */ = {
-			isa = PBXGroup;
-			children = (
-				18D77EC85BDEC0B38DE5F0FF /* 1-01창세기.txt */,
-				3DE66307D5145A92ADBAA988 /* 1-02출애굽기.txt */,
-				EA584BCB602DC0E49E9645C6 /* 1-03레위기.txt */,
-				B1217C594388B6ED874CA4CA /* 1-04민수기.txt */,
-				4FB988493685C64E55B60DE8 /* 1-05신명기.txt */,
-				E129F12C6F0353546D41F1BD /* 1-06여호수아.txt */,
-				13C67F9F9E11CB1F8D392B24 /* 1-07사사기.txt */,
-				AFE0A6ED0F2F6FDE7C4FE92C /* 1-08룻기.txt */,
-				B869A2DC36CB25850EB9B4C5 /* 1-09사무엘상.txt */,
-				143D9CBB4C9022836AE2C5C1 /* 1-10사무엘하.txt */,
-				BBE40D762B58A8D24E13BE8D /* 1-11열왕기상.txt */,
-				47939CCBC6471CBD92A28723 /* 1-12열왕기하.txt */,
-				740EDA9208EFFBCB9A4C023D /* 1-13역대상.txt */,
-				0A18971DBBC12B1DE08CC409 /* 1-14역대하.txt */,
-				6C0B13446DB97D953ED8D130 /* 1-15에스라.txt */,
-				07BFA1D0ED71D07DAFC54B3F /* 1-16느헤미야.txt */,
-				320EC0D5F136323DDC668C10 /* 1-17에스더.txt */,
-				02715348632A05C2C3EA8584 /* 1-18욥기.txt */,
-				ED833EAEFEC2CBCD833A5A48 /* 1-19시편.txt */,
-				0D245DBD1BA7A22A16C977ED /* 1-20잠언.txt */,
-				9C94BEBB8D0093598F8A0D85 /* 1-21전도서.txt */,
-				E993C7317281DE9825BD057F /* 1-22아가.txt */,
-				1A6851810637A8C1139F9177 /* 1-23이사야.txt */,
-				5DC5FCE823EF4B4A02AFFF5F /* 1-24예레미야.txt */,
-				B5500A273A7BEEE5CAFDE64C /* 1-25예레미야애가.txt */,
-				40F3CF9B684BBD50761AA3F7 /* 1-26에스겔.txt */,
-				C961631B83A1D64FA4C65824 /* 1-27다니엘.txt */,
-				C3641F671E0AEEF265E5CFD3 /* 1-28호세아.txt */,
-				52F8BAB69B5149E311B7F218 /* 1-29요엘.txt */,
-				890313FA7288AB2FE67F2834 /* 1-30아모스.txt */,
-				43ED7970CC80DC923FBE460F /* 1-31오바댜.txt */,
-				77AA3BF0AFC52691B72DE303 /* 1-32요나.txt */,
-				5A0136F28BF219353B2D2914 /* 1-33미가.txt */,
-				C02AA41FAD4D6101783EB01F /* 1-34나훔.txt */,
-				7231080C42DF3C03C5562596 /* 1-35하박국.txt */,
-				37EAD6938E2D07F0BC1AA880 /* 1-36스바냐.txt */,
-				EC09D8F2AF9F86D67365FBB3 /* 1-37학개.txt */,
-				98C880ECC1FF4583AEC66155 /* 1-38스가랴.txt */,
-				E5E5ECCBC3772420995A5D1F /* 1-39말라기.txt */,
-				6E53EE49A921CB115A6C5D35 /* 2-01마태복음.txt */,
-				2A4ACD0C191A5248269A0C35 /* 2-02마가복음.txt */,
-				895C01C1DE6A0BAFC2D712E5 /* 2-03누가복음.txt */,
-				ED3110288D9390ABF1996E51 /* 2-04요한복음.txt */,
-				50579C3D5F43847A66ED74FA /* 2-05사도행전.txt */,
-				017FE62BF24CCBED12E2B296 /* 2-06로마서.txt */,
-				E93599D49AF8544A419A3F01 /* 2-07고린도전서.txt */,
-				1EDF809CEDBB87522D2483E5 /* 2-08고린도후서.txt */,
-				CEA916734A8CAA0F632EC110 /* 2-09갈라디아서.txt */,
-				5749F28AD822A8136623283D /* 2-10에베소서.txt */,
-				3AB77DA571DB166292DE8C08 /* 2-11빌립보서.txt */,
-				1483C95A423009006DF1AFEF /* 2-12골로새서.txt */,
-				F34683DBBA73F36FC0C27783 /* 2-13데살로니가전서.txt */,
-				F61283B6D5F6933788996933 /* 2-14데살로니가후서.txt */,
-				02EC8AE092128A6EB50BD3AE /* 2-15디모데전서.txt */,
-				0A85A17849D4C3CB1AE877B7 /* 2-16디모데후서.txt */,
-				841E196577BA46EEC0C36AE2 /* 2-17디도서.txt */,
-				25851042BFE3D5204236763E /* 2-18빌레몬서.txt */,
-				A46517F088AC64051EC668D1 /* 2-19히브리서.txt */,
-				7721D0FDC17226422E067F6B /* 2-20야고보서.txt */,
-				1341B65AA35B2411BAC2F611 /* 2-21베드로전서.txt */,
-				19A6CB2C4517CE4E452E4265 /* 2-22베드로후서.txt */,
-				9C1FEC9C626B9AE977DA2E5F /* 2-23요한일서.txt */,
-				7FE3ACC702A072CCDB53FB88 /* 2-24요한이서.txt */,
-				8F9E7993439E133E4833137E /* 2-25요한삼서.txt */,
-				4C8CFF8B1D1E447AA2991FB0 /* 2-26유다서.txt */,
-				83D1614EBFA119C45FA2E1D1 /* 2-27요한계시록.txt */,
-			);
-			path = "개역개정-text";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -660,6 +660,7 @@
 		77AC0A7F0DB2CAC8D7AD95CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = leetaek;
 				TargetAttributes = {
 				};
@@ -697,72 +698,72 @@
 				57E9A38152A91E49787CB245 /* NanumBarunGothic.ttf in Resources */,
 				0079B8BA3C6DADBC924AF5AE /* NanumMyeongjo.ttf in Resources */,
 				B675279A012C77AC2D49494D /* 나눔손글씨 꽃내음.ttf in Resources */,
-				ED44B76412949EBF56E71BDD /* 1-01창세기.txt in Resources */,
-				E6DD75059AD1717578D064C8 /* 1-02출애굽기.txt in Resources */,
-				D8077F51D0AFFEB686C7A1D5 /* 1-03레위기.txt in Resources */,
-				DA9B1EC0CEDB0B13DB986EDD /* 1-04민수기.txt in Resources */,
-				2E5E7B65E78FAFF63D0505F3 /* 1-05신명기.txt in Resources */,
-				8B9B9F33A0F25A251F8827AA /* 1-06여호수아.txt in Resources */,
-				C2E2F466E5581A68CBABB510 /* 1-07사사기.txt in Resources */,
-				A74E8EB5695CF10303D355C8 /* 1-08룻기.txt in Resources */,
-				27E446783E151E44EE3518F5 /* 1-09사무엘상.txt in Resources */,
-				03426FC7FD04AA1838B24D50 /* 1-10사무엘하.txt in Resources */,
-				47B886E888BD7C81F81DFF5E /* 1-11열왕기상.txt in Resources */,
-				1AD09BC8E96F3E026F11DCFE /* 1-12열왕기하.txt in Resources */,
-				BFFDB3A3064B488349F4CE00 /* 1-13역대상.txt in Resources */,
-				21B60F3FE18739D3AAA9CB7B /* 1-14역대하.txt in Resources */,
-				F8F75BB6C71C33F4C7F99A0E /* 1-15에스라.txt in Resources */,
-				9B796AB4BB9C2A3BE171E6EC /* 1-16느헤미야.txt in Resources */,
-				BC0803323947DC853BD446BD /* 1-17에스더.txt in Resources */,
-				50FD6DF7C03650536CDE624E /* 1-18욥기.txt in Resources */,
-				7E78A152A3EC9AAFD43CF7DF /* 1-19시편.txt in Resources */,
-				D6AD40ACBBB900A70774164A /* 1-20잠언.txt in Resources */,
-				48D081D4B5017571B84A4924 /* 1-21전도서.txt in Resources */,
-				3BF782E573FE6B6EE4451D17 /* 1-22아가.txt in Resources */,
-				3B3960F94F24ABC5152C969D /* 1-23이사야.txt in Resources */,
-				1BC02D6E117F06A40CAD83EB /* 1-24예레미야.txt in Resources */,
-				E2062954323083107452E858 /* 1-25예레미야애가.txt in Resources */,
-				9497EE46FB1B13809C1C81BB /* 1-26에스겔.txt in Resources */,
-				30085CC509800472A0C228E5 /* 1-27다니엘.txt in Resources */,
-				8AFECF4C0B7FBE098C0D7224 /* 1-28호세아.txt in Resources */,
-				5A36C908852A909159FDD88E /* 1-29요엘.txt in Resources */,
-				438A71DF47CCB1B8D547F2C1 /* 1-30아모스.txt in Resources */,
-				EC2B43B5430F603FE355138A /* 1-31오바댜.txt in Resources */,
-				8C32DBCC98B52CD633511176 /* 1-32요나.txt in Resources */,
-				1CD89FEF1BF114290C4FD74F /* 1-33미가.txt in Resources */,
-				32C9574341D74BE28D46C04B /* 1-34나훔.txt in Resources */,
-				095C28980D6C8245C7985221 /* 1-35하박국.txt in Resources */,
-				EE1D330FB124ECCBA3F6D77C /* 1-36스바냐.txt in Resources */,
-				B02F87264544ECBE1BD242A1 /* 1-37학개.txt in Resources */,
-				A29CE58FD41263C3987F2C2B /* 1-38스가랴.txt in Resources */,
-				5B88AD9E9742ABE170DC5D71 /* 1-39말라기.txt in Resources */,
-				952A01B41B0CFA3D5EC7E442 /* 2-01마태복음.txt in Resources */,
-				F93D829E39A319ACAA0AE9CF /* 2-02마가복음.txt in Resources */,
-				10DD9684537ECE115C592BAB /* 2-03누가복음.txt in Resources */,
-				FCF548C73AC31F713F462D87 /* 2-04요한복음.txt in Resources */,
-				B1D332A9D01E96C0DB86AA53 /* 2-05사도행전.txt in Resources */,
-				3AFC1CA43A858EB49CADFCD9 /* 2-06로마서.txt in Resources */,
-				82C9A796EBAA2C017D9C1D4B /* 2-07고린도전서.txt in Resources */,
-				98369D574CFAAF709B60CBFE /* 2-08고린도후서.txt in Resources */,
-				493C32BC48127E22F4FEB5F7 /* 2-09갈라디아서.txt in Resources */,
-				3F8A27DC81614B2D49194F89 /* 2-10에베소서.txt in Resources */,
-				002B21079212997E53DBEBF5 /* 2-11빌립보서.txt in Resources */,
-				0F09446ABF5D0A464BBB7F5C /* 2-12골로새서.txt in Resources */,
-				1CCD4927FDEB359BE35119E5 /* 2-13데살로니가전서.txt in Resources */,
-				E9B7299108E80F6D9D63F93B /* 2-14데살로니가후서.txt in Resources */,
-				E22FB97E92C74DEB87E08D2E /* 2-15디모데전서.txt in Resources */,
-				5CA161E067F72903EB02566B /* 2-16디모데후서.txt in Resources */,
-				B6D6E223A62A04CC70CB04FF /* 2-17디도서.txt in Resources */,
-				5D59596D4BD528B2376BA5DF /* 2-18빌레몬서.txt in Resources */,
-				8E332D9EF6B1E17E45531263 /* 2-19히브리서.txt in Resources */,
-				675983049EF43F58A4A2CA66 /* 2-20야고보서.txt in Resources */,
-				2C23F4BDDB86A80FA214DB77 /* 2-21베드로전서.txt in Resources */,
-				AB4B1D8DE749E99EF001A064 /* 2-22베드로후서.txt in Resources */,
-				76F51E62AAC47AA5686181F2 /* 2-23요한일서.txt in Resources */,
-				9E43FF40BE98C115C9AFA322 /* 2-24요한이서.txt in Resources */,
-				199E387767F8CAAB326A6A63 /* 2-25요한삼서.txt in Resources */,
-				8FDC2F33B8A94A4F748BFE3B /* 2-26유다서.txt in Resources */,
-				6D050CA700258CA01228563B /* 2-27요한계시록.txt in Resources */,
+				FF4E8E4AD98DC1400C2C7CD1 /* 1-01창세기.txt in Resources */,
+				A918BD5173DC4F09BB392716 /* 1-02출애굽기.txt in Resources */,
+				4DB83BA22B8EC9E8E5117FEF /* 1-03레위기.txt in Resources */,
+				C59715C02F6034D22FCA85A0 /* 1-04민수기.txt in Resources */,
+				8630B387A0952F02632EBA23 /* 1-05신명기.txt in Resources */,
+				465E4EE1BA41627C4BD15652 /* 1-06여호수아.txt in Resources */,
+				BEDC678103918740067EABDB /* 1-07사사기.txt in Resources */,
+				BCA65C82EE361A40009BB3FF /* 1-08룻기.txt in Resources */,
+				D88BFF327B37BE36F829D824 /* 1-09사무엘상.txt in Resources */,
+				39EE5E5F6FF979618F7D4D8E /* 1-10사무엘하.txt in Resources */,
+				E5796C5ADB0CF6D849A13F55 /* 1-11열왕기상.txt in Resources */,
+				13431A6638AF7FBC4497654D /* 1-12열왕기하.txt in Resources */,
+				9DDFB4A10D4A0ECC0616E205 /* 1-13역대상.txt in Resources */,
+				9DC00B65B5E1C35AB1A4F9B4 /* 1-14역대하.txt in Resources */,
+				49A027E5A51C51AD5193B480 /* 1-15에스라.txt in Resources */,
+				E9D8B6B5E232D7A5D97DD9B2 /* 1-16느헤미야.txt in Resources */,
+				7300F1D51A1D93A6259F2EB5 /* 1-17에스더.txt in Resources */,
+				775DA539E4BBCAEEB04E50C5 /* 1-18욥기.txt in Resources */,
+				4B26C5A27BAC4054169EADB5 /* 1-19시편.txt in Resources */,
+				808CD24C2FB0BCB0B321CC67 /* 1-20잠언.txt in Resources */,
+				7B8DA5B3802BACC708584B8F /* 1-21전도서.txt in Resources */,
+				64E2DB24570254A42CC9D066 /* 1-22아가.txt in Resources */,
+				AC714AA0330DA50700A2E0CA /* 1-23이사야.txt in Resources */,
+				2EE526CBE3B324AD45B32B94 /* 1-24예레미야.txt in Resources */,
+				6CD4C836770EEA0171A95B8A /* 1-25예레미야애가.txt in Resources */,
+				0EB0AB6D0C09B1FC8A2312D5 /* 1-26에스겔.txt in Resources */,
+				9DBFCF65BFA72D229F8DB033 /* 1-27다니엘.txt in Resources */,
+				F05755821394885468CEF8E4 /* 1-28호세아.txt in Resources */,
+				C9331A50074F22E851C9443A /* 1-29요엘.txt in Resources */,
+				AE6BB3889871E64062E71496 /* 1-30아모스.txt in Resources */,
+				663BE2D2C5D83CEDC5951A6F /* 1-31오바댜.txt in Resources */,
+				251B8A012A0AAE2D14C2493C /* 1-32요나.txt in Resources */,
+				734F020E751082745E084D51 /* 1-33미가.txt in Resources */,
+				58ABEB31D3CA699080FF1162 /* 1-34나훔.txt in Resources */,
+				E8A7D6627D6B1E5AC5EB97D1 /* 1-35하박국.txt in Resources */,
+				BEA0676CD26E76D54D798F03 /* 1-36스바냐.txt in Resources */,
+				FC6D66FA38192C6745FFCB99 /* 1-37학개.txt in Resources */,
+				DF225C654CF8CD29FCE2C5C1 /* 1-38스가랴.txt in Resources */,
+				A16E279E11542A22ADD64920 /* 1-39말라기.txt in Resources */,
+				0811973629486212C4352D54 /* 2-01마태복음.txt in Resources */,
+				C0CA319D8040056A551C7AD6 /* 2-02마가복음.txt in Resources */,
+				307994269BE11D33BDB891B9 /* 2-03누가복음.txt in Resources */,
+				BF82CCB38F175B77D25F6700 /* 2-04요한복음.txt in Resources */,
+				277BD147D700939E26718A65 /* 2-05사도행전.txt in Resources */,
+				E3B41493CAF794770B3BD9CA /* 2-06로마서.txt in Resources */,
+				2E63083D315C008212019695 /* 2-07고린도전서.txt in Resources */,
+				784152F8A9490B09990B609D /* 2-08고린도후서.txt in Resources */,
+				8CE6A6D98FDABFE09B2FB9DB /* 2-09갈라디아서.txt in Resources */,
+				F405DA5030E2F368DFFB6EFE /* 2-10에베소서.txt in Resources */,
+				0C28F21438EC1B9A937B4CBA /* 2-11빌립보서.txt in Resources */,
+				02FD1A5D9B68194684C9DE1F /* 2-12골로새서.txt in Resources */,
+				28964E4EED0179458D0341CE /* 2-13데살로니가전서.txt in Resources */,
+				24367C7D91AC141294C586E8 /* 2-14데살로니가후서.txt in Resources */,
+				74A4FD2610DA75FDBE186705 /* 2-15디모데전서.txt in Resources */,
+				69B95363B47C7708263BF97C /* 2-16디모데후서.txt in Resources */,
+				95EE392AF50C31F3C6C40CD8 /* 2-17디도서.txt in Resources */,
+				BCBA0F316C03C808C620C447 /* 2-18빌레몬서.txt in Resources */,
+				D8DF467FB903398BF01BE725 /* 2-19히브리서.txt in Resources */,
+				12908A1913798BD34C208735 /* 2-20야고보서.txt in Resources */,
+				861AA8D5D3905249BE690C0F /* 2-21베드로전서.txt in Resources */,
+				8284CC8BEA7B76246C750916 /* 2-22베드로후서.txt in Resources */,
+				D85754B7957929DB29B944B6 /* 2-23요한일서.txt in Resources */,
+				1C047143BB58A53273CC92A7 /* 2-24요한이서.txt in Resources */,
+				862E7B71DFAE6B037807948B /* 2-25요한삼서.txt in Resources */,
+				09EFF0CDF47796F310966BEC /* 2-26유다서.txt in Resources */,
+				540DFF0557AE32BD4FF6AC8F /* 2-27요한계시록.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,6 +913,7 @@
 				PRODUCT_NAME = BibleTest;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -934,6 +936,7 @@
 				PRODUCT_NAME = BibleTest;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -965,6 +968,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -986,6 +990,7 @@
 				PRODUCT_NAME = Bible_Bible;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -1016,6 +1021,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -1036,6 +1042,7 @@
 				PRODUCT_NAME = Bible_Bible;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
