@@ -15,7 +15,9 @@ struct Bible: Equatable {
     //MARK: - txt fileRead
     func fileRead() -> [String] {
         // 파일 경로
-        let textPath = Bundle.main.path(forResource: "\(self.title.rawValue)", ofType: nil)
+        guard let textPath = Bundle.main.path(forResource: "\(self.title.rawValue)", ofType: nil) else {
+            return ["경로없음"]
+        }
         // 한글 인코딩
         let encodingEUCKR = CFStringConvertEncodingToNSStringEncoding(0x0422)
     
@@ -23,7 +25,7 @@ struct Bible: Equatable {
 
         // 파일 읽기
         do {
-            let contents = try String(contentsOfFile: textPath!, encoding: String.Encoding(rawValue: encodingEUCKR))
+            let contents = try String(contentsOfFile: textPath, encoding: String.Encoding(rawValue: encodingEUCKR))
             genesis = contents.components(separatedBy: "\r")
 
         } catch let e {
