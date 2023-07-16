@@ -6,37 +6,7 @@
 //
 
 import SwiftUI
-
-import ComposableArchitecture
 import RealmSwift
-
-struct MainFeature: ReducerProtocol {
-  struct State: Equatable {
-    var bible: Bible = .init(title: .genesis)
-    var showingSettingSheet: Bool = false
-    var showingTitle: Bool = false
-  }
-  
-  enum Action: Equatable {
-    case moveNextChapter
-    case moveBeforeChapter
-    case showTitle
-    case hideTitle
-    case showSettingSheet
-    case hideSettingSheet
-    case showDrawView
-    case hideDrawView
-  }
-  
-  func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-    switch action {
-    default :
-      return .none
-    }
-  }
-  
-}
-
 
 public struct ContentView: View {
     
@@ -47,15 +17,17 @@ public struct ContentView: View {
     @ObservedResults(SettingManager.self, configuration: Realm.Configuration(schemaVersion: 1)) var settingValue        //셋팅값을 위한 RealmDB
 
         
-  public init() {
-    self.bibleTitle = .genesis
-    self.chapterNum = 1
-    self.showingSheet = false
-    self.showTitle = false
-  }
+    public init() {
+        self.bibleTitle = .genesis
+        self.chapterNum = 1
+        self.showingSheet = false
+        self.showTitle = false
+        @ObservedResults(SettingManager.self, configuration: Realm.Configuration(schemaVersion: 1)) var settingValue        //셋팅값을 위한 RealmDB
+    }
+    
     
     public var body: some View {
-        let setting = settingValue.first ?? SettingManager()      
+        let setting = settingValue.first ?? SettingManager()
 
         return BibleView(bibleTitle: $bibleTitle, chapterNum: $chapterNum, showTitle: $showTitle, settingValue: setting)
             .overlay() {
@@ -64,7 +36,7 @@ public struct ContentView: View {
             }.onAppear(){
                 
                 let saved = RecentWritingManager().getSetting()
-              Log.debug(saved)
+                print(saved)
                 chapterNum = Int(String(saved.components(separatedBy: "txt").last!))!
                 bibleTitle = BibleTitle(rawValue: saved.components(separatedBy: "txt").first! + "txt")!
                 

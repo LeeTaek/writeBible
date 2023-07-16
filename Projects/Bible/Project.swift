@@ -23,4 +23,5 @@ let project = Project.makeModule(
     ],
     sources: "Feature/**",
     resources: "Feature/Component/DesignSystems/Resource/**"
+//    resources: "Resource/**"
 )

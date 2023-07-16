@@ -34,7 +34,7 @@ struct BibleView: View {
     
     //MARK: - 성경 본문 view
     var writeView: some View {
-        let bible = Bible(title: bibleTitle)
+        let bible = Bible(title: bibleTitle.rawValue)
         let keyTitle = bibleTitle.rawValue + chapterNum.description
         let dragGesture = DragGesture()
             .onChanged({
@@ -57,7 +57,7 @@ struct BibleView: View {
                     } else {
                         bibleTitle.before()
                         if bibleTitle != .genesis {
-                            self.chapterNum = Bible(title: bibleTitle).getLastChapter()
+                            self.chapterNum = Bible(title: bibleTitle.rawValue).getLastChapter()
                         }
                     }
                 }
@@ -91,7 +91,7 @@ struct BibleView: View {
                         })
                         
                         // 성경 본문
-                        ForEach(bible.makeBible(title: bibleTitle).filter{$0.chapter == chapterNum}, id: \.sentence ) { name in
+                        ForEach(bible.makeBible(title: bibleTitle.rawValue).filter{$0.chapter == chapterNum}, id: \.sentence ) { name in
                             let showChpaterTitle = checkChapterTitle(chapterTitle: name.chapterTitle)
                             
                             VStack() {

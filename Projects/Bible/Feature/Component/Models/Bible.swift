@@ -3,8 +3,8 @@
 
 import Foundation
 
-struct Bible: Equatable {
-    var title: BibleTitle
+struct Bible {
+    var title: String
     var chapterTitle: String?
     var chapter: Int = 1
     var section: Int = 1
@@ -15,9 +15,7 @@ struct Bible: Equatable {
     //MARK: - txt fileRead
     func fileRead() -> [String] {
         // 파일 경로
-        guard let textPath = Bundle.main.path(forResource: "\(self.title.rawValue)", ofType: nil) else {
-            return ["경로없음"]
-        }
+        let textPath = Bundle.module.path(forResource: "\(self.title)", ofType: nil)
         // 한글 인코딩
         let encodingEUCKR = CFStringConvertEncodingToNSStringEncoding(0x0422)
     
@@ -25,18 +23,19 @@ struct Bible: Equatable {
 
         // 파일 읽기
         do {
-            let contents = try String(contentsOfFile: textPath, encoding: String.Encoding(rawValue: encodingEUCKR))
+            let contents = try String(contentsOfFile: textPath!, encoding: String.Encoding(rawValue: encodingEUCKR))
+            Log.debug(textPath)
             genesis = contents.components(separatedBy: "\r")
 
         } catch let e {
-          Log.debug(e.localizedDescription)
+            print(e.localizedDescription)
         }
         return genesis
     }
     
     
     //MARK: - 바이블 객체 생성
-    func makeBible(title: BibleTitle) -> [Bible] {
+    func makeBible(title: String) -> [Bible] {
         let str = fileRead()
         var bible = [Bible]()
         
@@ -185,10 +184,4 @@ enum BibleTitle: String, Equatable, CaseIterable {
     }
     
 }
-
-
-
-
-
-
 

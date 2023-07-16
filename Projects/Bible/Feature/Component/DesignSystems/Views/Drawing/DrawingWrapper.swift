@@ -16,7 +16,7 @@ struct DrawingWrapper : UIViewControllerRepresentable {
     
     typealias UIViewControllerType = DrawingViewController
     
-    @ObservedObject var manager: DrawingManager
+    var manager: DrawingManager
     var title: String
     
     func makeUIViewController(context: Context) -> DrawingViewController {
