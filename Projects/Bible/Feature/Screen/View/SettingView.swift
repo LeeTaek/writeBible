@@ -12,16 +12,25 @@
 
 import SwiftUI
 
+import ComposableArchitecture
+
 struct SettingView: View {
+    let store: StoreOf<SettingStore>
+    @ObservedObject var viewStore: ViewStoreOf<SettingStore>
+    
     @State var setting: SettingModel
     @Binding var showSettingSheet: Bool
     var settingManager = SettingManager()
    
+    init(store: StoreOf<SettingStore>) {
+        self.store = store
+        self.viewStore = ViewStore(self.store, observe: { $0 })
+    }
+    
 
     var body: some View {
         VStack{
             settingTitle
-            
             settingView
         }.interactiveDismissDisabled(true)
     }
@@ -38,14 +47,18 @@ struct SettingView: View {
             
             Spacer()
             
-            Button(action: {
-                settingManager.updateSetting(setting: setting)
-                showSettingSheet = false
-            }) {
-                Image(systemName: "x.circle")
-                    .foregroundColor(.titleTextColor)
+//            Button(action: {
+//                settingManager.updateSetting(setting: setting)
+//                showSettingSheet = false
+//            }) {
+//                Image(systemName: "x.circle")
+//                    .foregroundColor(.titleTextColor)
+//            }
+//            .padding()
+            
+            Button("+") {
+                viewStore.send(.closeSettingSheet(true))
             }
-            .padding()
         }
         .background(Color.titleBackground)
     }
@@ -101,12 +114,24 @@ struct SettingView: View {
                 Form {
                     // 글체 설정
                     Section {
-                        Picker("글체", selection: $setting.font) {
-                            ForEach(FontCase.allCases, id: \.self) {
-                                fontTitle(font: $0)
-                                    .tag($0)
-                            }
-                        }.pickerStyle(.segmented)
+//                        Picker("글체", selection: $setting.font) {
+//                            ForEach(FontCase.allCases, id: \.self) {
+//                                fontTitle(font: $0)
+//                                    .tag($0)
+//                            }
+//                        }.pickerStyle(.segmented)
+                        
+                    
+                        Picker("글체",
+                               selection: viewStore.binding(
+                                get: \.setting,
+                                send: .fontChanged(setting.font))) {
+                                    ForEach(FontCase.allCases, id: \.self) {
+                                        fontTitle(font: $0)
+                                            .tag($0)
+                                    }
+                                }
+                                .pickerStyle(.segmented)
                         
                     } header: {
                         Text("글체")

@@ -16,7 +16,6 @@ import RealmSwift
 class SettingManager: Object, ObjectKeyIdentifiable {
     static let shared = SettingManager()
     
-    
     @Persisted(primaryKey: true) var id: Int
     @Persisted var lineSpace: Float
     @Persisted var fontSize: Float

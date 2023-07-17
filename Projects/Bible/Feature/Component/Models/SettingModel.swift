@@ -8,7 +8,7 @@
 //import Foundation
 import SwiftUI
 
-struct SettingModel {
+struct SettingModel: Hashable {
     var lineSpace: CGFloat
     var fontSize: CGFloat
     var traking: CGFloat

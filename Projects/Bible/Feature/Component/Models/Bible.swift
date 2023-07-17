@@ -3,7 +3,7 @@
 
 import Foundation
 
-struct Bible {
+struct Bible: Equatable {
     var title: String
     var chapterTitle: String?
     var chapter: Int = 1
