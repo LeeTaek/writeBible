@@ -1,6 +1,5 @@
 //
-//  WriteBibleApp.swift
-//  WriteBible
+//  WriteBibleApp.swX
 //
 //  Created by 이택성 on 2022/06/02.
 //

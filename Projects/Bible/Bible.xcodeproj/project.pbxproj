@@ -50,8 +50,6 @@
 		6CD4C836770EEA0171A95B8A /* 1-25예레미야애가.txt in Resources */ = {isa = PBXBuildFile; fileRef = C67CEE70168FCBB00FE32DC0 /* 1-25예레미야애가.txt */; };
 		7300F1D51A1D93A6259F2EB5 /* 1-17에스더.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A3D18B72E4DD5B0BBA9D36A /* 1-17에스더.txt */; };
 		734F020E751082745E084D51 /* 1-33미가.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F426A919A48527C875D4A2F /* 1-33미가.txt */; };
-		74567A962A6560B90027A6D7 /* BibleSentenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74567A952A6560B90027A6D7 /* BibleSentenceStore.swift */; };
-		74567A9B2A6565500027A6D7 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74567A9A2A6565500027A6D7 /* SettingStore.swift */; };
 		74A4FD2610DA75FDBE186705 /* 2-15디모데전서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 155508F002F9B451306ED2C3 /* 2-15디모데전서.txt */; };
 		775DA539E4BBCAEEB04E50C5 /* 1-18욥기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 97BBD4361E3C3197E410A725 /* 1-18욥기.txt */; };
 		784152F8A9490B09990B609D /* 2-08고린도후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B4936C70A5F666563DCCDAD /* 2-08고린도후서.txt */; };
@@ -65,6 +63,8 @@
 		8CE6A6D98FDABFE09B2FB9DB /* 2-09갈라디아서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 059887ACBDFE25F65F31FDBF /* 2-09갈라디아서.txt */; };
 		95C9FA2C832C282ACC67065C /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B354F6E7091B31BD95323E4 /* DrawingDocument.swift */; };
 		95EE392AF50C31F3C6C40CD8 /* 2-17디도서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CC7D9D9028C0F4ECB7254 /* 2-17디도서.txt */; };
+		99D8B4DD2A6921C000ACDF41 /* SettingDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8B4DC2A6921C000ACDF41 /* SettingDTO.swift */; };
+		99D8B4DF2A6921CB00ACDF41 /* WrittenBibleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8B4DE2A6921CB00ACDF41 /* WrittenBibleDTO.swift */; };
 		9DBFCF65BFA72D229F8DB033 /* 1-27다니엘.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C6DB11E00EB77A06DF2473E /* 1-27다니엘.txt */; };
 		9DC00B65B5E1C35AB1A4F9B4 /* 1-14역대하.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3FEC98884A554CFB2CD50B1 /* 1-14역대하.txt */; };
 		9DDFB4A10D4A0ECC0616E205 /* 1-13역대상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 782EF7CC07F839E8800DE450 /* 1-13역대상.txt */; };
@@ -77,6 +77,7 @@
 		AE6BB3889871E64062E71496 /* 1-30아모스.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3C07AEEA6F6A0BAA59EA082 /* 1-30아모스.txt */; };
 		B675279A012C77AC2D49494D /* 나눔손글씨 꽃내음.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2263C6A5D59951589212B8BB /* 나눔손글씨 꽃내음.ttf */; };
 		B790EA8CD72DAD8BAB7A81D1 /* Bible_Bible.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = CED0E1E1CA34FD2A7200B396 /* Bible_Bible.bundle */; platformFilter = ios; };
+		B9B013DCE85A3F0A72313ED7 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F05EC2FEAF129487E1E5D /* SettingStore.swift */; };
 		BCA65C82EE361A40009BB3FF /* 1-08룻기.txt in Resources */ = {isa = PBXBuildFile; fileRef = 390C4F3801073F1396552FE5 /* 1-08룻기.txt */; };
 		BCBA0F316C03C808C620C447 /* 2-18빌레몬서.txt in Resources */ = {isa = PBXBuildFile; fileRef = DDADEA00CA1409D278507FB6 /* 2-18빌레몬서.txt */; };
 		BEA0676CD26E76D54D798F03 /* 1-36스바냐.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92A17C08DBD910EC4D8D2E92 /* 1-36스바냐.txt */; };
@@ -97,6 +98,7 @@
 		DFAF09DDF30AE83FF8C2B7AB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D729CC549B0FC7F914B999 /* String+Extension.swift */; };
 		E3B41493CAF794770B3BD9CA /* 2-06로마서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 11F9FE6960A26D66B8F16EA5 /* 2-06로마서.txt */; };
 		E5796C5ADB0CF6D849A13F55 /* 1-11열왕기상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28313E81A1214190F17AF4CC /* 1-11열왕기상.txt */; };
+		E781670B8F001D62D586FA77 /* BibleSentenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D3AD1F9647DF59BA2FD8A /* BibleSentenceStore.swift */; };
 		E8A7D6627D6B1E5AC5EB97D1 /* 1-35하박국.txt in Resources */ = {isa = PBXBuildFile; fileRef = 94E4B9FFC7DF25DEB200B595 /* 1-35하박국.txt */; };
 		E9D8B6B5E232D7A5D97DD9B2 /* 1-16느헤미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74833548980BD17DF238BCAB /* 1-16느헤미야.txt */; };
 		ED7497B009A6F3DE65F20A86 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509740F7B03F8597AC1574AB /* ScrollPreferenceKey.swift */; };
@@ -185,6 +187,7 @@
 		1FBF43435E78E0496BD07DD4 /* BibleSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleSentenceView.swift; sourceTree = "<group>"; };
 		2263C6A5D59951589212B8BB /* 나눔손글씨 꽃내음.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 꽃내음.ttf"; sourceTree = "<group>"; };
 		24608C1203183B7DCFD79EC7 /* Bible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		250F05EC2FEAF129487E1E5D /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 		28313E81A1214190F17AF4CC /* 1-11열왕기상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-11열왕기상.txt"; sourceTree = "<group>"; };
 		283CB0EEA2B5731A9CD8677B /* RecentWritingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWritingManager.swift; sourceTree = "<group>"; };
 		28638A02E25D66040CEE2544 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
@@ -214,8 +217,6 @@
 		6C9122BC5B2E68A8C3A59864 /* 2-01마태복음.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-01마태복음.txt"; sourceTree = "<group>"; };
 		71F3F728561DA2186B5B0F66 /* TuistBundle+Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Bible.swift"; sourceTree = "<group>"; };
 		738FAE0E93A738D6D7C523D1 /* 1-26에스겔.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-26에스겔.txt"; sourceTree = "<group>"; };
-		74567A952A6560B90027A6D7 /* BibleSentenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleSentenceStore.swift; sourceTree = "<group>"; };
-		74567A9A2A6565500027A6D7 /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 		74833548980BD17DF238BCAB /* 1-16느헤미야.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-16느헤미야.txt"; sourceTree = "<group>"; };
 		77318F6AAB3FA712E93E70FC /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		782EF7CC07F839E8800DE450 /* 1-13역대상.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-13역대상.txt"; sourceTree = "<group>"; };
@@ -233,6 +234,8 @@
 		94ADB563219A89FA47A0D675 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		94E4B9FFC7DF25DEB200B595 /* 1-35하박국.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-35하박국.txt"; sourceTree = "<group>"; };
 		97BBD4361E3C3197E410A725 /* 1-18욥기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-18욥기.txt"; sourceTree = "<group>"; };
+		99D8B4DC2A6921C000ACDF41 /* SettingDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDTO.swift; sourceTree = "<group>"; };
+		99D8B4DE2A6921CB00ACDF41 /* WrittenBibleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenBibleDTO.swift; sourceTree = "<group>"; };
 		99E48CC48CCB3011B0EB7840 /* 2-26유다서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-26유다서.txt"; sourceTree = "<group>"; };
 		9A3CC7D9D9028C0F4ECB7254 /* 2-17디도서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-17디도서.txt"; sourceTree = "<group>"; };
 		9B4936C70A5F666563DCCDAD /* 2-08고린도후서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-08고린도후서.txt"; sourceTree = "<group>"; };
@@ -246,6 +249,7 @@
 		B0811F70CC0B8C34D58DDCCB /* 1-20잠언.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-20잠언.txt"; sourceTree = "<group>"; };
 		B17EB4E777A53A66FA6A5726 /* 1-01창세기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
 		B49A3DABB00A86699075306D /* Bible_Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible_Bible-Info.plist"; sourceTree = "<group>"; };
+		B57D3AD1F9647DF59BA2FD8A /* BibleSentenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleSentenceStore.swift; sourceTree = "<group>"; };
 		B7DEE92B1B5D7EF35E3FDE5E /* Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible-Info.plist"; sourceTree = "<group>"; };
 		BE3A8E9AC5F3D61B5A519BB4 /* 2-27요한계시록.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-27요한계시록.txt"; sourceTree = "<group>"; };
 		BF94266FE4055B0D7404B7AA /* BibleTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibleTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +315,7 @@
 		069A83757333A7F202931D62 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				99D8B4DA2A69216B00ACDF41 /* Data */,
 				38927DFE4FEDAB77297BB1A3 /* Component */,
 				B7600273CD34E8EB259E024B /* Coordinator */,
 				3668961CA106F9C5F417635F /* Screen */,
@@ -440,7 +445,7 @@
 		3668961CA106F9C5F417635F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				74567A972A65650C0027A6D7 /* Store */,
+				CF4464441168FB966B67AEC2 /* Store */,
 				2F02FD91AADB66E542F3E6A9 /* View */,
 				8BFFE4BF4C2BA2DC0E35B59E /* ContentView.swift */,
 			);
@@ -466,6 +471,14 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		6151792C93E9E040D8328ADD /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				B57D3AD1F9647DF59BA2FD8A /* BibleSentenceStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		62B50BAE9BEA4856D35103E4 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,22 +496,6 @@
 				78F8E58FD92E63F9B9FDC12E /* Sources */,
 			);
 			path = Derived;
-			sourceTree = "<group>";
-		};
-		74567A942A6560970027A6D7 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				74567A952A6560B90027A6D7 /* BibleSentenceStore.swift */,
-			);
-			path = Store;
-			sourceTree = "<group>";
-		};
-		74567A972A65650C0027A6D7 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				74567A9A2A6565500027A6D7 /* SettingStore.swift */,
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		78F8E58FD92E63F9B9FDC12E /* Sources */ = {
@@ -538,6 +535,15 @@
 			);
 			sourceTree = "<group>";
 		};
+		99D8B4DA2A69216B00ACDF41 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				99D8B4DC2A6921C000ACDF41 /* SettingDTO.swift */,
+				99D8B4DE2A6921CB00ACDF41 /* WrittenBibleDTO.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		B7600273CD34E8EB259E024B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,11 +574,19 @@
 		CC354075A8E29CF56E2262EC /* DesignSystems */ = {
 			isa = PBXGroup;
 			children = (
-				74567A942A6560970027A6D7 /* Store */,
 				C02BEBCFC600F0747066E7A6 /* Resource */,
+				6151792C93E9E040D8328ADD /* Store */,
 				041801735D000F8AB39690B6 /* Views */,
 			);
 			path = DesignSystems;
+			sourceTree = "<group>";
+		};
+		CF4464441168FB966B67AEC2 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				250F05EC2FEAF129487E1E5D /* SettingStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		E6C8ACF4024764E7B2937125 /* Models */ = {
@@ -674,7 +688,6 @@
 		77AC0A7F0DB2CAC8D7AD95CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = leetaek;
 			};
 			buildConfigurationList = 603F9F5D189033E2487336C3 /* Build configuration list for PBXProject "Bible" */;
@@ -807,7 +820,9 @@
 				394E8915D6DCFA11C305E3BF /* ColorManager.swift in Sources */,
 				F3FB0345FC07C45754886536 /* OSLog+Extension.swift in Sources */,
 				DFAF09DDF30AE83FF8C2B7AB /* String+Extension.swift in Sources */,
+				E781670B8F001D62D586FA77 /* BibleSentenceStore.swift in Sources */,
 				A0075984636350017DDC9664 /* BibleSentenceView.swift in Sources */,
+				99D8B4DD2A6921C000ACDF41 /* SettingDTO.swift in Sources */,
 				64AF18CC71493190D1B11207 /* TitleView.swift in Sources */,
 				28A4647D5AD78BFFA15E7E20 /* DrawingViewController.swift in Sources */,
 				C8D330894639AEE2C83AFC8D /* DrawingWrapper.swift in Sources */,
@@ -815,15 +830,15 @@
 				95C9FA2C832C282ACC67065C /* DrawingDocument.swift in Sources */,
 				ED7497B009A6F3DE65F20A86 /* ScrollPreferenceKey.swift in Sources */,
 				3697A7D22E8DD5EE851FCB30 /* SettingModel.swift in Sources */,
-				74567A962A6560B90027A6D7 /* BibleSentenceStore.swift in Sources */,
 				4A6FD160F4CF1E419EAD993D /* DrawingManager.swift in Sources */,
-				74567A9B2A6565500027A6D7 /* SettingStore.swift in Sources */,
 				D27008D332746B7586AB1A22 /* RealmManager.swift in Sources */,
 				A40445F4BDD629EC7EF3E382 /* RecentWritingManager.swift in Sources */,
 				F3AC0522E01B50C4E5428506 /* SettingManager.swift in Sources */,
 				38715F5CE0C5F878229C90B9 /* Coordinator.swift in Sources */,
 				28A9D182BD4B712A19939782 /* ContentView.swift in Sources */,
+				B9B013DCE85A3F0A72313ED7 /* SettingStore.swift in Sources */,
 				692E3164A070537E2476A8C4 /* BibleView.swift in Sources */,
+				99D8B4DF2A6921CB00ACDF41 /* WrittenBibleDTO.swift in Sources */,
 				22FCB70AA49433C779C2120F /* SettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -927,7 +942,6 @@
 				PRODUCT_NAME = BibleTest;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -950,7 +964,6 @@
 				PRODUCT_NAME = BibleTest;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -982,7 +995,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1004,7 +1016,6 @@
 				PRODUCT_NAME = Bible_Bible;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -1035,7 +1046,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -1056,7 +1066,6 @@
 				PRODUCT_NAME = Bible_Bible;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

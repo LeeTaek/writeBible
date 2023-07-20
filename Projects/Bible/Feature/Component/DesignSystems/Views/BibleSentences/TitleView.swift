@@ -65,7 +65,7 @@ struct TitleView: View {
                     
             }.sheet(isPresented: $showiSettingSheet) {
                 // 앱 처음 실행시 셋팅값이 없다면 setting 창을 띄워준다.
-                SettingView(setting: settingValue.getSetting(), showSettingSheet: $showiSettingSheet)
+//                SettingView(setting: settingValue.getSetting(), showSettingSheet: $showiSettingSheet)
             }
 
             

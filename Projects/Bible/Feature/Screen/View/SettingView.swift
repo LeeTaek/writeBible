@@ -17,10 +17,9 @@ import ComposableArchitecture
 struct SettingView: View {
     let store: StoreOf<SettingStore>
     @ObservedObject var viewStore: ViewStoreOf<SettingStore>
-    
-    @State var setting: SettingModel
-    @Binding var showSettingSheet: Bool
-    var settingManager = SettingManager()
+//    @State var setting: SettingModel
+//    @Binding var showSettingSheet: Bool
+//    var settingManager = SettingManager()
    
     init(store: StoreOf<SettingStore>) {
         self.store = store
@@ -73,24 +72,24 @@ struct SettingView: View {
                     Section {
                         VStack(alignment: .center) {
                             Text("주의 말씀의 맛이 내게 어찌 그리 단지요\n 내 입에 꿀보다 더 다니이다. \n ")
-                                .tracking(setting.traking)
-                                .font(.custom(setting.font.rawValue, size: setting.fontSize))
-                                .lineSpacing(setting.lineSpace)
+                            .tracking(viewStore.setting.traking)
+                                .font(.custom(viewStore.setting.font.rawValue, size: viewStore.setting.fontSize))
+                                .lineSpacing(viewStore.setting.lineSpace)
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                             
                             
                             
                             Text("- 시 119:103")
-                                .tracking(setting.traking)
-                                .font(.custom(setting.font.rawValue, size: setting.fontSize))
-                                .lineSpacing(setting.lineSpace)
+                                .tracking(viewStore.setting.traking)
+                                .font(.custom(viewStore.setting.font.rawValue, size: viewStore.setting.fontSize))
+                                .lineSpacing(viewStore.setting.lineSpace)
                                 .background(
                                     GeometryReader {            //라인 계산을 위한 base frame height
                                         Color.clear.preference(key: ViewHeightKey.self,
                                                                value: $0.frame(in: .local).size.height)
                                     })
                                 .onPreferenceChange(ViewHeightKey.self) {
-                                    self.setting.baseLineHeight = $0
+                                  self.viewStore.send(.baseLineChanged($0))
                                 }
                             
                             Spacer()
@@ -125,7 +124,7 @@ struct SettingView: View {
                         Picker("글체",
                                selection: viewStore.binding(
                                 get: \.setting,
-                                send: .fontChanged(setting.font))) {
+                                send: .fontChanged(viewStore.setting.font))) {
                                     ForEach(FontCase.allCases, id: \.self) {
                                         fontTitle(font: $0)
                                             .tag($0)
@@ -145,17 +144,27 @@ struct SettingView: View {
                     
                     //폰트 크기 설정
                     Section {
-                        Slider(value: $setting.fontSize, in: 20...35, step: 1){
-                            Text("fontSize")
-                        } minimumValueLabel: {
-                            Text("20")
-                        } maximumValueLabel: {
-                            Text("35")
-                        }
-                        .accentColor(.titleBackground)
-                        
+//                        Slider(value: $setting.fontSize, in: 20...35, step: 1){
+//                            Text("fontSize")
+//                        } minimumValueLabel: {
+//                            Text("20")
+//                        } maximumValueLabel: {
+//                            Text("35")
+//                        }
+//                        .accentColor(.titleBackground)
+                      
+                      Slider(value: viewStore.binding(get: \.setting.fontSize,
+                                                      send: .fontSizeChanged(viewStore.setting.fontSize)),
+                             in: 20...35,
+                             step: 1,
+                             label: { Text("fontSize") },
+                             minimumValueLabel: { Text("20") },
+                             maximumValueLabel: { Text("35") }
+                      )
+                      .accentColor(.titleBackground)
+                      
                     } header: {
-                        Text("글자 크기: \(Int(setting.fontSize))")
+                        Text("글자 크기: \(Int(viewStore.setting.fontSize))")
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
@@ -165,17 +174,27 @@ struct SettingView: View {
                     
                     // 글자 간격
                     Section {
-                        Slider(value: $setting.traking, in: 1...5, step: 1) {
-                            Text("traking")
-                        } minimumValueLabel: {
-                            Text("1")
-                        } maximumValueLabel: {
-                            Text("5")
-                        }
-                        .accentColor(.titleBackground)
+//                        Slider(value: $setting.traking, in: 1...5, step: 1) {
+//                            Text("traking")
+//                        } minimumValueLabel: {
+//                            Text("1")
+//                        } maximumValueLabel: {
+//                            Text("5")
+//                        }
+//                        .accentColor(.titleBackground)
                         
+                      Slider(value: viewStore.binding(get: \.setting.traking,
+                                                      send: .trackingChanged(viewStore.setting.traking)),
+                             in: 1...5,
+                             step: 1,
+                             label: { Text("traking") },
+                             minimumValueLabel: { Text("1") },
+                             maximumValueLabel: { Text("5") }
+                      )
+                      .accentColor(.titleBackground)
+
                     } header: {
-                        Text("글자 간격 : \(Int(setting.traking))")
+                        Text("글자 간격 : \(Int(viewStore.setting.traking))")
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
@@ -186,18 +205,28 @@ struct SettingView: View {
                     
                     // 줄 간격
                     Section {
-                        Slider(value: $setting.lineSpace, in: 10...25, step: 1) {
-                            Text("line spacing")
-                        } minimumValueLabel: {
-                            Text("10")
-                        } maximumValueLabel: {
-                            Text("25")
-                        }
-                        .accentColor(.titleBackground)
+//                        Slider(value: $setting.lineSpace, in: 10...25, step: 1) {
+//                            Text("line spacing")
+//                        } minimumValueLabel: {
+//                            Text("10")
+//                        } maximumValueLabel: {
+//                            Text("25")
+//                        }
+//                        .accentColor(.titleBackground)
                         
+                      
+                      Slider(value: viewStore.binding(get: \.setting.lineSpace,
+                                                      send: .trackingChanged(viewStore.setting.lineSpace)),
+                             in: 10...25,
+                             step: 1,
+                             label: { Text("line spacing") },
+                             minimumValueLabel: { Text("10") },
+                             maximumValueLabel: { Text("25") }
+                      )
+                      .accentColor(.titleBackground)
                         
                     } header: {
-                        Text("줄 간격 : \(Int(setting.lineSpace))")
+                        Text("줄 간격 : \(Int(viewStore.setting.lineSpace))")
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
@@ -207,15 +236,25 @@ struct SettingView: View {
                     }
                     
                     // 완료 버튼
-                    Button(action: {
-                        settingManager.updateSetting(setting: setting)
-                        self.showSettingSheet.toggle()
-                    }) {
-                        Text("완료")
-                            .fontWeight(.bold)
-                            .foregroundColor(.titleBackground)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                    }
+//                    Button(action: {
+//                        settingManager.updateSetting(setting: setting)
+//                        self.showSettingSheet.toggle()
+//                    }) {
+//                        Text("완료")
+//                            .fontWeight(.bold)
+//                            .foregroundColor(.titleBackground)
+//                            .frame(maxWidth: .infinity, alignment: .center)
+//                    }
+//
+                  Button(action: {
+                    viewStore.send(.closeSettingSheet(true))
+                  }, label: {
+                    Text("완료")
+                        .fontWeight(.bold)
+                        .foregroundColor(.titleBackground)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                  })
+                         
                 } /// Form
             }/// HStack
         }///geometry
@@ -245,8 +284,30 @@ struct SettingView: View {
 
 
 
-struct SettinView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingView(setting: (SettingModel(lineSpace: 11, fontSize: 20, traking: 2)), showSettingSheet: .constant(false))
-    }
-}
+//struct SettinView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let setting = SettingModel(lineSpace: 11, fontSize: 20, traking: 2)
+//        var showing = true
+//        let settingManager = SettingManager(setting: setting)
+//        
+//        let store = Store(initialState: SettingStore.State(setting: setting,
+//                                                         showSettingSheet: showing,
+//                                                         settingManager: settingManager),
+//                          reducer: SettingStore())
+//      
+//        SettingView(store: store)
+//    }
+//}
+//
+//#Preview {
+//  let setting = SettingModel(lineSpace: 11, fontSize: 20, traking: 2)
+//  var showing = true
+//  let settingManager = SettingManager(setting: setting)
+//  
+//  let store = Store(initialState: SettingStore.State(setting: setting,
+//                                                   showSettingSheet: showing,
+//                                                   settingManager: settingManager),
+//                    reducer: SettingStore())
+//
+//  return SettingView(store: store)
+//}

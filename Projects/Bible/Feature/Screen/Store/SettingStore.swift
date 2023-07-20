@@ -12,13 +12,15 @@ import ComposableArchitecture
 
 struct SettingStore: ReducerProtocol {
     struct State: Equatable {
-        var setting: SettingModel
-        var showSettingSheet: Bool
-        var settingManager: SettingManager
+      @BindingState var setting: SettingModel
+      @BindingState var showSettingSheet: Bool
+      @BindingState var settingManager: SettingManager
     }
     
     enum Action: Equatable {
+      case binding(BindingAction<State>)
         case closeSettingSheet(Bool)
+        case baseLineChanged(CGFloat)
         case fontChanged(FontCase)
         case fontSizeChanged(CGFloat)
         case trackingChanged(CGFloat)
@@ -28,9 +30,14 @@ struct SettingStore: ReducerProtocol {
     
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
+        case .binding:
+          return .none
         case .closeSettingSheet(let isClose):
             state.showSettingSheet = isClose
             return .none
+        case .baseLineChanged(let baseline):
+          state.setting.baseLineHeight = baseline
+          return .none
         case .fontChanged(let font):
             state.setting.font = font
             return .none

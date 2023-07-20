@@ -215,10 +215,7 @@
 		8B89685F231F6AE171A68263 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = leetaek;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = C8665897A1FA99D5B3BCA95B /* Build configuration list for PBXProject "Carve" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -277,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = H4MSW7FUBB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -288,7 +286,6 @@
 				PRODUCT_NAME = Carve;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -413,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = H4MSW7FUBB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -424,7 +422,6 @@
 				PRODUCT_NAME = Carve;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
