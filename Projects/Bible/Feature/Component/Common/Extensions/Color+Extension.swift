@@ -1,5 +1,5 @@
 //
-//  ColorManager.swift
+//  Color+Extension.swift
 //  WriteBible
 //
 //  Created by 이택성 on 2022/06/24.
