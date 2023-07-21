@@ -10,5 +10,8 @@
       <FileRef
          location = "group:Bible/Bible.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Data/Data.xcodeproj">
+      </FileRef>
    </Group>
 </Workspace>
