@@ -11,27 +11,26 @@ import Foundation
 import ComposableArchitecture
 
 struct SettingStore: ReducerProtocol {
+  @Dependency(\.settingRepository) var repository
+  
     struct State: Equatable {
-      @BindingState var setting: SettingModel
-      @BindingState var showSettingSheet: Bool
-      @BindingState var settingManager: SettingManager
+      var setting: SettingVO
+      var showSettingSheet: Bool
     }
     
     enum Action: Equatable {
-      case binding(BindingAction<State>)
         case closeSettingSheet(Bool)
         case baseLineChanged(CGFloat)
         case fontChanged(FontCase)
         case fontSizeChanged(CGFloat)
         case trackingChanged(CGFloat)
         case lineSpaceChanged(CGFloat)
-        case updateSetting(Bool)
+        case updateSetting(SettingVO)
+         case saveData(TaskResult<SettingRealmDTO>)
     }
     
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
-        case .binding:
-          return .none
         case .closeSettingSheet(let isClose):
             state.showSettingSheet = isClose
             return .none
@@ -50,10 +49,19 @@ struct SettingStore: ReducerProtocol {
         case .lineSpaceChanged(let lineSpace):
             state.setting.lineSpace = lineSpace
             return .none
-        case .updateSetting(let isUpdate):
-            state.settingManager.updateSetting(setting: state.setting)
-            state.showSettingSheet = isUpdate
-            return .none
+        case .updateSetting(let setting):
+          return .run { send in
+            await send(.saveData(
+              TaskResult {
+                try await SettingRealmDataSrouce.shared.update(data: setting.toDTO())
+              }
+            ))
+          }
+        case let .saveData(.success(settingDto)):
+          state.setting = settingDto.toDomain()
+          return .send(.closeSettingSheet(true))
+        case .saveData(.failure(_)):
+          return .send(.closeSettingSheet(true))
         }
     }
     

@@ -8,60 +8,37 @@
 
 import Foundation
 
-import RealmSwift
-
-public protocol RealmRepository {
-  associatedtype value
-  var realm: Realm? { get }
-  var realmQueue: DispatchQueue! { get }
-  func create(data: value) async throws -> value
-  func read(data: value) async throws
-  func update(data: value) async throws
-  func delete(data: value) async throws
-}
-
-extension RealmRepository {
-  var realm: Realm? {
-    do {
-      let realm = try Realm()
-      Log.debug("📂\(self)'s file UTL: \(String(describing: realm.configuration.fileURL))")
-      return realm
-    } catch {
-      print("Error initiating new realm \(error)")
-      return nil
-    }
-  }
-  
-  var realmQueue: DispatchQueue! {
-    return DispatchQueue(label: "realm-queue")
-  }
-}
+import Dependencies
 
 struct SettingRealmRepository: RealmRepository {
-  typealias value = SettingRealmObject
-  
-  var realm: Realm!
-  var realmQueue: DispatchQueue!
-  
-  func create(data: SettingRealmObject) async throws -> SettingRealmObject {
-    <#code#>
-  }
-  
-  func read(data: SettingRealmObject) async throws {
-    <#code#>
-  }
-  
-  func update(data: SettingRealmObject) async throws {
-    <#code#>
-  }
-  
-  func delete(data: SettingRealmObject) async throws {
-    <#code#>
-  }
-  
+  typealias value = SettingVO
+  var fetch: @Sendable () async throws -> SettingVO
 }
 
-class SettingRealmObject: Object {
+
+extension SettingRealmRepository: DependencyKey {
+  static var liveValue: SettingRealmRepository = Self(
+    fetch: { 
+      try await SettingRealmDataSrouce.shared.read().toDomain()
+    })
   
+  static let testValue: SettingRealmRepository = Self(
+    fetch: {
+      return SettingRealmDTO(lineSpace: 20,
+                             fontSize: 20,
+                             traking: 1,
+                             baseLineHeight: 20,
+                             font: FontCase.flower.rawValue
+      )
+      .toDomain()
+    })
+}
+
+
+extension DependencyValues {
+  var settingRepository: SettingRealmRepository {
+    get { self[SettingRealmRepository.self]}
+    set { self[SettingRealmRepository.self] = newValue }
+  }
 }
 
