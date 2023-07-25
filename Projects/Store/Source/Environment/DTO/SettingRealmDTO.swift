@@ -24,14 +24,7 @@ public class SettingRealmDTO: Object {
     self.baseLineHeight = baseLineHeight
     self.font = font
   }
-  
-  enum SettingRealmObjectError: Error {
-    case savedFailure
-    case notFoundSettingData
-    case updatedFailure
-    case deleteFailure
-  }
-  
+    
   public func toStore() -> SettingVO {
     return .init(lineSpace: lineSpace,
                  fontSize: fontSize,
@@ -39,6 +32,5 @@ public class SettingRealmDTO: Object {
                  baseLineHeight: baseLineHeight,
                  font: FontCase(rawValue: font) ?? .flower)
   }
-  
 }
 

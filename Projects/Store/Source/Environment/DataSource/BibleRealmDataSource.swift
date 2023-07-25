@@ -1,8 +1,8 @@
 //
-//  SettingRealmClient.swift
-//  Bible
+//  BibleRealmDataSource.swift
+//  Store
 //
-//  Created by openobject on 2023/07/21.
+//  Created by openobject on 2023/07/25.
 //  Copyright © 2023 leetaek. All rights reserved.
 //
 
@@ -10,13 +10,13 @@ import Foundation
 
 import RealmSwift
 
-final class SettingRealmDataSrouce: RealmDataSource {
-  typealias value = SettingRealmDTO
-  static let shared = SettingRealmDataSrouce()
+final class BibleRealmDataSource: RealmDataSource {
+  typealias value = WrittenBibleRealmDTO
+  static let shared = BibleRealmDataSource()
   var realm: Realm!
   var realmQueue: DispatchQueue!
   
-  func create(data: SettingRealmDTO) async throws {
+  func create(data: WrittenBibleRealmDTO) async throws {
     try await withCheckedThrowingContinuation { continuation in
       realmQueue.async { [self] in
         do {
@@ -32,10 +32,10 @@ final class SettingRealmDataSrouce: RealmDataSource {
     }
   }
   
-  func read() async throws -> SettingRealmDTO {
+  func read() async throws -> WrittenBibleRealmDTO {
     try await withCheckedThrowingContinuation { continuation in
       realmQueue.async { [self] in
-        let loadedData = realm.objects(SettingRealmDTO.self)
+        let loadedData = realm.objects(WrittenBibleRealmDTO.self)
         guard let setting = loadedData.first else {
           Log.debug("fail in read data: \(RealmObjectError.notFoundSettingData)")
           continuation.resume(throwing: RealmObjectError.notFoundSettingData)
@@ -46,22 +46,20 @@ final class SettingRealmDataSrouce: RealmDataSource {
     }
   }
   
-  func update(data: SettingRealmDTO) async throws -> SettingRealmDTO {
-    try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<SettingRealmDTO, Error>) -> Void in
+  func update(data: WrittenBibleRealmDTO) async throws -> WrittenBibleRealmDTO {
+    try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<WrittenBibleRealmDTO, Error>) -> Void in
       realmQueue.async { [self] in
-        let loadedData = realm.objects(SettingRealmDTO.self)
-        guard let setting = loadedData.first else {
+        let loadedData = realm.objects(WrittenBibleRealmDTO.self)
+        guard let writtenData = loadedData.first else {
           Log.debug("fail in update data: \(RealmObjectError.notFoundSettingData)")
           continuation.resume(throwing: RealmObjectError.notFoundSettingData)
           return
         }
         do {
           try realm.write {
-            setting.fontSize = data.fontSize
-            setting.traking = data.traking
-            setting.lineSpace = data.lineSpace
-            setting.baseLineHeight = data.baseLineHeight
-            setting.font = data.font
+            writtenData.writtenData = data.writtenData
+            writtenData.bibleSentence = data.bibleSentence
+            writtenData.isWritten = data.isWritten
           }
           continuation.resume(returning: data)
         } catch {
@@ -72,10 +70,10 @@ final class SettingRealmDataSrouce: RealmDataSource {
     }
   }
   
-  func delete(data: SettingRealmDTO) async throws {
+  func delete(data: WrittenBibleRealmDTO) async throws {
     try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) -> Void in
       realmQueue.async { [self] in
-        let loadedData = realm.objects(SettingRealmDTO.self)
+        let loadedData = realm.objects(WrittenBibleRealmDTO.self)
         guard let setting = loadedData.first else {
           Log.debug("fail in update data: \(RealmObjectError.notFoundSettingData)")
           continuation.resume(throwing: RealmObjectError.notFoundSettingData)
@@ -93,5 +91,5 @@ final class SettingRealmDataSrouce: RealmDataSource {
       }
     }
   }
+  
 }
-

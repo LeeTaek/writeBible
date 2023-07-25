@@ -10,7 +10,6 @@ import Foundation
  
 struct SettingRealmRepository: Repository {
   typealias value = SettingVO
-  
   init() { }
   
   public func create(data: SettingVO) async throws {

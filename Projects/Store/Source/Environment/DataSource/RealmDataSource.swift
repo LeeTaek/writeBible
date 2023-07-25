@@ -18,13 +18,14 @@ protocol RealmDataSource {
   func read() async throws -> value
   func update(data: value) async throws -> value
   func delete(data: value) async throws
+
 }
 
 extension RealmDataSource {
   public var realm: Realm? {
     do {
       let realm = try Realm()
-//      Log.debug("📂\(self)'s file UTL: \(String(describing: realm.configuration.fileURL))")
+      Log.debug("📂\(self)'s file UTL: \(String(describing: realm.configuration.fileURL))")
       return realm
     } catch {
       print("Error initiating new realm \(error)")
@@ -35,4 +36,11 @@ extension RealmDataSource {
   var realmQueue: DispatchQueue! {
     return DispatchQueue(label: "realm-queue")
   }
+}
+
+enum RealmObjectError: Error {
+  case savedFailure
+  case notFoundSettingData
+  case updatedFailure
+  case deleteFailure
 }

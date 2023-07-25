@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol Repository {
+protocol Repository {
   associatedtype value
   func create(data: value) async throws
   func read() async throws -> value
