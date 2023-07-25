@@ -10,6 +10,7 @@ let project = Project.makeModule(
     ],
     dependencies: [
       .project(target: "Bible", path: .relativeToRoot("Projects/Bible")),
+      .project(target: "Store", path: .relativeToRoot("Projects/Store")),
       .FirebaseAnalytics,
       .FirebaseMessaging,
     ],

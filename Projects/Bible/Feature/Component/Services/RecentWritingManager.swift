@@ -41,7 +41,7 @@ class RecentWritingManager: Object, ObjectKeyIdentifiable {
 
         } else {
             try! realm.write {
-              Log.debug(#fileID, #function, #line, "")
+//              Log.debug(#fileID, #function, #line, "")
                 realm.add(saveData)
             }
         }

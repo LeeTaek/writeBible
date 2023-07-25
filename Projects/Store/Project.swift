@@ -2,14 +2,14 @@
 //  Project.swift
 //  ProjectDescriptionHelpers
 //
-//  Created by leetaek on 2023/07/21.
+//  Created by leetaek on 2023/07/24.
 //
 
 import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project.makeModule(
-    name: "Data",
+    name: "Store",
     product: .staticFramework,
     packages: [
       .Realm,

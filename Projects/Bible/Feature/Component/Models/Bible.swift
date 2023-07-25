@@ -24,7 +24,7 @@ struct Bible: Equatable {
         // 파일 읽기
         do {
             let contents = try String(contentsOfFile: textPath!, encoding: String.Encoding(rawValue: encodingEUCKR))
-            Log.debug(textPath)
+//            Log.debug(textPath)
             genesis = contents.components(separatedBy: "\r")
 
         } catch let e {

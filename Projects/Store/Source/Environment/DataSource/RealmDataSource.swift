@@ -10,7 +10,7 @@ import Foundation
 
 import RealmSwift
 
-public protocol RealmDataSource {
+protocol RealmDataSource {
   associatedtype value
   var realm: Realm? { get }
   var realmQueue: DispatchQueue! { get }
@@ -21,10 +21,10 @@ public protocol RealmDataSource {
 }
 
 extension RealmDataSource {
-  var realm: Realm? {
+  public var realm: Realm? {
     do {
       let realm = try Realm()
-      Log.debug("📂\(self)'s file UTL: \(String(describing: realm.configuration.fileURL))")
+//      Log.debug("📂\(self)'s file UTL: \(String(describing: realm.configuration.fileURL))")
       return realm
     } catch {
       print("Error initiating new realm \(error)")

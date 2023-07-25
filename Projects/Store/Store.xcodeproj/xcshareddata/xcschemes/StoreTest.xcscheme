@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D65736E04D603220D123A52B"
-               BuildableName = "Data_Data.bundle"
-               BlueprintName = "Data_Data"
-               ReferencedContainer = "container:Data.xcodeproj">
+               BlueprintIdentifier = "332F763C92A7CFA19752DD15"
+               BuildableName = "StoreTest.xctest"
+               BlueprintName = "StoreTest"
+               ReferencedContainer = "container:Store.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,9 +26,18 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      disableMainThreadChecker = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "332F763C92A7CFA19752DD15"
+               BuildableName = "StoreTest.xctest"
+               BlueprintName = "StoreTest"
+               ReferencedContainer = "container:Store.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -44,10 +53,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D65736E04D603220D123A52B"
-            BuildableName = "Data_Data.bundle"
-            BlueprintName = "Data_Data"
-            ReferencedContainer = "container:Data.xcodeproj">
+            BlueprintIdentifier = "332F763C92A7CFA19752DD15"
+            BuildableName = "StoreTest.xctest"
+            BlueprintName = "StoreTest"
+            ReferencedContainer = "container:Store.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -60,10 +69,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D65736E04D603220D123A52B"
-            BuildableName = "Data_Data.bundle"
-            BlueprintName = "Data_Data"
-            ReferencedContainer = "container:Data.xcodeproj">
+            BlueprintIdentifier = "332F763C92A7CFA19752DD15"
+            BuildableName = "StoreTest.xctest"
+            BlueprintName = "StoreTest"
+            ReferencedContainer = "container:Store.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

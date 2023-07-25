@@ -17,7 +17,7 @@ let project = Project.makeModule(
       .TCACoordinator
     ],
     dependencies: [
-      .project(target: "Data", path: .relativeToRoot("Projects/Data")),
+      .project(target: "Store", path: .relativeToRoot("Projects/Store")),
       .RealmSwift,
       .TCAArchitecture,
       .TCACoordinator

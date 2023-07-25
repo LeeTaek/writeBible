@@ -9,7 +9,7 @@
     setting View
     
  */
-
+import Store
 import SwiftUI
 
 import ComposableArchitecture
@@ -17,9 +17,6 @@ import ComposableArchitecture
 struct SettingView: View {
     let store: StoreOf<SettingStore>
     @ObservedObject var viewStore: ViewStoreOf<SettingStore>
-//    @State var setting: SettingModel
-//    @Binding var showSettingSheet: Bool
-//    var settingManager = SettingManager()
    
     init(store: StoreOf<SettingStore>) {
         self.store = store
@@ -121,10 +118,7 @@ struct SettingView: View {
 //                        }.pickerStyle(.segmented)
                         
                     
-                        Picker("글체",
-                               selection: viewStore.binding(
-                                get: \.setting,
-                                send: .fontChanged(viewStore.setting.font))) {
+                        Picker("글체", selection: viewStore.$setting.font) {
                                     ForEach(FontCase.allCases, id: \.self) {
                                         fontTitle(font: $0)
                                             .tag($0)
@@ -153,8 +147,7 @@ struct SettingView: View {
 //                        }
 //                        .accentColor(.titleBackground)
                       
-                      Slider(value: viewStore.binding(get: \.setting.fontSize,
-                                                      send: .fontSizeChanged(viewStore.setting.fontSize)),
+                      Slider(value: viewStore.$setting.fontSize,
                              in: 20...35,
                              step: 1,
                              label: { Text("fontSize") },
@@ -183,8 +176,7 @@ struct SettingView: View {
 //                        }
 //                        .accentColor(.titleBackground)
                         
-                      Slider(value: viewStore.binding(get: \.setting.traking,
-                                                      send: .trackingChanged(viewStore.setting.traking)),
+                      Slider(value: viewStore.$setting.traking,
                              in: 1...5,
                              step: 1,
                              label: { Text("traking") },
@@ -215,8 +207,7 @@ struct SettingView: View {
 //                        .accentColor(.titleBackground)
                         
                       
-                      Slider(value: viewStore.binding(get: \.setting.lineSpace,
-                                                      send: .trackingChanged(viewStore.setting.lineSpace)),
+                      Slider(value: viewStore.$setting.lineSpace,
                              in: 10...25,
                              step: 1,
                              label: { Text("line spacing") },

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "372E276F143AFFAD2448C971"
-               BuildableName = "Data.framework"
-               BlueprintName = "Data"
-               ReferencedContainer = "container:Data.xcodeproj">
+               BlueprintIdentifier = "35A0BE3956190054895AFE63"
+               BuildableName = "Store_Store.bundle"
+               BlueprintName = "Store_Store"
+               ReferencedContainer = "container:Store.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,35 +27,14 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      disableMainThreadChecker = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B645369FD9EF413C85ED0E17"
-               BuildableName = "DataTest.xctest"
-               BlueprintName = "DataTest"
-               ReferencedContainer = "container:Data.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "372E276F143AFFAD2448C971"
-            BuildableName = "Data.framework"
-            BlueprintName = "Data"
-            ReferencedContainer = "container:Data.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      disablePerformanceAntipatternChecker = "YES"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -65,15 +44,15 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "372E276F143AFFAD2448C971"
-            BuildableName = "Data.framework"
-            BlueprintName = "Data"
-            ReferencedContainer = "container:Data.xcodeproj">
+            BlueprintIdentifier = "35A0BE3956190054895AFE63"
+            BuildableName = "Store_Store.bundle"
+            BlueprintName = "Store_Store"
+            ReferencedContainer = "container:Store.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -81,10 +60,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "372E276F143AFFAD2448C971"
-            BuildableName = "Data.framework"
-            BlueprintName = "Data"
-            ReferencedContainer = "container:Data.xcodeproj">
+            BlueprintIdentifier = "35A0BE3956190054895AFE63"
+            BuildableName = "Store_Store.bundle"
+            BlueprintName = "Store_Store"
+            ReferencedContainer = "container:Store.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
@@ -92,7 +71,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

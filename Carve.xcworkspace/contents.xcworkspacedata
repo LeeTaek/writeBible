@@ -11,7 +11,7 @@
          location = "group:Bible/Bible.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:Data/Data.xcodeproj">
+         location = "group:Store/Store.xcodeproj">
       </FileRef>
    </Group>
 </Workspace>
