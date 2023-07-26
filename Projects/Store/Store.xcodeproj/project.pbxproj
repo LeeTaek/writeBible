@@ -10,23 +10,24 @@
 		0441BC93CC12FC672300BB2D /* Store_Store.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3C94709B22A2C643FC2E4 /* Store_Store.bundle */; };
 		1483100ECA4E339B2E86B494 /* Store_Store.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 1AC3C94709B22A2C643FC2E4 /* Store_Store.bundle */; platformFilter = ios; };
 		1791F6FBE10C86683835823E /* SettingRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722283E92DDA4BD9DC900F56 /* SettingRealmRepository.swift */; };
+		187487C674AA7DE122F627AE /* WrittenBibleRealmDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B93B602DB530B6F9CC8B3 /* WrittenBibleRealmDTO.swift */; };
 		2ABAC1B92D227761AE47DF59 /* SettingRealmDataSrouce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A85E3784414026247D266 /* SettingRealmDataSrouce.swift */; };
+		31D0EE45999E4C612E0F1FDC /* BibleRealmDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC04181A939E348CF139812C /* BibleRealmDataSource.swift */; };
 		4947AE1AD64CFF52E07A7F0F /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746C7DC69FF75EB12F8A43E /* OSLog+Extension.swift */; };
 		5DF0860ABD2A4CFF2EF8458A /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B54D25484E1A2A1D02DCEF /* SettingStore.swift */; };
 		622943EBA51AAA19CF76C43F /* gitkeep.swift in Resources */ = {isa = PBXBuildFile; fileRef = 78E3C0A602A01B0221D83820 /* gitkeep.swift */; };
 		68BB0EA98BA006CD2050E971 /* TuistBundle+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B58D2DDEA27EC0366E9CE /* TuistBundle+Store.swift */; };
 		7022B7D107CF3814D2047EAD /* SettingRepositoryDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282E17FCCA4F1DA8FB43A4F1 /* SettingRepositoryDI.swift */; };
 		7829BD31DCAF846031FED843 /* Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0801B8E9E8B0E0F929898B /* Store.framework */; platformFilter = ios; };
+		78369CCD884C9A6674837AA5 /* WrittenBibleRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5956BEEF1811F3952A9298 /* WrittenBibleRealmRepository.swift */; };
 		8661EE1F23F70EE075F0D727 /* RealmDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CB6BE817F2998256D6973 /* RealmDependency.swift */; };
 		8EC4E060D143BC3603E14C28 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED156698EDD36ACD2EB9EC /* CGFloat+Extension.swift */; };
-		994187B62A6FA4310053321D /* BibleRealmDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994187B52A6FA4310053321D /* BibleRealmDataSource.swift */; };
-		994187B82A6FA4620053321D /* WrittenBibleRealmDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994187B72A6FA4620053321D /* WrittenBibleRealmDTO.swift */; };
-		994187BA2A6FB3A70053321D /* WrittenBibleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994187B92A6FB3A70053321D /* WrittenBibleVO.swift */; };
-		994187BD2A6FB41C0053321D /* WrittenBibleRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994187BC2A6FB41C0053321D /* WrittenBibleRealmRepository.swift */; };
-		994187BF2A6FBCB30053321D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994187BE2A6FBCB30053321D /* String+Extension.swift */; };
+		99AB75032A70BBA8009862CA /* SenetenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB75022A70BBA8009862CA /* SenetenceStore.swift */; };
+		AABDB333B36BF1FAE0CA2B2D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB936270E74940B633256EBC /* String+Extension.swift */; };
 		B07538541A4BF1D9107B8636 /* RealmDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CC465F76E84D99E4F5670 /* RealmDataSource.swift */; };
 		B6311442B3F17F8A7C0928B9 /* SettingVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C692D9CA6E04C7BEE004F /* SettingVO.swift */; };
 		CE6B8B2723C8A7D234F256C2 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A9611D003CB5FA74E7B75BD5 /* ComposableArchitecture */; };
+		D25562A6F97E34650B0E1D10 /* WrittenBibleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9F6C5339A5726CA128C4 /* WrittenBibleVO.swift */; };
 		DD5B2693A3C6EBA379E437D4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9FAB60854CFB086CBE8994FC /* RealmSwift */; };
 		EC93B240607FDA5F7E9182BF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94F657E8345B6F01EC5377 /* Repository.swift */; };
 		FF4213EB25D4AEA311AF1574 /* SettingRealmDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDEFE9E977F4C22F14A063 /* SettingRealmDTO.swift */; };
@@ -100,20 +101,21 @@
 		282E17FCCA4F1DA8FB43A4F1 /* SettingRepositoryDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepositoryDI.swift; sourceTree = "<group>"; };
 		35B54D25484E1A2A1D02DCEF /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 		3F7CB6BE817F2998256D6973 /* RealmDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDependency.swift; sourceTree = "<group>"; };
+		594B93B602DB530B6F9CC8B3 /* WrittenBibleRealmDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenBibleRealmDTO.swift; sourceTree = "<group>"; };
 		6ECDEFE9E977F4C22F14A063 /* SettingRealmDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRealmDTO.swift; sourceTree = "<group>"; };
 		722283E92DDA4BD9DC900F56 /* SettingRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRealmRepository.swift; sourceTree = "<group>"; };
 		78E3C0A602A01B0221D83820 /* gitkeep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitkeep.swift; sourceTree = "<group>"; };
 		7C6B58D2DDEA27EC0366E9CE /* TuistBundle+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Store.swift"; sourceTree = "<group>"; };
 		876FDE0481E9F0680CD72D50 /* StoreTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9D47B872918AA8F5FC5137 /* Store_Store-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Store_Store-Info.plist"; sourceTree = "<group>"; };
-		994187B52A6FA4310053321D /* BibleRealmDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleRealmDataSource.swift; sourceTree = "<group>"; };
-		994187B72A6FA4620053321D /* WrittenBibleRealmDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenBibleRealmDTO.swift; sourceTree = "<group>"; };
-		994187B92A6FB3A70053321D /* WrittenBibleVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenBibleVO.swift; sourceTree = "<group>"; };
-		994187BC2A6FB41C0053321D /* WrittenBibleRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenBibleRealmRepository.swift; sourceTree = "<group>"; };
-		994187BE2A6FBCB30053321D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		99AB75022A70BBA8009862CA /* SenetenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenetenceStore.swift; sourceTree = "<group>"; };
 		9BED156698EDD36ACD2EB9EC /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		AFF8AF3311FAC1E01454E844 /* StoreTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "StoreTest-Info.plist"; sourceTree = "<group>"; };
 		C746C7DC69FF75EB12F8A43E /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
+		CC04181A939E348CF139812C /* BibleRealmDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleRealmDataSource.swift; sourceTree = "<group>"; };
+		CF1E9F6C5339A5726CA128C4 /* WrittenBibleVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenBibleVO.swift; sourceTree = "<group>"; };
+		EB936270E74940B633256EBC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FA5956BEEF1811F3952A9298 /* WrittenBibleRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenBibleRealmRepository.swift; sourceTree = "<group>"; };
 		FCE4D7CFFF0D7B12797927E8 /* Store-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Store-Info.plist"; sourceTree = "<group>"; };
 		FD0801B8E9E8B0E0F929898B /* Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE94F657E8345B6F01EC5377 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -167,9 +169,9 @@
 		1DD5C69271E7A0DD723FBFBB /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				CC04181A939E348CF139812C /* BibleRealmDataSource.swift */,
 				043CC465F76E84D99E4F5670 /* RealmDataSource.swift */,
 				1E6A85E3784414026247D266 /* SettingRealmDataSrouce.swift */,
-				994187B52A6FA4310053321D /* BibleRealmDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -178,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				6ECDEFE9E977F4C22F14A063 /* SettingRealmDTO.swift */,
-				994187B72A6FA4620053321D /* WrittenBibleRealmDTO.swift */,
+				594B93B602DB530B6F9CC8B3 /* WrittenBibleRealmDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -187,7 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2C692D9CA6E04C7BEE004F /* SettingVO.swift */,
-				994187B92A6FB3A70053321D /* WrittenBibleVO.swift */,
+				CF1E9F6C5339A5726CA128C4 /* WrittenBibleVO.swift */,
 			);
 			path = VO;
 			sourceTree = "<group>";
@@ -197,7 +199,7 @@
 			children = (
 				9BED156698EDD36ACD2EB9EC /* CGFloat+Extension.swift */,
 				C746C7DC69FF75EB12F8A43E /* OSLog+Extension.swift */,
-				994187BE2A6FBCB30053321D /* String+Extension.swift */,
+				EB936270E74940B633256EBC /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -271,7 +273,7 @@
 			children = (
 				FE94F657E8345B6F01EC5377 /* Repository.swift */,
 				722283E92DDA4BD9DC900F56 /* SettingRealmRepository.swift */,
-				994187BC2A6FB41C0053321D /* WrittenBibleRealmRepository.swift */,
+				FA5956BEEF1811F3952A9298 /* WrittenBibleRealmRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				35B54D25484E1A2A1D02DCEF /* SettingStore.swift */,
+				99AB75022A70BBA8009862CA /* SenetenceStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -431,23 +434,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99AB75032A70BBA8009862CA /* SenetenceStore.swift in Sources */,
 				68BB0EA98BA006CD2050E971 /* TuistBundle+Store.swift in Sources */,
 				8661EE1F23F70EE075F0D727 /* RealmDependency.swift in Sources */,
-				994187BA2A6FB3A70053321D /* WrittenBibleVO.swift in Sources */,
 				7022B7D107CF3814D2047EAD /* SettingRepositoryDI.swift in Sources */,
-				994187B62A6FA4310053321D /* BibleRealmDataSource.swift in Sources */,
 				FF4213EB25D4AEA311AF1574 /* SettingRealmDTO.swift in Sources */,
+				187487C674AA7DE122F627AE /* WrittenBibleRealmDTO.swift in Sources */,
+				31D0EE45999E4C612E0F1FDC /* BibleRealmDataSource.swift in Sources */,
 				B07538541A4BF1D9107B8636 /* RealmDataSource.swift in Sources */,
 				2ABAC1B92D227761AE47DF59 /* SettingRealmDataSrouce.swift in Sources */,
-				994187BF2A6FBCB30053321D /* String+Extension.swift in Sources */,
-				994187BD2A6FB41C0053321D /* WrittenBibleRealmRepository.swift in Sources */,
 				EC93B240607FDA5F7E9182BF /* Repository.swift in Sources */,
-				994187B82A6FA4620053321D /* WrittenBibleRealmDTO.swift in Sources */,
 				1791F6FBE10C86683835823E /* SettingRealmRepository.swift in Sources */,
+				78369CCD884C9A6674837AA5 /* WrittenBibleRealmRepository.swift in Sources */,
 				8EC4E060D143BC3603E14C28 /* CGFloat+Extension.swift in Sources */,
 				4947AE1AD64CFF52E07A7F0F /* OSLog+Extension.swift in Sources */,
+				AABDB333B36BF1FAE0CA2B2D /* String+Extension.swift in Sources */,
 				5DF0860ABD2A4CFF2EF8458A /* SettingStore.swift in Sources */,
 				B6311442B3F17F8A7C0928B9 /* SettingVO.swift in Sources */,
+				D25562A6F97E34650B0E1D10 /* WrittenBibleVO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

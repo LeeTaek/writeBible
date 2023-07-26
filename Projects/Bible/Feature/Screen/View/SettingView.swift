@@ -40,18 +40,7 @@ struct SettingView: View {
                 .fontWeight(.heavy)
                 .foregroundColor(.titleTextColor)
                 .padding()
-            
             Spacer()
-            
-//            Button(action: {
-//                settingManager.updateSetting(setting: setting)
-//                showSettingSheet = false
-//            }) {
-//                Image(systemName: "x.circle")
-//                    .foregroundColor(.titleTextColor)
-//            }
-//            .padding()
-            
             Button("+") {
                 viewStore.send(.closeSettingSheet(true))
             }
@@ -69,24 +58,22 @@ struct SettingView: View {
                     Section {
                         VStack(alignment: .center) {
                             Text("주의 말씀의 맛이 내게 어찌 그리 단지요\n 내 입에 꿀보다 더 다니이다. \n ")
-                            .tracking(viewStore.setting.traking)
-                                .font(.custom(viewStore.setting.font.rawValue, size: viewStore.setting.fontSize))
-                                .lineSpacing(viewStore.setting.lineSpace)
+                            .tracking(viewStore.sentence.setting.traking)
+                            .font(.custom(viewStore.sentence.setting.font.rawValue, size: viewStore.sentence.setting.fontSize))
+                            .lineSpacing(viewStore.sentence.setting.lineSpace)
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                             
-                            
-                            
                             Text("- 시 119:103")
-                                .tracking(viewStore.setting.traking)
-                                .font(.custom(viewStore.setting.font.rawValue, size: viewStore.setting.fontSize))
-                                .lineSpacing(viewStore.setting.lineSpace)
+                            .tracking(viewStore.sentence.setting.traking)
+                            .font(.custom(viewStore.sentence.setting.font.rawValue, size: viewStore.sentence.setting.fontSize))
+                            .lineSpacing(viewStore.sentence.setting.lineSpace)
                                 .background(
                                     GeometryReader {            //라인 계산을 위한 base frame height
                                         Color.clear.preference(key: ViewHeightKey.self,
                                                                value: $0.frame(in: .local).size.height)
                                     })
                                 .onPreferenceChange(ViewHeightKey.self) {
-                                  self.viewStore.send(.baseLineChanged($0))
+                                  self.viewStore.send(.updateLineHeight($0))
                                 }
                             
                             Spacer()
@@ -103,22 +90,13 @@ struct SettingView: View {
                             .fontWeight(.bold)
                             .foregroundColor(.titleBackground)
                     }
-
                 }
                 .frame(width: geo.frame(in: .local).width * 0.46)
                 
                 Form {
                     // 글체 설정
                     Section {
-//                        Picker("글체", selection: $setting.font) {
-//                            ForEach(FontCase.allCases, id: \.self) {
-//                                fontTitle(font: $0)
-//                                    .tag($0)
-//                            }
-//                        }.pickerStyle(.segmented)
-                        
-                    
-                        Picker("글체", selection: viewStore.$setting.font) {
+                      Picker("글체", selection: viewStore.$sentence.setting.font) {
                                     ForEach(FontCase.allCases, id: \.self) {
                                         fontTitle(font: $0)
                                             .tag($0)
@@ -132,22 +110,12 @@ struct SettingView: View {
                             .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.titleBackground)
-
                     }
                     
                     
                     //폰트 크기 설정
                     Section {
-//                        Slider(value: $setting.fontSize, in: 20...35, step: 1){
-//                            Text("fontSize")
-//                        } minimumValueLabel: {
-//                            Text("20")
-//                        } maximumValueLabel: {
-//                            Text("35")
-//                        }
-//                        .accentColor(.titleBackground)
-                      
-                      Slider(value: viewStore.$setting.fontSize,
+                      Slider(value: viewStore.$sentence.setting.fontSize,
                              in: 20...35,
                              step: 1,
                              label: { Text("fontSize") },
@@ -157,26 +125,16 @@ struct SettingView: View {
                       .accentColor(.titleBackground)
                       
                     } header: {
-                        Text("글자 크기: \(Int(viewStore.setting.fontSize))")
+                      Text("글자 크기: \(Int(viewStore.sentence.setting.fontSize))")
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.titleBackground)
-
                     }
                     
                     // 글자 간격
                     Section {
-//                        Slider(value: $setting.traking, in: 1...5, step: 1) {
-//                            Text("traking")
-//                        } minimumValueLabel: {
-//                            Text("1")
-//                        } maximumValueLabel: {
-//                            Text("5")
-//                        }
-//                        .accentColor(.titleBackground)
-                        
-                      Slider(value: viewStore.$setting.traking,
+                      Slider(value: viewStore.$sentence.setting.traking,
                              in: 1...5,
                              step: 1,
                              label: { Text("traking") },
@@ -186,28 +144,17 @@ struct SettingView: View {
                       .accentColor(.titleBackground)
 
                     } header: {
-                        Text("글자 간격 : \(Int(viewStore.setting.traking))")
+                      Text("글자 간격 : \(Int(viewStore.sentence.setting.traking))")
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.titleBackground)
-
                     }
                     
                     
                     // 줄 간격
                     Section {
-//                        Slider(value: $setting.lineSpace, in: 10...25, step: 1) {
-//                            Text("line spacing")
-//                        } minimumValueLabel: {
-//                            Text("10")
-//                        } maximumValueLabel: {
-//                            Text("25")
-//                        }
-//                        .accentColor(.titleBackground)
-                        
-                      
-                      Slider(value: viewStore.$setting.lineSpace,
+                      Slider(value: viewStore.$sentence.setting.lineSpace,
                              in: 10...25,
                              step: 1,
                              label: { Text("line spacing") },
@@ -217,26 +164,15 @@ struct SettingView: View {
                       .accentColor(.titleBackground)
                         
                     } header: {
-                        Text("줄 간격 : \(Int(viewStore.setting.lineSpace))")
+                      Text("줄 간격 : \(Int(viewStore.sentence.setting.lineSpace))")
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.titleBackground)
                             .foregroundColor(.titleBackground)
-
                     }
                     
                     // 완료 버튼
-//                    Button(action: {
-//                        settingManager.updateSetting(setting: setting)
-//                        self.showSettingSheet.toggle()
-//                    }) {
-//                        Text("완료")
-//                            .fontWeight(.bold)
-//                            .foregroundColor(.titleBackground)
-//                            .frame(maxWidth: .infinity, alignment: .center)
-//                    }
-//
                   Button(action: {
                     viewStore.send(.closeSettingSheet(true))
                   }, label: {

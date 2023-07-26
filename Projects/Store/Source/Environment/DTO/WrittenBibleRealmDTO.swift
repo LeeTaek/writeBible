@@ -13,10 +13,10 @@ import RealmSwift
 public class WrittenBibleRealmDTO: Object {
   @Persisted public var id = UUID()
   @Persisted public var writtenData: Data
-  @Persisted public var bibleSentence: Bible
+  @Persisted public var bibleSentence: BibleVO
   @Persisted public var isWritten: Bool
   
-  public init(writtenData: Data, bibleSentence: Bible, isWritten: Bool = false) {
+  public init(writtenData: Data, bibleSentence: BibleVO, isWritten: Bool = false) {
     self.writtenData = writtenData
     self.bibleSentence = bibleSentence
     self.isWritten = isWritten

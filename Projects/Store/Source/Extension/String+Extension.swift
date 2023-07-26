@@ -19,7 +19,24 @@ extension String {
     return String(self[fromIndex..<toIndex])
   }
   
-  func toBible(title: String) -> Bible {
+  func readBibleTxt() -> [String] {
+    let textPath = Bundle.module.path(forResource: "\(self)", ofType: nil)
+    let encodingEUCKR = CFStringConvertEncodingToNSStringEncoding(0x0422)
+    var genesis = [String]()
+    
+    do {
+      let contents = try String(contentsOfFile: textPath!,
+                                encoding: String.Encoding(rawValue: encodingEUCKR))
+      Log.debug(textPath!)
+      genesis = contents.components(separatedBy: "\r")
+    } catch {
+      Log.debug(error.localizedDescription)
+    }
+    return genesis
+  }
+  
+  
+  func toBible(title: String) -> BibleVO {
     var prefix = ""
     var surfix = ""
     var subTitle: String?
@@ -33,7 +50,7 @@ extension String {
     }
     
     guard let chapter = Int(prefix.components(separatedBy: ":").first!),
-          let section = Int(prefix.components(separatedBy: ":").last!) else { return Bible.defaultValue }
+          let section = Int(prefix.components(separatedBy: ":").last!) else { return BibleVO.defaultValue }
     
     if surfix.contains("<") {
       var foreIndex = 0
@@ -52,7 +69,7 @@ extension String {
       surfix = surfix[0..<foreIndex-1] + surfix[afterIndex+1..<surfix.count]
     }
     
-    return Bible(title: title,
+    return BibleVO(title: title,
                  chapter: chapter,
                  section: section,
                  chapterTitle: subTitle,
