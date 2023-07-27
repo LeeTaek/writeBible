@@ -34,7 +34,6 @@ public struct SettingStore: ReducerProtocol {
       switch action {
       case .binding:
         return .none
-      case 
       case .closeSettingSheet(let isClose):
         state.showSettingSheet = isClose
         return .none
