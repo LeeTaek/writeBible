@@ -10,87 +10,62 @@ import Foundation
 
 import RealmSwift
 
-final class SettingRealmDataSrouce: RealmDataSource {
-  typealias value = SettingRealmDTO
+@globalActor
+actor SettingRealmDataSrouce: RealmDataSource {
   static let shared = SettingRealmDataSrouce()
+  typealias value = SettingRealmDTO
   var realm: Realm!
-  var realmQueue: DispatchQueue!
   
   func create(data: SettingRealmDTO) async throws {
-    try await withCheckedThrowingContinuation { continuation in
-      realmQueue.async { [self] in
-        do {
-          try realm.write {
-            realm.add(data)
-          }
-          continuation.resume()
-        } catch {
-          Log.debug("fail in create data: \(error)")
-          continuation.resume(throwing: RealmObjectError.savedFailure)
-        }
+    do {
+      try await realm.asyncWrite {
+        realm.create(SettingRealmDTO.self, value: data)
       }
+    } catch {
+      Log.debug("fail in create data: \(error)")
+      throw RealmObjectError.savedFailure
     }
   }
   
   func read() async throws -> SettingRealmDTO {
-    try await withCheckedThrowingContinuation { continuation in
-      realmQueue.async { [self] in
-        let loadedData = realm.objects(SettingRealmDTO.self)
-        guard let setting = loadedData.first else {
-          Log.debug("fail in read data: \(RealmObjectError.notFoundSettingData)")
-          continuation.resume(throwing: RealmObjectError.notFoundSettingData)
-          return
-        }
-        continuation.resume(returning: setting)
+    do {
+      let loadedData = realm.objects(SettingRealmDTO.self)
+      guard let setting = loadedData.first else {
+        throw RealmObjectError.notFoundSettingData
       }
+      return setting
+    } catch {
+      Log.debug("fail in read data: \(error)")
+      throw RealmObjectError.notFoundSettingData
     }
   }
   
   func update(data: SettingRealmDTO) async throws -> SettingRealmDTO {
-    try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<SettingRealmDTO, Error>) -> Void in
-      realmQueue.async { [self] in
-        let loadedData = realm.objects(SettingRealmDTO.self)
-        guard let setting = loadedData.first else {
-          Log.debug("fail in update data: \(RealmObjectError.notFoundSettingData)")
-          continuation.resume(throwing: RealmObjectError.notFoundSettingData)
-          return
-        }
-        do {
-          try realm.write {
-            setting.fontSize = data.fontSize
-            setting.traking = data.traking
-            setting.lineSpace = data.lineSpace
-            setting.baseLineHeight = data.baseLineHeight
-            setting.font = data.font
-          }
-          continuation.resume(returning: data)
-        } catch {
-          Log.debug("fail in update data: \(error)")
-          continuation.resume(throwing: RealmObjectError.updatedFailure)
-        }
+    let value = ["fontSize": data.fontSize,
+                 "tracking": data.traking,
+                 "lineSpace": data.lineSpace,
+                 "baseLineHeight": data.baseLineHeight,
+                 "font": data.font
+    ] as [String : Any]
+    do {
+      try await realm.asyncWrite {
+        realm.create(SettingRealmDTO.self, value: value, update: .modified)
       }
+    } catch {
+      Log.debug("fail in update data: \(error)")
+      throw RealmObjectError.updatedFailure
     }
+    return data
   }
   
   func delete(data: SettingRealmDTO) async throws {
-    try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) -> Void in
-      realmQueue.async { [self] in
-        let loadedData = realm.objects(SettingRealmDTO.self)
-        guard let setting = loadedData.first else {
-          Log.debug("fail in update data: \(RealmObjectError.notFoundSettingData)")
-          continuation.resume(throwing: RealmObjectError.notFoundSettingData)
-          return
-        }
-        do {
-          try realm.write {
-            realm.delete(setting)
-          }
-          continuation.resume()
-        } catch {
-          Log.debug("fail in delete data: \(error)")
-          continuation.resume(throwing: RealmObjectError.deleteFailure)
-        }
+    do {
+      try await realm.asyncWrite {
+        realm.delete(data)
       }
+    } catch {
+      Log.debug("fail in delete data: \(error)")
+      throw RealmObjectError.deleteFailure
     }
   }
 }

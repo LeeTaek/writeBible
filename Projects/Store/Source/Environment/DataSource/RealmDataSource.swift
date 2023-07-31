@@ -12,8 +12,7 @@ import RealmSwift
 
 protocol RealmDataSource {
   associatedtype value
-  var realm: Realm? { get }
-  var realmQueue: DispatchQueue! { get }
+  var realm: Realm? { get async }
   func create(data: value) async throws
   func read() async throws -> value
   func update(data: value) async throws -> value
@@ -23,19 +22,18 @@ protocol RealmDataSource {
 
 extension RealmDataSource {
   public var realm: Realm? {
-    do {
-      let realm = try Realm()
-      Log.debug("📂\(self)'s file UTL: \(String(describing: realm.configuration.fileURL))")
-      return realm
-    } catch {
-      print("Error initiating new realm \(error)")
-      return nil
+    get async {
+      do {
+        let realm = try await Realm()
+        Log.debug("📂\(self)'s file UTL: \(String(describing: realm.configuration.fileURL))")
+        return realm
+      } catch {
+        print("Error initiating new realm \(error)")
+        return nil
+      }
     }
   }
   
-  var realmQueue: DispatchQueue! {
-    return DispatchQueue(label: "realm-queue")
-  }
 }
 
 enum RealmObjectError: Error {
