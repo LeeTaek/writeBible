@@ -9,7 +9,7 @@
     성경 말씀을 띄워주는 View
  */
 
-//import Store
+import Store
 import SwiftUI
 
 import ComposableArchitecture
@@ -44,6 +44,7 @@ struct BibleSentenceView: View {
                     Text("\(bibleSentence.sentence)")           // 성경 본문
                       .tracking(setting.traking)
                       .font(.custom(setting.font.rawValue, size: setting.fontSize))
+                      .lineLimit(nil)
                       .lineSpacing(setting.lineSpace)
                       .fixedSize(horizontal: false, vertical: true)
                       .frame(width: geo.frame(in: .local).size.width/9 * 8, alignment: .leading)

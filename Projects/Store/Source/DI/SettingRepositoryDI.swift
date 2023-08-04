@@ -10,7 +10,7 @@ import Dependencies
 
 struct SettingRepositoryDI: RealmDependency {
   typealias value = SettingVO
-  var fetch: @Sendable () async throws -> SettingVO
+  var fetch: @Sendable () async throws -> SettingVO?
   var update: @Sendable (SettingVO) async throws -> SettingVO
 }
 

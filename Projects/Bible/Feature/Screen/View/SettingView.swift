@@ -210,7 +210,7 @@ struct SettingView: View {
 
 
 
-
+//
 //struct SettinView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        let setting = SettingModel(lineSpace: 11, fontSize: 20, traking: 2)

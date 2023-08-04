@@ -10,6 +10,6 @@ import Foundation
 
 protocol RealmDependency {
   associatedtype value
-  var fetch: @Sendable () async throws -> value { get }
+  var fetch: @Sendable () async throws -> value? { get }
   var update: @Sendable (value) async throws -> value { get }
 }

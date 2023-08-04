@@ -22,7 +22,7 @@ public class SettingRealmDTO: Object {
     self.fontSize = fontSize
     self.traking = traking
     self.baseLineHeight = baseLineHeight
-    self.font = font
+     self.font = font
   }
     
   public func toStore() -> SettingVO {

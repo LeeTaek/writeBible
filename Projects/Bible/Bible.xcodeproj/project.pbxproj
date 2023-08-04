@@ -99,7 +99,6 @@
 		DFAF09DDF30AE83FF8C2B7AB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D729CC549B0FC7F914B999 /* String+Extension.swift */; };
 		E3B41493CAF794770B3BD9CA /* 2-06로마서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 11F9FE6960A26D66B8F16EA5 /* 2-06로마서.txt */; };
 		E5796C5ADB0CF6D849A13F55 /* 1-11열왕기상.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28313E81A1214190F17AF4CC /* 1-11열왕기상.txt */; };
-		E781670B8F001D62D586FA77 /* BibleSentenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D3AD1F9647DF59BA2FD8A /* BibleSentenceStore.swift */; };
 		E8A7D6627D6B1E5AC5EB97D1 /* 1-35하박국.txt in Resources */ = {isa = PBXBuildFile; fileRef = 94E4B9FFC7DF25DEB200B595 /* 1-35하박국.txt */; };
 		E9D8B6B5E232D7A5D97DD9B2 /* 1-16느헤미야.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74833548980BD17DF238BCAB /* 1-16느헤미야.txt */; };
 		F05755821394885468CEF8E4 /* 1-28호세아.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8390F455D377296D78940C4D /* 1-28호세아.txt */; };
@@ -257,7 +256,6 @@
 		B0811F70CC0B8C34D58DDCCB /* 1-20잠언.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-20잠언.txt"; sourceTree = "<group>"; };
 		B17EB4E777A53A66FA6A5726 /* 1-01창세기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-01창세기.txt"; sourceTree = "<group>"; };
 		B49A3DABB00A86699075306D /* Bible_Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible_Bible-Info.plist"; sourceTree = "<group>"; };
-		B57D3AD1F9647DF59BA2FD8A /* BibleSentenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleSentenceStore.swift; sourceTree = "<group>"; };
 		B7DEE92B1B5D7EF35E3FDE5E /* Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible-Info.plist"; sourceTree = "<group>"; };
 		B96420D8FBA47E4769F88D2B /* Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3A8E9AC5F3D61B5A519BB4 /* 2-27요한계시록.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-27요한계시록.txt"; sourceTree = "<group>"; };
@@ -479,14 +477,6 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
-		6151792C93E9E040D8328ADD /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				B57D3AD1F9647DF59BA2FD8A /* BibleSentenceStore.swift */,
-			);
-			path = Store;
-			sourceTree = "<group>";
-		};
 		62B50BAE9BEA4856D35103E4 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,7 +566,6 @@
 			isa = PBXGroup;
 			children = (
 				C02BEBCFC600F0747066E7A6 /* Resource */,
-				6151792C93E9E040D8328ADD /* Store */,
 				041801735D000F8AB39690B6 /* Views */,
 			);
 			path = DesignSystems;
@@ -816,7 +805,6 @@
 				08611582BFAC1468C60F3A0E /* Color+Extension.swift in Sources */,
 				F3FB0345FC07C45754886536 /* OSLog+Extension.swift in Sources */,
 				DFAF09DDF30AE83FF8C2B7AB /* String+Extension.swift in Sources */,
-				E781670B8F001D62D586FA77 /* BibleSentenceStore.swift in Sources */,
 				A0075984636350017DDC9664 /* BibleSentenceView.swift in Sources */,
 				64AF18CC71493190D1B11207 /* TitleView.swift in Sources */,
 				28A4647D5AD78BFFA15E7E20 /* DrawingViewController.swift in Sources */,

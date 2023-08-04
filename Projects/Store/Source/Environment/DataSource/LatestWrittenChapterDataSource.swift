@@ -1,8 +1,8 @@
 //
-//  BibleRealmDataSource.swift
+//  LatestWrittenChapterDataSource.swift
 //  Store
 //
-//  Created by openobject on 2023/07/25.
+//  Created by openobject on 2023/08/03.
 //  Copyright © 2023 leetaek. All rights reserved.
 //
 
@@ -11,15 +11,15 @@ import Foundation
 import RealmSwift
 
 @globalActor
-actor BibleRealmDataSource: RealmDataSource {
-  static let shared = BibleRealmDataSource()
-  typealias value = WrittenBibleRealmDTO
-  
-  func create(data: WrittenBibleRealmDTO) async throws {
+actor LatestWrittenChapterDataSource: RealmDataSource {
+  static let shared = LatestWrittenChapterDataSource()
+  typealias value = LatestWrittenChapterRealmDTO
+
+  func create(data: LatestWrittenChapterRealmDTO) async throws {
     do {
       guard let realm = await realm else { throw RealmObjectError.realmInitFailure }
       try await realm.asyncWrite {
-        realm.create(WrittenBibleRealmDTO.self, value: data)
+        realm.create(LatestWrittenChapterRealmDTO.self, value: data)
       }
     } catch {
       Log.debug("fail in create data: \(error)")
@@ -27,30 +27,28 @@ actor BibleRealmDataSource: RealmDataSource {
     }
   }
   
-  func read() async throws -> WrittenBibleRealmDTO {
+  func read() async throws -> LatestWrittenChapterRealmDTO {
     do {
       guard let realm = await realm else { throw RealmObjectError.realmInitFailure }
-      let loadedData = realm.objects(WrittenBibleRealmDTO.self)
+      let loadedData = realm.objects(LatestWrittenChapterRealmDTO.self)
       guard let setting = loadedData.first else {
-        throw RealmObjectError.notFoundSettingData
-      }
+            throw RealmObjectError.notFoundSettingData
+          }
       return setting
     } catch {
       Log.debug("fail in read data: \(error)")
       throw RealmObjectError.notFoundSettingData
     }
-
   }
   
-  func update(data: WrittenBibleRealmDTO) async throws -> WrittenBibleRealmDTO {
-    let value = ["id": data.id,
-                 "writtenData": data.writtenData ?? Data(),
-                 "bibleSentence": data.bibleSentence
+  func update(data: LatestWrittenChapterRealmDTO) async throws -> LatestWrittenChapterRealmDTO {
+    let value = ["title": data.title,
+                 "chapter": data.chapter
     ] as [String : Any]
     do {
       guard let realm = await realm else { throw RealmObjectError.realmInitFailure }
       try await realm.asyncWrite {
-        realm.create(WrittenBibleRealmDTO.self, value: value, update: .modified)
+        realm.create(LatestWrittenChapterRealmDTO.self, value: value, update: .modified)
       }
     } catch {
       Log.debug("fail in update data: \(error)")
@@ -59,7 +57,7 @@ actor BibleRealmDataSource: RealmDataSource {
     return data
   }
   
-  func delete(data: WrittenBibleRealmDTO) async throws {
+  func delete(data: LatestWrittenChapterRealmDTO) async throws {
     do {
       guard let realm = await realm else { throw RealmObjectError.realmInitFailure }
       try await realm.asyncWrite {
@@ -70,5 +68,4 @@ actor BibleRealmDataSource: RealmDataSource {
       throw RealmObjectError.deleteFailure
     }
   }
-  
 }

@@ -36,7 +36,7 @@ extension String {
   }
   
   
-  func toBible(title: String) -> BibleVO {
+  func toBible(title: String) -> BibleSentenceVO {
     var prefix = ""
     var surfix = ""
     var subTitle: String?
@@ -50,7 +50,7 @@ extension String {
     }
     
     guard let chapter = Int(prefix.components(separatedBy: ":").first!),
-          let section = Int(prefix.components(separatedBy: ":").last!) else { return BibleVO.defaultValue }
+          let section = Int(prefix.components(separatedBy: ":").last!) else { return BibleSentenceVO.defaultValue }
     
     if surfix.contains("<") {
       var foreIndex = 0
@@ -69,7 +69,7 @@ extension String {
       surfix = surfix[0..<foreIndex-1] + surfix[afterIndex+1..<surfix.count]
     }
     
-    return BibleVO(title: title,
+    return BibleSentenceVO(title: title,
                  chapter: chapter,
                  section: section,
                  chapterTitle: subTitle,

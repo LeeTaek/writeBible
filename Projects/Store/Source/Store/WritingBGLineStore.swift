@@ -26,9 +26,7 @@ public struct WritingBGLineStore: ReducerProtocol {
   public func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
     switch action{
     case let .calculateLine(textHeight):
-      let lineHeight =
       state.textHeight = textHeight
-
       return .none
     }
   }

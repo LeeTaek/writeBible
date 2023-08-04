@@ -9,16 +9,26 @@
     성경 View와 Drawing을 View를 그려주는 View
  */
 
-
+import Store
 import SwiftUI
+
+import ComposableArchitecture
 import RealmSwift
 
 struct BibleView: View {
-    @Binding var bibleTitle: BibleTitle
-    @Binding var chapterNum: Int
+  let store: StoreOf<ContentStore>
+  @ObservedObject var viewStore: ViewStoreOf<ContentStore>
+  
+  init(store: StoreOf<ContentStore>) {
+    self.store = store
+    self.viewStore = ViewStore(self.store, observe: { $0 })
+  }
+  
+//    @State var bibleTitle: BibleTitle = .genesis
+//    @State var chapterNum: Int = 1
     @ObservedObject var manager = DrawingManager()          // Drawing View에 그린 내용을 저장하기 위한 프로퍼티
     @State private var translation: CGSize = .zero          // 드래그 제스쳐를 위한 변수
-    @Binding var showTitle: Bool                            // title View를 보일지 말지
+//    @State var showTitle: Bool = false                          // title View를 보일지 말지
     @ObservedRealmObject var settingValue: SettingManager   // RealmDB에 저장된 셋팅값을 가져옴
     
     @Environment(\.colorScheme) var colorScheme     // Dark모드에서 새기다 버튼 컬러를 위해 모드 감지
@@ -26,16 +36,22 @@ struct BibleView: View {
     var body: some View {
         VStack {
             simpleTitle
-            
             writeView
+        }
+        .overlay {
+          TitleView(
+            store: self.store.scope(state: \.title,
+                                    action: ContentStore.Action.titleAction)
+          )
+        }
+        .onAppear {
+          viewStore.send(.onAppear)
         }
     }
 
     
-    //MARK: - 성경 본문 view
     var writeView: some View {
-        let bible = Bible(title: bibleTitle.rawValue)
-        let keyTitle = bibleTitle.rawValue + chapterNum.description
+      let keyTitle = viewStore.title.bibleTitle.rawValue + viewStore.title.chapter.description
         let dragGesture = DragGesture()
             .onChanged({
                 self.translation = $0.translation
@@ -43,72 +59,19 @@ struct BibleView: View {
             .onEnded {
                 /// 다음장 혹은 이전장으로 넘어가기 위한 드래그 제스쳐
                 if $0.translation.width < -100 {                           //드래그 가로의 위치가 -100보다 작은 위치로 가면 실행
-                    if chapterNum < bible.getLastChapter() {
-                        self.chapterNum += 1
-                    } else {
-                        bibleTitle.next()
-                        if bibleTitle != .revelation {
-                            self.chapterNum = 1
-                        }
-                    }
+                  moveToNextChapter()
                 } else if $0.translation.width > 100 {                  //드래그 가로의 위치가 100보다 커지면 실행
-                    if chapterNum > 1 {
-                        self.chapterNum -= 1
-                    } else {
-                        bibleTitle.before()
-                        if bibleTitle != .genesis {
-                            self.chapterNum = Bible(title: bibleTitle.rawValue).getLastChapter()
-                        }
-                    }
+                  moveToBeforeChapter()
                 }
                 self.translation = .zero
             }
-        
-        
         
         return ScrollViewReader { scr in
             ScrollView(.vertical) {
                 VStack {
                     VStack {
-                        /// 수정해야 할 사항 1.
-                        /// Bound preference ScrollPreferenceKey tried to update multiple times per frame. 오류 발생
-                        /// onPreferenceChange가 무거운듯
-                        GeometryReader { proxy in       // titleView 표기
-                            Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
-                        }
-                        .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
-                            DispatchQueue.main.async {
-
-                                withAnimation(.easeInOut) {
-                                    if value < 0 {
-                                        showTitle = true
-                                    }
-                                    else {
-                                        showTitle = false
-                                    }
-                                }
-                            }
-                        })
-                        
-                        // 성경 본문
-                        ForEach(bible.makeBible(title: bibleTitle.rawValue).filter{$0.chapter == chapterNum}, id: \.sentence ) { name in
-                            let showChpaterTitle = checkChapterTitle(chapterTitle: name.chapterTitle)
-                            
-                            VStack() {
-                                Text(name.chapterTitle ?? "" )
-                                    .font(.system(size: 22))
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(Color.chapterTitleColor)
-                                    .isHidden(showChpaterTitle)
-                                
-                                // 성경 구절
-                                BibleSentenceView(bibleSentence: name, setting: .constant(settingValue.getSetting()))
-                            }/// VStack
-                            .id(name.section)
-                            .padding([.bottom])
-                            .listRowSeparator(.hidden)
-                        }/// ForEach
-                        
+                      detectScrollingView
+                      bibleSentencesList
                         Spacer()
                    
                         
@@ -132,37 +95,27 @@ struct BibleView: View {
                         Spacer()
                         
                         Button(action: {
-                            if chapterNum < bible.getLastChapter() {
-                                self.chapterNum += 1
-                            } else {
-                                bibleTitle.next()
-                                if bibleTitle != .revelation {
-                                    self.chapterNum = 1
-                                }
-                            }
+                            moveToNextChapter()
                             RealmManager().written(title: keyTitle)
                         }) {
                             buttonUI
                         } ///Button
                         .padding(30)
 
-                    }///HStack
-                } ///VStack
-            } /// scrollView
+                    }
+                }
+            }
             .coordinateSpace(name: "scroll")
-//                .onTapGesture {}
             .gesture(dragGesture)
-//            .animation(.interactiveSpring(), value: translation.width)
-        }/// scrollViewReader
+        }
     }
     
     
     //MARK: - simple title
     var simpleTitle: some View {
-        let ti = bibleTitle.rawValue.components(separatedBy: ".").first!
-        let name = ti[4..<ti.count]
+      let name = viewStore.title.bibleTitle.rawValue.rawTitle()
         
-        return  Text("\(name) \(chapterNum)장")
+        return  Text("\(name) \(viewStore.title.chapter)장")
             .font(.system(size: 25))
             .fontWeight(.bold)
             .foregroundColor(.simpleTitleColor)
@@ -170,15 +123,55 @@ struct BibleView: View {
     }
     
     
-    //MARK: - chapter Title이 있으면 true 반환
-    func checkChapterTitle(chapterTitle: String?) -> Bool {
-        return chapterTitle != nil ? false : true
+    var detectScrollingView: some View {
+      /// 수정해야 할 사항 1.
+      /// Bound preference ScrollPreferenceKey tried to update multiple times per frame. 오류 발생
+      /// onPreferenceChange가 무거운듯
+        GeometryReader { proxy in       // titleView 표기
+            Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
+        }
+      .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
+            DispatchQueue.main.async {
+
+                withAnimation(.easeInOut) {
+                    if value < 0 {
+                      viewStore.send(.showTitle)
+  //                                        showTitle = true
+                    }
+                    else {
+                      viewStore.send(.showTitle)
+  //                                        showTitle = false
+                    }
+                }
+            }
+      })
     }
+  
+  var bibleSentencesList: some View {
+    // 본문
+//    ForEach(bible.makeBible(title: bibleTitle.rawValue).filter{$0.chapter == chapterNum}, id: \.sentence ) { name in
+    ForEach(viewStore.sentences, id: \.sentence) { sentence in
+      let showChpaterTitle = sentence.chapterTitle != nil ? true : false
+      
+      VStack() {
+        Text(sentence.chapterTitle ?? "" )
+          .font(.system(size: 22))
+          .fontWeight(.heavy)
+          .foregroundColor(Color.chapterTitleColor)
+          .isHidden(showChpaterTitle)
+        
+        // 구절
+//        BibleSentenceView(bibleSentence: sentence, setting: .constant(settingValue.getSetting()))
+      }/// VStack
+      .id(sentence.section)
+      .padding([.bottom])
+      .listRowSeparator(.hidden)
+    }/// ForEach
+  }
+
     
  
-
-    //MARK: - 새기다 버튼 UI
-    
+    //새기다 버튼
     var buttonUI: some View {
         Rectangle()
             .stroke(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85), lineWidth: 3)
@@ -202,15 +195,46 @@ struct BibleView: View {
                 .padding()
             }
     }
+  
+  //MARK: - Methods
+  /// 다음장으로 이동.
+    func moveToNextChapter() {
+      let lastChapter = viewStore.state.title.lastChapter
+      
+      if viewStore.title.chapter < lastChapter {
+        self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle,
+                                                 chapter: viewStore.state.title.chapter + 1)))
+      } else {
+          if viewStore.title.bibleTitle != .revelation {
+            self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle.next(),
+                                                     chapter: 1)))
+          }
+      }
+    }
+    
+  
+  /// 이전 장으로 이동
+    func moveToBeforeChapter() {
+      if viewStore.state.title.chapter > 1 {
+        self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle,
+                                                 chapter: viewStore.state.title.chapter - 1)))
+      } else {
+          if viewStore.title.bibleTitle != .genesis {
+            let beforeBible = viewStore.state.title.bibleTitle.before()
+            let lastChapter = BibleSentenceVO.lastChapter(title: beforeBible.rawValue)
+            self.viewStore.send(.titleAction(.moveTo(title: beforeBible, chapter: lastChapter)))
+          }
+      }
+    }
     
 }
 
 
-struct BibleView_Previews: PreviewProvider {
-    static var previews: some View {
-        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1), showTitle: .constant(false), settingValue: SettingManager())
-    }
-}
+//struct BibleView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BibleView(bibleTitle: .constant(.genesis), chapterNum: .constant(1), showTitle: .constant(false), settingValue: SettingManager())
+//    }
+//}
 
 
 

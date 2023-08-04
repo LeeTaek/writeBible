@@ -12,19 +12,16 @@ import RealmSwift
 
 public class WrittenBibleRealmDTO: Object {
   @Persisted public var id = UUID()
-  @Persisted public var writtenData: Data
-  @Persisted public var bibleSentence: BibleVO
-  @Persisted public var isWritten: Bool
+  @Persisted public var writtenData: Data?
+  @Persisted public var bibleSentence: BibleSentenceVO
   
-  public init(writtenData: Data, bibleSentence: BibleVO, isWritten: Bool = false) {
+  public init(writtenData: Data?, bibleSentence: BibleSentenceVO, isWritten: Bool = false) {
     self.writtenData = writtenData
     self.bibleSentence = bibleSentence
-    self.isWritten = isWritten
   }
   
-  public func toStore() -> WrittenBibleVO {
+  public func toStore() -> WrittenSentenceVO {
     return .init(writtenData: writtenData,
-                 bible: bibleSentence,
-                 isWrite: true)
+                 bible: bibleSentence)
   }
 }

@@ -17,4 +17,10 @@ extension String {
          let toIndex = self.index(self.startIndex,offsetBy: range.endIndex)
          return String(self[fromIndex..<toIndex])
      }
+  
+  
+  func rawTitle() -> String {
+    guard let title = self.components(separatedBy: ".").first else { return "" }
+    return title[4..<title.count]
+  }
 }

@@ -37,6 +37,7 @@ extension RealmDataSource {
 }
 
 enum RealmObjectError: Error {
+  case realmInitFailure
   case savedFailure
   case notFoundSettingData
   case updatedFailure

@@ -14,14 +14,15 @@ public struct SentenceStore: ReducerProtocol {
   @Dependency(\.settingRepository) var repository
   
   public struct State: Equatable {
-    public var bible: [BibleVO]
+    var id = UUID()
+    public var bible: BibleSentenceVO
     public var setting: SettingVO
   }
   
   public enum Action: Equatable {
-    case fetchBible(title: String)
+    case fetchBible(title: String, chapter: Int)
     case initSetting
-    case fetchSetting(TaskResult<SettingVO>)
+    case fetchSetting(TaskResult<SettingVO?>)
     case updateSetting(SettingVO)
     case updateSettingResponse(TaskResult<SettingVO>)
     case updateBaseLineHeight(CGFloat)
@@ -30,8 +31,8 @@ public struct SentenceStore: ReducerProtocol {
   
   public func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
     switch action {
-    case .fetchBible(title: let title):
-      state.bible = BibleVO.fetchBible(title: title)
+    case .fetchBible(title: let title, chapter: let chapter):
+//      state.bible = BibleSentenceVO.fetchChapter(title: title, chapter: chapter)
       return .none
     case .initSetting:
       return .run { send in
@@ -42,7 +43,7 @@ public struct SentenceStore: ReducerProtocol {
         ))
       }
     case let .fetchSetting(.success(settingVO)):
-      state.setting = settingVO
+      state.setting = settingVO ?? SettingVO.defaultValue
       return .none
     case let .fetchSetting(.failure(error)):
       Log.debug("\(error), set default setting value")

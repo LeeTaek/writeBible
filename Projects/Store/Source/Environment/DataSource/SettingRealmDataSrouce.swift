@@ -14,10 +14,10 @@ import RealmSwift
 actor SettingRealmDataSrouce: RealmDataSource {
   static let shared = SettingRealmDataSrouce()
   typealias value = SettingRealmDTO
-  var realm: Realm!
   
   func create(data: SettingRealmDTO) async throws {
     do {
+      guard let realm = await realm else { throw RealmObjectError.realmInitFailure }
       try await realm.asyncWrite {
         realm.create(SettingRealmDTO.self, value: data)
       }
@@ -29,6 +29,7 @@ actor SettingRealmDataSrouce: RealmDataSource {
   
   func read() async throws -> SettingRealmDTO {
     do {
+      guard let realm = await realm else { throw RealmObjectError.realmInitFailure }
       let loadedData = realm.objects(SettingRealmDTO.self)
       guard let setting = loadedData.first else {
         throw RealmObjectError.notFoundSettingData
@@ -48,6 +49,7 @@ actor SettingRealmDataSrouce: RealmDataSource {
                  "font": data.font
     ] as [String : Any]
     do {
+      guard let realm = await realm else { throw RealmObjectError.realmInitFailure }
       try await realm.asyncWrite {
         realm.create(SettingRealmDTO.self, value: value, update: .modified)
       }
@@ -60,6 +62,7 @@ actor SettingRealmDataSrouce: RealmDataSource {
   
   func delete(data: SettingRealmDTO) async throws {
     do {
+      guard let realm = await realm else { throw RealmObjectError.realmInitFailure }
       try await realm.asyncWrite {
         realm.delete(data)
       }

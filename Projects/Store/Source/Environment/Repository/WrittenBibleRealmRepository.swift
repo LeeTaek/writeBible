@@ -9,10 +9,10 @@
 import Foundation
 
 struct WrittenBibleRealmRepository: Repository {
-  typealias value = WrittenBibleVO
+  typealias value = WrittenSentenceVO
   init() { }
   
-  func create(data: WrittenBibleVO) async throws {
+  func create(data: WrittenSentenceVO) async throws {
     let dto = toDTO(vo: data)
     do {
       try await BibleRealmDataSource.shared.create(data: dto)
@@ -21,17 +21,17 @@ struct WrittenBibleRealmRepository: Repository {
     }
   }
   
-  func read() async throws -> WrittenBibleVO {
+  func read() async throws -> WrittenSentenceVO {
     do {
       let vo = try await BibleRealmDataSource.shared.read().toStore()
       return vo
     } catch {
       Log.debug(error)
-      return WrittenBibleVO.defaultValue
+      return WrittenSentenceVO.defaultValue
     }
   }
   
-  func update(data: WrittenBibleVO) async throws -> WrittenBibleVO {
+  func update(data: WrittenSentenceVO) async throws -> WrittenSentenceVO {
     let dto = toDTO(vo: data)
     do {
       let vo = try await BibleRealmDataSource.shared.update(data: dto).toStore()
@@ -43,7 +43,7 @@ struct WrittenBibleRealmRepository: Repository {
 
   }
   
-  func delete(data: WrittenBibleVO) async throws {
+  func delete(data: WrittenSentenceVO) async throws {
     let dto = toDTO(vo: data)
     do {
       try await BibleRealmDataSource.shared.delete(data: dto)
@@ -52,10 +52,9 @@ struct WrittenBibleRealmRepository: Repository {
     }
   }
   
-  func toDTO(vo: WrittenBibleVO) -> WrittenBibleRealmDTO {
+  func toDTO(vo: WrittenSentenceVO) -> WrittenBibleRealmDTO {
     return .init(writtenData: vo.writtenData,
-                 bibleSentence: vo.bible,
-                 isWritten: vo.isWrite
+                 bibleSentence: vo.bible
     )
   }
 }

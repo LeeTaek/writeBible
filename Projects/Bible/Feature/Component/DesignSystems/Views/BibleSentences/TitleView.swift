@@ -5,17 +5,29 @@
 //  Created by 이택성 on 2022/06/08.
 //
 
+import Store
 import SwiftUI
+
+import ComposableArchitecture
 import RealmSwift
 
-struct TitleView: View {    
-    
-    @Binding var bibleTitle: BibleTitle
-    @Binding var chapter: Int
-    @Binding var showTitleSheet: Bool
-    @State private var showTitle = false
-    @State var showiSettingSheet = !SettingManager().isEmpty()  // setting 초기 설정을 위한 변수
-    @ObservedRealmObject var settingValue: SettingManager
+
+struct TitleView: View {
+  let store: StoreOf<TitleStore>
+  @ObservedObject var viewStore: ViewStoreOf<TitleStore>
+  
+  init(store: StoreOf<TitleStore>) {
+    self.store = store
+    self.viewStore = ViewStore(self.store, observe: { $0 })
+  }
+
+  
+//    @Binding var bibleTitle: BibleTitle
+//    @Binding var chapter: Int
+//    @Binding var showTitleSheet: Bool
+//    @State private var showTitle = false
+//    @State var showiSettingSheet = !SettingManager().isEmpty()  // setting 초기 설정을 위한 변수
+//    @ObservedRealmObject var settingValue: SettingManager
 
     @Environment(\.colorScheme) var colorScheme     // Dark모드에서 새기다 버튼 컬러를 위해 모드 감지
 
@@ -30,43 +42,41 @@ struct TitleView: View {
     
     //MARK: - Title View
     var title: some View {
-        let ti = bibleTitle.rawValue.components(separatedBy: ".").first!
-        let name = ti[4..<ti.count]
+//        let titleName = bibleTitle.rawValue.rawTitle()
+      let titleName = viewStore.bibleTitle.rawValue.rawTitle()
         
         return HStack{
             //MARK: -  Title 창
-            Button(action: {
-                self.showTitleSheet.toggle()
-            }) {
-                
-                Text("\(name) \(chapter)장")
+          Button(action: { self.viewStore.send(.toggleShowTitleSheet) }) {
+            Text("\(titleName) \(viewStore.chapter)장")
                     .font(.system(size: 30))
                     .padding()
                     .foregroundColor(.titleTextColor)
             }
-            .sheet(isPresented: $showTitleSheet) {
-                VStack {
-                    contents
-                    
-                    bibleList
-                        .padding()
-                }
-            }
+//            .sheet(isPresented: $showTitleSheet) {
+//                VStack {
+//                    contents
+//                    
+//                    bibleList
+//                        .padding()
+//                }
+//            }
 
 
             Spacer()
             
             
             //MARK: - 설정창 sheet
-            Button(action: {self.showiSettingSheet.toggle()}) {
+          Button(action: { self.viewStore.send(.toggleShowSettingSheet) })  {
                 Image(systemName: "gearshape")
                     .foregroundColor(Color.titleTextColor)
                     .padding()
                     
-            }.sheet(isPresented: $showiSettingSheet) {
-                // 앱 처음 실행시 셋팅값이 없다면 setting 창을 띄워준다.
-//                SettingView(setting: settingValue.getSetting(), showSettingSheet: $showiSettingSheet)
             }
+//          .sheet(isPresented: $showiSettingSheet) {
+//                // 앱 처음 실행시 셋팅값이 없다면 setting 창을 띄워준다.
+////                SettingView(setting: settingValue.getSetting(), showSettingSheet: $showiSettingSheet)
+//            }
 
             
         }
@@ -88,9 +98,7 @@ struct TitleView: View {
             
             Spacer()
            
-            Button(action: {
-                showTitleSheet = false
-            }) {
+            Button(action: { self.viewStore.send(.toggleShowTitleSheet) }) {
                 Image(systemName: "x.circle")
                     .foregroundColor(.titleTextColor)
                     
@@ -105,70 +113,72 @@ struct TitleView: View {
     
     //MARK: - Sheet창의 장
     var bibleList: some View {
-        let lastChapter = Bible(title: bibleTitle.rawValue).getLastChapter()
-
         return HStack {
-            // 성경 책 리스트
-            List {
-                ForEach(BibleTitle.allCases, id: \.self) { value in
-                    let ti = value.rawValue.components(separatedBy: ".").first!
-                    let name = ti[4..<ti.count]
-                    
-                    Button(action: {
-                        self.bibleTitle = value
-                        
-                    }) {
-                        VStack {
-                            Text("\(name)")
-                        }
-                    }
-                    .listRowBackground(self.bibleTitle == value ? Color.selectedColor : Color(UIColor.systemBackground))
-                }
-
-            }
-            .listStyle(.plain)
-            
-            // 성경 구절 리스트
-            List{
-                ForEach((1...lastChapter), id: \.self) { value in
-                    Button(action: {
-                        self.chapter = value
-
-                        showTitleSheet = false
-
-                    }) {
-                        HStack {
-                            Text("\(value)")
-                            
-                            Spacer()
-                            
-                            if RealmManager().isWirtten(title: bibleTitle.rawValue, chapter: value) {
-                                Image("Pencil")
-                                    .resizable()
-                                    .renderingMode(.template)
-                                    .frame(width: 30, height:30)
-                                    .tint(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85))
-                            }
-                       
-                        }
-                    }
-                    .listRowBackground(self.chapter == value ? Color.selectedColor : Color(UIColor.systemBackground))
-                }
-                
-            }.listStyle(.plain)
+          titleList
+          chapterList
         }
     }
+  
+  var titleList: some View {
+    List {
+      ForEach(BibleTitle.allCases, id: \.self) { title in
+            let titleName = title.rawValue.rawTitle()
+
+            Button(action: { self.viewStore.send(.selectTitle(title)) }) {
+                VStack {
+                    Text("\(titleName)")
+                }
+            }
+            .listRowBackground(viewStore.bibleTitle == title ? Color.selectedColor : Color(UIColor.systemBackground))
+        }
+
+    }
+    .listStyle(.plain)
+  }
     
+  
+  var chapterList: some View {
+    List{
+      ForEach((1...viewStore.lastChapter), id: \.self) { chapter in
+          Button(action: { self.viewStore.send(.selectChapter(chapter)) }) {
+                HStack {
+                    Text("\(chapter)")
+                    Spacer()
+                    
+                  if BibleSentenceVO.completeChapter(title: viewStore.bibleTitle.rawValue, chapter: viewStore.chapter) {
+                        Image("Pencil")
+                            .resizable()
+                            .renderingMode(.template)
+                            .frame(width: 30, height:30)
+                            .tint(colorScheme == .light ? Color.black.opacity(0.85) : Color.white.opacity(0.85))
+                    }
+                }
+            }
+          .listRowBackground(viewStore.chapter == chapter ? Color.selectedColor : Color(UIColor.systemBackground))
+        }
+        
+    }.listStyle(.plain)
+  }
     
     
     
     
 }
 
+// 
+//#Preview {
+//  let store = Store(initialState: TitleStore.State(),
+//                    reducer: TitleStore())
+//
+//  return TitleView(store: store)
+//}
 
-struct TitleView_Previews: PreviewProvider {
-   static var previews: some View {
-       TitleView(bibleTitle: .constant(.genesis), chapter: .constant(1),showTitleSheet: .constant(true), settingValue: SettingManager())
+
+struct SettinView_Previews: PreviewProvider {
+    static var previews: some View {
+      let store = Store(initialState: TitleStore.State(),
+                        reducer: TitleStore())
+
+      return TitleView(store: store)
     }
 }
-
