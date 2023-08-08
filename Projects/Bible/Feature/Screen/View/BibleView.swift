@@ -15,25 +15,25 @@ import SwiftUI
 import ComposableArchitecture
 import RealmSwift
 
-struct BibleView: View {
-  let store: StoreOf<ContentStore>
-  @ObservedObject var viewStore: ViewStoreOf<ContentStore>
+public struct BibleView: View {
+  let store: StoreOf<BibleStore>
+  @ObservedObject var viewStore: ViewStoreOf<BibleStore>
   
-  init(store: StoreOf<ContentStore>) {
+  public init(store: StoreOf<BibleStore>) {
     self.store = store
     self.viewStore = ViewStore(self.store, observe: { $0 })
   }
   
 //    @State var bibleTitle: BibleTitle = .genesis
 //    @State var chapterNum: Int = 1
-    @ObservedObject var manager = DrawingManager()          // Drawing View에 그린 내용을 저장하기 위한 프로퍼티
-    @State private var translation: CGSize = .zero          // 드래그 제스쳐를 위한 변수
+//    @ObservedObject var manager = DrawingManager()          // Drawing View에 그린 내용을 저장하기 위한 프로퍼티
+//    @State private var translation: CGSize = .zero          // 드래그 제스쳐를 위한 변수
 //    @State var showTitle: Bool = false                          // title View를 보일지 말지
-    @ObservedRealmObject var settingValue: SettingManager   // RealmDB에 저장된 셋팅값을 가져옴
+//    @ObservedRealmObject var settingValue: SettingManager   // RealmDB에 저장된 셋팅값을 가져옴
     
     @Environment(\.colorScheme) var colorScheme     // Dark모드에서 새기다 버튼 컬러를 위해 모드 감지
         
-    var body: some View {
+  public var body: some View {
         VStack {
             simpleTitle
             writeView
@@ -41,7 +41,7 @@ struct BibleView: View {
         .overlay {
           TitleView(
             store: self.store.scope(state: \.title,
-                                    action: ContentStore.Action.titleAction)
+                                    action: BibleStore.Action.titleAction)
           )
         }
         .onAppear {
@@ -52,19 +52,19 @@ struct BibleView: View {
     
     var writeView: some View {
       let keyTitle = viewStore.title.bibleTitle.rawValue + viewStore.title.chapter.description
-        let dragGesture = DragGesture()
-            .onChanged({
-                self.translation = $0.translation
-            })
-            .onEnded {
-                /// 다음장 혹은 이전장으로 넘어가기 위한 드래그 제스쳐
-                if $0.translation.width < -100 {                           //드래그 가로의 위치가 -100보다 작은 위치로 가면 실행
-                  moveToNextChapter()
-                } else if $0.translation.width > 100 {                  //드래그 가로의 위치가 100보다 커지면 실행
-                  moveToBeforeChapter()
-                }
-                self.translation = .zero
-            }
+//        let dragGesture = DragGesture()
+//            .onChanged({
+//                self.translation = $0.translation
+//            })
+//            .onEnded {
+//                /// 다음장 혹은 이전장으로 넘어가기 위한 드래그 제스쳐
+//                if $0.translation.width < -100 {                           //드래그 가로의 위치가 -100보다 작은 위치로 가면 실행
+//                  moveToNextChapter()
+//                } else if $0.translation.width > 100 {                  //드래그 가로의 위치가 100보다 커지면 실행
+//                  moveToBeforeChapter()
+//                }
+//                self.translation = .zero
+//            }
         
         return ScrollViewReader { scr in
             ScrollView(.vertical) {
@@ -73,16 +73,14 @@ struct BibleView: View {
                       detectScrollingView
                       bibleSentencesList
                         Spacer()
-                   
-                        
-                    }///VStack
+                    }
                     .id("scrollToTop")
                     .overlay() {
-                        /// 앱 처음 실행시 셋팅값 설정 후 Drawing 가능하도록 설정
-                        if settingValue.isEmpty() {
-                            DrawingWrapper(manager: manager, title: keyTitle)
-                                .id(keyTitle)
-                        }
+//                        /// 앱 처음 실행시 셋팅값 설정 후 Drawing 가능하도록 설정
+//                        if settingValue.isEmpty() {
+//                            DrawingWrapper(manager: manager, title: keyTitle)
+//                                .id(keyTitle)
+//                        }
                     }
                     .onChange(of: keyTitle) { newValue in
                         withAnimation(.default) {
@@ -93,20 +91,18 @@ struct BibleView: View {
                     // 새기다 버튼
                     HStack {
                         Spacer()
-                        
                         Button(action: {
                             moveToNextChapter()
-                            RealmManager().written(title: keyTitle)
+//                            RealmManager().written(title: keyTitle)
                         }) {
                             buttonUI
-                        } ///Button
+                        }
                         .padding(30)
-
                     }
                 }
             }
             .coordinateSpace(name: "scroll")
-            .gesture(dragGesture)
+//            .gesture(dragGesture)
         }
     }
     
@@ -135,12 +131,10 @@ struct BibleView: View {
 
                 withAnimation(.easeInOut) {
                     if value < 0 {
-                      viewStore.send(.showTitle)
-  //                                        showTitle = true
+                      viewStore.send(.showTitle(true))
                     }
                     else {
-                      viewStore.send(.showTitle)
-  //                                        showTitle = false
+                      viewStore.send(.showTitle(false))
                     }
                 }
             }
@@ -149,24 +143,13 @@ struct BibleView: View {
   
   var bibleSentencesList: some View {
     // 본문
-//    ForEach(bible.makeBible(title: bibleTitle.rawValue).filter{$0.chapter == chapterNum}, id: \.sentence ) { name in
-    ForEach(viewStore.sentences, id: \.sentence) { sentence in
-      let showChpaterTitle = sentence.chapterTitle != nil ? true : false
-      
-      VStack() {
-        Text(sentence.chapterTitle ?? "" )
-          .font(.system(size: 22))
-          .fontWeight(.heavy)
-          .foregroundColor(Color.chapterTitleColor)
-          .isHidden(showChpaterTitle)
-        
-        // 구절
-//        BibleSentenceView(bibleSentence: sentence, setting: .constant(settingValue.getSetting()))
-      }/// VStack
-      .id(sentence.section)
-      .padding([.bottom])
-      .listRowSeparator(.hidden)
-    }/// ForEach
+      ForEachStore(
+        self.store.scope(state: \.sentences, action: BibleStore.Action.sentence(id:action:))
+      ) { sentenceStore in
+        BibleSentenceView(store: sentenceStore)
+        .padding([.bottom])
+        .listRowSeparator(.hidden)
+    }
   }
 
     

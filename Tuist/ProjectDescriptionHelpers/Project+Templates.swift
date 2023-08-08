@@ -105,7 +105,7 @@ public extension TargetDependency {
 public extension Package {
   static let Realm: Package = .remote(url: "https://github.com/realm/realm-swift", requirement: .upToNextMajor(from: "10.41.0"))
   static let Firebase: Package = .remote(url: "https://github.com/firebase/firebase-ios-sdk.git", requirement: .upToNextMajor(from: "10.11.0"))
-  static let TCAArchitecture: Package = .remote(url: "https://github.com/pointfreeco/swift-composable-architecture", requirement: .upToNextMajor(from: "0.55.0"))
+  static let TCAArchitecture: Package = .remote(url: "https://github.com/pointfreeco/swift-composable-architecture", requirement: .upToNextMajor(from: "1.0.0"))
   static let TCACoordinator: Package = .remote(url: "https://github.com/johnpatrickmorgan/TCACoordinators", requirement: .upToNextMajor(from: "0.4.0"))
 }
 

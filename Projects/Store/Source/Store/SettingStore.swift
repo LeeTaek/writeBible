@@ -10,9 +10,11 @@ import Foundation
 
 import ComposableArchitecture
 
-public struct SettingStore: ReducerProtocol {
+public struct SettingStore: Reducer {
+    public init() { }
+  
     public struct State: Equatable {
-      public var showSettingSheet: Bool
+      public var showSettingSheet: Bool = false
       @BindingState public var sentence: SentenceStore.State
     }
     
@@ -23,7 +25,7 @@ public struct SettingStore: ReducerProtocol {
       case updateLineHeight(CGFloat)
     }
   
-  public var body: some ReducerProtocol<State, Action> {
+  public var body: some Reducer<State, Action> {
     BindingReducer()
     
     Scope(state: \.sentence, action: /Action.sentence) {

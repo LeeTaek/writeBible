@@ -10,38 +10,40 @@ import Foundation
 
 import ComposableArchitecture
 
-public struct SentenceStore: ReducerProtocol {
-  @Dependency(\.settingRepository) var repository
+public struct SentenceStore: Reducer {
+  @Dependency(\.settingRepository) var settingRepository
   
-  public struct State: Equatable {
-    var id = UUID()
-    public var bible: BibleSentenceVO
-    public var setting: SettingVO
+  public struct State: Equatable, Identifiable {
+    public let id: UUID
+    public var sentence: BibleSentenceVO
+    public var setting: SettingVO = .defaultValue
+    public var textHeight: CGFloat = .zero
+    public var line: Int = 3
   }
   
   public enum Action: Equatable {
-    case fetchBible(title: String, chapter: Int)
-    case initSetting
+    case onAppear
+    case getLine(CGFloat)
     case fetchSetting(TaskResult<SettingVO?>)
-    case updateSetting(SettingVO)
     case updateSettingResponse(TaskResult<SettingVO>)
     case updateBaseLineHeight(CGFloat)
   }
   
   
-  public func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+  public func reduce(into state: inout State, action: Action) -> Effect<Action> {
     switch action {
-    case .fetchBible(title: let title, chapter: let chapter):
-//      state.bible = BibleSentenceVO.fetchChapter(title: title, chapter: chapter)
-      return .none
-    case .initSetting:
+    case .onAppear:
       return .run { send in
         await send(.fetchSetting(
           TaskResult {
-            try await repository.fetch()
+            try await settingRepository.fetch()
           }
         ))
       }
+    case let .getLine(textHeight):
+      state.textHeight = textHeight
+      state.line = Int((state.textHeight + state.setting.lineSpace + 25) / (state.setting.baseLineHeight + state.setting.lineSpace)) + 1
+      return .none
     case let .fetchSetting(.success(settingVO)):
       state.setting = settingVO ?? SettingVO.defaultValue
       return .none
@@ -49,14 +51,6 @@ public struct SentenceStore: ReducerProtocol {
       Log.debug("\(error), set default setting value")
       state.setting = SettingVO.defaultValue
       return .none
-    case .updateSetting(let setting):
-      return .run { send in
-        await send(.updateSettingResponse(
-          TaskResult {
-            try await repository.update(setting)
-          }
-        ))
-      }
     case let .updateSettingResponse(.success(settingVO)):
       state.setting = settingVO
       return .none
@@ -64,6 +58,8 @@ public struct SentenceStore: ReducerProtocol {
       return .none
     case let .updateBaseLineHeight(lineHeight):
       state.setting.baseLineHeight = lineHeight
+      return .none
+    default:
       return .none
     }
   }

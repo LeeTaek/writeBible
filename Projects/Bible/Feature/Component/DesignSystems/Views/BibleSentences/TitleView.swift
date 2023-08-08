@@ -47,7 +47,7 @@ struct TitleView: View {
         
         return HStack{
             //MARK: -  Title 창
-          Button(action: { self.viewStore.send(.toggleShowTitleSheet) }) {
+          Button(action: { self.viewStore.send(.showTitleSheet(true)) }) {
             Text("\(titleName) \(viewStore.chapter)장")
                     .font(.system(size: 30))
                     .padding()
@@ -67,12 +67,21 @@ struct TitleView: View {
             
             
             //MARK: - 설정창 sheet
-          Button(action: { self.viewStore.send(.toggleShowSettingSheet) })  {
+          Button(action: { self.viewStore.send(.showSettingSheet(true)) })  {
                 Image(systemName: "gearshape")
                     .foregroundColor(Color.titleTextColor)
                     .padding()
                     
             }
+//          .sheet(
+//            isPresented: viewStore.binding(
+//              get: { $0.showSettingSheet },
+//              send: .showSettingSheet(true)
+//            )) {
+//              SettingView(store: Store(initialState: SettingStore.State()){
+//                SettingStore()
+//              })
+//            }
 //          .sheet(isPresented: $showiSettingSheet) {
 //                // 앱 처음 실행시 셋팅값이 없다면 setting 창을 띄워준다.
 ////                SettingView(setting: settingValue.getSetting(), showSettingSheet: $showiSettingSheet)
@@ -98,7 +107,7 @@ struct TitleView: View {
             
             Spacer()
            
-            Button(action: { self.viewStore.send(.toggleShowTitleSheet) }) {
+            Button(action: { self.viewStore.send(.showTitleSheet(false)) }) {
                 Image(systemName: "x.circle")
                     .foregroundColor(.titleTextColor)
                     
@@ -176,8 +185,9 @@ struct TitleView: View {
 
 struct SettinView_Previews: PreviewProvider {
     static var previews: some View {
-      let store = Store(initialState: TitleStore.State(),
-                        reducer: TitleStore())
+      let store = Store(initialState: TitleStore.State()) {
+        TitleStore()
+      }
 
       return TitleView(store: store)
     }

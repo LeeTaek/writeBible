@@ -15,7 +15,8 @@ public class WrittenBibleRealmDTO: Object {
   @Persisted public var writtenData: Data?
   @Persisted public var bibleSentence: BibleSentenceVO
   
-  public init(writtenData: Data?, bibleSentence: BibleSentenceVO, isWritten: Bool = false) {
+  public convenience init(writtenData: Data?, bibleSentence: BibleSentenceVO, isWritten: Bool = false) {
+    self.init()
     self.writtenData = writtenData
     self.bibleSentence = bibleSentence
   }

@@ -5,22 +5,27 @@
 //  Created by 이택성 on 2022/06/02.
 //
 
+import Store
 import SwiftUI
+
+import ComposableArchitecture
 import RealmSwift
 
 public struct ContentView: View {
-    @ObservedResults(SettingManager.self, configuration: Realm.Configuration(schemaVersion: 1)) var settingValue        //셋팅값을 위한 RealmDB
-
-        
+//    @ObservedResults(SettingManager.self, configuration: Realm.Configuration(schemaVersion: 1)) var settingValue        //셋팅값을 위한 RealmDB
+//
+//        
     public init() {
-        @ObservedResults(SettingManager.self, configuration: Realm.Configuration(schemaVersion: 1)) var settingValue        //셋팅값을 위한 RealmDB
+//        @ObservedResults(SettingManager.self, configuration: Realm.Configuration(schemaVersion: 1)) var settingValue        //셋팅값을 위한 RealmDB
     }
     
     
     public var body: some View {
-        let setting = settingValue.first ?? SettingManager()
+//        let setting = settingValue.first ?? SettingManager()
 
-      return Text("hi")
+      return BibleView(store: Store(initialState: BibleStore.State()) {
+        BibleStore()
+      })
 //        return BibleView(settingValue: setting)
 //            .overlay() {
 //                TitleView(bibleTitle: $bibleTitle, chapter: $chapterNum, showTitleSheet: $showingSheet, settingValue: setting)

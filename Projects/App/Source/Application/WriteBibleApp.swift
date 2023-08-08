@@ -5,15 +5,21 @@
 //
 
 import SwiftUI
-import Bible
+
+import ComposableArchitecture
 
 @main
 struct WriteBibleApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
   
   var body: some Scene {
+    
+    
     WindowGroup {
-      ContentView()
+      RouterView(
+        store: Store(initialState: Router.State()) {
+          Router()
+        })
     }
   }
 }

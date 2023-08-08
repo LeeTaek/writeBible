@@ -10,7 +10,7 @@ import Foundation
 
 import ComposableArchitecture
 
-public struct TitleStore: ReducerProtocol {
+public struct TitleStore: Reducer {
   @Dependency(\.latestWrittenChapterRepository) var latestWrittenChapterRepository
   
   public init() { }
@@ -29,9 +29,9 @@ public struct TitleStore: ReducerProtocol {
   public enum Action: Equatable {
     case onAppear
     case fetchLatestChapter(TaskResult<LatestWrittenChapterVO>)
-    case toggleShowTitleSheet
-    case toggleShowSettingSheet
-    case toggleShowTitle
+    case showTitleSheet(Bool)
+    case showSettingSheet(Bool)
+    case showTitle(Bool)
     case selectTitle(BibleTitle)
     case selectChapter(Int)
     case moveTo(title: BibleTitle, chapter: Int)
@@ -39,7 +39,7 @@ public struct TitleStore: ReducerProtocol {
   }
   
   
-  public func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+  public func reduce(into state: inout State, action: Action) -> Effect<Action> {
     switch action {
     case .onAppear:
       return .run { send in
@@ -53,14 +53,14 @@ public struct TitleStore: ReducerProtocol {
       state.bibleTitle = BibleTitle(rawValue: latest.title)!
       state.chapter = latest.chapter
       return .none
-    case .toggleShowTitleSheet:
-      state.showTitleSheet.toggle()
+    case let .showTitleSheet(isShow):
+      state.showTitleSheet = isShow
       return .none
-    case .toggleShowSettingSheet:
-      state.showSettingSheet.toggle()
+    case let .showSettingSheet(isShow):
+      state.showSettingSheet = isShow
       return .none
-    case .toggleShowTitle:
-      state.showTitle.toggle()
+    case let .showTitle(isShow):
+      state.showTitle = isShow
       return .none
     case .selectTitle(let title):
       state.bibleTitle = title
@@ -78,7 +78,7 @@ public struct TitleStore: ReducerProtocol {
       }
     case let .updateLatestChapter(.success(updatedData)):
       Log.debug("updated latest wirtten bible: \(updatedData)")
-      return .send(.toggleShowTitleSheet)
+      return .send(.showSettingSheet(false))
     case .moveTo(title: let title, chapter: let chapter):
       state.bibleTitle = title
       state.chapter = chapter

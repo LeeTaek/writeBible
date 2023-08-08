@@ -92,7 +92,8 @@ public class PersistableBible: EmbeddedObject {
   @Persisted var chapterTitle: String?
   @Persisted var sentence: String
   
-  init(bible: BibleSentenceVO) {
+  convenience init(bible: BibleSentenceVO) {
+    self.init()
     self.title = bible.title
     self.chapter = bible.chapter
     self.section = bible.section

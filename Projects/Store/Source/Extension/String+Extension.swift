@@ -20,14 +20,18 @@ extension String {
   }
   
   func readBibleTxt() -> [String] {
-    let textPath = Bundle.module.path(forResource: "\(self)", ofType: nil)
+    guard let textPath = Bundle.module.path(forResource: "\(self)", ofType: nil) else {
+      Log.debug("파일 경로를 찾을수 없음")
+      return [] 
+    }
     let encodingEUCKR = CFStringConvertEncodingToNSStringEncoding(0x0422)
     var genesis = [String]()
     
+    
     do {
-      let contents = try String(contentsOfFile: textPath!,
+      let contents = try String(contentsOfFile: textPath,
                                 encoding: String.Encoding(rawValue: encodingEUCKR))
-      Log.debug(textPath!)
+      Log.debug(textPath)
       genesis = contents.components(separatedBy: "\r")
     } catch {
       Log.debug(error.localizedDescription)

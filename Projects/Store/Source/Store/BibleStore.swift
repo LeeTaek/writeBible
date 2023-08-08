@@ -10,36 +10,39 @@ import Foundation
 
 import ComposableArchitecture
 
-public struct ContentStore: ReducerProtocol {
+public struct BibleStore: Reducer {
   @Dependency(\.settingRepository) var settingRepository
 
+  public init() { }
+  
   public struct State: Equatable {
     public var title = TitleStore.State()
-    public var sentences: [BibleSentenceVO]
-    public var settingValue: SettingVO
+    public var bible: [BibleSentenceVO] = []
+    public var sentences: IdentifiedArrayOf<SentenceStore.State> = []
+    public var settingValue: SettingVO = .defaultValue
     public var startCarve: Bool = false
+    public init() { }
   }
   
   public enum Action: Equatable {
     case onAppear
     case titleAction(TitleStore.Action)
+    case sentence(id: SentenceStore.State.ID, action: SentenceStore.Action)
     case fetchSetting(TaskResult<SettingVO>)
-    case showSettingSheet
-    case showTitle
+    case showSettingSheet(Bool)
+    case showTitle(Bool)
     case startCarve
   }
   
-  public var body: some ReducerProtocol<State, Action> {
-    Scope(state: \.title, action: /Action.titleAction) {
-      TitleStore()
-        ._printChanges()
-    }
-    
+  public var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
       case .onAppear:
-        state.sentences = BibleSentenceVO.fetchChapter(title: state.title.bibleTitle.rawValue,
+        state.bible = BibleSentenceVO.fetchChapter(title: state.title.bibleTitle.rawValue,
                                                        chapter: state.title.chapter)
+        state.bible.forEach {
+          state.sentences.insert(SentenceStore.State(id: UUID(), sentence: $0), at: $0.chapter - 1)
+        }
         return .run { send in
           await send(. fetchSetting(
             TaskResult {
@@ -54,10 +57,10 @@ public struct ContentStore: ReducerProtocol {
         Log.debug("\(error), set default setting value")
         state.settingValue = SettingVO.defaultValue
         return .none
-      case .showSettingSheet:
-        return .send(.titleAction(.toggleShowSettingSheet))
-      case .showTitle:
-        return .send(.titleAction(.toggleShowTitle))
+      case let .showSettingSheet(isShow):
+        return .send(.titleAction(.showSettingSheet(isShow)))
+      case let .showTitle(isShow):
+        return .send(.titleAction(.showTitle(isShow)))
       case .startCarve:
         return .none
 
@@ -65,6 +68,10 @@ public struct ContentStore: ReducerProtocol {
         return .none
 
       }
+      
+    }
+    .forEach(\.sentences, action: /Action.sentence(id:action:)) {
+     SentenceStore()
     }
     ._printChanges()
   }

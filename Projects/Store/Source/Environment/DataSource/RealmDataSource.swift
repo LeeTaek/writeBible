@@ -12,7 +12,7 @@ import RealmSwift
 
 protocol RealmDataSource {
   associatedtype value
-  var realm: Realm? { get async }
+  var realm: Realm! { get async }
   func create(data: value) async throws
   func read() async throws -> value
   func update(data: value) async throws -> value
@@ -20,12 +20,16 @@ protocol RealmDataSource {
 
 }
 
-extension RealmDataSource {
-  public var realm: Realm? {
+@globalActor actor BackgroundActor: GlobalActor {
+  static var shared = BackgroundActor()
+}
+
+extension RealmDataSource where Self: Actor {
+  internal var realm: Realm! {
     get async {
       do {
-        let realm = try await Realm()
-        Log.debug("📂\(self)'s file UTL: \(String(describing: realm.configuration.fileURL))")
+        let realm = try await Realm(actor: self)
+        Log.debug("📂\(self)'s file URL: \(String(describing: realm.configuration.fileURL))")
         return realm
       } catch {
         print("Error initiating new realm \(error)")

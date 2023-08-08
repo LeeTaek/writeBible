@@ -17,7 +17,8 @@ public class SettingRealmDTO: Object {
   @Persisted public var baseLineHeight: CGFloat
   @Persisted public var font: String
 
-  public init(lineSpace: CGFloat, fontSize: CGFloat, traking: CGFloat, baseLineHeight: CGFloat, font: String) {
+  public convenience init(lineSpace: CGFloat, fontSize: CGFloat, traking: CGFloat, baseLineHeight: CGFloat, font: String) {
+    self.init()
     self.lineSpace = lineSpace
     self.fontSize = fontSize
     self.traking = traking
