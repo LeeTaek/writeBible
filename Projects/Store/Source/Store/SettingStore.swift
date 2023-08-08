@@ -12,25 +12,24 @@ import ComposableArchitecture
 
 public struct SettingStore: Reducer {
     public init() { }
+    
+  @Dependency(\.settingRepository) var settingRepository
   
     public struct State: Equatable {
       public var showSettingSheet: Bool = false
-      @BindingState public var sentence: SentenceStore.State
+      @BindingState public var setting: SettingVO
+//      @BindingState public var sentence: SentenceStore.State
     }
     
     public enum Action: Equatable, BindableAction {
       case binding(BindingAction<State>)
       case closeSettingSheet(Bool)
-      case sentence(SentenceStore.Action)
+//      case sentence(SentenceStore.Action)
       case updateLineHeight(CGFloat)
     }
   
   public var body: some Reducer<State, Action> {
     BindingReducer()
-    
-    Scope(state: \.sentence, action: /Action.sentence) {
-      SentenceStore()
-    }
     
     Reduce { state, action in
       switch action {
@@ -39,13 +38,14 @@ public struct SettingStore: Reducer {
       case .closeSettingSheet(let isClose):
         state.showSettingSheet = isClose
         return .none
-      case let .updateLineHeight(lineHeight):
-        return .run { send in
-          await send(.sentence(.updateBaseLineHeight(lineHeight)))
-        }
+//      case let .updateLineHeight(lineHeight):
+//        return .run { send in
+//          await send(.sentence(.updateBaseLineHeight(lineHeight)))
+//        }
       default:
         return .none
       }
     }
+//    ._printChanges()
   }
 }

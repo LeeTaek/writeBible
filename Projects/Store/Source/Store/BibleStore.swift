@@ -72,7 +72,8 @@ public struct BibleStore: Reducer {
     }
     .forEach(\.sentences, action: /Action.sentence(id:action:)) {
      SentenceStore()
+        ._printChanges()
     }
-    ._printChanges()
+//    ._printChanges()
   }
 }

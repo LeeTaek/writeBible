@@ -62,6 +62,7 @@ public struct SentenceStore: Reducer {
     default:
       return .none
     }
+    _printChanges()
   }
   
 }

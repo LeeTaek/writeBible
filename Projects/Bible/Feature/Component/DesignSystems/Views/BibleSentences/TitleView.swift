@@ -53,14 +53,19 @@ struct TitleView: View {
                     .padding()
                     .foregroundColor(.titleTextColor)
             }
-//            .sheet(isPresented: $showTitleSheet) {
-//                VStack {
-//                    contents
-//                    
-//                    bibleList
-//                        .padding()
-//                }
-//            }
+            .sheet(
+              isPresented: viewStore.binding(
+                get: { $0.showTitleSheet },
+                send: .showTitleSheet(true)
+              )
+            ){
+                  VStack {
+                      contents
+                      
+                      bibleList
+                          .padding()
+                  }
+              }
 
 
             Spacer()

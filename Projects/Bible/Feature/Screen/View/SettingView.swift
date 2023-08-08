@@ -58,15 +58,15 @@ struct SettingView: View {
                     Section {
                         VStack(alignment: .center) {
                             Text("주의 말씀의 맛이 내게 어찌 그리 단지요\n 내 입에 꿀보다 더 다니이다. \n ")
-                            .tracking(viewStore.sentence.setting.traking)
-                            .font(.custom(viewStore.sentence.setting.font.rawValue, size: viewStore.sentence.setting.fontSize))
-                            .lineSpacing(viewStore.sentence.setting.lineSpace)
+                            .tracking(viewStore.setting.traking)
+                            .font(.custom(viewStore.setting.font.rawValue, size: viewStore.setting.fontSize))
+                            .lineSpacing(viewStore.setting.lineSpace)
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                             
                             Text("- 시 119:103")
-                            .tracking(viewStore.sentence.setting.traking)
-                            .font(.custom(viewStore.sentence.setting.font.rawValue, size: viewStore.sentence.setting.fontSize))
-                            .lineSpacing(viewStore.sentence.setting.lineSpace)
+                            .tracking(viewStore.setting.traking)
+                            .font(.custom(viewStore.setting.font.rawValue, size: viewStore.setting.fontSize))
+                            .lineSpacing(viewStore.setting.lineSpace)
                                 .background(
                                     GeometryReader {            //라인 계산을 위한 base frame height
                                         Color.clear.preference(key: ViewHeightKey.self,
@@ -96,7 +96,7 @@ struct SettingView: View {
                 Form {
                     // 글체 설정
                     Section {
-                      Picker("글체", selection: viewStore.$sentence.setting.font) {
+                      Picker("글체", selection: viewStore.$setting.font) {
                                     ForEach(FontCase.allCases, id: \.self) {
                                         fontTitle(font: $0)
                                             .tag($0)
@@ -115,7 +115,7 @@ struct SettingView: View {
                     
                     //폰트 크기 설정
                     Section {
-                      Slider(value: viewStore.$sentence.setting.fontSize,
+                      Slider(value: viewStore.$setting.fontSize,
                              in: 20...35,
                              step: 1,
                              label: { Text("fontSize") },
@@ -125,7 +125,7 @@ struct SettingView: View {
                       .accentColor(.titleBackground)
                       
                     } header: {
-                      Text("글자 크기: \(Int(viewStore.sentence.setting.fontSize))")
+                      Text("글자 크기: \(Int(viewStore.setting.fontSize))")
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
@@ -134,7 +134,7 @@ struct SettingView: View {
                     
                     // 글자 간격
                     Section {
-                      Slider(value: viewStore.$sentence.setting.traking,
+                      Slider(value: viewStore.$setting.traking,
                              in: 1...5,
                              step: 1,
                              label: { Text("traking") },
@@ -144,7 +144,7 @@ struct SettingView: View {
                       .accentColor(.titleBackground)
 
                     } header: {
-                      Text("글자 간격 : \(Int(viewStore.sentence.setting.traking))")
+                      Text("글자 간격 : \(Int(viewStore.setting.traking))")
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
@@ -154,7 +154,7 @@ struct SettingView: View {
                     
                     // 줄 간격
                     Section {
-                      Slider(value: viewStore.$sentence.setting.lineSpace,
+                      Slider(value: viewStore.$setting.lineSpace,
                              in: 10...25,
                              step: 1,
                              label: { Text("line spacing") },
@@ -164,7 +164,7 @@ struct SettingView: View {
                       .accentColor(.titleBackground)
                         
                     } header: {
-                      Text("줄 간격 : \(Int(viewStore.sentence.setting.lineSpace))")
+                      Text("줄 간격 : \(Int(viewStore.setting.lineSpace))")
                             .tracking(2)
                             .font(.system(size: 15))
                             .fontWeight(.bold)

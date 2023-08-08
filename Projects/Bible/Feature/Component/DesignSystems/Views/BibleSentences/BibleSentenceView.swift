@@ -22,19 +22,10 @@ struct BibleSentenceView: View {
     self.store = store
     self.viewStore = ViewStore(self.store, observe: { $0 })
   }
-  
-//    ///사용하는 메인뷰의 높이를 구하기위해 사용하는 변수
-//    @State var textHeight : CGFloat = .zero
-//    @State var line: Int = 3
-//    @Binding var setting: SettingModel
 
     var body: some View {
       VStack {
-        Text(viewStore.sentence.chapterTitle ?? "")
-          .font(.system(size: 22))
-          .fontWeight(.heavy)
-          .foregroundColor(Color.chapterTitleColor)
-          .isHidden(viewStore.sentence.chapterTitle != nil)
+        chapterTitle
 
         HStack(alignment: .top) {
           sentenceDescription
@@ -44,6 +35,14 @@ struct BibleSentenceView: View {
       }
     }
 
+  
+  var chapterTitle: some View {
+    Text(viewStore.sentence.chapterTitle ?? "")
+      .font(.system(size: 22))
+      .fontWeight(.heavy)
+      .foregroundColor(Color.chapterTitleColor)
+      .isHidden(viewStore.sentence.chapterTitle != nil)
+  }
   
   var sectionNumber: some View {
     let capterString = viewStore.sentence.section > 9 ? viewStore.sentence.section.description : viewStore.sentence.section.description + " "

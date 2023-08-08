@@ -143,12 +143,14 @@ public struct BibleView: View {
   
   var bibleSentencesList: some View {
     // 본문
+    List {
       ForEachStore(
         self.store.scope(state: \.sentences, action: BibleStore.Action.sentence(id:action:))
       ) { sentenceStore in
         BibleSentenceView(store: sentenceStore)
-        .padding([.bottom])
-        .listRowSeparator(.hidden)
+          .padding([.bottom])
+          .listRowSeparator(.hidden)
+      }
     }
   }
 

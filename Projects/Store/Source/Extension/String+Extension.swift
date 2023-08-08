@@ -21,8 +21,8 @@ extension String {
   
   func readBibleTxt() -> [String] {
     guard let textPath = Bundle.module.path(forResource: "\(self)", ofType: nil) else {
-      Log.debug("파일 경로를 찾을수 없음")
-      return [] 
+      Log.error("파일 경로를 찾을수 없음: \(self)")
+      return []
     }
     let encodingEUCKR = CFStringConvertEncodingToNSStringEncoding(0x0422)
     var genesis = [String]()

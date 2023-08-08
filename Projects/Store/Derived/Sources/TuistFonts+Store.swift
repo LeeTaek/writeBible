@@ -15,20 +15,20 @@
 // MARK: - Fonts
 
 // swiftlint:disable identifier_name line_length type_body_length
-public enum BibleFontFamily {
+public enum StoreFontFamily {
   public enum NanumBarunGothic {
-    public static let regular = BibleFontConvertible(name: "NanumBarunGothic", family: "NanumBarunGothic", path: "NanumBarunGothic.ttf")
-    public static let all: [BibleFontConvertible] = [regular]
+    public static let regular = StoreFontConvertible(name: "NanumBarunGothic", family: "NanumBarunGothic", path: "NanumBarunGothic.ttf")
+    public static let all: [StoreFontConvertible] = [regular]
   }
   public enum NanumMyeongjo {
-    public static let regular = BibleFontConvertible(name: "NanumMyeongjo", family: "NanumMyeongjo", path: "NanumMyeongjo.ttf")
-    public static let all: [BibleFontConvertible] = [regular]
+    public static let regular = StoreFontConvertible(name: "NanumMyeongjo", family: "NanumMyeongjo", path: "NanumMyeongjo.ttf")
+    public static let all: [StoreFontConvertible] = [regular]
   }
   public enum 나눔손글씨꽃내음 {
-    public static let regular = BibleFontConvertible(name: "NanumGgocNaeEum", family: "나눔손글씨 꽃내음", path: "나눔손글씨꽃내음.ttf")
-    public static let all: [BibleFontConvertible] = [regular]
+    public static let regular = StoreFontConvertible(name: "NanumGgocNaeEum", family: "나눔손글씨 꽃내음", path: "나눔손글씨꽃내음.ttf")
+    public static let all: [StoreFontConvertible] = [regular]
   }
-  public static let allCustomFonts: [BibleFontConvertible] = [NanumBarunGothic.all, NanumMyeongjo.all, 나눔손글씨꽃내음.all].flatMap { $0 }
+  public static let allCustomFonts: [StoreFontConvertible] = [NanumBarunGothic.all, NanumMyeongjo.all, 나눔손글씨꽃내음.all].flatMap { $0 }
   public static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }
@@ -37,7 +37,7 @@ public enum BibleFontFamily {
 
 // MARK: - Implementation Details
 
-public struct BibleFontConvertible {
+public struct StoreFontConvertible {
   public let name: String
   public let family: String
   public let path: String
@@ -67,8 +67,8 @@ public struct BibleFontConvertible {
   }
 }
 
-public extension BibleFontConvertible.Font {
-  convenience init?(font: BibleFontConvertible, size: CGFloat) {
+public extension StoreFontConvertible.Font {
+  convenience init?(font: StoreFontConvertible, size: CGFloat) {
     #if os(iOS) || os(tvOS) || os(watchOS)
     if !UIFont.fontNames(forFamilyName: font.family).contains(font.name) {
       font.register()
