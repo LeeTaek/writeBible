@@ -25,7 +25,7 @@ protocol RealmDataSource {
 }
 
 extension RealmDataSource where Self: Actor {
-  internal var realm: Realm! {
+  var realm: Realm! {
     get async {
       do {
         let realm = try await Realm(actor: self)

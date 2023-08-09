@@ -35,7 +35,6 @@ struct Router: Reducer {
         return .none
       }
     }
-    ._printChanges()
   }
   
 }

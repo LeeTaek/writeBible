@@ -15,7 +15,7 @@ public class LatestWrittenChapterRealmDTO: Object {
   @Persisted public var title: String
   @Persisted public var chapter: Int
   
-  convenience init(id: UUID = UUID(), title: String, chapter: Int) {
+  convenience init(id: UUID = UUID(), title: String, chapter: Int) async {
     self.init()
     self.id = id
     self.title = title

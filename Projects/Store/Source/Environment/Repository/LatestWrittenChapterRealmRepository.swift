@@ -13,7 +13,7 @@ struct LatestWrittenChapterRealmRepository: Repository {
   init() { }
   
   func create(data: LatestWrittenChapterVO) async throws {
-    let dto = toDTO(vo: data)
+    let dto = await toDTO(vo: data)
     do {
       try await LatestWrittenChapterDataSource.shared.create(data: dto)
     } catch {
@@ -32,7 +32,7 @@ struct LatestWrittenChapterRealmRepository: Repository {
   }
   
   func update(data: LatestWrittenChapterVO) async throws -> LatestWrittenChapterVO {
-    let dto = toDTO(vo: data)
+    let dto = await toDTO(vo: data)
     do {
       let vo = try await LatestWrittenChapterDataSource.shared.update(data: dto).toStore()
       return vo
@@ -43,7 +43,7 @@ struct LatestWrittenChapterRealmRepository: Repository {
   }
   
   func delete(data: LatestWrittenChapterVO) async throws {
-    let dto = toDTO(vo: data)
+    let dto = await toDTO(vo: data)
     do {
       try await LatestWrittenChapterDataSource.shared.delete(data: dto)
     } catch {
@@ -51,9 +51,9 @@ struct LatestWrittenChapterRealmRepository: Repository {
     }
   }
   
-  
-  func toDTO(vo: LatestWrittenChapterVO) -> LatestWrittenChapterRealmDTO {
-    return .init(title: vo.title, chapter: vo.chapter)
+  @LatestWrittenChapterDataSource
+  func toDTO(vo: LatestWrittenChapterVO) async -> LatestWrittenChapterRealmDTO {
+    return await .init(title: vo.title, chapter: vo.chapter)
   }
   
 }

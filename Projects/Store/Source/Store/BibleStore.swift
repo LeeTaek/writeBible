@@ -34,14 +34,14 @@ public struct BibleStore: Reducer {
     case startCarve
   }
   
-  public var body: some Reducer<State, Action> {
+  public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
       case .onAppear:
         state.bible = BibleSentenceVO.fetchChapter(title: state.title.bibleTitle.rawValue,
-                                                       chapter: state.title.chapter)
+                                                   chapter: state.title.chapter)
         state.bible.forEach {
-          state.sentences.insert(SentenceStore.State(id: UUID(), sentence: $0), at: $0.chapter - 1)
+          state.sentences.append(SentenceStore.State(id: UUID(), sentence: $0))
         }
         return .run { send in
           await send(. fetchSetting(
@@ -50,6 +50,9 @@ public struct BibleStore: Reducer {
             }
           ))
         }
+      case .sentence(id: let id, action: .onAppear(let sentence)):
+        Log.debug("id: \(id), sentence: \(sentence.chapter)")
+        return .none
       case let .fetchSetting(.success(settingVO)):
         state.settingValue = settingVO
         return .none
@@ -71,9 +74,7 @@ public struct BibleStore: Reducer {
       
     }
     .forEach(\.sentences, action: /Action.sentence(id:action:)) {
-     SentenceStore()
-        ._printChanges()
+      SentenceStore()
     }
-//    ._printChanges()
   }
 }

@@ -14,7 +14,7 @@ import RealmSwift
 actor LatestWrittenChapterDataSource: RealmDataSource {
   static let shared = LatestWrittenChapterDataSource()
   typealias value = LatestWrittenChapterRealmDTO
-
+  
   func create(data: LatestWrittenChapterRealmDTO) async throws {
     do {
       guard let realm = await realm else { throw RealmObjectError.realmInitFailure }
@@ -22,7 +22,7 @@ actor LatestWrittenChapterDataSource: RealmDataSource {
         realm.create(LatestWrittenChapterRealmDTO.self, value: data)
       }
     } catch {
-      Log.debug("fail in create data: \(error)")
+      Log.error("fail in create data: \(error)")
       throw RealmObjectError.savedFailure
     }
   }
@@ -36,7 +36,7 @@ actor LatestWrittenChapterDataSource: RealmDataSource {
           }
       return setting
     } catch {
-      Log.debug("fail in read data: \(error)")
+      Log.error("fail in read data: \(error)")
       throw RealmObjectError.notFoundSettingData
     }
   }
@@ -51,7 +51,7 @@ actor LatestWrittenChapterDataSource: RealmDataSource {
         realm.create(LatestWrittenChapterRealmDTO.self, value: value, update: .modified)
       }
     } catch {
-      Log.debug("fail in update data: \(error)")
+      Log.error("fail in update data: \(error)")
       throw RealmObjectError.updatedFailure
     }
     return data
@@ -64,7 +64,7 @@ actor LatestWrittenChapterDataSource: RealmDataSource {
         realm.delete(data)
       }
     } catch {
-      Log.debug("fail in delete data: \(error)")
+      Log.error("fail in delete data: \(error)")
       throw RealmObjectError.deleteFailure
     }
   }

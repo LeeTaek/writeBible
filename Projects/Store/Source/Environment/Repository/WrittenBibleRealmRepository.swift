@@ -13,7 +13,7 @@ struct WrittenBibleRealmRepository: Repository {
   init() { }
   
   func create(data: WrittenSentenceVO) async throws {
-    let dto = toDTO(vo: data)
+    let dto = await toDTO(vo: data)
     do {
       try await BibleRealmDataSource.shared.create(data: dto)
     } catch {
@@ -32,7 +32,7 @@ struct WrittenBibleRealmRepository: Repository {
   }
   
   func update(data: WrittenSentenceVO) async throws -> WrittenSentenceVO {
-    let dto = toDTO(vo: data)
+    let dto = await toDTO(vo: data)
     do {
       let vo = try await BibleRealmDataSource.shared.update(data: dto).toStore()
       return vo
@@ -44,7 +44,7 @@ struct WrittenBibleRealmRepository: Repository {
   }
   
   func delete(data: WrittenSentenceVO) async throws {
-    let dto = toDTO(vo: data)
+    let dto = await toDTO(vo: data)
     do {
       try await BibleRealmDataSource.shared.delete(data: dto)
     } catch {
@@ -52,8 +52,9 @@ struct WrittenBibleRealmRepository: Repository {
     }
   }
   
-  func toDTO(vo: WrittenSentenceVO) -> WrittenBibleRealmDTO {
-    return .init(writtenData: vo.writtenData,
+  @BibleRealmDataSource
+  func toDTO(vo: WrittenSentenceVO) async -> WrittenBibleRealmDTO {
+    return await .init(writtenData: vo.writtenData,
                  bibleSentence: vo.bible
     )
   }

@@ -29,8 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
-      <Testables>
-      </Testables>
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -40,6 +38,8 @@
             ReferencedContainer = "container:Carve.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

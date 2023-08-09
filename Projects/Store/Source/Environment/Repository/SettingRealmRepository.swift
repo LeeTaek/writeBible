@@ -13,11 +13,12 @@ struct SettingRealmRepository: Repository {
   init() { }
   
   public func create(data: SettingVO) async throws {
-    let dto = toDTO(vo: data)
+    let dto = await toDTO(vo: data)
     do {
       try await SettingRealmDataSrouce.shared.create(data: dto)
+      Log.debug("create Setting Value: \(data)")
     } catch {
-      Log.debug(error)
+      Log.error(error)
     }
   }
   
@@ -26,34 +27,35 @@ struct SettingRealmRepository: Repository {
       let vo = try await SettingRealmDataSrouce.shared.read().toStore()
       return vo
     } catch {
-      Log.debug(error)
+      Log.error(error)
+      try await create(data: SettingVO.defaultValue)
       return SettingVO.defaultValue
     }
   }
   
   func update(data: SettingVO) async throws -> SettingVO {
-    let dto = toDTO(vo: data)
+    let dto = await toDTO(vo: data)
     do {
       let vo = try await SettingRealmDataSrouce.shared.update(data: dto).toStore()
       return vo
     } catch {
-      Log.debug(error)
+      Log.error(error)
       return data
     }
   }
   
   func delete(data: SettingVO) async throws {
-    let dto = toDTO(vo: data)
+    let dto = await toDTO(vo: data)
     do {
       try await SettingRealmDataSrouce.shared.delete(data: dto)
     } catch {
-      Log.debug(error)
+      Log.error(error)
     }
   }
   
-  
-  func toDTO(vo: SettingVO) -> SettingRealmDTO {
-    return .init(lineSpace: vo.lineSpace,
+  @SettingRealmDataSrouce
+  func toDTO(vo: SettingVO) async -> SettingRealmDTO {
+    return await .init(lineSpace: vo.lineSpace,
                  fontSize: vo.fontSize,
                  traking: vo.traking,
                  baseLineHeight: vo.baseLineHeight,

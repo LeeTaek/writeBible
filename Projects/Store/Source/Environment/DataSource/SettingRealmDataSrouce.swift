@@ -22,7 +22,7 @@ actor SettingRealmDataSrouce: RealmDataSource {
         realm.create(SettingRealmDTO.self, value: data)
       }
     } catch {
-      Log.debug("fail in create data: \(error)")
+      Log.error("fail in create data: \(error)")
       throw RealmObjectError.savedFailure
     }
   }
@@ -36,7 +36,7 @@ actor SettingRealmDataSrouce: RealmDataSource {
       }
       return setting
     } catch {
-      Log.debug("fail in read data: \(error)")
+      Log.error("fail in read data: \(error)")
       throw RealmObjectError.notFoundSettingData
     }
   }
@@ -54,7 +54,7 @@ actor SettingRealmDataSrouce: RealmDataSource {
         realm.create(SettingRealmDTO.self, value: value, update: .modified)
       }
     } catch {
-      Log.debug("fail in update data: \(error)")
+      Log.error("fail in update data: \(error)")
       throw RealmObjectError.updatedFailure
     }
     return data
@@ -67,7 +67,7 @@ actor SettingRealmDataSrouce: RealmDataSource {
         realm.delete(data)
       }
     } catch {
-      Log.debug("fail in delete data: \(error)")
+      Log.error("fail in delete data: \(error)")
       throw RealmObjectError.deleteFailure
     }
   }

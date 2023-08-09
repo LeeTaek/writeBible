@@ -10,14 +10,14 @@ import Foundation
 
 import RealmSwift
 
-public class SettingRealmDTO: Object {
+public final class SettingRealmDTO: Object {
   @Persisted public var lineSpace: CGFloat
   @Persisted public var fontSize: CGFloat
   @Persisted public var traking: CGFloat
   @Persisted public var baseLineHeight: CGFloat
   @Persisted public var font: String
 
-  public convenience init(lineSpace: CGFloat, fontSize: CGFloat, traking: CGFloat, baseLineHeight: CGFloat, font: String) {
+  public convenience init(lineSpace: CGFloat, fontSize: CGFloat, traking: CGFloat, baseLineHeight: CGFloat, font: String) async {
     self.init()
     self.lineSpace = lineSpace
     self.fontSize = fontSize
@@ -34,4 +34,3 @@ public class SettingRealmDTO: Object {
                  font: FontCase(rawValue: font) ?? .flower)
   }
 }
-
