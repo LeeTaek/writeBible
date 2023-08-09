@@ -25,6 +25,9 @@ struct RouterView: View {
     Bible.BibleView(
       store: self.store.scope(state: \.bible, action: Router.Action.bible)
     )
+//    Bible.BibleSentenceView(
+//      store: self.store.scope(state: \.sentence, action: Router.Action.sentence)
+//    )
     .onAppear {
       self.store.send(.onAppear)
     }

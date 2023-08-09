@@ -18,14 +18,15 @@ public struct BibleStore: Reducer {
   public struct State: Equatable {
     public var title = TitleStore.State()
     public var bible: [BibleSentenceVO] = []
-    public var sentences: IdentifiedArrayOf<SentenceStore.State> = []
+    @BindingState public var sentences: IdentifiedArrayOf<SentenceStore.State> = []
     public var settingValue: SettingVO = .defaultValue
     public var startCarve: Bool = false
     public init() { }
   }
   
-  public enum Action: Equatable {
+  public enum Action: BindableAction, Equatable {
     case onAppear
+    case binding(BindingAction<State>)
     case titleAction(TitleStore.Action)
     case sentence(id: SentenceStore.State.ID, action: SentenceStore.Action)
     case fetchSetting(TaskResult<SettingVO>)
@@ -35,14 +36,11 @@ public struct BibleStore: Reducer {
   }
   
   public var body: some ReducerOf<Self> {
+    BindingReducer()
+    
     Reduce { state, action in
       switch action {
       case .onAppear:
-        state.bible = BibleSentenceVO.fetchChapter(title: state.title.bibleTitle.rawValue,
-                                                   chapter: state.title.chapter)
-        state.bible.forEach {
-          state.sentences.append(SentenceStore.State(id: UUID(), sentence: $0))
-        }
         return .run { send in
           await send(. fetchSetting(
             TaskResult {
@@ -54,6 +52,12 @@ public struct BibleStore: Reducer {
         Log.debug("id: \(id), sentence: \(sentence.chapter)")
         return .none
       case let .fetchSetting(.success(settingVO)):
+        state.bible = BibleSentenceVO.fetchChapter(title: state.title.bibleTitle.rawValue,
+                                                   chapter: state.title.chapter)
+        state.sentences.append(contentsOf: state.bible.map {
+                  SentenceStore.State(id: UUID(), sentence: $0)
+        })
+
         state.settingValue = settingVO
         return .none
       case let .fetchSetting(.failure(error)):
@@ -76,5 +80,6 @@ public struct BibleStore: Reducer {
     .forEach(\.sentences, action: /Action.sentence(id:action:)) {
       SentenceStore()
     }
+    ._printChanges()
   }
 }

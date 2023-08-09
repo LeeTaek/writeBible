@@ -7,7 +7,7 @@ import Foundation
 
 private class BundleFinder {}
 
-extension Foundation.Bundle {
+public extension Foundation.Bundle {
     /// Since Bible is a staticFramework, the bundle containing the resources is copied into the final product.
     static let module: Bundle = {
         let bundleName = "Bible_Bible"

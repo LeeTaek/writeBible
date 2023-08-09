@@ -67,7 +67,7 @@ public struct BibleView: View {
 //            }
         
         return ScrollViewReader { scr in
-            ScrollView(.vertical) {
+//            ScrollView(.vertical) {
                 VStack {
                     VStack {
                       detectScrollingView
@@ -100,7 +100,7 @@ public struct BibleView: View {
                         .padding(30)
                     }
                 }
-            }
+//            }
             .coordinateSpace(name: "scroll")
 //            .gesture(dragGesture)
         }
@@ -147,7 +147,8 @@ public struct BibleView: View {
       ForEachStore(
         self.store.scope(state: \.sentences, action: BibleStore.Action.sentence(id:action:))
       ) { sentenceStore in
-        BibleSentenceView(store: sentenceStore)
+        Log.debug(sentenceStore)
+        return BibleSentenceView(store: sentenceStore)
           .padding([.bottom])
           .listRowSeparator(.hidden)
       }

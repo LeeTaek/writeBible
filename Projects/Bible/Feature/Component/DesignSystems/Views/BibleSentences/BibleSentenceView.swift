@@ -14,16 +14,16 @@ import SwiftUI
 
 import ComposableArchitecture
 
-struct BibleSentenceView: View {
+public struct BibleSentenceView: View {
   let store: StoreOf<SentenceStore>
   @ObservedObject var viewStore: ViewStoreOf<SentenceStore>
 
-  init(store: StoreOf<SentenceStore>) {
+  public init(store: StoreOf<SentenceStore>) {
     self.store = store
     self.viewStore = ViewStore(self.store, observe: { $0 })
   }
 
-    var body: some View {
+  public var body: some View {
       VStack {
         chapterTitle
 
@@ -32,6 +32,10 @@ struct BibleSentenceView: View {
           writtingLineView
         }
         .frame(height: self.viewStore.textHeight)
+      }
+      .onPreferenceChange(ViewHeightKey.self) {
+        // Frame 높이에 따라 그릴 Line 수 계산
+        self.viewStore.send(.getLine($0))
       }
     }
 
@@ -97,10 +101,6 @@ struct BibleSentenceView: View {
       }
       .frame(width: UIScreen.main.bounds.width / 2)
     }
-    .onPreferenceChange(ViewHeightKey.self) {
-      // Frame 높이에 따라 그릴 Line 수 계산
-      self.viewStore.send(.getLine($0))
-    }
     .padding([.trailing,.leading])
   }
   
@@ -118,11 +118,13 @@ struct ViewHeightKey: PreferenceKey {
     }
 }
 
-//
-//struct BibleSentenceView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let bible = Bible(title: "요한계시록", chapter: 4, section: 1, sentence: "이 일 후에 내가 보니 하늘에 열린 문이 있는데 내가 들은 바 처음에 내게 말하던 나팔 소리 같은 그 음성이 이르되 이리로 올라오라 이 후에 마땅히 일어날 일들을 내가 네게 보이리라 하시더라")
-//        
-//        BibleSentenceView(bibleSentence: bible, setting: .constant(SettingModel(lineSpace: 11, fontSize: 20, traking: 2)))
-//    }
-//}
+
+
+#Preview {
+  let sentence = BibleSentenceVO.defaultValue
+  
+  return BibleSentenceView(store: Store(
+    initialState: SentenceStore.State(id: UUID(), sentence: sentence)) {
+      SentenceStore()
+    })
+}
