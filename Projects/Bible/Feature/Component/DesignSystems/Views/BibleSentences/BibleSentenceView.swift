@@ -59,21 +59,23 @@ public struct BibleSentenceView: View {
   
   
   var sentenceDescription: some View {
-    HStack {
-      sectionNumber
+    HStack(alignment: .top) {
+        sectionNumber
       
-      Text(viewStore.sentence.sentence)
-        .tracking(viewStore.setting.traking)
-        .font(.custom(viewStore.setting.font.rawValue, size: viewStore.setting.fontSize))
-        .lineLimit(nil)
-        .lineSpacing(viewStore.setting.lineSpace)
-        .fixedSize(horizontal: false, vertical: true)
-//        .frame(width: geo.frame(in: .local).size.width/9 * 8, alignment: .leading)
-        .background(
-          GeometryReader {
-            Color.clear.preference(key: ViewHeightKey.self,
-                                   value: $0.frame(in: .local).size.height)
-          })
+      GeometryReader { geo in
+        Text(viewStore.sentence.sentence)
+          .tracking(viewStore.setting.traking)
+          .font(.custom(viewStore.setting.font.rawValue, size: viewStore.setting.fontSize))
+          .lineLimit(nil)
+          .lineSpacing(viewStore.setting.lineSpace)
+          .fixedSize(horizontal: false, vertical: true)
+          .frame(width: geo.frame(in: .local).size.width/10 * 9, alignment: .leading)
+          .background(
+            GeometryReader {
+              Color.clear.preference(key: ViewHeightKey.self,
+                                     value: $0.frame(in: .local).size.height)
+            })
+      }
     }
     .frame(width: UIScreen.main.bounds.width / 2)
     
@@ -81,7 +83,7 @@ public struct BibleSentenceView: View {
       
   
   var writtingLineView: some View {
-    return HStack {
+    HStack(alignment: .top) {
       sectionNumber
 
       GeometryReader { lineGeo in
@@ -92,7 +94,7 @@ public struct BibleSentenceView: View {
           ForEach(1..<self.viewStore.line, id: \.self) { _ in
             Rectangle()
               .opacity(0.2)
-              .frame(width: lineGeo.frame(in: .local).size.width/9 * 8, height: 2)
+              .frame(width: lineGeo.frame(in: .local).size.width/10 * 9, height: 2)
 //              .position(x: (geo.frame(in: .local).midX + geo.frame(in: .local).minX)/2 - 20 ,
 //                        y: geo.frame(in: .local).minY + viewStore.setting.fontSize + (viewStore.setting.lineSpace*0.5))
           

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,11 +20,13 @@
 		8D99FC6DE0F51B3509CB686A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A39550908CB6D2A1E8DF4 /* AppCoordinator.swift */; };
 		9674D33BC2FC6EBC4E0721DD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62280C8FA4D7240333B14E6E /* Router.swift */; };
 		97D7B2D40EA5CCF41EA4E690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CC70BF846E4A7BC975BF43 /* Assets.xcassets */; };
+		99B84CB52A84A9E600A93C14 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B84CB42A84A9E600A93C14 /* Screen.swift */; };
+		99B84CB72A84AAA000A93C14 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B84CB62A84AAA000A93C14 /* MainTabCoordinator.swift */; };
 		A0403ABFEF8D197259E53434 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC12BA2A9A0D5F6BD9872A /* RouterView.swift */; };
 		A9F68BB00C0176F31ED98EB3 /* TuistAssets+Carve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B714E2812B624AEDA5E9039 /* TuistAssets+Carve.swift */; };
 		E395AFBDFF76E7941C5C1553 /* TuistBundle+Carve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C1F54911FF23AF757CCBD /* TuistBundle+Carve.swift */; };
 		E83D1D4D36E01E2477AD9A33 /* Store_Store.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8149797DA015685D4A3CD3BC /* Store_Store.bundle */; };
-		EC079C4C8915F8FD051B9673 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C92FF9C6D49207462AA343 /* CoordinatorView.swift */; };
+		EC079C4C8915F8FD051B9673 /* MainTabCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C92FF9C6D49207462AA343 /* MainTabCoordinatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,12 +59,14 @@
 		2FA2B28A120AD43A5C87DA24 /* Carve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B714E2812B624AEDA5E9039 /* TuistAssets+Carve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Carve.swift"; sourceTree = "<group>"; };
 		62280C8FA4D7240333B14E6E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		62C92FF9C6D49207462AA343 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		62C92FF9C6D49207462AA343 /* MainTabCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinatorView.swift; sourceTree = "<group>"; };
 		67189EBB192472C8DFDA5AB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F8C1F54911FF23AF757CCBD /* TuistBundle+Carve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Carve.swift"; sourceTree = "<group>"; };
 		72F09E66505F3238BC83B85E /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
 		8149797DA015685D4A3CD3BC /* Store_Store.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Store_Store.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A279AFAFDCF3FAA73744AF /* Bible_Bible.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bible_Bible.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B84CB42A84A9E600A93C14 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		99B84CB62A84AAA000A93C14 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		9C3A39550908CB6D2A1E8DF4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A20950F1147E5536403F60B6 /* Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7950B1226DAC35ED94479D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -161,7 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				9C3A39550908CB6D2A1E8DF4 /* AppCoordinator.swift */,
-				62C92FF9C6D49207462AA343 /* CoordinatorView.swift */,
+				62C92FF9C6D49207462AA343 /* MainTabCoordinatorView.swift */,
+				99B84CB42A84A9E600A93C14 /* Screen.swift */,
+				99B84CB62A84AAA000A93C14 /* MainTabCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -220,8 +226,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = leetaek;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = C8665897A1FA99D5B3BCA95B /* Build configuration list for PBXProject "Carve" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -234,6 +238,8 @@
 			mainGroup = FF7D0889A0C2653F2F829D95;
 			packageReferences = (
 				73FA8BCFCE250397270F7674 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				63FA1D8B4B012A20A833FE02 /* XCRemoteSwiftPackageReference "TCACoordinators" */,
+				51637E72678966DFA1858BAB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = E5745617D5561A4EBCAC750C /* Products */;
 			projectDirPath = "";
@@ -265,12 +271,14 @@
 			files = (
 				A9F68BB00C0176F31ED98EB3 /* TuistAssets+Carve.swift in Sources */,
 				E395AFBDFF76E7941C5C1553 /* TuistBundle+Carve.swift in Sources */,
+				99B84CB72A84AAA000A93C14 /* MainTabCoordinator.swift in Sources */,
 				16EE9ADE193E7C3ECD15077D /* AppDelegate.swift in Sources */,
 				9674D33BC2FC6EBC4E0721DD /* Router.swift in Sources */,
 				A0403ABFEF8D197259E53434 /* RouterView.swift in Sources */,
+				99B84CB52A84A9E600A93C14 /* Screen.swift in Sources */,
 				5190988A9A4B5DCEEB8AC7ED /* WriteBibleApp.swift in Sources */,
 				8D99FC6DE0F51B3509CB686A /* AppCoordinator.swift in Sources */,
-				EC079C4C8915F8FD051B9673 /* CoordinatorView.swift in Sources */,
+				EC079C4C8915F8FD051B9673 /* MainTabCoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +468,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		51637E72678966DFA1858BAB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		63FA1D8B4B012A20A833FE02 /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
 		73FA8BCFCE250397270F7674 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";

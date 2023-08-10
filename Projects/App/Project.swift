@@ -6,7 +6,10 @@ let project = Project.makeModule(
     platform: .iOS,
     product: .app,
     packages: [
-      .Firebase
+      .Firebase,
+        .TCAArchitecture,
+        .TCACoordinator
+
     ],
     dependencies: [
       .project(target: "Bible", path: .relativeToRoot("Projects/Bible")),

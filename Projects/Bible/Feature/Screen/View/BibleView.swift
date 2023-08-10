@@ -31,12 +31,13 @@ public struct BibleView: View {
       simpleTitle
       bibleSentencesList
     }
-    .overlay {
-      TitleView(
-        store: self.store.scope(state: \.title,
-                                action: BibleStore.Action.titleAction)
-      )
-    }
+    .padding(.horizontal)
+//    .overlay {
+//      TitleView(
+//        store: self.store.scope(state: \.title,
+//                                action: BibleStore.Action.titleAction)
+//      )
+//    }
     .onAppear {
       viewStore.send(.onAppear)
     }
@@ -46,9 +47,9 @@ public struct BibleView: View {
   
   /// 챕터 타이틀
   var simpleTitle: some View {
-    let name = viewStore.title.bibleTitle.rawValue.rawTitle()
+    let name = viewStore.title.rawValue.rawTitle()
     
-    return  Text("\(name) \(viewStore.title.chapter)장")
+    return  Text("\(name) \(viewStore.chapter)장")
       .font(.system(size: 25))
       .fontWeight(.bold)
       .foregroundColor(.simpleTitleColor)
@@ -58,7 +59,7 @@ public struct BibleView: View {
   
   /// 본문
   var bibleSentencesList: some View {
-    let keyTitle = viewStore.title.bibleTitle.rawValue + viewStore.title.chapter.description
+    let keyTitle = viewStore.title.rawValue + viewStore.chapter.description
 //    let dragGesture = DragGesture()
 //      .onChanged({
 //        self.translation = $0.translation
@@ -66,7 +67,7 @@ public struct BibleView: View {
 //      .onEnded {
 //        /// 다음장 혹은 이전장으로 넘어가기 위한 드래그 제스쳐
 //        if $0.translation.width < -100 {                           //드래그 가로의 위치가 -100보다 작은 위치로 가면 실행
-//          moveToNextChapter()
+//          퍋ㅈ
 //        } else if $0.translation.width > 100 {                  //드래그 가로의 위치가 100보다 커지면 실행
 //          moveToBeforeChapter()
 //        }
@@ -74,13 +75,15 @@ public struct BibleView: View {
 //      }
 
     return ScrollViewReader{ scr in
-      ScrollView(.vertical) {
-        ForEachStore(
-          self.store.scope(state: \.sentences, action: BibleStore.Action.sentence(id:action:))
-        ) { sentenceStore in
-          BibleSentenceView(store: sentenceStore)
-            .padding([.bottom])
-            .listRowSeparator(.hidden)
+      ScrollView(.vertical, showsIndicators: false) {
+        LazyVStack(alignment: .leading){
+          ForEachStore(
+            self.store.scope(state: \.sentences, action: BibleStore.Action.sentence(id:action:))
+          ) { sentenceStore in
+            BibleSentenceView(store: sentenceStore)
+              .padding([.bottom])
+              .listRowSeparator(.hidden)
+          }
         }
       }
       .id("scrollToTop")
@@ -124,42 +127,42 @@ public struct BibleView: View {
   
   //MARK: - Methods
   /// 다음장으로 이동.
-  func moveToNextChapter() {
-    let lastChapter = viewStore.state.title.lastChapter
-    
-    if viewStore.title.chapter < lastChapter {
-      self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle,
-                                               chapter: viewStore.state.title.chapter + 1)))
-    } else {
-      if viewStore.title.bibleTitle != .revelation {
-        self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle.next(),
-                                                 chapter: 1)))
-      }
-    }
-  }
-  
-  
-  /// 이전 장으로 이동
-  func moveToBeforeChapter() {
-    if viewStore.state.title.chapter > 1 {
-      self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle,
-                                               chapter: viewStore.state.title.chapter - 1)))
-    } else {
-      if viewStore.title.bibleTitle != .genesis {
-        let beforeBible = viewStore.state.title.bibleTitle.before()
-        let lastChapter = BibleSentenceVO.lastChapter(title: beforeBible.rawValue)
-        self.viewStore.send(.titleAction(.moveTo(title: beforeBible, chapter: lastChapter)))
-      }
-    }
-  }
-  
+//  func moveToNextChapter() {
+//    let lastChapter = viewStore.state.title.lastChapter
+//    
+//    if viewStore.title.chapter < lastChapter {
+//      self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle,
+//                                               chapter: viewStore.state.title.chapter + 1)))
+//    } else {
+//      if viewStore.title.bibleTitle != .revelation {
+//        self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle.next(),
+//                                                 chapter: 1)))
+//      }
+//    }
+//  }
+//  
+//  
+//  /// 이전 장으로 이동
+//  func moveToBeforeChapter() {
+//    if viewStore.state.title.chapter > 1 {
+//      self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle,
+//                                               chapter: viewStore.state.title.chapter - 1)))
+//    } else {
+//      if viewStore.title.bibleTitle != .genesis {
+//        let beforeBible = viewStore.state.title.bibleTitle.before()
+//        let lastChapter = BibleSentenceVO.lastChapter(title: beforeBible.rawValue)
+//        self.viewStore.send(.titleAction(.moveTo(title: beforeBible, chapter: lastChapter)))
+//      }
+//    }
+//  }
+//  
 }
 
 
 
 #Preview {
   return BibleView(store: Store(
-    initialState: BibleStore.State()) {
+    initialState: BibleStore.State(title: .genesis, chapter: 1)) {
       BibleStore()
     })
 }

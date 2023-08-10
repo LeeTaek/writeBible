@@ -13,7 +13,7 @@ import ComposableArchitecture
 
 struct Router: Reducer {
   struct State: Equatable{
-    var bible = BibleStore.State()
+    var bible = BibleStore.State(title: .genesis, chapter: 1)
     var sentence = SentenceStore.State(sentence: BibleSentenceVO.defaultValue)
   }
   
