@@ -124,7 +124,7 @@ struct ViewHeightKey: PreferenceKey {
   let sentence = BibleSentenceVO.defaultValue
   
   return BibleSentenceView(store: Store(
-    initialState: SentenceStore.State(id: UUID(), sentence: sentence)) {
+    initialState: SentenceStore.State(sentence: sentence)) {
       SentenceStore()
     })
 }

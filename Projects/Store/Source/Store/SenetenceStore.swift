@@ -14,20 +14,19 @@ public struct SentenceStore: Reducer {
   public init() { }
   
   public struct State: Equatable, Identifiable {
-    public let id: UUID
+    public let id: String
     public var sentence: BibleSentenceVO
     public var setting: SettingVO = .defaultValue
     public var textHeight: CGFloat = .zero
     public var line: Int = 3
     
-    public init(id: UUID, sentence: BibleSentenceVO) {
-      self.id = id
+    public init(sentence: BibleSentenceVO) {
       self.sentence = sentence
+      self.id = "\(sentence.title).\(sentence.chapter.description).\(sentence.section.description)"
     }
   }
   
-  public enum Action: BindableAction, Equatable {
-    case binding(BindingAction<State>)
+  public enum Action: Equatable {
     case onAppear(BibleSentenceVO)
     case getLine(CGFloat)
     case updateSettingResponse(TaskResult<SettingVO>)
@@ -35,11 +34,7 @@ public struct SentenceStore: Reducer {
   }
   
   
-//  public func reduce(into state: inout State, action: Action) -> Effect<Action> {
-  public var body: some ReducerOf<Self> {
-    BindingReducer()
-    
-    Reduce { state, action in
+  public func reduce(into state: inout State, action: Action) -> Effect<Action> {
       switch action {
       case .onAppear(let sentence):
         Log.debug("sentenceStore :\(sentence)")
@@ -56,11 +51,6 @@ public struct SentenceStore: Reducer {
       case let .updateBaseLineHeight(lineHeight):
         state.setting.baseLineHeight = lineHeight
         return .none
-      default:
-        return .none
       }
     }
-    ._printChanges()
-  }
-  
 }

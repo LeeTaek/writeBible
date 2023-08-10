@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		7A4AD617D80706F1C2F96C48 /* SettingVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7167C72C714ABF8132DC4 /* SettingVO.swift */; };
 		8B87BD3DA53CF6A1D5D231E2 /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1732FAEF9F8744C021F53E /* TCACoordinators */; };
 		95C9FA2C832C282ACC67065C /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B354F6E7091B31BD95323E4 /* DrawingDocument.swift */; };
+		99B84CB32A84758900A93C14 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B84CB22A84758900A93C14 /* View+Extension.swift */; };
 		A0075984636350017DDC9664 /* BibleSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF43435E78E0496BD07DD4 /* BibleSentenceView.swift */; };
 		A40445F4BDD629EC7EF3E382 /* RecentWritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283CB0EEA2B5731A9CD8677B /* RecentWritingManager.swift */; };
 		AE29047DFBE3AA61968C1656 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 227DF1CD85CFC32BCC54B24F /* RealmSwift */; };
@@ -132,6 +133,7 @@
 		71F3F728561DA2186B5B0F66 /* TuistBundle+Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Bible.swift"; sourceTree = "<group>"; };
 		77318F6AAB3FA712E93E70FC /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		8BFFE4BF4C2BA2DC0E35B59E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		99B84CB22A84758900A93C14 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		A5172044350588967C767E40 /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
 		B49A3DABB00A86699075306D /* Bible_Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible_Bible-Info.plist"; sourceTree = "<group>"; };
 		B7DEE92B1B5D7EF35E3FDE5E /* Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible-Info.plist"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				E437E75932C65C26326F89A3 /* Color+Extension.swift */,
 				C9DA0B0E9BFCB5904B47EB87 /* OSLog+Extension.swift */,
 				32D729CC549B0FC7F914B999 /* String+Extension.swift */,
+				99B84CB22A84758900A93C14 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -449,8 +452,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = leetaek;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 603F9F5D189033E2487336C3 /* Build configuration list for PBXProject "Bible" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -527,6 +528,7 @@
 				A40445F4BDD629EC7EF3E382 /* RecentWritingManager.swift in Sources */,
 				F3AC0522E01B50C4E5428506 /* SettingManager.swift in Sources */,
 				38715F5CE0C5F878229C90B9 /* Coordinator.swift in Sources */,
+				99B84CB32A84758900A93C14 /* View+Extension.swift in Sources */,
 				28A9D182BD4B712A19939782 /* ContentView.swift in Sources */,
 				692E3164A070537E2476A8C4 /* BibleView.swift in Sources */,
 				22FCB70AA49433C779C2120F /* SettingView.swift in Sources */,

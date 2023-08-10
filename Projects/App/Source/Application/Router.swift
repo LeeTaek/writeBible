@@ -14,7 +14,7 @@ import ComposableArchitecture
 struct Router: Reducer {
   struct State: Equatable{
     var bible = BibleStore.State()
-    var sentence = SentenceStore.State(id: UUID(), sentence: BibleSentenceVO.defaultValue)
+    var sentence = SentenceStore.State(sentence: BibleSentenceVO.defaultValue)
   }
   
   enum Action: Equatable {

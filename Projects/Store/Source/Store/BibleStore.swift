@@ -55,7 +55,7 @@ public struct BibleStore: Reducer {
         state.bible = BibleSentenceVO.fetchChapter(title: state.title.bibleTitle.rawValue,
                                                    chapter: state.title.chapter)
         state.sentences.append(contentsOf: state.bible.map {
-                  SentenceStore.State(id: UUID(), sentence: $0)
+                  SentenceStore.State(sentence: $0)
         })
 
         state.settingValue = settingVO
@@ -80,6 +80,6 @@ public struct BibleStore: Reducer {
     .forEach(\.sentences, action: /Action.sentence(id:action:)) {
       SentenceStore()
     }
-    ._printChanges()
+//    ._printChanges()
   }
 }
