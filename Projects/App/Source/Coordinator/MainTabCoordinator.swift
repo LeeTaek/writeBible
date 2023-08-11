@@ -6,6 +6,7 @@
 //  Copyright © 2023 leetaek. All rights reserved.
 //
 
+import Bible
 import Foundation
 
 import ComposableArchitecture
@@ -13,29 +14,39 @@ import TCACoordinators
 
 struct MainTabCoordinator: Reducer {
   enum Tab: Hashable {
-    case write, sentence, setting
+    case bible, app
   }
   
-  struct State: Equatable, IndexedRouterState {
-    var routes: [Route<Screen.State>]
+  struct State: Equatable {
+    static let initialState = State(
+      bible: .initialState,
+      selectedTab: .app
+    )
+    
+    var bible: BibleCoordinator.State
+    
+    var selectedTab: Tab
   }
   
-  enum Action: IndexedRouterAction {
-    case routeAction(Int, action: Screen.Action)
-    case updateRoutes([Route<Screen.State>])
+  enum Action {
+    case bible(BibleCoordinator.Action)
+    case tabSelected(Tab)
   }
   
   var body: some ReducerOf<Self> {
-    Reduce<State, Action> { state, action in
+    Scope(state: \.bible, action: /Action.bible) {
+      BibleCoordinator()
+    }
+    
+    Reduce { state, action in
       switch action {
-      case .routeAction(_, .bible(.onAppear)):
-        state.routes.presentCover(.bible(.init()), embedInNavigationView: true)
-        return .none
-      
+      case .tabSelected(let tab):
+        state.selectedTab = tab
       default:
-        return .none
+        break
       }
-      
+      return .none
     }
   }
 }
+

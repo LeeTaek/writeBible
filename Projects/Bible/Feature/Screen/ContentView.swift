@@ -23,7 +23,7 @@ public struct ContentView: View {
     public var body: some View {
 //        let setting = settingValue.first ?? SettingManager()
 
-      return BibleView(store: Store(initialState: BibleStore.State()) {
+      return BibleView(store: Store(initialState: BibleStore.State(title: .genesis, chapter: 1)) {
         BibleStore()
       })
 //        return BibleView(settingValue: setting)

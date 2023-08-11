@@ -27,7 +27,7 @@ struct LatestWrittenChapterRealmRepository: Repository {
       return vo
     } catch {
       Log.debug(error)
-      return LatestWrittenChapterVO(title: "창세기", chapter: 1)
+      return LatestWrittenChapterVO(title: .genesis, chapter: 1)
     }
   }
   
@@ -53,7 +53,7 @@ struct LatestWrittenChapterRealmRepository: Repository {
   
   @LatestWrittenChapterDataSource
   func toDTO(vo: LatestWrittenChapterVO) async -> LatestWrittenChapterRealmDTO {
-    return await .init(title: vo.title, chapter: vo.chapter)
+    return await .init(title: vo.title.rawValue, chapter: vo.chapter)
   }
   
 }

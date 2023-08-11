@@ -9,11 +9,16 @@
 import Foundation
 
 public struct LatestWrittenChapterVO: Hashable {
-  public var title: String
+  public var title: BibleTitle
   public var chapter: Int
   
+  public init(title: BibleTitle, chapter: Int) {
+    self.title = title
+    self.chapter = chapter
+  }
+  
   static public let defaultValue = Self(
-    title: "창세기",
+    title: .genesis,
     chapter: 1
   )
 }

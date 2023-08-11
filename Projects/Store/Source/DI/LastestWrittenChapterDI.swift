@@ -8,14 +8,14 @@
 
 import Dependencies
 
-struct LatestWrittenChapterDI: RealmDependency {
+public struct LatestWrittenChapterDI: RealmDependency {
   typealias value = LatestWrittenChapterVO
-  var fetch: @Sendable () async throws -> LatestWrittenChapterVO?
-  var update: @Sendable (LatestWrittenChapterVO) async throws -> LatestWrittenChapterVO
+  public var fetch: @Sendable () async throws -> LatestWrittenChapterVO?
+  public var update: @Sendable (LatestWrittenChapterVO) async throws -> LatestWrittenChapterVO
 }
 
 extension LatestWrittenChapterDI: DependencyKey {
-  static var liveValue: LatestWrittenChapterDI = {
+  public static var liveValue: LatestWrittenChapterDI = {
     let repository = LatestWrittenChapterRealmRepository()
     return .init(fetch: {
       try await repository.read()
@@ -24,7 +24,7 @@ extension LatestWrittenChapterDI: DependencyKey {
     })
   }()
   
-  static var previewValue: LatestWrittenChapterDI {
+  public static var previewValue: LatestWrittenChapterDI {
     return .init(fetch: {
       return LatestWrittenChapterVO.defaultValue
     }, update: { _ in
@@ -34,7 +34,7 @@ extension LatestWrittenChapterDI: DependencyKey {
 }
 
 
-extension DependencyValues {
+public extension DependencyValues {
   var latestWrittenChapterRepository: LatestWrittenChapterDI {
     get { self[LatestWrittenChapterDI.self] }
     set { self[LatestWrittenChapterDI.self] = newValue }

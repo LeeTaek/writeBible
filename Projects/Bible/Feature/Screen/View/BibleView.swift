@@ -123,39 +123,6 @@ public struct BibleView: View {
         .padding()
       }
   }
-  
-  
-  //MARK: - Methods
-  /// 다음장으로 이동.
-//  func moveToNextChapter() {
-//    let lastChapter = viewStore.state.title.lastChapter
-//    
-//    if viewStore.title.chapter < lastChapter {
-//      self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle,
-//                                               chapter: viewStore.state.title.chapter + 1)))
-//    } else {
-//      if viewStore.title.bibleTitle != .revelation {
-//        self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle.next(),
-//                                                 chapter: 1)))
-//      }
-//    }
-//  }
-//  
-//  
-//  /// 이전 장으로 이동
-//  func moveToBeforeChapter() {
-//    if viewStore.state.title.chapter > 1 {
-//      self.viewStore.send(.titleAction(.moveTo(title: viewStore.state.title.bibleTitle,
-//                                               chapter: viewStore.state.title.chapter - 1)))
-//    } else {
-//      if viewStore.title.bibleTitle != .genesis {
-//        let beforeBible = viewStore.state.title.bibleTitle.before()
-//        let lastChapter = BibleSentenceVO.lastChapter(title: beforeBible.rawValue)
-//        self.viewStore.send(.titleAction(.moveTo(title: beforeBible, chapter: lastChapter)))
-//      }
-//    }
-//  }
-//  
 }
 
 

@@ -16,9 +16,12 @@ public struct SettingStore: Reducer {
   @Dependency(\.settingRepository) var settingRepository
   
     public struct State: Equatable {
+      public var id = UUID()
       public var showSettingSheet: Bool = false
-      @BindingState public var setting: SettingVO
+      @BindingState public var setting: SettingVO = .defaultValue
 //      @BindingState public var sentence: SentenceStore.State
+      
+      public init() { }
     }
     
     public enum Action: Equatable, BindableAction {

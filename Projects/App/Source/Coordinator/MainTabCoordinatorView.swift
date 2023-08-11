@@ -15,25 +15,20 @@ import TCACoordinators
 struct MainTabCoordinatorView: View {
   let store: StoreOf<MainTabCoordinator>
   
+  
   var body: some View {
-    TCARouter(store) { screen in
-      SwitchStore(screen) { screen in
-        switch screen {
-        case .bible:
-          CaseLet(
-            /Screen.State.bible,
-             action: Screen.Action.bible,
-             then: BibleView.init
-          )
-          
-        case .sentence:
-          CaseLet(
-            /Screen.State.sentence,
-             action: Screen.Action.sentence,
-             then: BibleSentenceView.init
-          )
-        }
-      }
+    WithViewStore(store, observe: \.selectedTab) { viewStore in
+    TabView(selection: viewStore.binding(get: { $0 },
+                                         send: MainTabCoordinator.Action.tabSelected )) {
+      BibleCoordinatorView(
+        store: store.scope(
+          state: { $0.bible },
+          action: { .bible($0) }
+        )
+      )
+      .tabItem{ Text("bible") }
+      .tag(MainTabCoordinator.Tab.bible)
+    }
     }
   }
   

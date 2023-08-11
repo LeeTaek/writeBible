@@ -23,6 +23,6 @@ public class LatestWrittenChapterRealmDTO: Object {
   }
   
   public func toStore() -> LatestWrittenChapterVO {
-    return .init(title: title, chapter: chapter)
+    return .init(title: BibleTitle(rawValue: title)!, chapter: chapter)
   }
 }
