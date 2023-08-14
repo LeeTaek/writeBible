@@ -20,12 +20,17 @@ public struct BibleStore: Reducer {
     public var chapter: Int
     public var bible: [BibleSentenceVO] = []
     @BindingState public var sentences: IdentifiedArrayOf<SentenceStore.State> = []
-    public var settingValue: SettingVO = .defaultValue
+    public var settingValue: SettingVO
     public var startCarve: Bool = false
     
     public init(title: BibleTitle, chapter: Int) {
       self.title = title
       self.chapter = chapter
+      self.bible = BibleSentenceVO.fetchChapter(title: title.rawValue, chapter: chapter)
+      self.settingValue = .defaultValue
+      self.bible.forEach {
+        self.sentences.insert(SentenceStore.State(sentence: $0), at: $0.section - 1)
+      }
     }
   }
   
@@ -46,11 +51,6 @@ public struct BibleStore: Reducer {
     Reduce { state, action in
       switch action {
       case .onAppear:
-        state.bible = BibleSentenceVO.fetchChapter(title: state.title.rawValue,
-                                                   chapter: state.chapter)
-        state.sentences.append(contentsOf: state.bible.map {
-                  SentenceStore.State(sentence: $0)
-        })
         return .run { send in
           await send(. fetchSetting(
             TaskResult {
