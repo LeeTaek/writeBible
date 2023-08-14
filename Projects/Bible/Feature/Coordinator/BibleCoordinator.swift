@@ -18,7 +18,7 @@ public struct BibleCoordinator: Reducer {
   
   public struct State: Equatable, IdentifiedRouterState {
     public static let initialState = State(
-      routes: [.root(.bible(.init(title: .acts, chapter: 1)))]
+      routes: [.root(.bible(.init(title: .genesis, chapter: 1)))]
     )
     
     public var routes: IdentifiedArrayOf<Route<Screen.State>>
@@ -88,6 +88,9 @@ public struct BibleCoordinator: Reducer {
         break
       }
       return .none
+    }
+    .forEachRoute {
+      Screen()
     }
     ._printChanges()
   }

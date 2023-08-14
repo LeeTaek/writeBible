@@ -15,15 +15,15 @@
 		6E89DD9BFC1497D69404054F /* Store_Store.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 8149797DA015685D4A3CD3BC /* Store_Store.bundle */; platformFilter = ios; };
 		78E9318C608F091C2BC8C7E4 /* Bible_Bible.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87A279AFAFDCF3FAA73744AF /* Bible_Bible.bundle */; };
 		7934C922E539566778DBD0A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7950B1226DAC35ED94479D1 /* Preview Assets.xcassets */; };
+		806275FC8C79A99816C9EDDF /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CFDBB9E0C086A17EAC1EA6 /* MainTabCoordinator.swift */; };
 		893FAFE173F959A52B253738 /* Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20950F1147E5536403F60B6 /* Store.framework */; platformFilter = ios; };
 		8C4F0D1A5C3C3D3F3ED44FF5 /* Bible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A2ADDA255CEEF80C551F73 /* Bible.framework */; platformFilter = ios; };
+		9228BC4A3CD518295D49559C /* MainTabCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B1C625F9417DDBE6F4A2FD /* MainTabCoordinatorView.swift */; };
 		97D7B2D40EA5CCF41EA4E690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CC70BF846E4A7BC975BF43 /* Assets.xcassets */; };
-		99B84CB52A84A9E600A93C14 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B84CB42A84A9E600A93C14 /* Screen.swift */; };
-		99B84CB72A84AAA000A93C14 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B84CB62A84AAA000A93C14 /* MainTabCoordinator.swift */; };
 		A9F68BB00C0176F31ED98EB3 /* TuistAssets+Carve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B714E2812B624AEDA5E9039 /* TuistAssets+Carve.swift */; };
+		D0FBAF0A8128426484EE5276 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CB7067E370C48C87C0899 /* Screen.swift */; };
 		E395AFBDFF76E7941C5C1553 /* TuistBundle+Carve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C1F54911FF23AF757CCBD /* TuistBundle+Carve.swift */; };
 		E83D1D4D36E01E2477AD9A33 /* Store_Store.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8149797DA015685D4A3CD3BC /* Store_Store.bundle */; };
-		EC079C4C8915F8FD051B9673 /* MainTabCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C92FF9C6D49207462AA343 /* MainTabCoordinatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,19 +52,19 @@
 
 /* Begin PBXFileReference section */
 		02CC70BF846E4A7BC975BF43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E5CB7067E370C48C87C0899 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		0EE26D3EEC48EEF578BD481A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2FA2B28A120AD43A5C87DA24 /* Carve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B714E2812B624AEDA5E9039 /* TuistAssets+Carve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Carve.swift"; sourceTree = "<group>"; };
-		62C92FF9C6D49207462AA343 /* MainTabCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinatorView.swift; sourceTree = "<group>"; };
 		67189EBB192472C8DFDA5AB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F8C1F54911FF23AF757CCBD /* TuistBundle+Carve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Carve.swift"; sourceTree = "<group>"; };
 		72F09E66505F3238BC83B85E /* WriteBibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBibleApp.swift; sourceTree = "<group>"; };
+		79CFDBB9E0C086A17EAC1EA6 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		8149797DA015685D4A3CD3BC /* Store_Store.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Store_Store.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A279AFAFDCF3FAA73744AF /* Bible_Bible.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bible_Bible.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		99B84CB42A84A9E600A93C14 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
-		99B84CB62A84AAA000A93C14 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		A20950F1147E5536403F60B6 /* Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7950B1226DAC35ED94479D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8B1C625F9417DDBE6F4A2FD /* MainTabCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinatorView.swift; sourceTree = "<group>"; };
 		E3A2ADDA255CEEF80C551F73 /* Bible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,9 +156,9 @@
 		B59E6437154EBF22C397C9A8 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				62C92FF9C6D49207462AA343 /* MainTabCoordinatorView.swift */,
-				99B84CB42A84A9E600A93C14 /* Screen.swift */,
-				99B84CB62A84AAA000A93C14 /* MainTabCoordinator.swift */,
+				79CFDBB9E0C086A17EAC1EA6 /* MainTabCoordinator.swift */,
+				C8B1C625F9417DDBE6F4A2FD /* MainTabCoordinatorView.swift */,
+				0E5CB7067E370C48C87C0899 /* Screen.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -216,7 +216,10 @@
 		8B89685F231F6AE171A68263 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = leetaek;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = C8665897A1FA99D5B3BCA95B /* Build configuration list for PBXProject "Carve" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -262,11 +265,11 @@
 			files = (
 				A9F68BB00C0176F31ED98EB3 /* TuistAssets+Carve.swift in Sources */,
 				E395AFBDFF76E7941C5C1553 /* TuistBundle+Carve.swift in Sources */,
-				99B84CB72A84AAA000A93C14 /* MainTabCoordinator.swift in Sources */,
 				16EE9ADE193E7C3ECD15077D /* AppDelegate.swift in Sources */,
-				99B84CB52A84A9E600A93C14 /* Screen.swift in Sources */,
 				5190988A9A4B5DCEEB8AC7ED /* WriteBibleApp.swift in Sources */,
-				EC079C4C8915F8FD051B9673 /* MainTabCoordinatorView.swift in Sources */,
+				806275FC8C79A99816C9EDDF /* MainTabCoordinator.swift in Sources */,
+				9228BC4A3CD518295D49559C /* MainTabCoordinatorView.swift in Sources */,
+				D0FBAF0A8128426484EE5276 /* Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +292,7 @@
 				PRODUCT_NAME = Carve;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -424,6 +428,7 @@
 				PRODUCT_NAME = Carve;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
