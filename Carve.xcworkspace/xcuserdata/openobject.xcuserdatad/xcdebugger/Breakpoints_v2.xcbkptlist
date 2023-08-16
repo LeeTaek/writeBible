@@ -3,38 +3,4 @@
    uuid = "F37C54C2-8933-41D7-A802-91E00C5B585C"
    type = "0"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "15FCA911-AAD1-4FC6-8A5F-B23A50E53129"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../../../../private/var/folders/lw/fycg6p555fg98460nklhs_sc0000gn/T/swift-generated-sources/@__swiftmacro_5Bible33_40D989DF90A4FFF593D1D744000823E8Ll7PreviewfMf0_.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1"
-            endingLineNumber = "1"
-            landmarkName = "$s5Bible33_40D989DF90A4FFF593D1D744000823E8Ll7PreviewfMf0_15PreviewRegistryfMu_"
-            landmarkType = "37">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ABCF95BF-0CF3-4414-8C9E-EB8C7368460D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Projects/Store/Source/Store/BibleStore.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>
