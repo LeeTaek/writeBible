@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,7 @@
 		403066E21AC87C616B965653 /* 2-14데살로니가후서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 715DBD0DFDC301555CE86CA6 /* 2-14데살로니가후서.txt */; };
 		4564B4CABEE6D69AD12BC245 /* 2-11빌립보서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A7A9C8CD6184B0B9851B4BC /* 2-11빌립보서.txt */; };
 		4947AE1AD64CFF52E07A7F0F /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746C7DC69FF75EB12F8A43E /* OSLog+Extension.swift */; };
+		4A357C100D3DCB17FD3A47EE /* StoreUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E978B8E7F1B141FB6141BA /* StoreUnitTest.swift */; };
 		4D8262DBA3E77A9FEF620BA9 /* 2-26유다서.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08772DAFEB38E0592EC64A3B /* 2-26유다서.txt */; };
 		4F0C2A4E7F8AB9F001FC73A2 /* 1-08룻기.txt in Resources */ = {isa = PBXBuildFile; fileRef = DBAF05D8C4262C62CE103593 /* 1-08룻기.txt */; };
 		50D7F02345045C258A7FD5C0 /* 1-31오바댜.txt in Resources */ = {isa = PBXBuildFile; fileRef = 17516158E9DF19F4E614D80D /* 1-31오바댜.txt */; };
@@ -246,6 +247,7 @@
 		9BED156698EDD36ACD2EB9EC /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		A2F86645D8D2C6DFE03A10D0 /* 1-10사무엘하.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-10사무엘하.txt"; sourceTree = "<group>"; };
 		A3BDD789F38FC6F68A53BACA /* 1-25예레미야애가.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-25예레미야애가.txt"; sourceTree = "<group>"; };
+		A6E978B8E7F1B141FB6141BA /* StoreUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUnitTest.swift; sourceTree = "<group>"; };
 		A6FCED71EA21562B24F4048F /* 2-13데살로니가전서.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2-13데살로니가전서.txt"; sourceTree = "<group>"; };
 		A7F7D829F461D3718F2E45B6 /* 1-02출애굽기.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-02출애굽기.txt"; sourceTree = "<group>"; };
 		A8D3BBEE688192EA4A16C291 /* 1-38스가랴.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1-38스가랴.txt"; sourceTree = "<group>"; };
@@ -340,6 +342,14 @@
 				594B93B602DB530B6F9CC8B3 /* WrittenBibleRealmDTO.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		25B56C1523AF13454DF87B7B /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				A6E978B8E7F1B141FB6141BA /* StoreUnitTest.swift */,
+			);
+			path = UnitTest;
 			sourceTree = "<group>";
 		};
 		4919351FD40BF0EAF6C36B33 /* VO */ = {
@@ -498,6 +508,7 @@
 				0C3F059750F9838D3E7E5D2A /* Derived */,
 				0D52C2DFBC4E12C0F109EC20 /* Resource */,
 				C3D25D90291929069D26F8DD /* Source */,
+				25B56C1523AF13454DF87B7B /* UnitTest */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -624,7 +635,6 @@
 		DBDCE8F750FC36A24280CD14 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = leetaek;
 				TargetAttributes = {
 				};
@@ -786,6 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A357C100D3DCB17FD3A47EE /* StoreUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,7 +829,6 @@
 				PRODUCT_NAME = Store_Store;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -838,7 +848,6 @@
 				PRODUCT_NAME = Store_Store;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -869,7 +878,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -1006,7 +1014,6 @@
 				PRODUCT_NAME = StoreTest;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1038,7 +1045,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1064,7 +1070,6 @@
 				PRODUCT_NAME = StoreTest;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;

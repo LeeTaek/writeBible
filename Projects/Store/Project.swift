@@ -20,5 +20,6 @@ let project = Project.makeModule(
       .TCAArchitecture,
     ],
     sources: "Source/**",
-    resources: "Resource/**"
+    resources: "Resource/**",
+    testSource: "UnitTest/**"
 )

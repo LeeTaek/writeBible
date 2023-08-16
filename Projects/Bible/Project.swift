@@ -23,6 +23,6 @@ let project = Project.makeModule(
       .TCACoordinator
     ],
     sources: "Feature/**",
-    resources: "Feature/Component/DesignSystems/Resource/**"
-//    resources: "Resource/**"
+    resources: "Feature/Component/DesignSystems/Resource/**",
+    testSource: "UnitTest/**"
 )
