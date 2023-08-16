@@ -54,8 +54,6 @@ struct WrittenBibleRealmRepository: Repository {
   
   @BibleRealmDataSource
   func toDTO(vo: WrittenSentenceVO) async -> WrittenBibleRealmDTO {
-    return await .init(writtenData: vo.writtenData,
-                 bibleSentence: vo.bible
-    )
+    return await .init(bibleSentence: vo.bible)
   }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,8 @@
 		8B87BD3DA53CF6A1D5D231E2 /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1732FAEF9F8744C021F53E /* TCACoordinators */; };
 		92317A169D3AB9A085F47B9A /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24794C36A0D027A29826CC2C /* TitleView.swift */; };
 		95C9FA2C832C282ACC67065C /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B354F6E7091B31BD95323E4 /* DrawingDocument.swift */; };
+		99BFB6292A8C8EC90081E286 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BFB6282A8C8EC90081E286 /* DrawingView.swift */; };
+		99BFB62B2A8C90490081E286 /* InProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BFB62A2A8C90490081E286 /* InProgressLineView.swift */; };
 		9CBF72DCE20508FD23635FF0 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19021A02B89CD16ED013EA /* UnitTest.swift */; };
 		A0075984636350017DDC9664 /* BibleSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF43435E78E0496BD07DD4 /* BibleSentenceView.swift */; };
 		A40445F4BDD629EC7EF3E382 /* RecentWritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283CB0EEA2B5731A9CD8677B /* RecentWritingManager.swift */; };
@@ -136,6 +138,8 @@
 		77318F6AAB3FA712E93E70FC /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		7D54CB1E1EABE0D2E7AD141A /* BibleCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleCoordinatorView.swift; sourceTree = "<group>"; };
 		988DBF37D32CB65F1800F200 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		99BFB6282A8C8EC90081E286 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		99BFB62A2A8C90490081E286 /* InProgressLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressLineView.swift; sourceTree = "<group>"; };
 		A5172044350588967C767E40 /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
 		B49A3DABB00A86699075306D /* Bible_Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible_Bible-Info.plist"; sourceTree = "<group>"; };
 		B7DEE92B1B5D7EF35E3FDE5E /* Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bible-Info.plist"; sourceTree = "<group>"; };
@@ -398,6 +402,8 @@
 			children = (
 				4A55CFAD925FD7D6A12513D3 /* DrawingViewController.swift */,
 				164998FF6BA3F73D493A5618 /* DrawingWrapper.swift */,
+				99BFB6282A8C8EC90081E286 /* DrawingView.swift */,
+				99BFB62A2A8C90490081E286 /* InProgressLineView.swift */,
 			);
 			path = Drawing;
 			sourceTree = "<group>";
@@ -474,8 +480,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = leetaek;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 603F9F5D189033E2487336C3 /* Build configuration list for PBXProject "Bible" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -545,6 +549,7 @@
 				28A4647D5AD78BFFA15E7E20 /* DrawingViewController.swift in Sources */,
 				C8D330894639AEE2C83AFC8D /* DrawingWrapper.swift in Sources */,
 				92317A169D3AB9A085F47B9A /* TitleView.swift in Sources */,
+				99BFB6292A8C8EC90081E286 /* DrawingView.swift in Sources */,
 				52C63C6BCB85C2EEB1AD0453 /* Bible.swift in Sources */,
 				95C9FA2C832C282ACC67065C /* DrawingDocument.swift in Sources */,
 				7A4AD617D80706F1C2F96C48 /* SettingVO.swift in Sources */,
@@ -554,6 +559,7 @@
 				F3AC0522E01B50C4E5428506 /* SettingManager.swift in Sources */,
 				4E7E4A8C015025FCEA553D44 /* BibleCoordinator.swift in Sources */,
 				4BDFA6B55B725325C7A8BD41 /* BibleCoordinatorView.swift in Sources */,
+				99BFB62B2A8C90490081E286 /* InProgressLineView.swift in Sources */,
 				145490747AD590DAF54689FF /* Screen.swift in Sources */,
 				692E3164A070537E2476A8C4 /* BibleView.swift in Sources */,
 				22FCB70AA49433C779C2120F /* SettingView.swift in Sources */,

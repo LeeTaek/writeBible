@@ -106,18 +106,23 @@ public class PersistableBible: EmbeddedObject {
 
 
 public struct WrittenSentenceVO: Hashable {
-  public var writtenData: Data?
+  public var writtenData = RealmSwift.List<Line>()
   public var bible: BibleSentenceVO
   
-  public init(writtenData: Data?, bible: BibleSentenceVO) {
+  public init(writtenData: RealmSwift.List<Line>, bible: BibleSentenceVO) {
     self.writtenData = writtenData
     self.bible = bible
   }
   
   static public let defaultValue = Self(
-    writtenData: nil,
+    writtenData: RealmSwift.List<Line>(),
     bible: BibleSentenceVO.defaultValue
   )
+  
+  public func hash(into hasher: inout Hasher) {
+    let id = bible.title + bible.chapter.description + bible.section.description
+    return hasher.combine(id)
+  }
 }
 
 

@@ -83,26 +83,36 @@ public struct BibleSentenceView: View {
       
   
   var writtingLineView: some View {
-    HStack(alignment: .top) {
-      sectionNumber
-
-      GeometryReader { lineGeo in
-        VStack (alignment: .leading, spacing: 35){
-          /// 필사하는 부분 밑줄
-          /// Line count = (해당 구절 전체 높이 + Line 간격) / ( 1줄의 높이 + Line 간격)
-          
-          ForEach(1..<self.viewStore.line, id: \.self) { _ in
-            Rectangle()
-              .opacity(0.2)
-              .frame(width: lineGeo.frame(in: .local).size.width, height: 2)
-              .offset(y: lineGeo.frame(in: .local).minY + viewStore.setting.fontSize + (viewStore.setting.lineSpace*0.5))
-          
+    ZStack {
+      HStack(alignment: .top) {
+        sectionNumber
+        
+        GeometryReader { lineGeo in
+          VStack (alignment: .leading, spacing: 35){
+            /// 필사하는 부분 밑줄
+            /// Line count = (해당 구절 전체 높이 + Line 간격) / ( 1줄의 높이 + Line 간격)
+            
+            ForEach(1..<self.viewStore.line, id: \.self) { _ in
+              Rectangle()
+                .opacity(0.2)
+                .frame(width: lineGeo.frame(in: .local).size.width, height: 2)
+                .offset(y: lineGeo.frame(in: .local).minY + viewStore.setting.fontSize + (viewStore.setting.lineSpace*0.5))
+              
+            }
           }
         }
+        .frame(width: UIScreen.main.bounds.width / 2)
       }
-      .frame(width: UIScreen.main.bounds.width / 2)
+      .padding([.trailing,.leading])
+      
+      
+      DrawingView(store: Store(initialState: DrawingStore.State(drawing: viewStore.drawings.,
+                                                                sentence: viewStore.sentence,
+                                                                line: .init(drawing: viewStore.drawings, color: .black, lineWidth: 1, geoSize: .zero)
+                                                               )) {
+        DrawingStore()
+      })
     }
-    .padding([.trailing,.leading])
   }
   
 }

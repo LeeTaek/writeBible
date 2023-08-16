@@ -9,11 +9,17 @@
 import Foundation
 
 import ComposableArchitecture
+import RealmSwift
 
 public struct SentenceStore: Reducer {
   public init() { }
   
   public struct State: Equatable, Identifiable {
+    public static func == (lhs: SentenceStore.State, rhs: SentenceStore.State) -> Bool {
+      lhs.id == rhs.id
+    }
+    
+    @ObservedResults(WrittenBibleRealmDTO.self) public var drawings
     public let id: String
     public var sentence: BibleSentenceVO
     public var setting: SettingVO = .defaultValue
